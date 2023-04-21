@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Web]" guice-stage="DEVELOPMENT">
+  <parameter name="UserName" value="Bhairub  "/>
+  <parameter name="url1" value="https://web.financier.uat-mqf.co.za/LogOn?ReturnUrl=%2fCustomer"/>
+  <parameter name="url" value="https://www.operations.uat-mqf.co.za/login"/>
+  <parameter name="Password" value="WFG6eKRvi3kvpQ"/>
+  <parameter name="browserType" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.utility.ExtentReporter"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="MarquisSanityScript(failed)">
+    <classes>
+      <class name="com.marquis.SanityScripts.marquisFinancierSanityScript">
+        <methods>
+          <include name="beforemethodcode"/>
+          <include name="Doc_Vals"/>
+        </methods>
+      </class> <!-- com.marquis.SanityScripts.marquisFinancierSanityScript -->
+    </classes>
+  </test> <!-- MarquisSanityScript(failed) -->
+</suite> <!-- Failed suite [Web] -->

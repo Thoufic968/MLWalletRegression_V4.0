@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Web]" guice-stage="DEVELOPMENT">
+  <parameter name="UserName" value="SHAKIRM"/>
+  <parameter name="userType" value="SeritiPortal"/>
+  <parameter name="url" value="https://www.seritisolutions.co.za/DEMO/web/admin/SecurityUser.aspx?Status=View%22"/>
+  <parameter name="Password" value="Test@123"/>
+  <parameter name="browserType" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.utility.ExtentReporter"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="MarquisSanityScript(failed)">
+    <classes>
+      <class name="com.marquis.SanityScripts.marquisFinancierSanityScript">
+        <methods>
+          <include name="beforemethodcode"/>
+          <include name="clientDetails" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.marquis.SanityScripts.marquisFinancierSanityScript -->
+    </classes>
+  </test> <!-- MarquisSanityScript(failed) -->
+</suite> <!-- Failed suite [Web] -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web">
+	
+	<!-- <parameter name="userType" value="${UserType}"/>  Guest/NonSubscribedUser/SubscribedUser/SubscribedUserWith15daysExpiry
+	<parameter name="runMode" value="${runMode}"/>	
+	<parameter name="runModule" value="${runModule}"/>
+	<parameter name="browserType" value="${browserType}"/>
+	<parameter name="url" value="${url}" /> -->
+	
+	<!--<parameter name="url" value="marquis_UAT" />
+	<parameter name="browserType" value="Chrome"/>   
+	<parameter name="userType" value="NonSubscribedUser"/>  
+	<parameter name="runModule" value="Suite"/>
+	<parameter name="runMode" value="Suites"/>	
+	<parameter name="url" value="" />-->
+	
+	<parameter name = "UserName" value="SHAKIRM"/>
+	<parameter name = "Password" value="Test@123"/>
+	<parameter name="url" value="https://www.seritisolutions.co.za/DEMO/web/admin/SecurityUser.aspx?Status=View%22" />
+	<parameter name="browserType" value="Chrome"/>
+	<parameter name="userType" value="SeritiPortal"/>
+	
+
+	<listeners>
+		<!-- <listener class-name="com.parameters.ParameterInjector" />-->
+		<listener class-name="com.utility.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+	
+	<test name="MarquisSanityScript" parallel="methods" thread-count="2">
+   		<classes>
+    		<class name="com.marquis.SanityScripts.marquisFinancierSanityScript" />
+   		</classes>	
+	</test>	
+	
+</suite>
