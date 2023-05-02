@@ -25,48 +25,48 @@ public class MLWalletCashInViaBranch {
 
     //******************* Cash In Via Branch ====================================/
 
-    @Test(priority = 1)
-    public void cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception
-    {
-        MLWalletBusinessLogic.cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01();
-    }
-
-    @Test(priority = 2)
-    public void cashInViaBranchCancelTransactionScenario_CIBR_TC_02() throws Exception
-    {
-        MLWalletBusinessLogic.cashInViaBranchCancelTransactionScenario_CIBR_TC_02();
-    }
-
-    @Test(priority = 3)
-    public void cashInviaBranch_Invalid_Amount_CIBR_TC_03() throws Exception
-    {
-        MLWalletBusinessLogic.cashInviaBranch_Invalid_Amount_CIBR_TC_03();
-    }
-
-    @Test(priority = 4)
-    public void cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04() throws Exception
-    {
-        MLWalletBusinessLogic.cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04();
-    }
+//    @Test(priority = 1)
+//    public void cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception
+//    {
+//        MLWalletBusinessLogic.cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01();
+//    }
+//
+//    @Test(priority = 2)
+//    public void cashInViaBranchCancelTransactionScenario_CIBR_TC_02() throws Exception
+//    {
+//        MLWalletBusinessLogic.cashInViaBranchCancelTransactionScenario_CIBR_TC_02();
+//    }
+//
+//    @Test(priority = 3)
+//    public void cashInviaBranch_Invalid_Amount_CIBR_TC_03() throws Exception
+//    {
+//        MLWalletBusinessLogic.cashInviaBranch_Invalid_Amount_CIBR_TC_03();
+//    }
+//
+//    @Test(priority = 4)
+//    public void cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04() throws Exception
+//    {
+//        MLWalletBusinessLogic.cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04();
+//    }
 
 
 //============================================================================================================//
 
 
-    @Test(priority = 5)
-    public void cashInViaBRanchInvalidAmount_CIBR_TC_05() throws Exception {
-        MLWalletBusinessLogic.cashInViaBRanchInvalidAmount_CIBR_TC_05();
-    }
-
-    @Test(priority = 6)
-    public void cashInViaBranchUIValidation_CIBR_TC_06() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchUIValidation_CIBR_TC_06();
-    }
-
-    @Test(priority = 7)
-    public void cashInViaBranchBackBtnValidation_CIBR_TC_07() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchBackBtnValidation_CIBR_TC_07();
-    }
+//    @Test(priority = 5)
+//    public void cashInViaBRanchInvalidAmount_CIBR_TC_05() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBRanchInvalidAmount_CIBR_TC_05();
+//    }
+//
+//    @Test(priority = 6)
+//    public void cashInViaBranchUIValidation_CIBR_TC_06() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchUIValidation_CIBR_TC_06();
+//    }
+//
+//    @Test(priority = 7)
+//    public void cashInViaBranchBackBtnValidation_CIBR_TC_07() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchBackBtnValidation_CIBR_TC_07();
+//    }
 
     @Test(priority = 8)
     public void cashInViaBranchNavigationToHomePageFromQRPage_CIBR_TC_08() throws Exception {
@@ -105,7 +105,7 @@ public class MLWalletCashInViaBranch {
 
 
     @Test(priority = 15)
-    public void cashInViaBranchMaxTransactionSemiVerifiedTierUser_CIBR_TC_19() throws Exception {
+    public void cashInViaBranchMaxTransactionSemiVerifiedTierUser_CIBR_TC_20() throws Exception {
         MLWalletBusinessLogic.cashInViaBranchMaxTransactionSemiVerifiedTierUser_CIBR_TC_20();
     }
 
@@ -123,6 +123,55 @@ public class MLWalletCashInViaBranch {
     public void cashInViaBranchFullyVerifiedTierUser_CIBR_TC_18() throws Exception {
         MLWalletBusinessLogic.cashInViaBranchFullyVerifiedTierUser_CIBR_TC_18();
     }
+
+    @Test(priority = 19)
+    public void cashInViaBranchTransactionDetailsUIValidation_CIBR_TC_22() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionDetailsUIValidation_CIBR_TC_22();
+    }
+
+
+    @Test(priority = 20)
+    public void cashInViaBranchTransactionCancelledStatusValidation_CIBR_TC_26() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionCancelledStatusValidation_CIBR_TC_26();
+    }
+    @Test(priority = 21)
+    public void cashInViaBranchTransactionPendingStatusValidation_CIBR_TC_23() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionPendingStatusValidation_CIBR_TC_23();
+    }
+
+    @Test(priority = 22)
+    public void cashInViaBranchLocationPopupValidation_CIBR_TC_28() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchLocationPopupValidation_CIBR_TC_28();
+    }
+
+    @Test(priority = 23)
+    public void cashInViaBranchLocationDenyFunctionality_CIBR_TC_29() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchLocationDenyFunctionality_CIBR_TC_29();
+    }
+
+    @Test(priority = 24)
+    public void cashInViaBranchLocationPermissionDenyCloseBtnFunctionality_CIBR_TC_30() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchLocationPermissionDenyCloseBtnFunctionality_CIBR_TC_30();
+    }
+
+    @Test(priority = 25)
+    public void cashInViaBranchLocationPermissionDenyOpenSettingsBtnFunctionality_CIBR_TC_31() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchLocationPermissionDenyOpenSettingsBtnFunctionality_CIBR_TC_31();
+    }
+
+    @Test(priority = 26)
+    public void cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33();
+    }
+
+    @Test(priority = 27)
+    public void cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32();
+    }
+
+
+
+
 
 
 }

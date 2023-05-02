@@ -203,7 +203,7 @@ public class Utilities extends ExtentReporter {
     }
 
 
-    public void setWifiConnectionToONOFF(String Value) {
+    public static void setWifiConnectionToONOFF(String Value) {
         try {
             if (Value.equalsIgnoreCase("On")) {
                 System.out.println("Switching On Wifi");
@@ -2866,17 +2866,28 @@ public class Utilities extends ExtentReporter {
         logger.info("Swiped Horizontally");
     }
 
+    public static void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
+        Dimension size = DriverManager.getAppiumDriver().manage().window().getSize();
+        int anchor = (int) (size.width * anchorPercentage);
+        int startPoint = (int) (size.height * startPercentage);
+        int endPoint = (int) (size.height * endPercentage);
+
+        new TouchAction(DriverManager.getAppiumDriver())
+                .press(PointOption.point(anchor,startPoint))
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(600)))
+                .moveTo(PointOption.point(anchor,endPoint))
+                .release().perform();
+        logger.info("Swiped Horizontally");
+    }
 
 
 
 
-//    public static void waitTime(int x) {
-//        try {
-//            Thread.sleep(x);
-//        } catch (Exception e) {
-//            logger.error(e);
-//        }
-//    }
+
+
+
+
+
 
 
 

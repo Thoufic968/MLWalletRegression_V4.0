@@ -22,31 +22,31 @@ public class MLWalletSettingScripts {
     }
 //=========================================================================================================//
 
-//    @Test(priority = 1)
-//    public void accountDetails_SS_TC_01() throws Exception {
-//        MLWalletBusinessLogic.settingsAccountDetailsValidation_SS_TC_01();
-//    }
-//
-//    @Test(priority = 2)
-//    public void settingsValidMLPinValidation_SS_TC_02() throws Exception {
-//        MLWalletBusinessLogic.settingsValidMLPinValidation_SS_TC_02();
-//    }
-//
-//    @Test(priority = 3)
-//    public void settingsInvalidMLPinValidation_SS_TC_03() throws Exception {
-//        MLWalletBusinessLogic.settingsInvalidMLPinValidation_SS_TC_03();
-//    }
+    @Test(priority = 1)
+    public void accountDetails_SS_TC_01() throws Exception {
+        MLWalletBusinessLogic.settingsAccountDetailsValidation_SS_TC_01();
+    }
+
+    @Test(priority = 2)
+    public void settingsValidMLPinValidation_SS_TC_02() throws Exception {
+        MLWalletBusinessLogic.settingsValidMLPinValidation_SS_TC_02();
+    }
+
+    @Test(priority = 3)
+    public void settingsInvalidMLPinValidation_SS_TC_03() throws Exception {
+        MLWalletBusinessLogic.settingsInvalidMLPinValidation_SS_TC_03();
+    }
 
     @Test(priority = 4)
     public void settingsBiometricsLogin_SS_TC_04() throws Exception {
         MLWalletBusinessLogic.settingsBiometricsLogin_SS_TC_04();
     }
 
-//    @Test(priority = 5)
-//    public void settingAccRecovery_SS_TC_05() throws Exception {
-//        MLWalletBusinessLogic.settingAccRecovery_SS_TC_05();
-//    }
-//
+    @Test(priority = 5)
+    public void settingAccRecovery_SS_TC_05() throws Exception {
+        MLWalletBusinessLogic.settingAccRecovery_SS_TC_05();
+    }
+
 
     @Test(priority = 6)
     public void settingsPageUIValidation_SS_TC_06() throws Exception {

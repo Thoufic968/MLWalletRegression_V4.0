@@ -26,16 +26,16 @@ public class MLWalletEloadPage {
 	public static By objTransaction=By.xpath("(//*[android.view.ViewGroup]/following-sibling::android.view.ViewGroup/descendant::android.widget.TextView)[11]");
 	public static By objContinuePromoPopUp=By.xpath("//*[@text='Would you like to continue with this promo?']");
 	public static By objPromoName=By.xpath("(//*[android.view.ViewGroup]/child::android.view.ViewGroup/child::android.widget.TextView)[5]");
+	public static By objPromoConfirmationPopup = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
 	public static By objConfirmBtn=By.xpath("//*[@text='Confirm']");
+	public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
 	public static By objTransactionDetailsPage=By.xpath("//*[@text='Transaction Details']");
 	public static By objTypeOfPromoUsed=By.xpath("(//*[@resource-id='Type'])[2]");
 	public static By objMobileNumber=By.xpath("(//*[@resource-id='Mobile Number'])[2]");
 	public static By objAmountToSend=By.xpath("(//*[@resource-id='Amount to Send'])[2]");
 	public static By objServiceFee=By.xpath("(//*[@resource-id='Service Fee'])[2]");
 	public static By objTotalAmount=By.xpath("(//*[@resource-id='Total'])[2]");
-	
 	public static By objErrorMsg=By.xpath("//*[android.widget.EditText]/following-sibling::android.widget.TextView");
-	
 	public static By objInsufficientBalPopup=By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
 	public static By objOkBtn=By.xpath("//*[@text='Ok']");
 	public static By objMobileNumberInTransactionDetails = By.xpath("(//*[@text='Successfully bought load for']/following-sibling::android.widget.TextView)[1]");
@@ -45,11 +45,31 @@ public class MLWalletEloadPage {
 
 	public static By objMaxLimitPopupMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
 	public static By obj3000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 3000'])[1]");
+	public static By obj2000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 2000'])[1]");
 	public static By objBuyLoad = By.xpath("//*[@text='Buy Load']");
 	public static By objLoadSelectionBackArrowBtn = By.xpath("//*[@text='Load Selection']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 	public static By objMobileNumberInLoadSelection = By.xpath("//*[@text='+63']/following-sibling::android.widget.TextView");
 	public static By objChange =By.xpath("//*[@text='Change']");
 	public static By objWalletBalanceInLoadSeletion = By.xpath("//*[@text='Change']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 	public static By objLoadWithAmount = By.xpath("(//*[@text='Transaction Details']//parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView");
-
+	public static By objContacts =By.xpath("//*[@text='Contacts']");
+	public static By objAllowBtn = By.xpath("//*[@text='Allow']");
+	public static By objSearch = By.xpath("//*[@class='android.widget.EditText']");
+	public static By objContactsBtn = By.xpath("(//*[@text='Contacts'])[2]");
+	public static By objFavorites = By.xpath("//*[@text='Favorites']");
+	public static By objContactsAndNumber(int i,int j){
+		return By.xpath("(((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])["+i+"]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]/*[@class='android.widget.TextView'])["+j+"]");
+	}
+	public static By objContactsPageBackBtn = By.xpath("(//*[@text='Contacts'])[1]/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+	public static By objSearchedContactName = By.xpath("(((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]/*[@class='android.widget.TextView'])[1]");
+	public static By objSearchedContactNumber = By.xpath("(((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]/*[@class='android.widget.TextView'])[2]");
+	public static By objAddToFavoriteIcon = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[2]/child::android.widget.TextView");
+	public static By objNoFavoritesFoundMsg = By.xpath("//*[@text='No favorites found']");
+	public static By objNoContactsFoundMsg = By.xpath("//*[@text='No contacts found']");
+	public static By objBackToHomeBtn = By.xpath("//*[@text='Back To Home']");
+	public static By objAppInfo = By.xpath("//*[@text='App info']");
+	public static By objContactPopupMsg = By.xpath("//*[@resource-id='android:id/message']");
+	public static By objAskMeLater = By.xpath("//*[@resource-id='android:id/button3']");
+	public static By objAllowAccess = By.xpath("//*[@resource-id='android:id/button1']");
+	public static By objNewTransaction = By.xpath("//*[@text='New Transaction']");
 }

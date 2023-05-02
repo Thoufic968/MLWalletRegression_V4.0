@@ -42,5 +42,8 @@ public class MLWalletCashInViaBranch {
 	public static By objGoBackBtn = By.xpath("//*[@text='Go Back']");
 	public static By objMaxLimitTxt = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
 	public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
+	public static By objAppInfo = By.xpath("//*[@text='App info']");
+
+
 
 }

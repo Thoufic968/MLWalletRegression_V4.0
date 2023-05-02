@@ -176,4 +176,5 @@ public class MLWalletCashOutPage {
     }
     public static By objAccountNumberInEditRecipient = By.xpath("//*[@text='Account Number']/following-sibling::android.widget.EditText");
     public static By objEditRecipientBackBtn = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup' and ./*[@class='android.view.ViewGroup']]]]]/*/*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup']])[1]");
+    public static By objAppInfo = By.xpath("//*[@text='App info']");
 }

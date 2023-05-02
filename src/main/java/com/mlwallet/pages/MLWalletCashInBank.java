@@ -76,7 +76,7 @@ public class MLWalletCashInBank {
     public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
     public static By objMaxLimitTxt = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
     public static By objBankMaxLimitTxt = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
-
+    public static By objAppInfo = By.xpath("//*[@text='App info']");
 
 
 }

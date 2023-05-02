@@ -78,7 +78,7 @@ public class MLWalletRegressionScripts {
 	@Test(priority = 9)
 	public void cashOutBuyerTierLevelAcc() throws Exception
 	{
-		MLWalletBusinessLogic.cashOutBuyerTierLevelAcc_WM_TC_08();
+		MLWalletBusinessLogic.cashOutBuyerTierLevelAcc_WM_TC_09();
 	}
 
 

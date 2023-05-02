@@ -18,6 +18,8 @@ public class MLWalletHomePage {
     public static By objCashOutIcon = By.xpath("//*[@text='Cashout /\n" +
             "Withdraw']");
     public static By objBuyELoadIcon =By.xpath("//*[@text='Buy eLoad']");
+    public static By objBuyELoadTransaction =By.xpath("(//*[@text='Buy Eload'])[1]");
+    public static By objPosted = By.xpath("//*[@text='Posted']");
     public static By objPayBillsIcon = By.xpath("//*[@text='Pay Bills']");
     public static By objShopItemsIcon = By.xpath("//*[@text='Shop Items']");
     public static By objSendTransferIcon = By.xpath("//*[@text='Send /\n" +
@@ -56,7 +58,16 @@ public class MLWalletHomePage {
     public static By objBranchVerified = By.xpath("//*[@text='Branch Verified']");
     public static By objFullyVerified = By.xpath("//*[@text='Fully Verified']");
     public static By objUpgradeTierLevelBtn = By.xpath("//*[@text='Upgrade Tier Level']");
-
-
-
+    public static By objPopUpMsg = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_message']");
+    public static By obPopupAllowBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']");
+    public static By objContactPopUpAllowBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_button']");
+    public static By objLocationPopUpAllowOnceBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']");
+    public static By objPopUpDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_button']");
+    public static By objContactPopupDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_and_dont_ask_again_button']");
+    public static By objPermissionDeniedPopUp = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[1]");
+    public static By objOpenSettingBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");
+    public static By objCloseBtn = By.xpath("//*[@resource-id='modal-cancel-button']/child::android.widget.TextView");
+    public static By objInternetConnectionPopUp = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[1]");
+    public static By objInternetConnectionMsg = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[2]");
+    public static By objOkBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");
 }
