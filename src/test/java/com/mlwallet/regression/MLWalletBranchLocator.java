@@ -1,6 +1,7 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
+import com.driverInstance.AppiumServer;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -16,6 +17,7 @@ public class MLWalletBranchLocator {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletBranchLocator.deviceName=deviceName;
         MLWalletBranchLocator.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -58,11 +60,11 @@ public class MLWalletBranchLocator {
 //    public void branchLocatorNewsLettersFunctionality_BL_TC_10() throws Exception {
 //        MLWalletBusinessLogic.branchLocatorNewsLettersFunctionality_BL_TC_10();
 //    }
-//
-//    @Test(priority = 8)
-//    public void branchLocatorFAQFunctionality_BL_TC_11() throws Exception {
-//        MLWalletBusinessLogic.branchLocatorFAQFunctionality_BL_TC_11();
-//    }
+
+    @Test(priority = 8)
+    public void branchLocatorFAQFunctionality_BL_TC_11() throws Exception {
+        MLWalletBusinessLogic.branchLocatorFAQFunctionality_BL_TC_11();
+    }
 
 
 

@@ -72,6 +72,9 @@ public class MLWalletBusinessLogic {
 		DriverManager.getAppiumDriver().quit();
 	}
 
+	public void beforeSuite(){
+
+	}
 	//================================ LOG IN==============================================//
 	public void mlWalletLogin(String sTier) throws Exception {
 		explicitWaitVisible(MLWalletLoginPage.objMobileNumberTextField, 10);
@@ -8248,12 +8251,53 @@ public class MLWalletBusinessLogic {
 	}
 
 
-	public void troubleSigningInEmptyFullNameFunctionality() throws Exception {
-		ExtentReporter.HeaderChildNode("Trouble Signing In ");
+	public void troubleSigningInEmptyFullNameFunctionality_TS_TC_15() throws Exception {
+		ExtentReporter.HeaderChildNode("Trouble Signing In Empty Full Name Functionality");
 		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn,getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn,"Button"));
-		Swipe("UP",3);
+		Swipe("UP",4);
 		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objNextBtn,getTextVal(MLWalletTroubleSigningInPage.objNextBtn,"Button"));
+		if(verifyElementPresent(MLWalletTroubleSigningInPage.objRequiredQuestion,getTextVal(MLWalletTroubleSigningInPage.objRequiredQuestion,"Error msg"))){
+			String sActualErrorMsg = getText(MLWalletTroubleSigningInPage.objRequiredQuestion);
+			String sExceptedErrorMsg = "This is a required question";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("TS_TC_15, Trouble Signing In Empty Full Name Functionality Validated");
+			ExtentReporter.extentLoggerPass("TS_TC_15", "TS_TC_15, Trouble Signing In Empty Full Name Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void troubleSigningInEmptyRegisteredEmailFunctionality_TS_TC_16() throws Exception {
+		ExtentReporter.HeaderChildNode("Trouble Signing In Empty Registered Email Functionality");
+		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn,getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn,"Button"));
+		type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name") ,"First Name Field");
+		Swipe("UP",4);
+		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objNextBtn,getTextVal(MLWalletTroubleSigningInPage.objNextBtn,"Button"));
+		if(verifyElementPresent(MLWalletTroubleSigningInPage.objRequiredQuestion,getTextVal(MLWalletTroubleSigningInPage.objRequiredQuestion,"Error msg"))){
+			String sActualErrorMsg = getText(MLWalletTroubleSigningInPage.objRequiredQuestion);
+			String sExceptedErrorMsg = "This is a required question";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("TS_TC_16, Trouble Signing In Empty Registered Email Functionality Validated");
+			ExtentReporter.extentLoggerPass("TS_TC_16", "TS_TC_16, Trouble Signing In Empty Registered Email Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+	public void troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17() throws Exception {
+		ExtentReporter.HeaderChildNode("Trouble Signing In Empty Registered Mobile Number Functionality");
+		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn,getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn,"Button"));
+		type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name") ,"First Name Field");
+		type(MLWalletTroubleSigningInPage.objRegisteredEmail, prop.getproperty("Email") ,"Registered Email Field");
+		Swipe("UP",4);
+		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objNextBtn,getTextVal(MLWalletTroubleSigningInPage.objNextBtn,"Button"));
+		if(verifyElementPresent(MLWalletTroubleSigningInPage.objRequiredQuestion,getTextVal(MLWalletTroubleSigningInPage.objRequiredQuestion,"Error msg"))){
+			String sActualErrorMsg = getText(MLWalletTroubleSigningInPage.objRequiredQuestion);
+			String sExceptedErrorMsg = "This is a required question";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("TS_TC_17, Trouble Signing In Empty Mobile Number Functionality Validated");
+			ExtentReporter.extentLoggerPass("TS_TC_17", "TS_TC_17, Trouble Signing In Empty Mobile Number Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
 	}
 
 }

@@ -17,6 +17,7 @@ public class MLWalletTroubleSigningInPage {
     public static By objClearFormPopupMsg = By.xpath("//*[@resource-id='Qf7yGf1']");
     public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
     public static By objNextBtn = By.xpath("//*[@text='Next']");
+    public static By objRequiredQuestion = By.xpath("//*[@text='This is a required question']");
 
 
 }
