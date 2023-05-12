@@ -177,10 +177,55 @@ public class MLWalletSendTransferToMLWalletUserScripts {
         MLWalletBusinessLogic.sendMoneyToMLWalletSuccessMsgValidation_STW_TC_35();
     }
 
-//    @Test(priority = 29)
-//    public void sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36() throws Exception {
-//        MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36("50000");
-//    }
+    @Test(priority = 29)
+    public void sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36("50000");
+    }
+
+    @Test(priority = 30)
+    public void sendMoneyToMLWalletMaxTransactionReceivingLimitBranchVerifiedTier_STW_TC_38() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitBranchVerifiedTier_STW_TC_38("50000");
+    }
+
+    @Test(priority = 31)
+    public void sendMoneyToMLWalletMaxTransactionReceivingLimitFullyVerifiedTier_STW_TC_40() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitFullyVerifiedTier_STW_TC_40("50000");
+    }
+    @Test(priority = 35)
+    public void sendMoneyToMLWalletLocationPopupValidation_STW_TC_42() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletLocationPopupValidation_STW_TC_42();
+    }
+
+    @Test(priority = 36)
+    public void sendMoneyToMLWalletLocationDenyFunctionality_STW_TC_43() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletLocationDenyFunctionality_STW_TC_43();
+    }
+
+    @Test(priority = 37)
+    public void sendMoneyToMLWalletLocationPermissionDenyCloseBtnFunctionality_STW_TC_44() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletLocationPermissionDenyCloseBtnFunctionality_STW_TC_44();
+    }
+
+    @Test(priority = 38)
+    public void sendMoneyToMLWalletLocationPermissionDenyOpenSettingsBtnFunctionality_STW_TC_45() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletLocationPermissionDenyOpenSettingsBtnFunctionality_STW_TC_45();
+    }
+
+    @Test(priority = 39)
+    public void sendMoneyToMLWalletLocationPopUpAllowFunctionality_STW_TC_46() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletLocationPopUpAllowFunctionality_STW_TC_46();
+    }
+
+    @Test(priority = 40)
+    public void sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47();
+    }
+
+    @Test(priority = 41)
+    public void sendMoneyToMLWalletTransactionValidationAfterMinimizingApp_STW_TC_50() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLWalletTransactionValidationAfterMinimizingApp_STW_TC_50();
+    }
+
 
 
 

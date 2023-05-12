@@ -176,4 +176,5 @@ public class SendTransferPage {
     public static By objKwartaPadalaRates = By.xpath("//*[@class='android.widget.ScrollView']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
     public static By objWalletToWalletStatus = By.xpath("((//*[@text='Wallet to Wallet'])[1]/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView)[2]");
 
+    public static By objAppInfo = By.xpath("//*[@text='App info']");
 }

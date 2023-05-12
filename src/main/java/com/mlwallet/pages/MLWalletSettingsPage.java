@@ -56,5 +56,7 @@ public class MLWalletSettingsPage {
 	public static By objDeleteConfirmationPopUp = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
 	public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
 	public static By objBiometrics = By.xpath("//*[@text='Biometrics']");
+	public static By objNatureOfRequest = By.xpath("(//*[@class='android.widget.RadioGroup']/child::android.view.View/child::android.widget.TextView)[1]");
+
 
 }

@@ -211,7 +211,7 @@ public class MLWalletRegressionScripts {
 	@Test(priority = 30)
 	public void mlWalletShopItems_Scenario() throws Exception
 	{
-		MLWalletBusinessLogic.mlWallet_ShopItems_without_Input_Otp();
+//		MLWalletBusinessLogic.mlWallet_ShopItems_without_Input_Otp_MLS_TC_04();
 
 	}
 

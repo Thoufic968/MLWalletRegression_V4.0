@@ -23,7 +23,7 @@ public class MLWalletEloadPage {
 	public static By objLoadSelectionPage=By.xpath("//*[@text='Load Selection']");
 	public static By objPromoLoadTab=By.xpath("//*[@text='Promo Load']");
 	public static By objRegularLoadTab = By.xpath("//*[@text='Regular Load']");
-	public static By objTransaction=By.xpath("(//*[android.view.ViewGroup]/following-sibling::android.view.ViewGroup/descendant::android.widget.TextView)[11]");
+	public static By objTransaction=By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[./*[@text]]])[1]");
 	public static By objContinuePromoPopUp=By.xpath("//*[@text='Would you like to continue with this promo?']");
 	public static By objPromoName=By.xpath("(//*[android.view.ViewGroup]/child::android.view.ViewGroup/child::android.widget.TextView)[5]");
 	public static By objPromoConfirmationPopup = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");

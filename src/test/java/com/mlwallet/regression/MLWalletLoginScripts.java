@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import static com.business.mlwallet.MLWalletBusinessLogic.prop;
+
 public class MLWalletLoginScripts {
     public static String deviceName;
     public static String portno;
@@ -68,6 +70,26 @@ public class MLWalletLoginScripts {
     @Test(priority = 9)
     public void loginOTPPageUIValidation_Lgn_TC_10() throws Exception {
         MLWalletBusinessLogic.loginOTPPageUIValidation_Lgn_TC_10();
+    }
+
+    @Test(priority = 10)
+    public void loginWithExistingMobileNumber_Lgn_TC_17() throws Exception {
+        MLWalletBusinessLogic.loginWithExistingMobileNumber_Lgn_TC_17();
+    }
+
+    @Test(priority = 11)
+    public void loginMPinPageUIValidation_Lgn_TC_18() throws Exception {
+        MLWalletBusinessLogic.loginMPinPageUIValidation_Lgn_TC_18();
+    }
+
+    @Test(priority = 12)
+    public void loginNetworkInterruptionValidation_Lgn_TC_19() throws Exception {
+        MLWalletBusinessLogic.loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(prop.getproperty("Branch_Verified"));
+    }
+
+    @Test(priority = 13)
+    public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
+        MLWalletBusinessLogic.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
     }
 
 }

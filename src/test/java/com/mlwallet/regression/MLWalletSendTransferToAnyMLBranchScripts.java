@@ -233,7 +233,40 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
         MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioThirteen_STB_TC_48("25000");
     }
 
+    @Test(priority = 42)
+    public void sendMoneyToMLBranchLocationPopupValidation_STB_TC_50() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopupValidation_STB_TC_50();
+    }
 
+    @Test(priority = 43)
+    public void sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51();
+    }
+
+    @Test(priority = 44)
+    public void sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52();
+    }
+
+    @Test(priority = 45)
+    public void sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53();
+    }
+
+    @Test(priority = 46)
+    public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
+    }
+
+    @Test(priority = 47)
+    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
+    }
+
+    @Test(priority = 48)
+    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56();
+    }
 
 
 

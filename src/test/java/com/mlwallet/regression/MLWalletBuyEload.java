@@ -239,6 +239,11 @@ public class MLWalletBuyEload {
         MLWalletBusinessLogic.buyELoadNewTransactionBtnFunctionality_BE_TC_66();
     }
 
+    @Test(priority = 42)
+    public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069() throws Exception {
+        MLWalletBusinessLogic.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Fully_Verified"), 4);
+    }
+
 
 
 

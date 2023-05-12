@@ -144,6 +144,40 @@ public class MLWalletRegressionPayBillsScripts {
         MLWalletBusinessLogic.payBillsRecentTransaction_PB_TC_21();
     }
 
+    @Test(priority = 23)
+    public void payBillsLocationPopupValidation_PB_TC_34() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationPopupValidation_PB_TC_34();
+    }
+
+    @Test(priority = 24)
+    public void payBillsLocationDenyFunctionality_PB_TC_35() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationDenyFunctionality_PB_TC_35();
+    }
+
+    @Test(priority = 25)
+    public void payBillsLocationPermissionDenyCloseBtnFunctionality_PB_TC_36() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationPermissionDenyCloseBtnFunctionality_PB_TC_36();
+    }
+//
+    @Test(priority = 26)
+    public void payBillsLocationPermissionDenyOpenSettingsBtnFunctionality_PB_TC_37() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationPermissionDenyOpenSettingsBtnFunctionality_PB_TC_37();
+    }
+
+    @Test(priority = 27)
+    public void payBillsLocationPopUpAllowFunctionality_PB_TC_38() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationPopUpAllowFunctionality_PB_TC_38();
+    }
+
+    @Test(priority = 28)
+    public void payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39() throws Exception {
+        MLWalletBusinessLogic.payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39();
+    }
+
+    @Test(priority = 29)
+    public void payBillsTransactionValidationAfterMinimizingApp_PB_TC_42() throws Exception {
+        MLWalletBusinessLogic.payBillsTransactionValidationAfterMinimizingApp_PB_TC_42();
+    }
 
 
 
