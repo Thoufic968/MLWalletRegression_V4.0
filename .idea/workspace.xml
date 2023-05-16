@@ -1,125 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="6f78265c-f23c-4389-b616-2c880263c940" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2LPLoKdY4ajaiPNnztPmgYCYEjH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/src/main/java/com/driverInstance",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.tabs"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ML Wallet Project\MLWalletV1.1\MLWalletRegressionV1.0\src\main\java\com\driverInstance" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ML Wallet Project\MLWalletV1.1\MLWalletRegressionV1.0\src\test\java\com\mlwallet\regression" />
-      <recent name="D:\ML Wallet Project\MLWalletV1.1\MLWalletRegressionV1.0\src\main\java\com\mlwallet\pages" />
-      <recent name="D:\ML Wallet Project\MLWalletV1.1\MLWalletRegressionV1.0\src\main\java\com\utility" />
-      <recent name="D:\ML Wallet Project\12_1_2023_Morning\src\main\java\com\mlwallet\pages" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml (1)">
-    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/branchLocator.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MLWallet" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/branchLocator.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MLWallet" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/login.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MLWallet" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MLWallet" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-Xms512M -Xmx4096M" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/superSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MLWallet" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/superSuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -127,72 +11,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/branchLocator.xml" />
-      <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/login.xml" />
-      <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/superSuite.xml" />
-      <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml (1)" />
-      <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml (1)" />
-        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/superSuite.xml" />
-        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/branchLocator.xml" />
-        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/login.xml" />
         <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6f78265c-f23c-4389-b616-2c880263c940" name="Changes" comment="" />
-      <created>1675767948528</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1675767948528</updated>
-    </task>
-    <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.OutOfMemoryError" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

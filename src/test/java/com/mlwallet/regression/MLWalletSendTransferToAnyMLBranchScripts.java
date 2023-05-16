@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletSendTransferToAnyMLBranchScripts {
 
@@ -12,10 +11,12 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
     public static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName", "portno"})
     @BeforeMethod
     public void before(String deviceName, String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletSendTransferToAnyMLBranchScripts.deviceName = deviceName;
         MLWalletSendTransferToAnyMLBranchScripts.portno = portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet", deviceName, portno);
@@ -34,11 +35,11 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //        MLWalletBusinessLogic.sendMoneyAddRecipient_STB_TC_03();
 //    }
 //
-//    @Test(priority = 3)
-//    public void sendMoneyContactDuplicate() throws Exception {
-//        MLWalletBusinessLogic.sendMoneyContactDuplicate_STB_TC_04();
-//    }
-//
+    @Test(priority = 3)
+    public void sendMoneyContactDuplicate() throws Exception {
+        MLWalletBusinessLogic.sendMoneyContactDuplicate_STB_TC_04();
+    }
+
 //    @Test(priority = 4)
 //    public void sendMoneyToSavedRecipient() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToSavedRecipient_STB_TC_02();
@@ -78,9 +79,9 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //    public void sendMoneyInvalidDetails() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyInvalidDetails_STB_TC_07();
 //    }
-
-
-    //========================================================================================================//
+//
+//
+//    //========================================================================================================//
 //    @Test(priority = 12)
 //    public void sendTransferUIValidation_STB_TC_13() throws Exception {
 //        MLWalletBusinessLogic.sendTransferUIValidation_STB_TC_13();
@@ -126,7 +127,7 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //    public void sendMoneyToBranchAddRecipientPageUIValidation_STB_TC_21() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToBranchAddRecipientPageUIValidation_STB_TC_21();
 //    }
-//====================================================================================
+////====================================================================================
 //    @Test(priority = 21)
 //    public void sendMoneyToMLBranchBuyerTierAccount_STB_TC_22() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToMLBranchBuyerTierAccount_STB_TC_22();
@@ -232,40 +233,45 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //    public void sendMoneyToMLBranchRatesValidationScenarioThirteen_STB_TC_48() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioThirteen_STB_TC_48("25000");
 //    }
+//
+//    @Test(priority = 42)
+//    public void sendMoneyToMLBranchLocationPopupValidation_STB_TC_50() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopupValidation_STB_TC_50();
+//    }
+//
+//    @Test(priority = 43)
+//    public void sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51();
+//    }
+//
+//    @Test(priority = 44)
+//    public void sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52();
+//    }
+//
+//    @Test(priority = 45)
+//    public void sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53();
+//    }
+//
+//    @Test(priority = 46)
+//    public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
+//    }
+//
+//    @Test(priority = 47)
+//    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
+//    }
+//
+//    @Test(priority = 48)
+//    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56();
+//    }
 
-    @Test(priority = 42)
-    public void sendMoneyToMLBranchLocationPopupValidation_STB_TC_50() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopupValidation_STB_TC_50();
-    }
-
-    @Test(priority = 43)
-    public void sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51();
-    }
-
-    @Test(priority = 44)
-    public void sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52();
-    }
-
-    @Test(priority = 45)
-    public void sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53();
-    }
-
-    @Test(priority = 46)
-    public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
-    }
-
-    @Test(priority = 47)
-    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
-    }
-
-    @Test(priority = 48)
-    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56();
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
     }
 
 

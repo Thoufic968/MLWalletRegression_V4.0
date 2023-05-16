@@ -14,12 +14,17 @@ public class MLWalletLoginScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+//    @BeforeTest()
+//        public void beforeTest(){
+//            AppiumServer.stopServer();
+//            AppiumServer.startServer();
+//        }
 
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
-//        AppiumServer.startServer();
+        AppiumServer.startServer();
         MLWalletLoginScripts.deviceName=deviceName;
         MLWalletLoginScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -95,9 +100,9 @@ public class MLWalletLoginScripts {
     }
 
 
-//    @AfterMethod
-//    public void afterMethod(){
-//        AppiumServer.stopServer();
-//    }
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 }

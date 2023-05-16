@@ -1,10 +1,9 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
+import com.driverInstance.AppiumServer;
 import com.mlwallet.pages.MLWalletPayBillsPage;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class MLWalletRegressionPayBillsScripts {
 
@@ -13,10 +12,12 @@ public class MLWalletRegressionPayBillsScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletRegressionPayBillsScripts.deviceName=deviceName;
         MLWalletRegressionPayBillsScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -183,6 +184,10 @@ public class MLWalletRegressionPayBillsScripts {
 
 
 
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 
 

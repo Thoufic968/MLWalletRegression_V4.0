@@ -1,8 +1,11 @@
 package com.driverInstance;
 
+import com.utility.Utilities;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -44,11 +47,15 @@ public class AppiumServer{
          //service.start();
       } else {
          service.start();
-         System.out.println("[EVENT] Appium Server Started Sucessfully.");
+         System.out.println("[EVENT] Appium Server Started Successfully.");
       }
    }
 
+
    public static void stopServer(){
+      DriverManager.getAppiumDriver().quit();
       service.stop();
+      Utilities.waitTime(3000);
+      System.out.println("[EVENT] Appium Server Stopped Successfully.");
    }
 }

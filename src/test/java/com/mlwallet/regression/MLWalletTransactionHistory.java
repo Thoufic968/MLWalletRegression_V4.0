@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletTransactionHistory {
     public static String deviceName;
@@ -15,6 +14,7 @@ public class MLWalletTransactionHistory {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletTransactionHistory.deviceName=deviceName;
         MLWalletTransactionHistory.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -118,6 +118,10 @@ public class MLWalletTransactionHistory {
 
 
 
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 
 

@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletHomeAndDashboard {
     public static String deviceName;
@@ -15,6 +14,7 @@ public class MLWalletHomeAndDashboard {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletHomeAndDashboard.deviceName=deviceName;
         MLWalletHomeAndDashboard.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -130,6 +130,10 @@ public class MLWalletHomeAndDashboard {
     @Test(priority = 22)
     public void mlWalletHomePageIIconValidationAsFullyVerifiedTierUser_HD_TC_23() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageIIconValidationAsFullyVerifiedTierUser_HD_TC_23();
+    }
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
     }
 
 

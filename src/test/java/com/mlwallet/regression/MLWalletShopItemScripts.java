@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletShopItemScripts {
     public static String deviceName;
@@ -11,10 +10,12 @@ public class MLWalletShopItemScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletShopItemScripts.deviceName=deviceName;
         MLWalletShopItemScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -138,6 +139,12 @@ public class MLWalletShopItemScripts {
     @Test(priority = 23)
     public void shopItemsSubTotalVerificationWithSelectingTheItemsInCart_MLS_TC_60() throws Exception {
         MLWalletBusinessLogic.shopItemsSubTotalVerificationWithSelectingTheItemsInCart_MLS_TC_60();
+    }
+
+
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
     }
 
 }

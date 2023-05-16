@@ -11,7 +11,7 @@ public class MLWalletLoginPage {
 	public static By objLoginBtn=By.xpath("//*[@resource-id='208465']");
 	public static By objOtpTextField=By.xpath("//*[@resource-id='textInput']");
 
-	public static By objAvailableBalance = By.xpath("//*[@resource-id='UTJ9TN']");
+	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
 
 	public static By objInvalidMobNumberTxt = By.xpath("//*[@text='Mobile number is invalid']");
 

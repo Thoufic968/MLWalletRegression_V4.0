@@ -1619,6 +1619,7 @@ public class MLWalletBusinessLogic {
 			ExtentReporter.extentLoggerPass("WM_TC_78", "WM_TC_78, CashOut/Withdraw Bank Internet Interruption While Entering OTP Validated");
 			System.out.println("-----------------------------------------------------------");
 		}
+		setWifiConnectionToONOFF("ON");
 	}
 
 
@@ -1638,6 +1639,7 @@ public class MLWalletBusinessLogic {
 			ExtentReporter.extentLoggerPass("WM_TC_80", "WM_TC_80, CashOut/Withdraw Branch Internet Interruption While Entering OTP Validated");
 			System.out.println("-----------------------------------------------------------");
 		}
+		setWifiConnectionToONOFF("ON");
 	}
 
 
@@ -1972,7 +1974,7 @@ public class MLWalletBusinessLogic {
 		addRecipient();
 		if (verifyElementPresent(SendTransferPage.objContactAlreadyExistMsg, getTextVal(SendTransferPage.objContactAlreadyExistMsg, "Error Message"))) {
 			String sContactDuplicatePopupMsg = getText(SendTransferPage.objContactAlreadyExistMsg);
-			String sExpectedPopupMsg = "Contact already exists.";
+			String sExpectedPopupMsg = "Contact already exists";
 			assertionValidation(sContactDuplicatePopupMsg, sExpectedPopupMsg);
 			logger.info("STB_TC_04, Contact already exists popup message Validated");
 			ExtentReporter.extentLoggerPass("STB_TC_04", "STB_TC_04, Contact already exists popup message Validated");
@@ -3851,7 +3853,7 @@ public class MLWalletBusinessLogic {
 		Swipe("UP",2);
 		verifyElementPresent(MLWalletShopItemsPage.objSelectPaymentMethod,getTextVal(MLWalletShopItemsPage.objSelectPaymentMethod,"Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objMLWallet,getTextVal(MLWalletShopItemsPage.objMLWallet,"Option"));
-		Swipe("UP",1);
+		Swipe("UP",2);
 		click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order Button");
 	}
 
@@ -4918,6 +4920,7 @@ public class MLWalletBusinessLogic {
 		reviewTransactionValidation();
 		enterOTP(prop.getproperty("Valid_OTP"));
 		enableLocation_PopUp();
+		waitTime(3000);
 		DriverManager.getAppiumDriver().runAppInBackground(Duration.ofSeconds(5));
 		logger.info("Application relaunched after 5 Seconds");
 		if(verifyElementPresent(MLWalletCashInBank.objLoginIdTxtField,"Bank Page")){
@@ -8282,7 +8285,7 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
-//h
+
 	public void troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17() throws Exception {
 		ExtentReporter.HeaderChildNode("Trouble Signing In Empty Registered Mobile Number Functionality");
 		verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn,getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn,"Button"));

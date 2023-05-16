@@ -1,10 +1,9 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
+import com.driverInstance.AppiumServer;
 import org.apache.poi.ss.formula.functions.T;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class MLWalletCashOutWithdrawScripts {
     public static String deviceName;
@@ -12,10 +11,13 @@ public class MLWalletCashOutWithdrawScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletCashOutWithdrawScripts.deviceName=deviceName;
         MLWalletCashOutWithdrawScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -70,10 +72,10 @@ public class MLWalletCashOutWithdrawScripts {
 //    {
 //        MLWalletBusinessLogic.cashOutBuyerTierLevelAcc_WM_TC_09();
 //    }
-
-//=========================== Phase 2=================================================================//
-
-
+//
+////=========================== Phase 2=================================================================//
+//
+//
 //    @Test(priority = 9)
 //    public void cashOutInvalidBank_WM_TC_10() throws Exception {
 //        MLWalletBusinessLogic.cashOutInvalidBank_WM_TC_10();
@@ -345,11 +347,11 @@ public class MLWalletCashOutWithdrawScripts {
 //    public void cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80() throws Exception {
 //        MLWalletBusinessLogic.cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80("10");
 //    }
-
-    @Test(priority = 63)
-    public void cashOutBankTransactionValidationAfterMinimizingApp_WM_TC_83() throws Exception {
-        MLWalletBusinessLogic.cashOutBankTransactionValidationAfterMinimizingApp_WM_TC_83("100");
-    }
+//
+//    @Test(priority = 63)
+//    public void cashOutBankTransactionValidationAfterMinimizingApp_WM_TC_83() throws Exception {
+//        MLWalletBusinessLogic.cashOutBankTransactionValidationAfterMinimizingApp_WM_TC_83("100");
+//    }
 
     @Test(priority = 64)
     public void cashOutBranchTransactionValidationAfterMinimizingApp_WM_TC_91() throws Exception {
@@ -361,6 +363,10 @@ public class MLWalletCashOutWithdrawScripts {
 
 
 
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 
 

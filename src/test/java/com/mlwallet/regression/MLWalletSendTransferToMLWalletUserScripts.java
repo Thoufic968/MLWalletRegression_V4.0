@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletSendTransferToMLWalletUserScripts {
 
@@ -12,10 +11,12 @@ public class MLWalletSendTransferToMLWalletUserScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletSendTransferToMLWalletUserScripts.deviceName=deviceName;
         MLWalletSendTransferToMLWalletUserScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -72,9 +73,9 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 //        MLWalletBusinessLogic.sendMoneyMLWalletMaximumAmount_STW_TC_07();
 //    }
 //
-
-//================================================================================================//
-
+//
+////================================================================================================//
+//
 //    @Test(priority = 9)
 //      public void sendMoneyDeleteFromFavorites() throws Exception
 //    {
@@ -176,7 +177,7 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 //    public void sendMoneyToMLWalletSuccessMsgValidation_STW_TC_35() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToMLWalletSuccessMsgValidation_STW_TC_35();
 //    }
-//
+
     @Test(priority = 29)
     public void sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36() throws Exception {
         MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitSemiVerifiedTier_STW_TC_36("50000");
@@ -230,6 +231,10 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 
 
 
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 
 

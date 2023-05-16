@@ -1,9 +1,8 @@
 package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import com.driverInstance.AppiumServer;
+import org.testng.annotations.*;
 
 public class MLWalletCashInViaBranch {
     public static String deviceName;
@@ -11,10 +10,19 @@ public class MLWalletCashInViaBranch {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+//    @BeforeTest()
+//    public void beforeTest(){
+//        AppiumServer.stopServer();
+//        AppiumServer.startServer();
+//    }
+
+
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletCashInViaBranch.deviceName=deviceName;
         MLWalletCashInViaBranch.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -48,11 +56,11 @@ public class MLWalletCashInViaBranch {
 //    {
 //        MLWalletBusinessLogic.cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04();
 //    }
-
-
-//============================================================================================================//
-
-
+//
+//
+////============================================================================================================//
+//
+//
 //    @Test(priority = 5)
 //    public void cashInViaBRanchInvalidAmount_CIBR_TC_05() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBRanchInvalidAmount_CIBR_TC_05();
@@ -176,5 +184,9 @@ public class MLWalletCashInViaBranch {
 
 
 
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 }

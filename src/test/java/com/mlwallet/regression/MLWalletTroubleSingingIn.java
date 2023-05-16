@@ -2,10 +2,7 @@ package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
 import com.driverInstance.AppiumServer;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class MLWalletTroubleSingingIn {
     public static String deviceName;
@@ -13,10 +10,15 @@ public class MLWalletTroubleSingingIn {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
+
+
+
+
     //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
+        AppiumServer.startServer();
         MLWalletTroubleSingingIn.deviceName=deviceName;
         MLWalletTroubleSingingIn.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -68,7 +70,10 @@ public class MLWalletTroubleSingingIn {
         MLWalletBusinessLogic.troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17();
     }
 
-
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 
 }
