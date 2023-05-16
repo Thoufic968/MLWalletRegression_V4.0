@@ -17,7 +17,7 @@ public class MLWalletBranchLocator {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
-        AppiumServer.startServer();
+//        AppiumServer.startServer();
         MLWalletBranchLocator.deviceName=deviceName;
         MLWalletBranchLocator.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);

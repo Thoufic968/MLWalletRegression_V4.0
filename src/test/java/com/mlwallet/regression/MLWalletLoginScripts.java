@@ -19,14 +19,14 @@ public class MLWalletLoginScripts {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
-        AppiumServer.startServer();
+//        AppiumServer.startServer();
         MLWalletLoginScripts.deviceName=deviceName;
         MLWalletLoginScripts.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
     }
 
 //====================================================================================================//
-//
+
 //    @Test(priority = 1)
 //    public void LogInScenarioWithValidMobNumber() throws Exception
 //    {
@@ -43,7 +43,7 @@ public class MLWalletLoginScripts {
 //==============================================================================================================//
 
 
-//
+
 //    @Test(priority = 4)
 //    public void appLaunch_Lgn_TC_05() throws Exception {
 //        MLWalletBusinessLogic.appLaunch_Lgn_TC_05();
@@ -73,17 +73,17 @@ public class MLWalletLoginScripts {
 //    public void loginOTPPageUIValidation_Lgn_TC_10() throws Exception {
 //        MLWalletBusinessLogic.loginOTPPageUIValidation_Lgn_TC_10();
 //    }
-//
-//    @Test(priority = 10)
-//    public void loginWithExistingMobileNumber_Lgn_TC_17() throws Exception {
-//        MLWalletBusinessLogic.loginWithExistingMobileNumber_Lgn_TC_17();
-//    }
-//
-//    @Test(priority = 11)
-//    public void loginMPinPageUIValidation_Lgn_TC_18() throws Exception {
-//        MLWalletBusinessLogic.loginMPinPageUIValidation_Lgn_TC_18();
-//    }
-//
+
+    @Test(priority = 10)
+    public void loginWithExistingMobileNumber_Lgn_TC_17() throws Exception {
+        MLWalletBusinessLogic.loginWithExistingMobileNumber_Lgn_TC_17();
+    }
+
+    @Test(priority = 11)
+    public void loginMPinPageUIValidation_Lgn_TC_18() throws Exception {
+        MLWalletBusinessLogic.loginMPinPageUIValidation_Lgn_TC_18();
+    }
+
     @Test(priority = 12)
     public void loginNetworkInterruptionValidation_Lgn_TC_19() throws Exception {
         MLWalletBusinessLogic.loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(prop.getproperty("Branch_Verified"));
@@ -95,9 +95,9 @@ public class MLWalletLoginScripts {
     }
 
 
-    @AfterMethod
-    public void afterMethod(){
-        AppiumServer.stopServer();
-    }
+//    @AfterMethod
+//    public void afterMethod(){
+//        AppiumServer.stopServer();
+//    }
 
 }

@@ -17,7 +17,6 @@ public class MLWalletTroubleSingingIn {
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
-        AppiumServer.startServer();
         MLWalletTroubleSingingIn.deviceName=deviceName;
         MLWalletTroubleSingingIn.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
@@ -69,10 +68,7 @@ public class MLWalletTroubleSingingIn {
         MLWalletBusinessLogic.troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17();
     }
 
-    @AfterMethod
-    public void afterMethod(){
-        AppiumServer.stopServer();
-    }
+
 
 
 }
