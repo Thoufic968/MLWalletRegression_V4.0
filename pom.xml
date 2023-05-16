@@ -307,7 +307,6 @@
 						<!-- TestNG suite XML files -->
 						<!-- <suiteXmlFile>${rp.launch}.xml</suiteXmlFile> -->
 						     <suiteXmlFile>mlwallet.xml</suiteXmlFile>
-						<suiteXmlFile>superSuite.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}.xml</suiteXmlFile> -->
 						<!-- <suiteXmlFile>pwaAndroidHLS.xml</suiteXmlFile> -->
 					</suiteXmlFiles>

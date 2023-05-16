@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6f78265c-f23c-4389-b616-2c880263c940" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBranchLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBranchLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashOutWithdrawScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashOutWithdrawScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionPayBillsScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionPayBillsScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToMLWalletUserScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToMLWalletUserScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTroubleSingingIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTroubleSingingIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
