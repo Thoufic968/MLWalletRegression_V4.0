@@ -32,7 +32,8 @@
 <!--			<class name="com.mlwallet.regression.MLWalletBranchLocator"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
-			<class name="com.mlwallet.regression.MLWalletRegistration" />
+<!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
+			<class name="com.mlwallet.regression.MLWalletUseQR" />
 
 		</classes>
 	</test>

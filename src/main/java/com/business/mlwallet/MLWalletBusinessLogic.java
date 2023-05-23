@@ -9,6 +9,7 @@ import com.propertyfilereader.PropertyFileReader;
 import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
 import com.utility.Utilities;
+import io.appium.java_client.android.Activity;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -8916,9 +8917,37 @@ public class MLWalletBusinessLogic {
 		useQRCodeNavigation(prop.getproperty("Branch_Verified"));
 		verifyElementPresentAndClick(MLWalletUseQR.objGenerateQRCodeToReceiveMoney,getTextVal(MLWalletUseQR.objGenerateQRCodeToReceiveMoney,"Option"));
 		if(verifyElementPresent(MLWalletUseQR.objGenerateQR,getTextVal(MLWalletUseQR.objGenerateQR,"Page"))){
-			
+			verifyElementPresent(MLWalletUseQR.objQR,"Generated QR");
+			verifyElementPresent(MLWalletUseQR.objReceiverName,getTextVal(MLWalletUseQR.objReceiverName,"Receiver Name"));
+			verifyElementPresent(MLWalletUseQR.objReceiverMobileNumber,getTextVal(MLWalletUseQR.objReceiverMobileNumber,"Receiver Mobile Number"));
+			logger.info("QR_TC_01, Use QR, Generate QR Code Validated");
+			ExtentReporter.extentLoggerPass("QR_TC_01", "QR_TC_01, Use QR, Generate QR Code Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
+	public void useQRSendMoneyToAnyMLWalletUser_QR_TC_02() throws Exception {
+		ExtentReporter.HeaderChildNode("Use QR, Send Money To Any ML Wallet User");
+		useQRCodeNavigation(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletUseQR.objReadQRCodeToSendMoney,getTextVal(MLWalletUseQR.objReadQRCodeToSendMoney,"Option"));
+		verifyElementPresentAndClick(MLWalletUseQR.objAllowCamera,getTextVal(MLWalletUseQR.objAllowCamera,"Button"));
+//		---------------------------------------------------
+		setPlatform = "Web";
+		new CommandBase("Chrome","","");
+		waitTime(6000);
+		BrowsertearDown();
+		System.out.println("Closed");
+//		---------------------------------------------------------------
+
+		setPlatform = "Android";
+
+//		DriverManager.getAppiumDriver().activateApp("com.mlhuillier.mlwallet",);
+//				startActivity(new Activity("com.example", "ActivityName"));
+		System.out.println("D");
+	}
+
+
+
 
 	public void switchplatform(){
 		HeaderChildNode("Switch platform");

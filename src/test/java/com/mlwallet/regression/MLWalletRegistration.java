@@ -2,6 +2,7 @@ package com.mlwallet.regression;
 
 import com.business.mlwallet.MLWalletBusinessLogic;
 import com.driverInstance.AppiumServer;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -171,6 +172,11 @@ public class MLWalletRegistration {
     @Test(priority = 30)
     public void registrationTermsAndConditionPageBackBtnValidation_RG_TC_37() throws Exception {
         MLWalletBusinessLogic.registrationTermsAndConditionPageBackBtnValidation_RG_TC_37();
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
     }
 
 //    @Test(priority = 1)

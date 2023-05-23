@@ -307,7 +307,7 @@ public class Drivertools {
 				|| methodName.equals("onboarding_MP") || methodName.equals("zeelogoVerificationInPlayer") 
 				|| methodName.equals("authenticateInprint") || methodName.equals("premiumLiveChannel") 
 				|| methodName.equals("premiumcontentFromInfo") || methodName.equals("rsvodplayback") 
-				|| methodName.equals("switchplatform") || methodName.equals("mlWalletLogin")) {
+				|| methodName.equals("useQRSendMoneyToAnyMLWalletUser_QR_TC_02") || methodName.equals("mlWalletLogin")) {
 			setPlatfrom("Web");
 		}
 		
