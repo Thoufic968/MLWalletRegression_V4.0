@@ -106,10 +106,10 @@ public class MLWalletCashInViaBranch {
 //        MLWalletBusinessLogic.cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19();
 //    }
 //
-//    @Test(priority = 14)
-//    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
-//        MLWalletBusinessLogic.cashInViaBranchBuyerTierUser_CIBR_TC_16();
-//    }
+////    @Test(priority = 14)
+////  public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
+////    MLWalletBusinessLogic.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+////}
 //
 //
 //    @Test(priority = 15)

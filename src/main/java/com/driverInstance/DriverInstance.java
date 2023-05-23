@@ -231,6 +231,7 @@ public class DriverInstance extends Drivertools {
 			WebDriverManager.firefoxdriver().browserVersion("0.27.0").setup();
 			tlWebDriver.set(new FirefoxDriver());
 		} else if (browserName.equalsIgnoreCase("Chrome")) {
+			System.out.println("Launching chrome");
 			WebDriverManager.chromedriver().cachePath("Drivers").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized");

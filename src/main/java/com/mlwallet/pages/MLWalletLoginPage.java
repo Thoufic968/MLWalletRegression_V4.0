@@ -8,7 +8,7 @@ public class MLWalletLoginPage {
 
 //	public static By objMobileNumberTextField=By.xpath("//*[@resource-id='967123']");
 
-	public static By objLoginBtn=By.xpath("//*[@resource-id='208465']");
+	public static By objLoginBtn=By.xpath("//*[@text='Login']");
 	public static By objOtpTextField=By.xpath("//*[@resource-id='textInput']");
 
 	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
