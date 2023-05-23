@@ -8939,10 +8939,8 @@ public class MLWalletBusinessLogic {
 		System.out.println("Closed");
 //		---------------------------------------------------------------
 
-		setPlatform = "Android";
 
-//		DriverManager.getAppiumDriver().activateApp("com.mlhuillier.mlwallet",);
-//				startActivity(new Activity("com.example", "ActivityName"));
+		new MLWalletBusinessLogic("MLWallet","4TWOGQCM6589MBZD","4723");
 		System.out.println("D");
 	}
 
