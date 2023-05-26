@@ -38,6 +38,12 @@ public class DriverInstance extends Drivertools {
 	
 	public static ThreadLocal<RemoteWebDriver> tlWebDriver = new ThreadLocal<>();
 
+
+	public DriverInstance(){
+
+	}
+
+
 	@SuppressWarnings("static-access")
 	public DriverInstance(String Application,String deviceName, String portno) {
 		super(Application,deviceName,portno);
@@ -231,7 +237,6 @@ public class DriverInstance extends Drivertools {
 			WebDriverManager.firefoxdriver().browserVersion("0.27.0").setup();
 			tlWebDriver.set(new FirefoxDriver());
 		} else if (browserName.equalsIgnoreCase("Chrome")) {
-			System.out.println("Launching chrome");
 			WebDriverManager.chromedriver().cachePath("Drivers").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized");
@@ -263,7 +268,7 @@ public class DriverInstance extends Drivertools {
 			tlWebDriver.set(new EdgeDriver());
 		}	
 		//DriverManager.getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		DriverManager.getDriver().get(getURL());
+//		DriverManager.getDriver().get(getURL());
 		//DriverManager.getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 

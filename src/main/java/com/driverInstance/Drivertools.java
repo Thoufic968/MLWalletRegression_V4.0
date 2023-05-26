@@ -91,6 +91,10 @@ public class Drivertools {
 
 	private static String ENV = "";
 
+	public Drivertools(){
+
+	}
+
 	/** The Constant logger. */
 //	final static Logger logger = Logger.getLogger("rootLogger");
 	static LoggingUtils logger = new LoggingUtils();
@@ -289,7 +293,7 @@ public class Drivertools {
 		setTestName(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getName());
 		setBrowserType(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browserType"));
 		setURL(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url"));
-		//setURL1(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url1"));
+		setURL1(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url1"));
 		//setURL(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url1"));
 		setRunModule(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runModule"));
 		setRunMode(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runMode"));
@@ -307,7 +311,7 @@ public class Drivertools {
 				|| methodName.equals("onboarding_MP") || methodName.equals("zeelogoVerificationInPlayer") 
 				|| methodName.equals("authenticateInprint") || methodName.equals("premiumLiveChannel") 
 				|| methodName.equals("premiumcontentFromInfo") || methodName.equals("rsvodplayback") 
-				|| methodName.equals("useQRSendMoneyToAnyMLWalletUser_QR_TC_02") || methodName.equals("mlWalletLogin")) {
+				|| methodName.equals("loginPerformance") || methodName.equals("mlWalletLogin")) {
 			setPlatfrom("Web");
 		}
 		
@@ -321,16 +325,13 @@ public class Drivertools {
 			System.exit(0);
 		}
 		
-		if (getPlatform().equals("Web1")) {
-			if (getURL().equals("https://newpwa.zee5.com/")) {
+		if (getPlatform().equals("Web")) {
+			if (getURL().equals("https://prnt.sc/Yb206x_3XGhc")) {
 				setENV(getURL());
 			} 
-			}else if(getURL().equals("https://pwa-preprod2.zee5.com/")) {
+			}else if(getURL().equals("https://prnt.sc/-tB44a2oVBjN")) {
 				setENV(getURL());
-			}else if(getURL().equals("marquis_UAT")) {
-				setENV(getURL());
-//			}else if (getURL1().equals("https://web.financier.uat-mqf.co.za/LogOn?ReturnUrl=%2fCustomer")) {
-//				setENV(getURL1());
+
 		} else if (getPlatform().equals("Android")) {
 			setENV("Native App");
 			setApk(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("Platform"));

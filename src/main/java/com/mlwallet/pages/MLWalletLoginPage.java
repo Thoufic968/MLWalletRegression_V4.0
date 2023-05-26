@@ -10,6 +10,8 @@ public class MLWalletLoginPage {
 
 	public static By objLoginBtn=By.xpath("//*[@text='Login']");
 	public static By objOtpTextField=By.xpath("//*[@resource-id='textInput']");
+	public static By objCameraPopup = By.xpath("//*[@text='Allow ML Wallet to take pictures and record video?']");
+
 
 	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
 

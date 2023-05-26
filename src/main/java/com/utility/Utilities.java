@@ -2881,7 +2881,31 @@ public class Utilities extends ExtentReporter {
     }
 
 
+    public static void switchPlatformToWeb(String url) {
+        new DriverInstance().LaunchBrowser("Chrome");
+        DriverManager.getDriver().get(url);
+        waitTime(5000);
+//        new Utilities().setPlatform("Web");
+        logger.info("Platform switched to Web Browser for QR Code");
+        ExtentReporter.extentLogger("","Platform switched to Web Browser for QR Code");
+    }
 
+    public static void switchPlatformToAndroid() {
+        waitTime(6000);
+        new Utilities().setPlatform("Android");
+        System.out.println(new Utilities().getPlatform());
+        initDriver();
+        logger.info("Platform switched back to Android");
+        ExtentReporter.extentLogger("","Platform switched back to Android");
+
+    }
+
+    public static void closeWebBrowser() {
+        waitTime(5000);
+        DriverManager.getDriver().close();
+        logger.info("Web Browser Closed");
+        ExtentReporter.extentLogger("","Web Browser Closed");
+    }
 
 
 

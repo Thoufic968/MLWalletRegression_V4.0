@@ -68,4 +68,5 @@ public class MLWalletRegistration {
     public static By objGOBackToLoginScreenBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");
     public static By objTermsAndCondition = By.xpath("//*[@text='Terms and Conditions']");
     public static By objTermsAndConditionBackBtn = By.xpath("//*[@text='Terms and Conditions']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+
 }
