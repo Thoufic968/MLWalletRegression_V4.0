@@ -2908,7 +2908,19 @@ public class Utilities extends ExtentReporter {
     }
 
 
-
+    public static void tapUsingCoordinates(int x, int y) throws Exception {
+        TouchAction t=new  TouchAction(DriverManager.getAppiumDriver());
+        try
+        {
+            t.tap(PointOption.point(x, y)).perform().release();
+            logger.info("Tapped on "+x+","+y+" co-ordinates");
+            ExtentReporter.extentLoggerPass("Tap", "Tapped on "+x+" , "+y+" co-ordinates");
+        }catch(Exception e)
+        {
+            logger.info("Failed to tap on"+x+","+y+" co-ordinates");
+            ExtentReporter.extentLoggerFail("Tap", "Failed to Tap on"+x+","+y+" co-ordinates");
+        }
+    }
 
 
 

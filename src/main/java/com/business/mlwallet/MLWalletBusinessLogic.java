@@ -4726,6 +4726,28 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Tapping Outside the Dragon Pay Popup Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		selectBankAndInputAmount("100");
+		verifyElementPresent(MLWalletCashInBank.objDragonPayChargesMsg, getTextVal(MLWalletCashInBank.objDragonPayChargesMsg, "Message"));
+		String sDragonPayChargesMsg = getText(MLWalletCashInBank.objDragonPayChargesMsg);
+		String sExpectedDragonPayChargesMsg = "Dragon Pay charges a fee of 30 pesos for this transaction. Do you wish to continue with your transaction?";
+		assertionValidation(sDragonPayChargesMsg, sExpectedDragonPayChargesMsg);
+		tapUsingCoordinates(500,1000);
+		logger.info("Clicked OutSide the Dragon Pay Popup");
+		if (verifyElementPresent(MLWalletCashInBank.objDragonPayChargesMsg, getTextVal(MLWalletCashInBank.objDragonPayChargesMsg, "Popup Message"))) {
+			logger.info("CIBA_TC_22, Cash In Via Bank, After Tapping Outside the Dragon Pay Popup, Popup doesn't closed");
+			ExtentReporter.extentLoggerPass("CIBA_TC_22", "CIBA_TC_22, Cash In Via Bank, After Tapping Outside the Dragon Pay Popup, Popup doesn't closed");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+
+
+
+
 	public void cashInViaBankInvalidAmountFieldValidation_CIBA_TC_23() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Bank Invalid Amount Field Validation");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -7111,6 +7133,20 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13(String sAmount) throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Branch, On tapping Outside the CashIn Confirmation Popup");
+		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		cashInViaBranchEnterAmount(sAmount);
+		verifyElementPresent(MLWalletCashInViaBranch.objCashInConfirmationPopup,getTextVal(MLWalletCashInViaBranch.objCashInConfirmationPopup,"Popup"));
+		tapUsingCoordinates(500,1000);
+		logger.info("Clicked OutSide the Dragon Pay Popup");
+		if(verifyElementPresent(MLWalletCashInViaBranch.objCashInConfirmationPopup,getTextVal(MLWalletCashInViaBranch.objCashInConfirmationPopup,"Popup"))){
+			logger.info("CIBR_TC_13, Cash In Via Branch, On tapping Outside the CashIn Confirmation Popup, Popup doesn't closed");
+			ExtentReporter.extentLoggerPass("CIBR_TC_13", "CIBR_TC_13, Cash In Via Branch, On tapping Outside the CashIn Confirmation Popup, Popup doesn't closed");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
 	public void cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Go Back Button validation on CashIn Confirm Popup");
 		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
@@ -7120,7 +7156,6 @@ public class MLWalletBusinessLogic {
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch, getTextVal(MLWalletCashInViaBranch.objCashInToBranch, "Header"));
 		verifyElementPresentAndClick(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"Button"));
-		explicitWaitVisible(MLWalletCashInViaBranch.objCancelTransactionBtn,5);
 		verifyElementPresentAndClick(MLWalletCashInViaBranch.objGoBackBtn,getTextVal(MLWalletCashInViaBranch.objGoBackBtn,"Button"));
 		if(verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch, getTextVal(MLWalletCashInViaBranch.objCashInToBranch, "Header"))){
 			logger.info("CIBR_TC_14, Cash In Via Branch, On clicking Go Back Button on CashIn Confirm Popup Application Navigates to CashIn Page with pending Status");
@@ -7128,6 +7163,24 @@ public class MLWalletBusinessLogic {
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
+	public void cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Branch, On tapping Outside the Cancel Transaction Confirmation Popup");
+		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch, getTextVal(MLWalletCashInViaBranch.objCashInToBranch, "Header"));
+		verifyElementPresentAndClick(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"Button"));
+		verifyElementPresent(MLWalletCashInViaBranch.objCancelTransactionPopup,getTextVal(MLWalletCashInViaBranch.objCancelTransactionPopup,"PopUp"));
+		tapUsingCoordinates(500,1000);
+		logger.info("Clicked OutSide the Dragon Pay Popup");
+		if(verifyElementPresent(MLWalletCashInViaBranch.objCancelTransactionPopup,getTextVal(MLWalletCashInViaBranch.objCancelTransactionPopup,"PopUp"))){
+			logger.info("CIBR_TC_15, Cash In Via Branch, On tapping Outside the Cancel Transaction Confirmation Popup, Popup doesn't closed");
+			ExtentReporter.extentLoggerPass("CIBR_TC_15", "CIBR_TC_15, Cash In Via Branch, On tapping Outside the Cancel Transaction Confirmation Popup, Popup doesn't closed");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+
 
 	public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Buyer Tier User");

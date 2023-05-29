@@ -44,6 +44,8 @@ public class MLWalletCashInViaBranch {
 	public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
 	public static By objAppInfo = By.xpath("//*[@text='App info']");
 
+	public static By objCashInConfirmationPopup = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+
 
 
 }
