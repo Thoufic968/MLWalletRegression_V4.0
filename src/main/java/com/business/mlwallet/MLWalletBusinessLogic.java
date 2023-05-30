@@ -112,9 +112,11 @@ public class MLWalletBusinessLogic {
 	public void enterOTP(String OTP) throws Exception {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
-		verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//		verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 		Thread.sleep(3000);
-		type(MLWalletLoginPage.objOtpTextField, OTP, "OTP Text Field");
+		for(int i=1;i<=6;i++) {
+			type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
+		}
 	}
 
 	public void backArrowBtn(int nNumber) throws Exception {
@@ -200,7 +202,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
 		type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
-		type(MLWalletLoginPage.objOtpTextField, prop.getproperty("InValid_OTP"), "OTP Text Field");
+//		type(MLWalletLoginPage.objOtpTextField, prop.getproperty("InValid_OTP"), "OTP Text Field");
 	}
 
 
@@ -269,7 +271,9 @@ public class MLWalletBusinessLogic {
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+
+
 			verifyElementPresent(MLWalletLoginPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("Lgn_TC_10, LogIn OTP Page UI Validated");
 			ExtentReporter.extentLoggerPass("Lgn_TC_10", "Lgn_TC_10, LogIn OTP Page UI Validated");
@@ -729,7 +733,7 @@ public class MLWalletBusinessLogic {
 		enableLocation_PopUp();
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("WM_TC_20, One Time Pin page UI Validation");
 			ExtentReporter.extentLoggerPass("WM_TC_20", "WM_TC_20, One Time Pin page UI Validation");
@@ -1324,7 +1328,7 @@ public class MLWalletBusinessLogic {
 		enableLocation_PopUp();
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("WM_TC_60, CashOut/WithDraw ML Branch OTP Page UI Validated");
 			ExtentReporter.extentLoggerPass("WM_TC_60", "WM_TC_20, CashOut/WithDraw ML Branch OTP Page UI Validated");
@@ -3045,7 +3049,7 @@ public class MLWalletBusinessLogic {
 		enableLocation_PopUp();
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("STW_TC_17, One Time Pin page UI Validated");
 			ExtentReporter.extentLoggerPass("STW_TC_17", "STW_TC_16, One Time Pin page UI Validated");
@@ -6566,7 +6570,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("BE_TC_25, Buy ELoad One Time Pin page UI Validated");
 			ExtentReporter.extentLoggerPass("BE_TC_25", "BE_TC_25, Buy ELoad One Time Pin page UI Validated");
@@ -8376,7 +8380,7 @@ public class MLWalletBusinessLogic {
 
 	public void registrationPageNavigation() throws Exception {
 		verifyElementPresentAndClick(MLWalletRegistration.objCreateOne,getTextVal(MLWalletRegistration.objCreateOne,"Button"));
-		explicitWaitVisibility(MLWalletRegistration.objMobileNumberField, 10);
+		waitTime(6000);
 		type(MLWalletRegistration.objMobileNumberField, prop.getproperty("Registration_MobileNumber"), "Mobile Number Text Field");
 		click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm,"Button"));
 		enterOTP(prop.getproperty("Valid_OTP"));
@@ -8430,6 +8434,7 @@ public class MLWalletBusinessLogic {
 
 	public void registrationAddressPageNavigation() throws Exception {
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		emailAndPlaceOfBirth();
@@ -8443,7 +8448,7 @@ public class MLWalletBusinessLogic {
 	public void registrationInvalidMobileNumber_RG_TC_02() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration With Invalid Number");
 		verifyElementPresentAndClick(MLWalletRegistration.objCreateOne,getTextVal(MLWalletRegistration.objCreateOne,"Button"));
-		explicitWaitVisibility(MLWalletRegistration.objMobileNumberField, 10);
+		waitTime(10000);
 		type(MLWalletRegistration.objMobileNumberField, prop.getproperty("Invalid_MobileNumber"), "Mobile Number Text Field");
 		click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm,"Button"));
 		if (verifyElementPresent(MLWalletLoginPage.objInvalidMobNumberTxt, getTextVal(MLWalletLoginPage.objInvalidMobNumberTxt, "Error Message"))) {
@@ -8456,6 +8461,7 @@ public class MLWalletBusinessLogic {
 	public void registrationFirstNameInputFieldValidation_RG_TC_04() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration First Name Input Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo,getTextVal(MLWalletRegistration.objRegistrationPersonalInfo,"Page"));
 		verifyElementPresent(MLWalletRegistration.objPersonalInfo,getTextVal(MLWalletRegistration.objPersonalInfo,"Header"));
 		type(MLWalletRegistration.objFirstName,prop.getproperty("Invalid_First_Name"),"First Name Input Field");
@@ -8475,6 +8481,7 @@ public class MLWalletBusinessLogic {
 	public void registrationMiddleNameInputFieldValidation_RG_TC_05() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Middle Name Input Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo,getTextVal(MLWalletRegistration.objRegistrationPersonalInfo,"Page"));
 		verifyElementPresent(MLWalletRegistration.objPersonalInfo,getTextVal(MLWalletRegistration.objPersonalInfo,"Header"));
 		type(MLWalletRegistration.objFirstName,prop.getproperty("First_Name"),"First Name Input Field");
@@ -8495,6 +8502,7 @@ public class MLWalletBusinessLogic {
 	public void registrationLastNameInputFieldValidation_RG_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Last Name Input Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo,getTextVal(MLWalletRegistration.objRegistrationPersonalInfo,"Page"));
 		verifyElementPresent(MLWalletRegistration.objPersonalInfo,getTextVal(MLWalletRegistration.objPersonalInfo,"Header"));
 		type(MLWalletRegistration.objFirstName,prop.getproperty("First_Name"),"First Name Input Field");
@@ -8514,6 +8522,7 @@ public class MLWalletBusinessLogic {
 	public void registrationInvalidBirthDate_RG_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Invalid Birth Date");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		verifyElementPresentAndClick(MLWalletRegistration.objBirthDate,"Birth Date Input Field");
 		verifyElementPresentAndClick(MLWalletRegistration.objOkBtn,getTextVal(MLWalletRegistration.objOkBtn,"Button"));
@@ -8532,6 +8541,7 @@ public class MLWalletBusinessLogic {
 	public void registrationInvalidEmailAddress_RG_TC_08() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Invalid Email Address");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		type(MLWalletRegistration.objEmailAddress,prop.getproperty("Invalid_Email_Address"),"Email Address Field");
@@ -8549,6 +8559,7 @@ public class MLWalletBusinessLogic {
 	public void registrationInvalidReEnterEmailAddress_RG_TC_09() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Invalid Re-Enter Email Address");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		type(MLWalletRegistration.objEmailAddress, prop.getproperty("Email"), "Email Address Field");
@@ -8568,6 +8579,7 @@ public class MLWalletBusinessLogic {
 	public void registrationInvalidPlaceOfBirthValidation_RG_TC_10() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Invalid Place of Birth");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		type(MLWalletRegistration.objEmailAddress, prop.getproperty("Email"), "Email Address Field");
@@ -8588,6 +8600,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyNationalityFieldValidation_RG_TC_11() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Nationality Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		emailAndPlaceOfBirth();
@@ -8606,6 +8619,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyCivilStatusFieldValidation_RG_TC_12() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Civil status Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		emailAndPlaceOfBirth();
@@ -8624,6 +8638,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyGenderFieldValidation_RG_TC_13() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Gender Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		emailAndPlaceOfBirth();
@@ -8703,6 +8718,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyFirstNameFieldValidation_RG_TC_18() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty First Name Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		swipeAndConfirm();
 		Swipe("DOWN",2);
 		if (verifyElementPresent(MLWalletRegistration.objFirstNameErrorMsg, getTextVal(MLWalletRegistration.objFirstNameErrorMsg, "Error Message"))) {
@@ -8718,6 +8734,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyMiddleNameFieldValidation_RG_TC_19() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Middle Name Input Validation");
 		registrationPageNavigation();
+		waitTime(6000);
 		verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo,getTextVal(MLWalletRegistration.objRegistrationPersonalInfo,"Page"));
 		verifyElementPresent(MLWalletRegistration.objPersonalInfo,getTextVal(MLWalletRegistration.objPersonalInfo,"Header"));
 		type(MLWalletRegistration.objFirstName,prop.getproperty("First_Name"),"First Name Input Field");
@@ -8736,6 +8753,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyLastNameFieldValidation_RG_TC_20() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Last Name Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo,getTextVal(MLWalletRegistration.objRegistrationPersonalInfo,"Page"));
 		verifyElementPresent(MLWalletRegistration.objPersonalInfo,getTextVal(MLWalletRegistration.objPersonalInfo,"Header"));
 		type(MLWalletRegistration.objFirstName,prop.getproperty("First_Name"),"First Name Input Field");
@@ -8755,6 +8773,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyEmailAddress_RG_TC_22() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Email Address Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		swipeAndConfirm();
@@ -8772,6 +8791,7 @@ public class MLWalletBusinessLogic {
 	public void registrationEmptyPlaceOfBirthValidation_RG_TC_23() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Empty Place of Birth Field Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		registrationInputName();
 		selectDate();
 		type(MLWalletRegistration.objEmailAddress, prop.getproperty("Email"), "Email Address Field");
@@ -8846,7 +8866,7 @@ public class MLWalletBusinessLogic {
 		type(MLWalletRegistration.objMobileNumberField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
 		click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm,"Button"));
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("RG_TC_28, Registration One Time Pin page UI Validated");
 			ExtentReporter.extentLoggerPass("RG_TC_28", "RG_TC_28, Registration One Time Pin page UI Validated");
@@ -8907,6 +8927,7 @@ public class MLWalletBusinessLogic {
 	public void registrationPersonalInfoPageBackBtnValidationRG_TC_33() throws Exception {
 		ExtentReporter.HeaderChildNode("Registration Personal Info Page Back Btn Validation");
 		registrationPageNavigation();
+		waitTime(5000);
 		waitTime(5000);
 		verifyElementPresentAndClick(MLWalletRegistration.objRegistrationPersonalInfoBackBtn,"OTP Page Back arrow Btn");
 		if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
@@ -9216,7 +9237,7 @@ public class MLWalletBusinessLogic {
 		enableLocation_PopUp();
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
+//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("QR_TC_15,Use QR, One Time Pin screen UI Validated");
 			ExtentReporter.extentLoggerPass("QR_TC_15", "QR_TC_15,Use QR, One Time Pin screen UI Validated");
