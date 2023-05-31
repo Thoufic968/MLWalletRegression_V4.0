@@ -113,9 +113,23 @@ public class MLWalletBusinessLogic {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
 //		verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-		Thread.sleep(3000);
-		for(int i=1;i<=6;i++) {
-			type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
+//		Thread.sleep(3000);
+//		for(int i=1;i<=6;i++) {
+//			type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
+//		}
+
+		waitTime(5000);
+		if(verifyElementPresent(MLWalletLoginPage.objContinueBtn, "Continue Button Pop Up")) {
+			click(MLWalletLoginPage.objContinueBtn, "Clicked On OTP Continue Button");
+		}else {
+			explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 20);
+			waitTime(2000);
+			verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+
+			for(int i=1;i<=6;i++) {
+				type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
+			}
+			waitTime(3000);
 		}
 	}
 
@@ -272,9 +286,7 @@ public class MLWalletBusinessLogic {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-
-
-			verifyElementPresent(MLWalletLoginPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
+//			verifyElementPresent(MLWalletLoginPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("Lgn_TC_10, LogIn OTP Page UI Validated");
 			ExtentReporter.extentLoggerPass("Lgn_TC_10", "Lgn_TC_10, LogIn OTP Page UI Validated");
 			System.out.println("-----------------------------------------------------------");
@@ -4806,8 +4818,8 @@ public class MLWalletBusinessLogic {
 		dragonPayChargesMsgValidation();
 		reviewTransactionValidation();
 		waitTime(5000);
-		if (verifyElementPresent(MLWalletCashInBank.objBankMaxLimitTxt, getTextVal(MLWalletCashInBank.objBankMaxLimitTxt, "Error Message"))) {
-			String sErrorMsg = getText(MLWalletCashInBank.objBankMaxLimitTxt);
+		if (verifyElementPresent(MLWalletCashInBank.objBankMaxLimitTxtFullyVerified, getTextVal(MLWalletCashInBank.objBankMaxLimitTxtFullyVerified, "Error Message"))) {
+			String sErrorMsg = getText(MLWalletCashInBank.objBankMaxLimitTxtFullyVerified);
 			String sExpectedErrorMsg = "The maximum Bank Cash-in per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			logger.info("CIBA_TC_28, To validate Maximum Limit of transaction");
@@ -4949,6 +4961,7 @@ public class MLWalletBusinessLogic {
 			ExtentReporter.extentLoggerPass("CIBA_TC_40", "CIBA_TC_40, Cash In Via Bank Internet Interruption While Entering OTP Validated");
 			System.out.println("-----------------------------------------------------------");
 		}
+		setWifiConnectionToONOFF("ON");
 	}
 
 

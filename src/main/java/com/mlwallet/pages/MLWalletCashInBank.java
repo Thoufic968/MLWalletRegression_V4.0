@@ -24,7 +24,7 @@ public class MLWalletCashInBank {
 
     public static By objServiceFeeMsg = By.xpath("(//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView)[2]");
 
-    public static By objDragonPayChargesMsg = By.xpath("(//*[@text='Continue']/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView)[2]");
+    public static By objDragonPayChargesMsg = By.xpath("//*[@text='Continue']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objContinueBtn = By.xpath("//*[@text='Continue']");
 
@@ -51,22 +51,22 @@ public class MLWalletCashInBank {
 
     public static By objSuccessMsg = By.xpath("//*[@resource-id='ContentPlaceHolder1_Label1']");
 
-    public static By objMinimumTransactionPopupMsg = By.xpath("(//*[@text='Ok']/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMinimumTransactionPopupMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objInvalidAmountMsg = By.xpath("//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 
-    public static By objMaxLimitErrorMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMaxLimitErrorMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objCashInBackArrowBtn = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]]]]]/*/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]])[1]/*/*[@text and ./parent::*[@class='android.view.ViewGroup']])[1]");
     public static By objSearchBank = By.xpath("//*[@class='android.widget.EditText']");
     public static By objBanks = By.xpath("//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[@text]]/child::android.widget.TextView");
     public static By objNoRecentTransactionTxt = By.xpath("//*[@text='No Recent Transaction']");
     public static By objSelectBankBackBtn = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]]]]]/*/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]])[1]/*/*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup']])[1]");
     public static By objDragonPayBackBtn = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup' and ./*[./*[@class='android.widget.ScrollView']]]]]]/*/*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup']])[1]");
-    public static By objReceiverName = By.xpath("//*[@resource-id='fullName']");
-    public static By objBankName = By.xpath("//*[@resource-id='longName']");
-    public static By objPrincipalAmount = By.xpath("//*[@resource-id='initialAmount']");
-    public static By objServiceFee = By.xpath("//*[@resource-id='serviceFee']");
-    public static By objEmail = By.xpath("//*[@resource-id='email']");
+    public static By objReceiverName = By.xpath("//*[@resource-id='8NNBWZ']");
+    public static By objBankName = By.xpath("//*[@resource-id='7NECLV']");
+    public static By objPrincipalAmount = By.xpath("//*[@resource-id='BJBQYQ']");
+    public static By objServiceFee = By.xpath("//*[@resource-id='FKA4CU']");
+    public static By objEmail = By.xpath("//*[@resource-id='CVI6QY']");
     public static By objReviewTransactionBackBtn = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup' and ./*[./*[@class='android.widget.ScrollView']]]]]]/*/*[@text and ./parent::*[@class='android.view.ViewGroup']])[1]");
     public static By objPendingStatus = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]/*[@class='android.widget.TextView'])[19]");
     public static By objPending = By.xpath("//*[@text='Pending']");
@@ -74,8 +74,10 @@ public class MLWalletCashInBank {
     public static By objTransactionHistoryBackBtn = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]]]]]/*/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]])[1]/*/*[@text and ./parent::*[@class='android.view.ViewGroup']])[1]");
     public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
     public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
-    public static By objMaxLimitTxt = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
-    public static By objBankMaxLimitTxt = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+    public static By objMaxLimitTxt = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objBankMaxLimitTxt = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objBankMaxLimitTxtFullyVerified = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
     public static By objAppInfo = By.xpath("//*[@text='App info']");
 
 

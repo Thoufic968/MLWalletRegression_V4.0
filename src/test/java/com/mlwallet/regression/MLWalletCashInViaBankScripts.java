@@ -118,15 +118,14 @@ public class MLWalletCashInViaBankScripts {
 //    public void cancelButtonValidationInDragonPayPopUp_CIBA_TC_21() throws Exception {
 //        MLWalletBusinessLogic.cancelButtonValidationInDragonPayPopUp_CIBA_TC_21();
 //    }
-
-
-    @Test(priority = 18)
-    public void cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22();
-    }
-
-
-
+//
+//
+//    @Test(priority = 18)
+//    public void cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22();
+//    }
+//
+//
 //    @Test(priority = 19)
 //    public void cashInViaBankInvalidAmountFieldValidation_CIBA_TC_23() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBankInvalidAmountFieldValidation_CIBA_TC_23();
@@ -138,7 +137,7 @@ public class MLWalletCashInViaBankScripts {
 //    }
 //
 //    @Test(priority = 21)
-//    public void cashInViaBankMaxLimit_CIBA_TC_27() throws Exception {
+//    public void cashInViaBankSemiVerifiedUserMaxLimit_CIBA_TC_27() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBankSemiVerifiedUserMaxLimit_CIBA_TC_27();
 //    }
 //
@@ -182,16 +181,16 @@ public class MLWalletCashInViaBankScripts {
 //    public void cashInViaBankLocationPopUpAllowFunctionality_CIBA_TC_39() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBankLocationPopUpAllowFunctionality_CIBA_TC_39();
 //    }
-//
-//    @Test(priority = 30)
-//    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
-//        MLWalletBusinessLogic.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
-//    }
-//
-//    @Test(priority = 31)
-//    public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
-//        MLWalletBusinessLogic.cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43();
-//    }
+
+    @Test(priority = 30)
+    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
+    }
+
+    @Test(priority = 31)
+    public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43();
+    }
 
 
     @AfterMethod

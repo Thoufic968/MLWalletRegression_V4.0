@@ -64,10 +64,10 @@ public class MLWalletHomePage {
     public static By objLocationPopUpAllowOnceBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']");
     public static By objPopUpDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_button']");
     public static By objContactPopupDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_and_dont_ask_again_button']");
-    public static By objPermissionDeniedPopUp = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[1]");
-    public static By objOpenSettingBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");
-    public static By objCloseBtn = By.xpath("//*[@resource-id='modal-cancel-button']/child::android.widget.TextView");
-    public static By objInternetConnectionPopUp = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[1]");
-    public static By objInternetConnectionMsg = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[2]");
-    public static By objOkBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");
+    public static By objPermissionDeniedPopUp = By.xpath("//*[@text='Permission Denied']");
+    public static By objOpenSettingBtn = By.xpath("//*[@text='Open Settings']");
+    public static By objCloseBtn = By.xpath("//*[@text='Close']");
+    public static By objInternetConnectionPopUp = By.xpath("//*[@text='Connection Error']");
+    public static By objInternetConnectionMsg = By.xpath("//*[@text='Connection Error']/following-sibling::android.widget.TextView");
+    public static By objOkBtn = By.xpath("//*[@text='Ok']");
 }

@@ -13,7 +13,7 @@ public class MLWalletLoginPage {
 		return By.xpath("(//*[@class='android.widget.EditText'])["+i+"]");
 	}
 	public static By objCameraPopup = By.xpath("//*[@text='Allow ML Wallet to take pictures and record video?']");
-
+	public static By objContinueBtn = By.xpath("//*[@text='CONTINUE']");
 
 	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
 
