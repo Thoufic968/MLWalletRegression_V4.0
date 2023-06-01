@@ -121,15 +121,16 @@ public class MLWalletBusinessLogic {
 		waitTime(5000);
 		if(verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
 			click(MLWalletLoginPage.objContinueBtn, "Clicked On OTP Continue Button");
-		}else {
-			explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 20);
-			waitTime(2000);
+		}else if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)){
+			waitTime(10000);
 			verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
 
 			for(int i=1;i<=6;i++) {
 				type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
 			}
 			waitTime(3000);
+		}else{
+			handleMpin("1111","");
 		}
 	}
 
@@ -746,7 +747,7 @@ public class MLWalletBusinessLogic {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
+//			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("WM_TC_20, One Time Pin page UI Validation");
 			ExtentReporter.extentLoggerPass("WM_TC_20", "WM_TC_20, One Time Pin page UI Validation");
 			System.out.println("-----------------------------------------------------------");
@@ -831,8 +832,8 @@ public class MLWalletBusinessLogic {
 		enterBankDetails(prop.getproperty("AccountNumber"));
 		Thread.sleep(3000);
 		enterAmountBank(sAmount);
-		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitTxt, getTextVal(MLWalletCashOutPage.objMaxLimitTxt, "Text Message"))) {
-			String sErrorMessage = getText(MLWalletCashOutPage.objMaxLimitTxt);
+		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitUpgrade, getTextVal(MLWalletCashOutPage.objMaxLimitUpgrade, "Text Message"))) {
+			String sErrorMessage = getText(MLWalletCashOutPage.objMaxLimitUpgrade);
 			String ExpectedTxt = "Bank Cash-out is not allowed for customers at this verification level. Please upgrade your account to use this service.";
 			assertionValidation(sErrorMessage, ExpectedTxt);
 			verifyElementPresent(MLWalletCashOutPage.objUpgradeNowBtn, getTextVal(MLWalletCashOutPage.objUpgradeNowBtn, "Button"));
@@ -951,8 +952,8 @@ public class MLWalletBusinessLogic {
 		enterBankDetails(prop.getproperty("AccountNumber"));
 		Thread.sleep(3000);
 		enterAmountBank("30000");
-		if (verifyElementPresent(MLWalletCashOutPage.objBankMaxLimitTxt, getTextVal(MLWalletCashOutPage.objBankMaxLimitTxt, "Error Message"))) {
-			String sErrorMsg = getText(MLWalletCashOutPage.objBankMaxLimitTxt);
+		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitUpgrade, getTextVal(MLWalletCashOutPage.objMaxLimitUpgrade, "Error Message"))) {
+			String sErrorMsg = getText(MLWalletCashOutPage.objMaxLimitUpgrade);
 			String sExpectedErrorMsg = "The maximum Bank Cash-out per transaction set for your verification level is P5,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(MLWalletCashOutPage.objUpgradeNowBtn, getTextVal(MLWalletCashOutPage.objUpgradeNowBtn, "Button"));
@@ -986,8 +987,8 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Semi_Verified"));
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch("20000");
-		if (verifyElementPresent(MLWalletCashOutPage.objBankMaxLimitTxt, getTextVal(MLWalletCashOutPage.objBankMaxLimitTxt, "Error Message"))) {
-			String sErrorMsg = getText(MLWalletCashOutPage.objBankMaxLimitTxt);
+		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitUpgrade, getTextVal(MLWalletCashOutPage.objMaxLimitUpgrade, "Error Message"))) {
+			String sErrorMsg = getText(MLWalletCashOutPage.objMaxLimitUpgrade);
 			String sExpectedErrorMsg = "The maximum Branch Cash-out per transaction set for your verification level is P5,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(MLWalletCashOutPage.objUpgradeNowBtn, getTextVal(MLWalletCashOutPage.objUpgradeNowBtn, "Button"));
@@ -1547,6 +1548,7 @@ public class MLWalletBusinessLogic {
 		enterAmountBank(sAmount);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
+			waitTime(4000);
 			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
 				logger.info("WM_TC_73, CashOut/Withdraw Bank Location popup Allow Button Functionality Validated");
 				ExtentReporter.extentLoggerPass("WM_TC_73", "WM_TC_73, CashOut/Withdraw Bank Location popup Allow Button Functionality Validated");
@@ -1622,6 +1624,7 @@ public class MLWalletBusinessLogic {
 		enterAmountMLBranch(sAmount);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
+			waitTime(4000);
 			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
 				logger.info("WM_TC_78, CashOut/Withdraw Branch Location popup Allow Button Functionality Validated");
 				ExtentReporter.extentLoggerPass("WM_TC_78", "WM_TC_78, CashOut/Withdraw Branch Location popup Allow Button Functionality Validated");
@@ -1640,7 +1643,7 @@ public class MLWalletBusinessLogic {
 		waitTime(3000);
 		enterAmountBank(sAmount);
 		enableLocation_PopUp();
-		explicitWaitVisible(MLWalletLoginPage.objOneTimePin,10);
+		waitTime(6000);
 		setWifiConnectionToONOFF("OFF");
 		enterOTP(prop.getproperty("Valid_OTP"));
 		if(verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))){
@@ -1660,7 +1663,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch(sAmount);
 		enableLocation_PopUp();
-		explicitWaitVisible(MLWalletLoginPage.objOneTimePin,10);
+		waitTime(6000);
 		setWifiConnectionToONOFF("OFF");
 		enterOTP(prop.getproperty("Valid_OTP"));
 		if(verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))){

@@ -33,9 +33,10 @@ public class MLWalletCashOutPage {
 
     public static By objBackArrowBtn = By.xpath("//*[@text='Transaction Details']/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView");
 
-    public static By objMaxLimitTxt = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMaxLimitTxt = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objMaxLimitUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
-    public static By objInsufficientBalance = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objInsufficientBalance = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objOkBtn = By.xpath("//*[@resource-id='modal-confirm-button']");
 
     public static By objCashOutPageBackArrowBtn = By.xpath("//*[@text='Cash Out']/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView");
@@ -76,7 +77,7 @@ public class MLWalletCashOutPage {
 
     public static By objTransactionReceipt = By.xpath("//*[@text='Transaction Receipt']");
 
-    public static By objAccInvalidErrorMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objAccInvalidErrorMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objBackArrow = By.xpath("//*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[./*[./*[@class='android.widget.ScrollView']]]]]]]");
 
@@ -84,9 +85,9 @@ public class MLWalletCashOutPage {
 
     public static By objDragonPayPopUpMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
 
-    public static By objBankMaxLimitTxt = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+    public static By objBankMaxLimitTxt = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
-    public static By objMinimumTransactionErrorMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMinimumTransactionErrorMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
 //    public static By objReceiversName = By.xpath("//*[@text='Review Transaction']");
 
@@ -140,13 +141,13 @@ public class MLWalletCashOutPage {
     public static By objOneTimePinBackBtn = By.xpath("//*[@text='One Time Pin']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 
     public static By objReviewTransaction = By.xpath("//*[@text='Review Transaction']");
-    public static By objReceiverName = By.xpath("//*[@resource-id='fullName']");
-    public static By objBankName = By.xpath("//*[@resource-id='bankName']");
-    public static By objAccountNumber = By.xpath("//*[@resource-id='accountNumber']");
-    public static By objAmount = By.xpath("//*[@resource-id='amount']");
-    public static By objServiceFee = By.xpath("//*[@resource-id='serviceFee']");
-    public static By objTotalAmountDeduct = By.xpath("//*[@resource-id='netAmount']");
-    public static By objEmailAddressUpdated = By.xpath("//*[@resource-id='email']");
+    public static By objReceiverName = By.xpath("//*[@resource-id='CQIWYB']");
+    public static By objBankName = By.xpath("//*[@resource-id='UMQBR2']");
+    public static By objAccountNumber = By.xpath("//*[@resource-id='WQMCNC']");
+    public static By objAmount = By.xpath("//*[@resource-id='C9ZSVZ']");
+    public static By objServiceFee = By.xpath("//*[@resource-id='M3JX35']");
+    public static By objTotalAmountDeduct = By.xpath("//*[@resource-id='PR4KMJ']");
+    public static By objEmailAddressUpdated = By.xpath("//*[@resource-id='5NTB7H']");
     public static By objNewTransaction = By.xpath("//*[@text='New Transaction']");
     public static By objPHP = By.xpath("//*[contains(@text,'PHP')]");
     public static By objCancelIcon = By.xpath("//*[@text='Cash Out']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
