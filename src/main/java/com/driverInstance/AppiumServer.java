@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class AppiumServer{
@@ -16,7 +17,13 @@ public class AppiumServer{
 
    }
       static AppiumDriverLocalService service;
-   public static void startServer(){
+   public static void startServer() throws IOException {
+
+      String cmd1 ="adb uninstall io.appium.uiautomator2.server";
+      String cmd2 = "adb uninstall io.appium.uiautomator2.server.test";
+      Runtime.getRuntime().exec(cmd1);
+      Runtime.getRuntime().exec(cmd2);
+
      /* service=new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\IGS0502\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
               .withIPAddress("127.0.0.1").usingPort(4723).withStartUpTimeOut(60, TimeUnit.SECONDS).build();
 

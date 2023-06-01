@@ -21,8 +21,8 @@
 
 
 <!--			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
-			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
-<!--			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
+			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
 <!--			<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->

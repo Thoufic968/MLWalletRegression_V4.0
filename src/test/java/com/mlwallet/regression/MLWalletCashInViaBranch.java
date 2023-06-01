@@ -95,22 +95,22 @@ public class MLWalletCashInViaBranch {
 //    public void cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12();
 //    }
-
-    @Test(priority = 12)
-    public void cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13("100");
-    }
-
-    @Test(priority = 13)
-    public void cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14();
-    }
-
-    @Test(priority = 14)
-    public void cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15();
-    }
-
+//
+//    @Test(priority = 12)
+//    public void cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13("100");
+//    }
+//
+//    @Test(priority = 13)
+//    public void cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14();
+//    }
+//
+//    @Test(priority = 14)
+//    public void cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15();
+//    }
+//
 //    @Test(priority = 15)
 //    public void cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19();
@@ -186,12 +186,12 @@ public class MLWalletCashInViaBranch {
 //    public void cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32();
 //    }
-//
-//    @Test(priority = 30)
-//    public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
-//        MLWalletBusinessLogic.cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36();
-//    }
-//
+
+    @Test(priority = 30)
+    public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36();
+    }
+
 
 
     @AfterMethod

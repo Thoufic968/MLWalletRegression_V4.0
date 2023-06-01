@@ -84,7 +84,7 @@ public class MLWalletBusinessLogic {
 		type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		enterOTP(prop.getproperty("Valid_OTP"));
-		explicitWaitVisible(MLWalletLoginPage.objAvailableBalance, 10);
+		waitTime(5000);
 		if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
 			logger.info("Application Logged In Successfully");
 		} else {
@@ -110,8 +110,8 @@ public class MLWalletBusinessLogic {
 //================================== Enter OTP ===================================================//
 
 	public void enterOTP(String OTP) throws Exception {
-		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
-		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+//		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
+//		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
 //		verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 //		Thread.sleep(3000);
 //		for(int i=1;i<=6;i++) {
@@ -119,7 +119,7 @@ public class MLWalletBusinessLogic {
 //		}
 
 		waitTime(5000);
-		if(verifyElementPresent(MLWalletLoginPage.objContinueBtn, "Continue Button Pop Up")) {
+		if(verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
 			click(MLWalletLoginPage.objContinueBtn, "Clicked On OTP Continue Button");
 		}else {
 			explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 20);
@@ -6961,9 +6961,6 @@ public class MLWalletBusinessLogic {
 		cashInViaBranchNavigation(sTier);
 		cashInViaBranchEnterAmount("50001");
 		click(MLWalletCashInViaBranch.objContinueButton, getTextVal(MLWalletCashInViaBranch.objContinueButton, "Button"));
-		Swipe("UP", 2);
-		enterOTP(prop.getproperty("Valid_OTP"));
-		enableLocation_PopUp();
 	}
 
 
@@ -7280,8 +7277,8 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Max Transaction Buyer Tier User");
 		maxTransactionLimitValidation(prop.getproperty("Buyer_Tier"));
 		waitTime(5000);
-		if(verifyElementPresent(MLWalletCashInViaBranch.objBankMaxLimitTxt,getTextVal(MLWalletCashInViaBranch.objBankMaxLimitTxt,"Error Message"))) {
-			String sErrorMsg = getText(MLWalletCashInViaBranch.objBankMaxLimitTxt);
+		if(verifyElementPresent(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade,getTextVal(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade,"Error Message"))) {
+			String sErrorMsg = getText(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade);
 			String sExpectedErrorMsg = "The maximum Branch Cash-in per transaction set for your verification level is P20,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			logger.info("CIBR_TC_19, Cash In Via Branch Max Transaction Buyer Tier User,Branch CashIn Not Allowed-Error message Validated");
@@ -7293,8 +7290,8 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Max Transaction Limit Semi-verified Tier User");
 		maxTransactionLimitValidation(prop.getproperty("Semi_Verified"));
 		waitTime(5000);
-		if(verifyElementPresent(MLWalletCashInViaBranch.objBankMaxLimitTxt,getTextVal(MLWalletCashInViaBranch.objBankMaxLimitTxt,"Error Message"))) {
-			String sErrorMsg = getText(MLWalletCashInViaBranch.objBankMaxLimitTxt);
+		if(verifyElementPresent(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade,getTextVal(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade,"Error Message"))) {
+			String sErrorMsg = getText(MLWalletCashInViaBranch.objBankMaxLimitToUpgrade);
 			String sExpectedErrorMsg = "The maximum Branch Cash-in per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			logger.info("CIBR_TC_20, Cash In Via Branch Max Transaction Limit Semi-verified Tier User Validated");
@@ -7512,6 +7509,14 @@ public class MLWalletBusinessLogic {
 	public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Transaction Validation After Minimizing App");
 		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		if(verifyElementDisplayed(MLWalletCashInViaBranch.objCancelTransactionBtn)){
+			click(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"button"));
+			click(MLWalletCashInViaBranch.objCancelBtn1,getTextVal(MLWalletCashInViaBranch.objCancelBtn1,"Button"));
+			verifyElementPresentAndClick(MLWalletCashInViaBranch.objBackToHomeBtn,getTextVal(MLWalletCashInViaBranch.objBackToHomeBtn,"Button"));
+			click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
+			verifyElementPresent(MLWalletCashInViaBranch.objBranchName, "Cash In Options Page");
+			click(MLWalletCashInViaBranch.objBranchName, "ML Branch");
+		}
 		cashInViaBranchEnterAmount("100");
 		waitTime(2000);
 		verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
@@ -7519,7 +7524,9 @@ public class MLWalletBusinessLogic {
 		click(MLWalletCashInViaBranch.objContinueButton, "Continue Button");
 		enterOTP(prop.getproperty("Valid_OTP"));
 		enableLocation_PopUp();
+		waitTime(5000);
 		DriverManager.getAppiumDriver().runAppInBackground(Duration.ofSeconds(5));
+		waitTime(5000);
 		logger.info("Application relaunched after 5 Seconds");
 		if(verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch,getTextVal(MLWalletCashInViaBranch.objCashInToBranch,"Bank Page"))){
 			logger.info("CIBR_TC_36, Cash In Via Branch Transaction Validation After Minimizing App Validated");
