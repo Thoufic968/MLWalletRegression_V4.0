@@ -1740,7 +1740,7 @@ public class MLWalletBusinessLogic {
 	}
 
 	public void enterMLBranchDetails() throws Exception {
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
 			verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 			type(SendTransferPage.objFirstname, prop.getproperty("First_Name"), "First Name Text Field");
@@ -1755,7 +1755,6 @@ public class MLWalletBusinessLogic {
 
 	public void enterAmountToKwartaPadala(String nAmount) throws Exception {
 		waitTime(5000);
-
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -1767,7 +1766,7 @@ public class MLWalletBusinessLogic {
 	}
 
 	public void selectSavedRecipient() throws Exception {
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
 			click(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
 			explicitWaitVisible(SendTransferPage.objSavedRecipients, 5);
@@ -1847,7 +1846,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyRequiredDetails_STB_TC_08() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money Invalid Bank Details");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
 		if (verifyElementPresent(SendTransferPage.objFirstNameRequiredMsg, getTextVal(SendTransferPage.objFirstNameRequiredMsg, "Error Message"))) {
@@ -1894,7 +1893,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyInvalidDetails_STB_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money Invalid Bank Details");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		type(SendTransferPage.objFirstname, prop.getproperty("Invalid_First_Name"), "First Name Text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -1936,7 +1935,7 @@ public class MLWalletBusinessLogic {
 		clearField(SendTransferPage.objMobileNumber, "Mobile Number Text Field");
 		type(SendTransferPage.objMobileNumber, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "page"))) {
 			logger.info("STB_TC_07, Prompt msg for Receiver's Details Invalid is validated");
 			ExtentReporter.extentLoggerPass("STB_TC_07", "STB_TC_07, Prompt msg for Receiver's Details Invalid is validated");
@@ -1948,7 +1947,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyAddRecipient_STB_TC_03() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		addRecipient();
 		type(SendTransferPage.objSearchRecipient, prop.getproperty("Last_Name"), "Search Recipient Text Field");
@@ -2003,7 +2002,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyContactDuplicate_STB_TC_04() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money Contact Duplicate");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		addRecipient();
 		if (verifyElementPresent(SendTransferPage.objContactAlreadyExistMsg, getTextVal(SendTransferPage.objContactAlreadyExistMsg, "Error Message"))) {
@@ -2058,7 +2057,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		enterMLBranchDetails();
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		type(SendTransferPage.objAmountTxtField, Amount, "Amount text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -2074,7 +2073,7 @@ public class MLWalletBusinessLogic {
 
 	public void sendMoneyInsufficientAmount_STB_TC_10() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
-		sendMoneyToAnyMLBranch(prop.getproperty("Semi_Verified"));
+		sendMoneyToAnyMLBranch(prop.getproperty("Fully_verified"));
 		enterMLBranchDetails();
 		enterAmountToKwartaPadala("39000");
 		if (verifyElementPresent(SendTransferPage.objInsufficientAmountMsg, getTextVal(SendTransferPage.objInsufficientAmountMsg, "Error Message"))) {
@@ -2123,7 +2122,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyToBranchUIValidation_STB_TC_14() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to ML Branch page UI Validation");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
 			verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
 			verifyElementPresent(SendTransferPage.objFirstname, "First Name Input Field");
@@ -2141,7 +2140,7 @@ public class MLWalletBusinessLogic {
 	public void sendMoneyToBranchSaveRecipientPageUIValidation_STB_TC_15() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money To Branch Save Recipient Page UI Validation");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresentAndClick(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
 		waitTime(3000);
 		if (verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Page"))) {
@@ -2196,7 +2195,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Send Money To Branch Confirm Details Page UI Validation");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		enterMLBranchDetails();
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -2381,7 +2380,7 @@ public class MLWalletBusinessLogic {
 			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(SendTransferPage.objOkBtn, getTextVal(SendTransferPage.objOkBtn, "Button"));
 			logger.info("STB_TC_29, Send Money To ML Branch, Branch verified Tier Account Maximum Transaction - Error Message is validated");
 			ExtentReporter.extentLoggerPass("STB_TC_29", "STB_TC_29, Send Money To ML Branch, Branch verified Tier Account Maximum Transaction  - Error Message is validated");
 			System.out.println("-----------------------------------------------------------");
@@ -2397,7 +2396,7 @@ public class MLWalletBusinessLogic {
 			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(SendTransferPage.objOkBtn, getTextVal(SendTransferPage.objOkBtn, "Button"));
 			logger.info("STB_TC_32, Send Money To ML Branch, Fully verified Tier Account Maximum Transaction - Error Message is validated");
 			ExtentReporter.extentLoggerPass("STB_TC_32", "STB_TC_32, Send Money To ML Branch, Fully verified Tier Account Maximum Transaction  - Error Message is validated");
 			System.out.println("-----------------------------------------------------------");
@@ -2998,6 +2997,7 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
 			Swipe("UP", 1);
 			verifyElementPresentAndClick(SendTransferPage.objCancelTransaction, getTextVal(SendTransferPage.objCancelTransaction, "Button"));
+			waitTime(5000);
 			if (verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"))) {
 				logger.info("STW_TC_13, Cancelled the current Transaction");
 				ExtentReporter.extentLoggerPass("STW_TC_13", "STW_TC_13, Cancelled the current Transaction");
@@ -3498,11 +3498,14 @@ public class MLWalletBusinessLogic {
 		enterAmountAndSendToMLWallet("10");
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
-			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
-				logger.info("STW_TC_46, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
-				ExtentReporter.extentLoggerPass("STW_TC_46", "STW_TC_46, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
-				System.out.println("-----------------------------------------------------------");
+			if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
+				verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+			}else if(verifyElementDisplayed(MLWalletLoginPage.objMLPin)) {
+				verifyElementPresent(MLWalletLoginPage.objMLPin,getTextVal(MLWalletLoginPage.objMLPin,"Page"));
 			}
+			logger.info("STW_TC_46, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
+			ExtentReporter.extentLoggerPass("STW_TC_46", "STW_TC_46, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
 

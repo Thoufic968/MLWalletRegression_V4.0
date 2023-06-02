@@ -153,10 +153,10 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //        MLWalletBusinessLogic.sendMoneyToMLBranchSemiVerifiedTierAccountMaxAmount_STB_TC_26();
 //    }
 //
-//    @Test(priority = 26)
-//    public void sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29() throws Exception {
-//        MLWalletBusinessLogic.sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29();
-//    }
+    @Test(priority = 26)
+    public void sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29();
+    }
 //
 //    @Test(priority = 27)
 //    public void sendMoneyToMLBranchFullyVerifiedTierAccountMaxAmount_STB_TC_32() throws Exception {
@@ -258,16 +258,16 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
     public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
         MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
     }
-//
-//    @Test(priority = 47)
-//    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
-//        MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
-//    }
-//
-//    @Test(priority = 48)
-//    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
-//        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56();
-//    }
+
+    @Test(priority = 47)
+    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
+    }
+
+    @Test(priority = 48)
+    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56();
+    }
 
     @AfterMethod
     public void afterMethod(){

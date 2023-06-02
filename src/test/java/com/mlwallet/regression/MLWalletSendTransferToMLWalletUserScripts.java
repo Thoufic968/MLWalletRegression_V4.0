@@ -26,7 +26,7 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 //===========================================================================================================//
 
     @Test(priority = 1)
-    public void sendToMLWalletUser() throws Exception
+    public void sendToMLWalletUser_STW_TC_01() throws Exception
     {
         MLWalletBusinessLogic.sendToMLWalletUser_STW_TC_01();
     }
@@ -37,38 +37,38 @@ public class MLWalletSendTransferToMLWalletUserScripts {
     }
 
     @Test(priority = 3)
-    public void sendMoneyMLWalletToExistingReceiver() throws Exception
+    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception
     {
         MLWalletBusinessLogic.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
 
     }
 
     @Test(priority = 4)
-    public void sendToMLWalletInvalidMobNumber() throws Exception
+    public void sendToMLWalletInvalidMobNumber_STW_TC_03() throws Exception
     {
         MLWalletBusinessLogic.sendToMLWalletInvalidMobNumber_STW_TC_03();
     }
 
     @Test(priority = 5)
-    public void sendToMLWalletUnRegisteredNumber() throws Exception
+    public void sendToMLWalletUnRegisteredNumber_STW_TC_04() throws Exception
     {
         MLWalletBusinessLogic.sendToMLWalletUnRegisteredNumber_STW_TC_04();
     }
 
     @Test(priority = 6)
-    public void sendToMLWalletInvalidAmount() throws Exception
+    public void sendToMLWalletInvalidAmount_STW_TC_05() throws Exception
     {
         MLWalletBusinessLogic.sendToMLWalletInvalidAmount_STW_TC_05("0");
     }
 
     @Test(priority = 7)
-    public void sendToMLWalletInsufficientAmount() throws Exception
+    public void sendToMLWalletInsufficientAmount_STW_TC_06() throws Exception
     {
         MLWalletBusinessLogic.sendToMLWalletInsufficientAmount_STW_TC_06();
     }
 
     @Test(priority = 8)
-    public void sendMoneyMLWalletMaximumAmount() throws Exception
+    public void sendMoneyMLWalletMaximumAmount_STW_TC_07() throws Exception
     {
         MLWalletBusinessLogic.sendMoneyMLWalletMaximumAmount_STW_TC_07();
     }
@@ -76,8 +76,8 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 
 //================================================================================================//
 
-    @Test(priority = 9)
-      public void sendMoneyDeleteFromFavorites() throws Exception
+    @Test(priority = 14)
+      public void sendMoneyDeleteFromFavorites_STW_TC_09() throws Exception
     {
         MLWalletBusinessLogic.sendMoneyDeleteFromFavorites_STW_TC_09();
     }
@@ -102,7 +102,7 @@ public class MLWalletSendTransferToMLWalletUserScripts {
         MLWalletBusinessLogic.sendMoneyMLWalletSearchUnFavoriteUser_STW_TC_14();
     }
 
-    @Test(priority = 14)
+    @Test(priority = 9)
     public void sendMoneyMLWalletSearchFavoriteUser_STW_TC_15() throws Exception {
         MLWalletBusinessLogic.sendMoneyMLWalletSearchFavoriteUser_STW_TC_15();
     }
