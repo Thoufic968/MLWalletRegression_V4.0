@@ -2906,7 +2906,7 @@ public class MLWalletBusinessLogic {
 
 	public void sendToMLWalletInsufficientAmount_STW_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
-		sendMoneyMLWallet("9999999999");
+		sendMoneyMLWallet("9999999994");
 		enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
 		enterAmountAndSendToMLWallet("35000");
 		explicitWaitVisible(SendTransferPage.objInsufficientAmountMsg, 5);
@@ -3259,7 +3259,7 @@ public class MLWalletBusinessLogic {
 			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(SendTransferPage.objOkBtn, getTextVal(SendTransferPage.objOkBtn, "Button"));
 			logger.info("STW_TC_29, Send Money To ML Wallet Branch-Verified Account Maximum Limit - Error Message is validated");
 			ExtentReporter.extentLoggerPass("STW_TC_29", "STW_TC_29, Send Money To ML Wallet Branch-Verified Account Maximum Limit  - Error Message is validated");
 			System.out.println("-----------------------------------------------------------");
@@ -3276,7 +3276,7 @@ public class MLWalletBusinessLogic {
 			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(SendTransferPage.objOkBtn, getTextVal(SendTransferPage.objOkBtn, "Button"));
 			logger.info("STW_TC_32, Send Money To ML Wallet Fully-Verified Account Maximum Limit - Error Message is validated");
 			ExtentReporter.extentLoggerPass("STW_TC_32", "STW_TC_32, Send Money To ML Wallet Fully-Verified Account Maximum Limit  - Error Message is validated");
 			System.out.println("-----------------------------------------------------------");
