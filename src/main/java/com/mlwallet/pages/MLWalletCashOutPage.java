@@ -83,7 +83,7 @@ public class MLWalletCashOutPage {
 
     public static By objBankListBackArrow = By.xpath("//*[@text='Bank List']/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView");
 
-    public static By objDragonPayPopUpMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+    public static By objDragonPayPopUpMsg = By.xpath("//*[@text='Continue']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objBankMaxLimitTxt = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 

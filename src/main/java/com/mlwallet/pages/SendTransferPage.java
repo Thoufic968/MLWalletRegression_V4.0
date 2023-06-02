@@ -78,7 +78,7 @@ public class SendTransferPage {
 
     public static By objEditRecipient = By.xpath("//*[@text='Edit']");
 
-    public static By objPopupMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+    public static By objPopupMsg = By.xpath("//*[@text='Remove']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objRemoveBtn = By.xpath("//*[@text='Remove']");
 
@@ -99,10 +99,11 @@ public class SendTransferPage {
 
     public static By objInvalidAmountMsg = By.xpath("//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 
-    public static By objInsufficientAmountMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objInsufficientAmountMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
-    public static By objMaxLimitErrorMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
-    public static By objErrorMsg = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMaxLimitErrorMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objErrorMsg = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
     public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
 
 //======================================== Send to Wallet User ===================================//

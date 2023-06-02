@@ -130,7 +130,7 @@ public class MLWalletBusinessLogic {
 			}
 			waitTime(3000);
 		}else{
-			handleMpin("1111","");
+			handleMpin(prop.getproperty("mPin"));
 		}
 	}
 
@@ -407,7 +407,6 @@ public class MLWalletBusinessLogic {
 		if (verifyElementPresent(MLWalletCashOutPage.objAmountField, "Bank Cash Out Amount Field")) {
 			type(MLWalletCashOutPage.objAmountField, sAmount, "Amount to Send");
 			click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
-			explicitWaitVisible(MLWalletCashOutPage.objDragonPayPopUpMsg,10);
 			waitTime(10000);
 			String sDragonPopUpMsg = getText(MLWalletCashOutPage.objDragonPayPopUpMsg);
 			String sExpectedMsg = "Dragon Pay charges a fee of 35.00 pesos for this transaction. Do you wish to continue with your transaction?";
@@ -712,6 +711,7 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		verifyElementPresentAndClick(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		verifyElementPresentAndClick(MLWalletCashOutPage.objToAnyMLBranch, getTextVal(MLWalletCashOutPage.objToAnyMLBranch, "Button"));
+		waitTime(6000);
 		if (verifyElementPresent(MLWalletCashOutPage.objCashOutPage, getTextVal(MLWalletCashOutPage.objCashOutPage, "Page"))) {
 			verifyElementPresent(MLWalletCashOutPage.ObjCashOutToBranch, getTextVal(MLWalletCashOutPage.objCashOutToBranch, "Header"));
 			verifyElementPresent(MLWalletCashOutPage.objUserName, getTextVal(MLWalletCashOutPage.objUserName, "User Name"));
@@ -744,7 +744,7 @@ public class MLWalletBusinessLogic {
 		Thread.sleep(3000);
 		enterAmountBank(sAmount);
 		enableLocation_PopUp();
-		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
+		waitTime(6000);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 //			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
@@ -974,7 +974,7 @@ public class MLWalletBusinessLogic {
 			String sErrorMsg = getText(MLWalletCashOutPage.objBankMaxLimitTxt);
 			String sExpectedErrorMsg = "The maximum Bank Cash-out per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(MLWalletCashOutPage.objUpgradeNowBtn, getTextVal(MLWalletCashOutPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(MLWalletCashOutPage.objOkBtn, getTextVal(MLWalletCashOutPage.objOkBtn, "Button"));
 			logger.info("WM_TC_36, The Maximum Bank Cash-out per transaction Msg for Fully-verified tier Account is Validated");
 			ExtentReporter.extentLoggerPass("WM_TC_36", "WM_TC_36, The Maximum Bank Cash-out per transaction Msg for Fully-verified tier Account is Validated");
 			System.out.println("-----------------------------------------------------------");
@@ -1008,7 +1008,7 @@ public class MLWalletBusinessLogic {
 			String sErrorMsg = getText(MLWalletCashOutPage.objBankMaxLimitTxt);
 			String sExpectedErrorMsg = "The maximum Branch Cash-out per transaction set for your verification level is P40,000.00. Please try again.";
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
-			verifyElementPresent(MLWalletCashOutPage.objUpgradeNowBtn, getTextVal(MLWalletCashOutPage.objUpgradeNowBtn, "Button"));
+			verifyElementPresent(MLWalletCashOutPage.objOkBtn, getTextVal(MLWalletCashOutPage.objOkBtn, "Button"));
 			logger.info("WM_TC_42, The Maximum Branch Cash-out per transaction Msg for Fully-verified tier Account is Validated");
 			ExtentReporter.extentLoggerPass("WM_TC_42", "WM_TC_42, The Maximum Bank Cash-out per transaction Msg for Fully-verified tier Account is Validated");
 			System.out.println("-----------------------------------------------------------");
@@ -1304,6 +1304,7 @@ public class MLWalletBusinessLogic {
 		type(MLWalletCashOutPage.objAccountNumberInEditRecipient, prop.getproperty("EditedAccountNumber"), "Account Number In Edit Recipient");
 		click(MLWalletCashOutPage.objConfirmBtn, getTextVal(MLWalletCashOutPage.objConfirmBtn, "Button"));
 		verifyElementPresentAndClick(MLWalletCashOutPage.objCheckBox, "Middle Name Check Box");
+		click(MLWalletCashOutPage.objConfirmBtn, getTextVal(MLWalletCashOutPage.objConfirmBtn, "Button"));
 		verifyElementPresentAndClick(MLWalletCashOutPage.BogusBank, getTextVal(MLWalletCashOutPage.BogusBank, "Bank"));
 		verifyElementPresentAndClick(MLWalletCashOutPage.objViewAllBtn, getTextVal(MLWalletCashOutPage.objViewAllBtn, "button"));
 		waitTime(3000);
@@ -1882,7 +1883,7 @@ public class MLWalletBusinessLogic {
 		}
 		type(SendTransferPage.objMobileNumber, prop.getproperty("Branch_Verified"), "Last Name Text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "page"))) {
 			logger.info("STB_TC_08, Prompt msg for Receiver's Details required is validated");
 			ExtentReporter.extentLoggerPass("STB_TC_08", "STB_TC_08, Prompt msg for Receiver's Details required is validated");
@@ -2073,9 +2074,9 @@ public class MLWalletBusinessLogic {
 
 	public void sendMoneyInsufficientAmount_STB_TC_10() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
-		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified_ELoad_LowBalance"));
+		sendMoneyToAnyMLBranch(prop.getproperty("Semi_Verified"));
 		enterMLBranchDetails();
-		enterAmountToKwartaPadala("35000");
+		enterAmountToKwartaPadala("39000");
 		if (verifyElementPresent(SendTransferPage.objInsufficientAmountMsg, getTextVal(SendTransferPage.objInsufficientAmountMsg, "Error Message"))) {
 			String sInsufficientBalanceErrorMsg = getText(SendTransferPage.objInsufficientAmountMsg);
 			String sExpectedErrorMsg = "There is insufficient balance to proceed with this transaction. Please try again.";
@@ -2142,6 +2143,7 @@ public class MLWalletBusinessLogic {
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
 		verifyElementPresentAndClick(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
+		waitTime(3000);
 		if (verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Page"))) {
 			verifyElementPresent(SendTransferPage.objAddRecipient, getTextVal(SendTransferPage.objAddRecipient, "Button"));
 			verifyElementPresent(SendTransferPage.objSelectRecipient, getTextVal(SendTransferPage.objSelectRecipient, "Header"));
@@ -2237,7 +2239,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Send Money To Branch Enter Amount Page UI Validation");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		enterMLBranchDetails();
-		explicitWaitVisible(SendTransferPage.objKwartaPadala, 5);
+		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
 			verifyElementPresent(SendTransferPage.objAmountToSend, getTextVal(SendTransferPage.objAmountToSend, "Header"));
 			verifyElementPresent(SendTransferPage.objAmountTxtField, "Amount Input Field");
@@ -2375,8 +2377,8 @@ public class MLWalletBusinessLogic {
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		enterMLBranchDetails();
 		enterAmountToKwartaPadala("60000");
-		if (verifyElementPresent(SendTransferPage.objErrorMsg, getTextVal(SendTransferPage.objErrorMsg, "Error Message"))) {
-			String sMaximumLimitErrorMsg = getText(SendTransferPage.objErrorMsg);
+		if (verifyElementPresent(SendTransferPage.objMaxLimitErrorMsg, getTextVal(SendTransferPage.objMaxLimitErrorMsg, "Error Message"))) {
+			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
@@ -2391,8 +2393,8 @@ public class MLWalletBusinessLogic {
 		sendMoneyToAnyMLBranch(prop.getproperty("Fully_verified"));
 		enterMLBranchDetails();
 		enterAmountToKwartaPadala("60000");
-		if (verifyElementPresent(SendTransferPage.objErrorMsg, getTextVal(SendTransferPage.objErrorMsg, "Error Message"))) {
-			String sMaximumLimitErrorMsg = getText(SendTransferPage.objErrorMsg);
+		if (verifyElementPresent(SendTransferPage.objMaxLimitErrorMsg, getTextVal(SendTransferPage.objMaxLimitErrorMsg, "Error Message"))) {
+			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
@@ -2667,13 +2669,17 @@ public class MLWalletBusinessLogic {
 		enterAmountToKwartaPadala("100");
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
-			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
-				logger.info("STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
-				ExtentReporter.extentLoggerPass("STB_TC_54", "STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
-				System.out.println("-----------------------------------------------------------");
+			if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
+				verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+			}else if(verifyElementDisplayed(MLWalletLoginPage.objMLPin)) {
+				verifyElementPresent(MLWalletLoginPage.objMLPin,getTextVal(MLWalletLoginPage.objMLPin,"Page"));
 			}
+			logger.info("STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
+			ExtentReporter.extentLoggerPass("STB_TC_54", "STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
 
 
 	public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
@@ -3249,8 +3255,8 @@ public class MLWalletBusinessLogic {
 		sendMoneyMLWallet(prop.getproperty("Branch_Verified"));
 		enterMobileNumberMLWallet(prop.getproperty("Fully_verified"));
 		enterAmountAndSendToMLWallet("60000");
-		if (verifyElementPresent(SendTransferPage.objErrorMsg, getTextVal(SendTransferPage.objErrorMsg, "Error Message"))) {
-			String sMaximumLimitErrorMsg = getText(SendTransferPage.objErrorMsg);
+		if (verifyElementPresent(SendTransferPage.objMaxLimitErrorMsg, getTextVal(SendTransferPage.objMaxLimitErrorMsg, "Error Message"))) {
+			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
@@ -3266,8 +3272,8 @@ public class MLWalletBusinessLogic {
 		sendMoneyMLWallet(prop.getproperty("Fully_verified"));
 		enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
 		enterAmountAndSendToMLWallet("60000");
-		if (verifyElementPresent(SendTransferPage.objErrorMsg, getTextVal(SendTransferPage.objErrorMsg, "Error Message"))) {
-			String sMaximumLimitErrorMsg = getText(SendTransferPage.objErrorMsg);
+		if (verifyElementPresent(SendTransferPage.objMaxLimitErrorMsg, getTextVal(SendTransferPage.objMaxLimitErrorMsg, "Error Message"))) {
+			String sMaximumLimitErrorMsg = getText(SendTransferPage.objMaxLimitErrorMsg);
 			String sExpectedErrorMsg = "The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaximumLimitErrorMsg, sExpectedErrorMsg);
 			verifyElementPresent(SendTransferPage.objUpgradeNowBtn, getTextVal(SendTransferPage.objUpgradeNowBtn, "Button"));
@@ -5762,15 +5768,15 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
-	public static void handleMpin(String mPin, String validationText) throws Exception {
+	public static void handleMpin(String mPin) throws Exception {
 		for (int i = 0; i < mPin.length(); i++) {
 			char ch = mPin.charAt(i);
 			String ch1 = String.valueOf(ch);
 			click(MLWalletSettingsPage.objEnterMpinVal(ch1),
 					getTextVal(MLWalletSettingsPage.objEnterMpinVal(ch1), "MPIN"));
 		}
-		logger.info(validationText + " MPIN " + mPin + " Successfully");
-		ExtentReporter.extentLogger("Enter MPIN", "" + validationText + " MPIN " + mPin + " Successfully");
+		logger.info("Entered MPIN " + mPin + " Successfully");
+		ExtentReporter.extentLogger("Enter MPIN", "Entered MPIN " + mPin + " Successfully");
 	}
 //===========================================================================================================//
 	public void settingsAccountDetailsValidation_SS_TC_01() throws Exception {
@@ -5792,7 +5798,7 @@ public class MLWalletBusinessLogic {
 		navigateToProfile();
 		click(MLWalletSettingsPage.objChangeMLPin, "Change ML Pin");
 		verifyElementPresent(MLWalletSettingsPage.objChangeMLPin, "Change ML Pin");
-		handleMpin(prop.getproperty("wrongMpin"), "Entered Invalid ML PIN");
+		handleMpin(prop.getproperty("wrongMpin"));
 		if(verifyElementPresent(MLWalletSettingsPage.objInvalaidMpinPopUp,getTextVal(MLWalletSettingsPage.objInvalaidMpinPopUp,"Error Popup Message"))){
 			String sInvalidMPinPopUp = getText(MLWalletSettingsPage.objInvalaidMpinPopUp);
 			String sExceptedErrorPOpUp = "You have entered an invalid PIN. Please try again.";
@@ -5811,14 +5817,14 @@ public class MLWalletBusinessLogic {
 		click(MLWalletSettingsPage.objChangeMLPin, "Change ML Pin");
 		verifyElementPresent(MLWalletSettingsPage.objChangeMLPin, "Change ML Pin");
 		waitTime(2000);
-		handleMpin(prop.getproperty("mPin"), "Entered");
+		handleMpin(prop.getproperty("mPin"));
 		waitTime(2000);
 		if (verifyElementPresent(MLWalletSettingsPage.objEnterNewMMLpinText,
 				getTextVal(MLWalletSettingsPage.objEnterNewMMLpinText, "Page"))) {
 			waitTime(2000);
-			handleMpin(prop.getproperty("newMpin"), "New ML PIN");
+			handleMpin(prop.getproperty("newMpin"));
 			waitTime(2000);
-			handleMpin(prop.getproperty("newMpin"), "Confirmed New ML ");
+			handleMpin(prop.getproperty("newMpin"));
 			if(verifyElementPresent(MLWalletSettingsPage.objMLPinChangedPopup,
 					getTextVal(MLWalletSettingsPage.objMLPinChangedPopup,"Success Popup"))){
 				String sActualSuccessPopUp = getText(MLWalletSettingsPage.objMLPinChangedPopup);
