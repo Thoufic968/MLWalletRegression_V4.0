@@ -568,6 +568,21 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08() throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Branch Maximum Transaction Branch Verified Tier");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
+		enterAmountMLBranch("50001");
+		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitTxt, getTextVal(MLWalletCashOutPage.objMaxLimitTxt, "Text Message"))) {
+			String sInsufficientBalancePopupTxt = getText(MLWalletCashOutPage.objMaxLimitTxt);
+			String ExpectedTxt = "The maximum Branch Cash-out per transaction set for your verification level is P40,000.00. Please try again.";
+			assertionValidation(sInsufficientBalancePopupTxt, ExpectedTxt);
+			logger.info("WM_TC_08, The Maximum Branch Cash-out per transaction Msg for Branch-verified tier Account is Validated");
+			ExtentReporter.extentLoggerPass("WM_TC_08", "WM_TC_08, The Maximum Branch Cash-out per transaction Msg for Branch-verified tier Account is Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
 	public void cashOutBuyerTierLevelAcc_WM_TC_09() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash Out Withdraw Branch");
 		mlWalletLogin(prop.getproperty("Buyer_Tier"));
@@ -5529,8 +5544,8 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletPayBillsPage.objConfirmDetails, getTextVal(MLWalletPayBillsPage.objConfirmDetails, "Page"));
 		Swipe("UP",1);
 		click(MLWalletPayBillsPage.objPayBtn,getTextVal(MLWalletPayBillsPage.objPayBtn,"Button"));
-		if(verifyElementPresent(MLWalletPayBillsPage.objMaxLimitErrorMessage,getTextVal(MLWalletPayBillsPage.objMaxLimitErrorMessage,"Error Message"))){
-			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessage);
+		if(verifyElementPresent(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade,getTextVal(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade,"Error Message"))){
+			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade);
 			String sExpectedErrorMessage = "The maximum Bills Pay per transaction set for your verification level is P10,000.00. Please try again.";
 			assertionValidation(sMaxLimitErrorMessage,sExpectedErrorMessage);
             verifyElementPresent(MLWalletPayBillsPage.objUpgradeNowBtn,getTextVal(MLWalletPayBillsPage.objUpgradeNowBtn,"Button"));
@@ -5550,8 +5565,8 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletPayBillsPage.objConfirmDetails, getTextVal(MLWalletPayBillsPage.objConfirmDetails, "Page"));
 		Swipe("UP",1);
 		click(MLWalletPayBillsPage.objPayBtn,getTextVal(MLWalletPayBillsPage.objPayBtn,"Button"));
-		if(verifyElementPresent(MLWalletPayBillsPage.objMaxLimitErrorMessage,getTextVal(MLWalletPayBillsPage.objMaxLimitErrorMessage,"Error Message"))){
-			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessage);
+		if(verifyElementPresent(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade,getTextVal(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade,"Error Message"))){
+			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessageUpgrade);
 			String sExpectedErrorMessage = "The maximum Bills Pay per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaxLimitErrorMessage,sExpectedErrorMessage);
 			verifyElementPresent(MLWalletPayBillsPage.objUpgradeNowBtn,getTextVal(MLWalletPayBillsPage.objUpgradeNowBtn,"Button"));
@@ -5575,7 +5590,7 @@ public class MLWalletBusinessLogic {
 			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessage);
 			String sExpectedErrorMessage = "The maximum Bills Pay per transaction set for your verification level is P25,000.00. Please try again.";
 			assertionValidation(sMaxLimitErrorMessage,sExpectedErrorMessage);
-			verifyElementPresent(MLWalletPayBillsPage.objUpgradeNowBtn,getTextVal(MLWalletPayBillsPage.objUpgradeNowBtn,"Button"));
+			verifyElementPresent(MLWalletPayBillsPage.objOKBtn,getTextVal(MLWalletPayBillsPage.objOKBtn,"Button"));
 			logger.info("PB_TC_26, Pay Bills Maximum Bills Payment Per Transaction for Branch Verified Tier Account Validated");
 			ExtentReporter.extentLoggerPass("PB_TC_26", "PB_TC_26, Pay Bills Maximum Bills Payment Per Transaction for Branch Verified Tier Account validated");
 			System.out.println("-----------------------------------------------------------");
@@ -5595,7 +5610,7 @@ public class MLWalletBusinessLogic {
 			String sMaxLimitErrorMessage = getText(MLWalletPayBillsPage.objMaxLimitErrorMessage);
 			String sExpectedErrorMessage = "The maximum Bills Pay per transaction set for your verification level is P50,000.00. Please try again.";
 			assertionValidation(sMaxLimitErrorMessage,sExpectedErrorMessage);
-			verifyElementPresent(MLWalletPayBillsPage.objUpgradeNowBtn,getTextVal(MLWalletPayBillsPage.objUpgradeNowBtn,"Button"));
+			verifyElementPresent(MLWalletPayBillsPage.objOKBtn,getTextVal(MLWalletPayBillsPage.objOKBtn,"Button"));
 			logger.info("PB_TC_31, Pay Bills Maximum Bills Payment Per Transaction for Fully Verified Tier Account Validated");
 			ExtentReporter.extentLoggerPass("PB_TC_31", "PB_TC_31, Pay Bills Maximum Bills Payment Per Transaction for Fully Verified Tier Account validated");
 			System.out.println("-----------------------------------------------------------");
@@ -8235,6 +8250,17 @@ public class MLWalletBusinessLogic {
 		if(verifyElementNotPresent(MLWalletHomePage.objIIcon,"i Icon",5)){
 			logger.info("HD_TC_23, ML Wallet Home Page I Icon not displayed For Fully-verified Tier user");
 			ExtentReporter.extentLoggerPass("HD_TC_23", "HD_TC_23, ML Wallet Home Page I Icon not displayed For Fully-verified Tier user");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void mlWalletHomePageDoYouHaveAnotherAcButtonFunctionality_HD_TC_24() throws Exception {
+		ExtentReporter.HeaderChildNode("ML Wallet Home Page Do you have another Account Button functionality");
+		mlWalletLogin(prop.getproperty("Fully_verified"));
+		verifyElementPresentAndClick(MLWalletHomePage.objDoYouHaveAnotherAccBtn,getTextVal(MLWalletHomePage.objDoYouHaveAnotherAccBtn,"button"));
+		if(verifyElementPresent(MLWalletHomePage.objAddAccFacility,getTextVal(MLWalletHomePage.objAddAccFacility,"Page"))){
+			logger.info("HD_TC_24, ML Wallet Home Page Do you have another Account Button functionality validated");
+			ExtentReporter.extentLoggerPass("HD_TC_24", "HD_TC_24, ML Wallet Home Page Do you have another Account Button functionality validated");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}

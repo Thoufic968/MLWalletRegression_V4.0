@@ -70,4 +70,7 @@ public class MLWalletHomePage {
     public static By objInternetConnectionPopUp = By.xpath("//*[@text='Connection Error']");
     public static By objInternetConnectionMsg = By.xpath("//*[@text='Connection Error']/following-sibling::android.widget.TextView");
     public static By objOkBtn = By.xpath("//*[@text='Ok']");
+    public static By objDoYouHaveAnotherAccBtn = By.xpath("//*[@resource-id='SYOFR5']");
+    public static By objAddAccFacility = By.xpath("//*[@text='ML Wallet Add Account Facility']");
+
 }

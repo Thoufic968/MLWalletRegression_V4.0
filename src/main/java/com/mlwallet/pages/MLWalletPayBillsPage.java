@@ -32,7 +32,7 @@ public class MLWalletPayBillsPage {
     public static By objAirAsia = By.xpath("//*[@text='AIR ASIA BILLSPAYMENT']");
     public static By objBillsPayInformation = By.xpath("//*[@text='Bills Pay Information']");
     public static By objBillerNameInBillsPayInformation = By.xpath("//*[@text='Biller']/following-sibling::android.widget.EditText");
-    public static By objSearchBiller = By.xpath("//*[@text='Billers']/parent::android.view.ViewGroup/following-sibling::android.widget.EditText");
+    public static By objSearchBiller = By.xpath("//android.widget.EditText[@resource-id='P3812K']");
     public static By objSearchBillerInSavedBillers = By.xpath("//*[@class='android.widget.EditText']");
     public static By objMisBillsPayBiller = By.xpath("//*[@text='MIS BILLSPAY123456']");
     public static By objEditBtn = By.xpath("//*[@text='Edit']");
@@ -56,7 +56,8 @@ public class MLWalletPayBillsPage {
     public static By objAccountNumber = By.xpath("(//*[@resource-id='Account Number'])[2]");
     public static By objPaymentMethod = By.xpath("(//*[@resource-id='Payment Method'])[2]");
     public static By objPayBtn = By.xpath("//*[contains(@text,'Pay P')]");
-    public static By objMaxLimitErrorMessage = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+    public static By objMaxLimitErrorMessageUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objMaxLimitErrorMessage = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objAddBiller = By.xpath("//*[@text='Add Biller']");
     public static By objAddBillers = By.xpath("//*[@text='Add Billers']");
     public static By objAddSeectedBiller = By.xpath("//*[@text='Biller']/preceding-sibling::android.view.ViewGroup");
