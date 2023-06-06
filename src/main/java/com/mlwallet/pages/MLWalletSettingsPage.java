@@ -53,10 +53,21 @@ public class MLWalletSettingsPage {
 	public static By objTroubleSigningIn = By.xpath("//*[@text='Trouble Signing In']");
 	public static By objMLWalletSupport = By.xpath("//*[@text='ML Wallet Support' and @class='android.widget.TextView']");
 	public static By objNatureOfRequests = By.xpath("//*[@class='android.widget.RadioGroup']/child::android.view.View/child::android.widget.TextView");
-	public static By objDeleteConfirmationPopUp = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+	public static By objDeleteConfirmationPopUp = By.xpath("//*[@text='Proceed']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
 	public static By objBiometrics = By.xpath("//*[@text='Biometrics']");
 	public static By objNatureOfRequest = By.xpath("(//*[@class='android.widget.RadioGroup']/child::android.view.View/child::android.widget.TextView)[1]");
-
+	public static By objWarningHeader = By.xpath("//*[@text='Before you go make sure you don’t leave anything behind!']");
+	public static By objWarningMsg(int i){
+		return By.xpath("(//*[@text='Before you go make sure you don’t leave anything behind!']/following-sibling::android.view.ViewGroup/child::android.widget.TextView)["+i+"]");
+	}
+	public static By objIWantToStay = By.xpath("//*[@text='I Want To Stay']");
+	public static By objDeleteAccountBackBtn = By.xpath("//*[@text='Delete Account']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+	public static By objDeleteAccountBtn = By.xpath("(//*[@text='Delete Account'])[2]");
+	public static By objDeleteAccountMLPin = By.xpath("//*[@text='Delete Account ML Pin']");
+	public static By objEnterCurrentMLPinHeader = By.xpath("//*[@text='Enter Current ML PIN']");
+	public static By objMLInputField = By.xpath("//*[@resource-id='847305']");
+	public static By objDeleteAccMLPinBackBtn = By.xpath("//*[@text='Delete Account ML Pin']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+	public static By objInvalidMLPinMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
 }

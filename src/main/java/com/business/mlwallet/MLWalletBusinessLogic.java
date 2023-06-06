@@ -5053,11 +5053,13 @@ public class MLWalletBusinessLogic {
 	}
 
 	public void addSelectedBiller() throws Exception {
+		waitTime(3000);
 		if (verifyElementPresent(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller")) {
 			click(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller");
+			waitTime(5000);
 			click(MLWalletPayBillsPage.objBillerListSearchBiller,"Biller List Search Biller");
 			type(MLWalletPayBillsPage.objBillerListSearchBiller, prop.getproperty("Biller_Name"), "Biller List Search Biller");
-			explicitWaitVisible(MLWalletPayBillsPage.objMisBillsPayBiller,5);
+			waitTime(4000);
 			click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
 			click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
 		}
@@ -5718,11 +5720,14 @@ public class MLWalletBusinessLogic {
 		click(MLWalletPayBillsPage.objPayBtn,getTextVal(MLWalletPayBillsPage.objPayBtn,"Button"));
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
-			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
-				logger.info("PB_TC_38, Pay Bills Location popup Allow Button Functionality Validated");
-				ExtentReporter.extentLoggerPass("PB_TC_38", "PB_TC_38, Pay Bills Location popup Allow Button Functionality Validated");
-				System.out.println("-----------------------------------------------------------");
+			if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
+				verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+			}else if(verifyElementDisplayed(MLWalletLoginPage.objMLPin)) {
+				verifyElementPresent(MLWalletLoginPage.objMLPin,getTextVal(MLWalletLoginPage.objMLPin,"Page"));
 			}
+			logger.info("PB_TC_38, Pay Bills Location popup Allow Button Functionality Validated");
+			ExtentReporter.extentLoggerPass("PB_TC_38", "PB_TC_38, Pay Bills Location popup Allow Button Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
 
@@ -5802,6 +5807,7 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		navigateToProfile();
 		click(MLWalletSettingsPage.objAccountDetails, "Account Details");
+		waitTime(3000);
 		verifyElementPresent(MLWalletSettingsPage.objAccountDetails, getTextVal(MLWalletSettingsPage.objAccountDetails,"Name"));
 		verifyElementPresent(MLWalletSettingsPage.objNameOfAccountHolder,getTextVal(MLWalletSettingsPage.objNameOfAccountHolder, "Name"));
 		verifyElementPresent(MLWalletSettingsPage.objMailAddressOfAccountHolder,getTextVal(MLWalletSettingsPage.objMailAddressOfAccountHolder, "Mail Address"));
@@ -6000,6 +6006,7 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		navigateToProfile();
 		verifyElementPresentAndClick(MLWalletSettingsPage.objAccountDetails,getTextVal(MLWalletSettingsPage.objAccountDetails,"Option"));
+		waitTime(3000);
 		if(verifyElementPresent(MLWalletSettingsPage.objAccountDetails, getTextVal(MLWalletSettingsPage.objAccountDetails,"Page"))){
 			logger.info("SS_TC_14, Settings Account Details Navigation validated");
 			ExtentReporter.extentLoggerPass("SS_TC_14", "SS_TC_14, Settings Account Details Navigation validated");
@@ -6039,6 +6046,7 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		navigateToProfile();
 		verifyElementPresentAndClick(MLWalletSettingsPage.objAccountRecovery,getTextVal(MLWalletSettingsPage.objAccountRecovery,"Option"));
+		waitTime(6000);
 		if(verifyElementPresent(MLWalletSettingsPage.objTroubleSigningIn,getTextVal(MLWalletSettingsPage.objTroubleSigningIn,"Page"))){
 			verifyElementPresent(MLWalletSettingsPage.objMLWalletSupport,getTextVal(MLWalletSettingsPage.objMLWalletSupport,"Header"));
 			verifyElementPresent(MLWalletSettingsPage.objFullNameField, "First Name Field");
@@ -6095,6 +6103,7 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		navigateToProfile();
 		verifyElementPresentAndClick(MLWalletSettingsPage.objAccountRecovery,getTextVal(MLWalletSettingsPage.objAccountRecovery,"Option"));
+		waitTime(5000);
 		if(verifyElementPresent(MLWalletSettingsPage.objTroubleSigningIn,getTextVal(MLWalletSettingsPage.objTroubleSigningIn,"Page"))){
 			logger.info("SS_TC_21, Settings, After clicking on Account recovery, application navigated to Trouble Signing in page is validated");
 			ExtentReporter.extentLoggerPass("SS_TC_21", "SS_TC_21, After clicking on Account recovery, application navigated to Trouble Signing in page is validated");
@@ -6138,12 +6147,146 @@ public class MLWalletBusinessLogic {
 	}
 
 
+	public void settingsDeleteAccountPageUIValidation_SS_TC_25() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Page UI Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		navigateToProfile();
+		verifyElementPresentAndClick(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Option"));
+		verifyElementPresent(MLWalletSettingsPage.objDeleteConfirmationPopUp,getTextVal(MLWalletSettingsPage.objDeleteConfirmationPopUp,"Confirmation Popup"));
+		verifyElementPresentAndClick(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Page"))){
+			verifyElementPresent(MLWalletSettingsPage.objDeleteAccountBackBtn,"Back Arrow Button");
+			verifyElementPresent(MLWalletSettingsPage.objWarningHeader,getTextVal(MLWalletSettingsPage.objWarningHeader,"Header"));
+			for(int i=1;i<10;i++){
+				if(i%2==0) {
+					verifyElementPresent(MLWalletSettingsPage.objWarningMsg(i), getTextVal(MLWalletSettingsPage.objWarningMsg(i), "Warning Message"));
+				}
+			}
+			verifyElementPresent(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Button"));
+			verifyElementPresent(MLWalletSettingsPage.objIWantToStay,getTextVal(MLWalletSettingsPage.objIWantToStay,"Button"));
+			logger.info("SS_TC_25, Settings Delete Account Page UI validated");
+			ExtentReporter.extentLoggerPass("SS_TC_25", "SS_TC_25, Settings Delete Account Page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void settingsDeleteAccountIWantToStayButtonFunctionality_SS_TC_26() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account I Want To Stay Button Functionality");
+		settingsDeleteAccountPageUIValidation_SS_TC_25();
+		click(MLWalletSettingsPage.objIWantToStay,getTextVal(MLWalletSettingsPage.objIWantToStay,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objSettings,getTextVal(MLWalletSettingsPage.objSettings,"Page"))){
+			logger.info("SS_TC_26, Settings Delete Account, After clicking on I Want To Stay Button, App navigates to Settings Page");
+			ExtentReporter.extentLoggerPass("SS_TC_26", "SS_TC_26, Settings Delete Account, After clicking on I Want To Stay Button, App navigates to Settings Page");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void settingsDeleteAccountPageBackButtonValidation_SS_TC_27() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Page Back Button Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		navigateToProfile();
+		verifyElementPresentAndClick(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Option"));
+		verifyElementPresent(MLWalletSettingsPage.objDeleteConfirmationPopUp,getTextVal(MLWalletSettingsPage.objDeleteConfirmationPopUp,"Confirmation Popup"));
+		verifyElementPresentAndClick(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		verifyElementPresent(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Page"));
+		verifyElementPresentAndClick(MLWalletSettingsPage.objDeleteAccountBackBtn, "Back Arrow Button");
+		if(verifyElementPresent(MLWalletSettingsPage.objSettings,getTextVal(MLWalletSettingsPage.objSettings,"Page"))){
+			logger.info("SS_TC_27, Settings Delete Account, After clicking on Back-Arrow Button, App navigates to Settings Page");
+			ExtentReporter.extentLoggerPass("SS_TC_27", "SS_TC_27, Settings Delete Account, After clicking on Back-Arrow Button, App navigates to Settings Page");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void settingsDeleteAccountButtonFunctionality_SS_TC_28() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Button Functionality");
+		settingsDeleteAccountPageUIValidation_SS_TC_25();
+		click(MLWalletSettingsPage.objDeleteAccountBtn,getTextVal(MLWalletSettingsPage.objDeleteAccountBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteConfirmationPopUp,getTextVal(MLWalletSettingsPage.objDeleteConfirmationPopUp,"Page"))){
+			verifyElementPresent(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+			verifyElementPresent(MLWalletSettingsPage.objCancelBtn,getTextVal(MLWalletSettingsPage.objCancelBtn,"Button"));
+			logger.info("SS_TC_28, Settings Delete Account Button Functionality validated");
+			ExtentReporter.extentLoggerPass("SS_TC_28", "SS_TC_28, Settings Delete Account Button Functionality validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
+	public void settingsDeleteAccountConfirmationPopupCancelBtnFunctionality_SS_TC_29() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Confirmation Popup Cancel Button Functionality");
+		settingsDeleteAccountButtonFunctionality_SS_TC_28();
+		click(MLWalletSettingsPage.objCancelBtn,getTextVal(MLWalletSettingsPage.objCancelBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Page"))){
+			logger.info("SS_TC_29, Settings Delete Account Confirmation Popup, After clicking on Cancel button App stays in Delete Account Page");
+			ExtentReporter.extentLoggerPass("SS_TC_29", "SS_TC_29, Settings Delete Account Confirmation Popup, After clicking on Cancel button App stays in Delete Account Page");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
+	public void settingsDeleteAccountConfirmationPopupProceedBtnFunctionality_SS_TC_30() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Confirmation Popup Proceed Button Functionality");
+		settingsDeleteAccountButtonFunctionality_SS_TC_28();
+		click(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccountMLPin,getTextVal(MLWalletSettingsPage.objDeleteAccountMLPin,"Page"))){
+			logger.info("SS_TC_30, Settings Delete Account Confirmation Popup, After clicking on Proceed button App navigates to Delete Account ML pin Page");
+			ExtentReporter.extentLoggerPass("SS_TC_30", "SS_TC_30, Settings Delete Account Confirmation Popup, After clicking on Proceed button App navigates to Delete Account ML pin Page");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void settingsDeleteAccountMLPinPageUIValidation_SS_TC_31() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account ML Pin Page UI Validation");
+		settingsDeleteAccountButtonFunctionality_SS_TC_28();
+		click(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccountMLPin,getTextVal(MLWalletSettingsPage.objDeleteAccountMLPin,"Page"))){
+			verifyElementPresent(MLWalletSettingsPage.objEnterCurrentMLPinHeader,getTextVal(MLWalletSettingsPage.objEnterCurrentMLPinHeader,"Header"));
+			verifyElementPresent(MLWalletSettingsPage.objMLInputField,"ML Pin Input Field");
+			logger.info("SS_TC_31, Settings Delete Account ML Pin Page UI Validated");
+			ExtentReporter.extentLoggerPass("SS_TC_31", "SS_TC_31, Settings Delete Account ML Pin Page UI Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void settingsDeleteAccountMLPinPageBackArrowBtnFunctionality_SS_TC_32() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account ML Pin Page Back Arrow Button Functionality");
+		settingsDeleteAccountButtonFunctionality_SS_TC_28();
+		click(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		verifyElementPresent(MLWalletSettingsPage.objDeleteAccountMLPin,getTextVal(MLWalletSettingsPage.objDeleteAccountMLPin,"Page"));
+		verifyElementPresentAndClick(MLWalletSettingsPage.objDeleteAccMLPinBackBtn,getTextVal(MLWalletSettingsPage.objDeleteAccMLPinBackBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccount,getTextVal(MLWalletSettingsPage.objDeleteAccount,"Page"))){
+			logger.info("SS_TC_32, Settings Delete Account ML Pin Page Back Arrow Button Validated");
+			ExtentReporter.extentLoggerPass("SS_TC_32", "SS_TC_32, Settings Delete Account ML Pin Page Back Arrow Button Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void settingsDeleteAccountInvalidMLPin_SS_TC_34() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account Invalid ML Pin");
+		settingsDeleteAccountButtonFunctionality_SS_TC_28();
+		click(MLWalletSettingsPage.objProceedBtn,getTextVal(MLWalletSettingsPage.objProceedBtn,"Button"));
+		verifyElementPresent(MLWalletSettingsPage.objDeleteAccountMLPin,getTextVal(MLWalletSettingsPage.objDeleteAccountMLPin,"Page"));
+		handleMpin("9999");
+		if(verifyElementPresent(MLWalletSettingsPage.objInvalidMLPinMsg,getTextVal(MLWalletSettingsPage.objInvalidMLPinMsg,"Popup"))){
+			String sActualInvalidMLPinMsg = getText(MLWalletSettingsPage.objInvalidMLPinMsg);
+			String sExceptedMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualInvalidMLPinMsg,sExceptedMsg);
+			verifyElementPresent(MLWalletSettingsPage.objOKBtn,getTextVal(MLWalletSettingsPage.objOKBtn,"Button"));
+			logger.info("SS_TC_34, Settings Delete Account Invalid ML Pin message Validated");
+			ExtentReporter.extentLoggerPass("SS_TC_34", "SS_TC_34, Settings Delete Account Invalid ML Pin message Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void settingsDeleteAccountInvalidMLPinPopupOkBtnFunctionality_SS_TC_35() throws Exception {
+		ExtentReporter.HeaderChildNode("Settings Delete Account invalid ML Pin Popup Ok Button Functionality");
+		settingsDeleteAccountInvalidMLPin_SS_TC_34();
+		click(MLWalletSettingsPage.objOKBtn,getTextVal(MLWalletSettingsPage.objOKBtn,"Button"));
+		if(verifyElementPresent(MLWalletSettingsPage.objDeleteAccountMLPin,getTextVal(MLWalletSettingsPage.objDeleteAccountMLPin,"Page"))){
+			logger.info("SS_TC_35, Settings Delete Account invalid ML Pin Popup Ok Button Functionality Validated");
+			ExtentReporter.extentLoggerPass("SS_TC_35", "SS_TC_35, Settings Delete Account invalid ML Pin Popup Ok Button Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 

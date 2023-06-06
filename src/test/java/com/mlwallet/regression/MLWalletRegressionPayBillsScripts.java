@@ -79,23 +79,23 @@ public class MLWalletRegressionPayBillsScripts {
 //    }
 //
 //
-//   @Test(priority = 11)
-//    public void addBillerToPayBills_PB_TC_12() throws Exception {
-//        MLWalletBusinessLogic.addBillerToPayBills_PB_TC_12();
-//    }
-//
-//
-//
-//    @Test(priority = 12)
-//    public void editAddedBillerToPayBills_PB_TC_14() throws Exception {
-//        MLWalletBusinessLogic.editAddedBillerToPayBills_PB_TC_14();
-//    }
-//
-//
-//    @Test(priority = 13)
-//    public void deleteAddedBillerPayBills_PB_TC_15() throws Exception {
-//        MLWalletBusinessLogic.deleteAddedBillerPayBills_PB_TC_15();
-//    }
+   @Test(priority = 11)
+    public void addBillerToPayBills_PB_TC_12() throws Exception {
+        MLWalletBusinessLogic.addBillerToPayBills_PB_TC_12();
+    }
+
+
+
+    @Test(priority = 12)
+    public void editAddedBillerToPayBills_PB_TC_14() throws Exception {
+        MLWalletBusinessLogic.editAddedBillerToPayBills_PB_TC_14();
+    }
+
+
+    @Test(priority = 13)
+    public void deleteAddedBillerPayBills_PB_TC_15() throws Exception {
+        MLWalletBusinessLogic.deleteAddedBillerPayBills_PB_TC_15();
+    }
 //
 ////============================================================================================================//
 //
@@ -119,26 +119,26 @@ public class MLWalletRegressionPayBillsScripts {
 //    public void payBillsSavedBilerUIValidation_PB_TC_20() throws Exception {
 //        MLWalletBusinessLogic.payBillsSavedBilerUIValidation_PB_TC_20();
 //    }
-
-    @Test(priority = 18)
-    public void payBillsMaxBillsPaymentPerTransactionBuyTierUser_PB_TC_22() throws Exception {
-        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionBuyTierUser_PB_TC_22();
-    }
-
-    @Test(priority = 19)
-    public void payBillsMaxBillsPaymentPerTransactionSemiVerifiedTier_PB_TC_25() throws Exception {
-        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionSemiVerifiedTier_PB_TC_25();
-    }
-
-    @Test(priority = 20)
-    public void payBillsMaxBillsPaymentPerTransactionBranchVerifiedTier_PB_TC_28() throws Exception {
-        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionBranchVerifiedTier_PB_TC_28();
-    }
-
-    @Test(priority = 21)
-    public void payBillsMaxBillsPaymentPerTransactionFullyVerifiedTier_PB_TC_31() throws Exception {
-        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionFullyVerifiedTier_PB_TC_31();
-    }
+//
+//    @Test(priority = 18)
+//    public void payBillsMaxBillsPaymentPerTransactionBuyTierUser_PB_TC_22() throws Exception {
+//        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionBuyTierUser_PB_TC_22();
+//    }
+//
+//    @Test(priority = 19)
+//    public void payBillsMaxBillsPaymentPerTransactionSemiVerifiedTier_PB_TC_25() throws Exception {
+//        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionSemiVerifiedTier_PB_TC_25();
+//    }
+//
+//    @Test(priority = 20)
+//    public void payBillsMaxBillsPaymentPerTransactionBranchVerifiedTier_PB_TC_28() throws Exception {
+//        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionBranchVerifiedTier_PB_TC_28();
+//    }
+//
+//    @Test(priority = 21)
+//    public void payBillsMaxBillsPaymentPerTransactionFullyVerifiedTier_PB_TC_31() throws Exception {
+//        MLWalletBusinessLogic.payBillsMaxBillsPaymentPerTransactionFullyVerifiedTier_PB_TC_31();
+//    }
 //
 //    @Test(priority = 22)
 //    public void payBillsRecentTransaction_PB_TC_21() throws Exception {
@@ -165,10 +165,10 @@ public class MLWalletRegressionPayBillsScripts {
 //        MLWalletBusinessLogic.payBillsLocationPermissionDenyOpenSettingsBtnFunctionality_PB_TC_37();
 //    }
 //
-//    @Test(priority = 27)
-//    public void payBillsLocationPopUpAllowFunctionality_PB_TC_38() throws Exception {
-//        MLWalletBusinessLogic.payBillsLocationPopUpAllowFunctionality_PB_TC_38();
-//    }
+    @Test(priority = 27)
+    public void payBillsLocationPopUpAllowFunctionality_PB_TC_38() throws Exception {
+        MLWalletBusinessLogic.payBillsLocationPopUpAllowFunctionality_PB_TC_38();
+    }
 //
 //    @Test(priority = 28)
 //    public void payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39() throws Exception {
