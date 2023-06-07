@@ -26,7 +26,7 @@ public class MLWalletEloadPage {
 	public static By objTransaction=By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[./*[@text]]])[1]");
 	public static By objContinuePromoPopUp=By.xpath("//*[@text='Would you like to continue with this promo?']");
 	public static By objPromoName=By.xpath("(//*[android.view.ViewGroup]/child::android.view.ViewGroup/child::android.widget.TextView)[5]");
-	public static By objPromoConfirmationPopup = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+	public static By objPromoConfirmationPopup = By.xpath("//*[@text='Confirm']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objConfirmBtn=By.xpath("//*[@text='Confirm']");
 	public static By objCancelBtn = By.xpath("//*[@text='Cancel']");
 	public static By objTransactionDetailsPage=By.xpath("//*[@text='Transaction Details']");
@@ -36,16 +36,16 @@ public class MLWalletEloadPage {
 	public static By objServiceFee=By.xpath("(//*[@resource-id='Service Fee'])[2]");
 	public static By objTotalAmount=By.xpath("(//*[@resource-id='Total'])[2]");
 	public static By objErrorMsg=By.xpath("//*[android.widget.EditText]/following-sibling::android.widget.TextView");
-	public static By objInsufficientBalPopup=By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+	public static By objInsufficientBalPopup=By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objOkBtn=By.xpath("//*[@text='Ok']");
 	public static By objMobileNumberInTransactionDetails = By.xpath("(//*[@text='Successfully bought load for']/following-sibling::android.widget.TextView)[1]");
 	public static By objELoadAmount = By.xpath("(//*[@text='Successfully bought load for']/following-sibling::android.widget.TextView)[2]");
 	public static By objBuyELoadTime = By.xpath("(//*[@text='Successfully bought load for']/following-sibling::android.widget.TextView)[3]");
 	public static By objBuyELoadStatus = By.xpath("(//*[@text='Successfully bought load for']/following-sibling::android.widget.TextView)[4]");
 
-	public static By objMaxLimitPopupMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
-	public static By obj3000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 3000'])[1]");
-	public static By obj2000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 2000'])[1]");
+	public static By objMaxLimitPopupMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+	public static By obj3000RegularLoad = By.xpath("(//*[@text='Globe Regular Load 3000'])[1]");
+	public static By obj2000RegularLoad = By.xpath("(//*[@text='Globe Regular Load 2000'])[1]");
 	public static By objBuyLoad = By.xpath("//*[@text='Buy Load']");
 	public static By objLoadSelectionBackArrowBtn = By.xpath("//*[@text='Load Selection']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 	public static By objMobileNumberInLoadSelection = By.xpath("//*[@text='+63']/following-sibling::android.widget.TextView");

@@ -62,10 +62,10 @@ public class MLWalletCashOutWithdrawScripts {
 //        MLWalletBusinessLogic.cashOutMaxLimit_WM_TC_06();
 //    }
 //
-//    @Test(priority = 7)
-//    public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
-//        MLWalletBusinessLogic.cashOutInsufficientBalance_WM_TC_07();
-//    }
+    @Test(priority = 7)
+    public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
+        MLWalletBusinessLogic.cashOutInsufficientBalance_WM_TC_07();
+    }
 //
 //    @Test(priority = 8)
 //    public void cashOutBuyerTierLevelAcc_WM_TC_09() throws Exception

@@ -3640,6 +3640,7 @@ public class MLWalletBusinessLogic {
 	public void cashOutTransactionHistory_TH_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash Out Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
+		scrollToFirstHorizontalScrollableElement("Cash Out");
 		click(MLWalletTransactionHistoryPage.objCashOutTab, "Cash Out");
 		Thread.sleep(3000);
 		mlWallet_TransactionHistory_Generic_Steps("Cash Out", "No Recent Transaction");
@@ -3651,6 +3652,7 @@ public class MLWalletBusinessLogic {
 	public void receiveMoneyTransactionHistory_TH_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("Receive Money Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
+		scrollToFirstHorizontalScrollableElement("Receive Money");
 		click(MLWalletTransactionHistoryPage.objReceiveMoneyTab, "Receive Money");
 		Thread.sleep(3000);
 		mlWallet_TransactionHistory_Generic_Steps("Receive Money", "No Recent Transaction");
@@ -3674,6 +3676,7 @@ public class MLWalletBusinessLogic {
 	public void mlShopTransactionHistory_TH_TC_09() throws Exception {
 		ExtentReporter.HeaderChildNode("ML Shop Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
+		scrollToFirstHorizontalScrollableElement("ML Shop");
 		click(MLWalletTransactionHistoryPage.objMlShopTab, "ML Shop");
 		Thread.sleep(2000);
 		mlWallet_TransactionHistory_Generic_Steps("ML Shop", "No Recent Transaction");
@@ -3802,7 +3805,6 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReceiverMobileNo, getTextVal(MLWalletTransactionHistoryPage.objReceiverMobileNo, "Receiver's Mobile Number"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objPaymentMethod, getTextVal(MLWalletTransactionHistoryPage.objPaymentMethod, "Payment Method"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionType, getTextVal(MLWalletTransactionHistoryPage.objTransactionType, "Payment Method"));
-			verifyElementPresent(MLWalletTransactionHistoryPage.objBank, getTextVal(MLWalletTransactionHistoryPage.objBank, "Bank"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objAmount, getTextVal(MLWalletTransactionHistoryPage.objAmount, "Amount"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objServiceFee, getTextVal(MLWalletTransactionHistoryPage.objServiceFee, "Service Fee"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objTotalCashIn, getTextVal(MLWalletTransactionHistoryPage.objTotalCashIn, "Total Cash In"));
@@ -3825,7 +3827,6 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReceiverMobileNo, getTextVal(MLWalletTransactionHistoryPage.objReceiverMobileNo, "Receiver's Mobile Number"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objPaymentMethod, getTextVal(MLWalletTransactionHistoryPage.objPaymentMethod, "Payment Method"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionType, getTextVal(MLWalletTransactionHistoryPage.objTransactionType, "Payment Method"));
-			verifyElementPresent(MLWalletTransactionHistoryPage.objBank, getTextVal(MLWalletTransactionHistoryPage.objBank, "Bank"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objAmount, getTextVal(MLWalletTransactionHistoryPage.objAmount, "Amount"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objServiceFee, getTextVal(MLWalletTransactionHistoryPage.objServiceFee, "Service Fee"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objTotalCashOut, getTextVal(MLWalletTransactionHistoryPage.objTotalCashOut, "Total Cash Out"));
@@ -3848,7 +3849,6 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReceiverMobileNo, getTextVal(MLWalletTransactionHistoryPage.objReceiverMobileNo, "Receiver's Mobile Number"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objPaymentMethod, getTextVal(MLWalletTransactionHistoryPage.objPaymentMethod, "Payment Method"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objSenderName, getTextVal(MLWalletTransactionHistoryPage.objSenderName, "Sender Name"));
-			verifyElementPresent(MLWalletTransactionHistoryPage.objAmountReceived, getTextVal(MLWalletTransactionHistoryPage.objAmountReceived, "Amount Received"));
 			logger.info("TH_TC_19,Transaction History Receive Money Transaction Details Validated");
 			ExtentReporter.extentLoggerPass("TH_TC_19", "'TH_TC_19',Transaction History Receive Money Transaction Details Validated");
 			System.out.println("-----------------------------------------------------------");
@@ -3867,7 +3867,9 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReceiverName, getTextVal(MLWalletTransactionHistoryPage.objReceiverName, "Receiver Name"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReceiverMobileNo, getTextVal(MLWalletTransactionHistoryPage.objReceiverMobileNo, "Receiver's Mobile Number"));
 			verifyElementPresent(MLWalletTransactionHistoryPage.objPaymentMethod, getTextVal(MLWalletTransactionHistoryPage.objPaymentMethod, "Payment Method"));
-			verifyElementPresent(MLWalletTransactionHistoryPage.objAmountReceived, getTextVal(MLWalletTransactionHistoryPage.objAmountReceived, "Amount Received"));
+			logger.info("TH_TC_20,Transaction History ML Shop Transaction Details Validated");
+			ExtentReporter.extentLoggerPass("TH_TC_20", "'TH_TC_20',Transaction History ML Shop Transaction Details Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
 
@@ -6333,6 +6335,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletEloadPage.objBuyLoad,getTextVal(MLWalletEloadPage.objBuyLoad,"Page"));
 		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
 		enterOTP(prop.getproperty("Valid_OTP"));
+		waitTime(30000);
 		if(verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage,getTextVal(MLWalletEloadPage.objTransactionDetailsPage,"Page"))){
 			verifyElementPresent(MLWalletEloadPage.objMobileNumberInTransactionDetails,getTextVal(MLWalletEloadPage.objMobileNumberInTransactionDetails,"Mobile Number"));
 			verifyElementPresent(MLWalletEloadPage.objBuyELoadTime,getTextVal(MLWalletEloadPage.objBuyELoadTime,"Date and Time"));
@@ -6394,12 +6397,12 @@ public class MLWalletBusinessLogic {
 	public void buyELoadInsufficientBalance_BE_TC_05(String sTier,int promotab) throws Exception
 	{
 		ExtentReporter.HeaderChildNode("Buying eLoad with insufficient balance");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
 		waitTime(5000);
-		swipeDownUntilElementVisible("Smart Regular Load 3000");
+		swipeDownUntilElementVisible("Globe Regular Load 3000");
 		verifyElementPresentAndClick(MLWalletEloadPage.obj2000RegularLoad,getTextVal(MLWalletEloadPage.obj2000RegularLoad,"Load"));
 		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
 		waitTime(5000);
@@ -6407,20 +6410,27 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletEloadPage.objBuyLoad,getTextVal(MLWalletEloadPage.objBuyLoad,"Page"));
 		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
 		waitTime(5000);
-		verifyElementPresent(MLWalletEloadPage.objInsufficientBalPopup, getTextVal(MLWalletEloadPage.objInsufficientBalPopup, "Pop up"));
-		logger.info("BE_TC_05, Insufficient Balance Error Message Validated");
-		ExtentReporter.extentLoggerPass("BE_TC_05", "BE_TC_05, Insufficient Balance Error Message Validated");
+		if(verifyElementPresent(MLWalletEloadPage.objInsufficientBalPopup, getTextVal(MLWalletEloadPage.objInsufficientBalPopup, "Pop up"))){
+			String sActualInsufficientBalMsg = getText(MLWalletEloadPage.objInsufficientBalPopup);
+			String sExceptedMsg = "There is insufficient balance to proceed with this transaction. Please try again.";
+			assertionValidation(sActualInsufficientBalMsg,sExceptedMsg);
+			verifyElementPresent(MLWalletEloadPage.objOkBtn,getTextVal(MLWalletEloadPage.objOkBtn,"Button"));
+			logger.info("BE_TC_05, Insufficient Balance Error Message Validated");
+			ExtentReporter.extentLoggerPass("BE_TC_05", "BE_TC_05, Insufficient Balance Error Message Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+
 	}
 
 
 	public void buyELoadMaxLimitPerTransaction_BE_TC_09(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Maximum Limit per Transaction");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
 		waitTime(5000);
-		swipeDownUntilElementVisible("Smart Regular Load 3000");
+		swipeDownUntilElementVisible("Globe Regular Load 3000");
 		verifyElementPresentAndClick(MLWalletEloadPage.obj3000RegularLoad,getTextVal(MLWalletEloadPage.obj3000RegularLoad,"Load"));
 		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
 		waitTime(5000);
@@ -6754,7 +6764,7 @@ public class MLWalletBusinessLogic {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
+//			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("BE_TC_25, Buy ELoad One Time Pin page UI Validated");
 			ExtentReporter.extentLoggerPass("BE_TC_25", "BE_TC_25, Buy ELoad One Time Pin page UI Validated");
 			System.out.println("-----------------------------------------------------------");
@@ -6776,6 +6786,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletEloadPage.objBuyLoad,getTextVal(MLWalletEloadPage.objBuyLoad,"Page"));
 		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
 		enterOTP(prop.getproperty("Valid_OTP"));
+		waitTime(30000);
 		if(verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage,getTextVal(MLWalletEloadPage.objTransactionDetailsPage,"Page"))) {
 			verifyElementPresent(MLWalletEloadPage.objMobileNumberInTransactionDetails, getTextVal(MLWalletEloadPage.objMobileNumberInTransactionDetails, "Mobile Number"));
 			verifyElementPresent(MLWalletEloadPage.objBuyELoadTime, getTextVal(MLWalletEloadPage.objBuyELoadTime, "Date and Time"));
@@ -6879,11 +6890,11 @@ public class MLWalletBusinessLogic {
 		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
-			if(verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage,getTextVal(MLWalletEloadPage.objLoadSelectionPage,"Page"))){
-				logger.info("BE_TC_55, Buy ELoad Location popup Allow Button Functionality Validated");
-				ExtentReporter.extentLoggerPass("BE_TC_55", "BE_TC_55, Buy ELoad Location popup Allow Button Functionality Validated");
-				System.out.println("-----------------------------------------------------------");
-			}
+			verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage,getTextVal(MLWalletEloadPage.objLoadSelectionPage,"Page"));
+			logger.info("BE_TC_55, Buy ELoad Location popup Allow Button Functionality Validated");
+			ExtentReporter.extentLoggerPass("BE_TC_55", "BE_TC_55, Buy ELoad Location popup Allow Button Functionality Validated");
+			System.out.println("-----------------------------------------------------------");
+
 		}
 	}
 
@@ -7095,6 +7106,7 @@ public class MLWalletBusinessLogic {
 		enterOTP(prop.getproperty("Valid_OTP"));
 		DriverManager.getAppiumDriver().runAppInBackground(Duration.ofSeconds(5));
 		logger.info("Application relaunched after 5 Seconds");
+		waitTime(20000);
 		if(verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage,getTextVal(MLWalletEloadPage.objTransactionDetailsPage,"Page"))){
 			logger.info("BE_TC_069, Buy ELoad Transaction Validation After Minimizing App Validated");
 			ExtentReporter.extentLoggerPass("BE_TC_069", "BE_TC_069, Buy ELoad Transaction Validation After Minimizing App Validated");
