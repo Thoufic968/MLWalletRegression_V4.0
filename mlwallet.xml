@@ -11,7 +11,7 @@
 	     <parameter name="portno" value="4723"></parameter>
          <parameter name="deviceName" value="RZ8T20EDQ5W"></parameter>
 		 <parameter name="browserType" value="Chrome"></parameter>
-		 <parameter name="url" value="https://prnt.sc/Yb206x_3XGhc"></parameter>
+		 <parameter name="url" value="https://prnt.sc/qA8TKBF8wiJ9"></parameter>
 		 <parameter name="url1" value="https://prnt.sc/-tB44a2oVBjN"></parameter>
 
 
@@ -30,13 +30,13 @@
 <!--			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletTransactionHistory" />-->
-			<class name="com.mlwallet.regression.MLWalletBuyEload" />
+<!--			<class name="com.mlwallet.regression.MLWalletBuyEload" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletBranchLocator"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
-<!--			<class name="com.mlwallet.regression.MLWalletUseQR" />-->
+			<class name="com.mlwallet.regression.MLWalletUseQR" />
 
 		</classes>
 	</test>

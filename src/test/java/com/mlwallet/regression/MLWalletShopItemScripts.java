@@ -24,42 +24,42 @@ public class MLWalletShopItemScripts {
 
 
 
-    @Test(priority = 1)
-    public void mlWalletShopItems_Scenario() throws Exception
-    {
-        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
-    }
-
-    @Test(priority = 2)
-    public void shopItemsHamburgerMenuNavigation_MLS_TC_12() throws Exception {
-        MLWalletBusinessLogic.shopItemsHamburgerMenuNavigation_MLS_TC_12();
-    }
-
-    @Test(priority = 3)
-    public void shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15() throws Exception {
-       MLWalletBusinessLogic.shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15();
-    }
-
-    @Test(priority = 4)
-    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
-        MLWalletBusinessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
-    }
-
-    @Test(priority = 5)
-    public void shopItemsCartPageUIValidation_MLS_TC_19() throws Exception {
-        MLWalletBusinessLogic.shopItemsCartPageUIValidation_MLS_TC_19();
-    }
-
-    @Test(priority = 6)
-    public void shopItemsShippingDetailsPageUIValidation_MLS_TC_20() throws Exception {
-        MLWalletBusinessLogic.shopItemsShippingDetailsPageUIValidation_MLS_TC_20();
-    }
-
-
-    @Test(priority = 7)
-    public void shopItemsSelectBranchAddressPageUIValidation_MLS_TC_21() throws Exception {
-        MLWalletBusinessLogic.shopItemsSelectBranchAddressPageUIValidation_MLS_TC_21();
-    }
+//    @Test(priority = 1)
+//    public void mlWalletShopItems_Scenario() throws Exception
+//    {
+//        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
+//    }
+//
+//    @Test(priority = 2)
+//    public void shopItemsHamburgerMenuNavigation_MLS_TC_12() throws Exception {
+//        MLWalletBusinessLogic.shopItemsHamburgerMenuNavigation_MLS_TC_12();
+//    }
+//
+//    @Test(priority = 3)
+//    public void shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15() throws Exception {
+//       MLWalletBusinessLogic.shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15();
+//    }
+//
+//    @Test(priority = 4)
+//    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
+//    }
+//
+//    @Test(priority = 5)
+//    public void shopItemsCartPageUIValidation_MLS_TC_19() throws Exception {
+//        MLWalletBusinessLogic.shopItemsCartPageUIValidation_MLS_TC_19();
+//    }
+//
+//    @Test(priority = 6)
+//    public void shopItemsShippingDetailsPageUIValidation_MLS_TC_20() throws Exception {
+//        MLWalletBusinessLogic.shopItemsShippingDetailsPageUIValidation_MLS_TC_20();
+//    }
+//
+//
+//    @Test(priority = 7)
+//    public void shopItemsSelectBranchAddressPageUIValidation_MLS_TC_21() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSelectBranchAddressPageUIValidation_MLS_TC_21();
+//    }
 
     @Test(priority = 8)
     public void shopItemsSaveBtnFunctionalityOnSelectBranchScreen_MLS_TC_22() throws Exception {

@@ -49,7 +49,7 @@ public class MLWalletLoginPage {
 	public static By objRegistrationNumber = By.xpath("//*[@text='Registration Number']");
 
 	public static By objResendCode = By.xpath("//*[contains(@text,'Resend Code')]");
-	public static By objErrorPopup = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
+	public static By objErrorPopup = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objOkBtn = By.xpath("//*[@text='Ok']");
 
 	public static By objNoInternetConnectionMsg = By.xpath("(//*[@text='No Connection']/following-sibling::android.widget.TextView)[1]");

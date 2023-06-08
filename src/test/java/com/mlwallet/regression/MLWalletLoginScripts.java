@@ -60,9 +60,9 @@ public class MLWalletLoginScripts {
 //    }
 //
 //    @Test(priority = 6)
-//    public void loginTroubleSigningIn_Lgn_TC_07() throws Exception {
-//        MLWalletBusinessLogic.loginTroubleSigningIn_Lgn_TC_07();
-//    }
+    public void loginTroubleSigningIn_Lgn_TC_07() throws Exception {
+        MLWalletBusinessLogic.loginTroubleSigningIn_Lgn_TC_07();
+    }
 //
 //    @Test(priority = 7)
 //    public void loginCreateOne_Lgn_TC_08() throws Exception {

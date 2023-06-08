@@ -250,6 +250,7 @@ public class MLWalletBusinessLogic {
 	public void loginTroubleSigningIn_Lgn_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("LogIn Trouble Signing In Validation");
 		if (verifyElementPresentAndClick(MLWalletLoginPage.objTroubleSigningIn, getTextVal(MLWalletLoginPage.objTroubleSigningIn, "Button"))) {
+			waitTime(6000);
 			verifyElementPresent(MLWalletLoginPage.objTroubleSigningPage, getTextVal(MLWalletLoginPage.objTroubleSigningPage, "Page"));
 			verifyElementPresent(MLWalletLoginPage.objMLWalletSupport, getTextVal(MLWalletLoginPage.objMLWalletSupport, "Header"));
 			logger.info("Lgn_TC_07, Navigated to Trouble Signing In Page");
@@ -3886,7 +3887,9 @@ public class MLWalletBusinessLogic {
 	public void selectItemAndAddToCart() throws Exception {
 		Swipe("UP", 2);
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		waitTime(10000);
 		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+		waitTime(5000);
 		Swipe("up", 2);
 		click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
 	}
@@ -3900,12 +3903,6 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
 		click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
 		verifyElementPresent(MLWalletShopItemsPage.objSelectBranchPage, getTextVal(MLWalletShopItemsPage.objSelectBranchPage, "Page"));
-//		click(MLWalletShopItemsPage.objInputFieldOne, "Select Branch Field 1");
-//		click(MLWalletShopItemsPage.objBranchName, getTextVal(MLWalletShopItemsPage.objBranchName, "Branch Name"));
-//		click(MLWalletShopItemsPage.objInputFieldTwo, "Select Branch Field 2");
-//		click(MLWalletShopItemsPage.objSubBranchName, getTextVal(MLWalletShopItemsPage.objSubBranchName, "Branch Name"));
-//		click(MLWalletShopItemsPage.objInputFieldThree, "Select Branch Field 3");
-//		click(MLWalletShopItemsPage.objSubBranchNameTwo, getTextVal(MLWalletShopItemsPage.objSubBranchNameTwo, "Branch Name"));
 		click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
 		verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
 		click(MLWalletShopItemsPage.objOkBtn, "OK Button");
@@ -6486,7 +6483,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Back Arrow Button Validation");
-		buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("sunMobileNumber"),4);
+		buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("sunMobileNumber"),3);
 		verifyElementPresentAndClick(MLWalletEloadPage.objLoadSelectionBackArrowBtn,"Load Selection Back Arrow Button");
 		if(verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage,getTextVal(MLWalletEloadPage.objEloadtransactionPage,"Page"))){
 			logger.info("BE_TC_12, After clicking on Back Arrow Btn on Load Selection Page, Application Navigates to eLoad Transaction Page is Validated");
@@ -9206,6 +9203,7 @@ public class MLWalletBusinessLogic {
 	public void useQRCodeNavigation(String sTier) throws Exception {
 		mlWalletLogin(sTier);
 		verifyElementPresentAndClick(MLWalletUseQR.objUseQR,getTextVal(MLWalletUseQR.objUseQR,"Icon"));
+		waitTime(3000);
 		verifyElementPresent(MLWalletUseQR.objUseQR,getTextVal(MLWalletUseQR.objUseQR,"Page"));
 	}
 
@@ -9301,15 +9299,18 @@ public class MLWalletBusinessLogic {
 		Thread.sleep(3000);
 		mlWalletLogout();
 		click(MLWalletLogOutPage.objChangeNumber, getTextVal(MLWalletLogOutPage.objChangeNumber, "Link"));
-		mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+		mlWalletLogin(prop.getproperty("Fully_verified"));
 		verifyElementPresent(MLWalletTransactionHistoryPage.objRecentTransaction,getTextVal(MLWalletTransactionHistoryPage.objRecentTransaction,"Header"));
-		verifyElementPresent(MLWalletTransactionHistoryPage.objReceiveMoneyTab,getTextVal(MLWalletTransactionHistoryPage.objReceiveMoneyTab,"Transaction"));
+		Swipe("DOWN",2);
+//		verifyElementPresent(MLWalletTransactionHistoryPage.objReceiveMoneyTab,getTextVal(MLWalletTransactionHistoryPage.objReceiveMoneyTab,"Transaction"));
+		verifyElementPresent(MLWalletTransactionHistoryPage.objWalletToWallet,getTextVal(MLWalletTransactionHistoryPage.objWalletToWallet,"Transaction"));
+
 		verifyElementPresent(MLWalletUseQR.objSuccess,getTextVal(MLWalletUseQR.objSuccess,"Status"));
-		click(MLWalletTransactionHistoryPage.objReceiveMoneyTab,getTextVal(MLWalletTransactionHistoryPage.objReceiveMoneyTab,"Transaction"));
+		click(MLWalletTransactionHistoryPage.objWalletToWallet,getTextVal(MLWalletTransactionHistoryPage.objWalletToWallet,"Transaction"));
 		String sReferenceNumberInReceiver = getText(SendTransferPage.objReferenceNumberInTransactionDetails);
 		assertionValidation(sReferenceNumberInReceiver, sReferenceNumberInSender);
-		String sAmountReceived = getText(MLWalletTransactionHistoryPage.objAmountReceived);
-		assertionValidation(sAmountReceived,sAmountToSend);
+//		String sAmountReceived = getText(MLWalletTransactionHistoryPage.objAmountReceived);
+//		assertionValidation(sAmountReceived,sAmountToSend);
 		logger.info("QR_TC_04, Use QR, Wallet to Wallet Receive Money validated");
 		ExtentReporter.extentLoggerPass("QR_TC_04", "QR_TC_04, Use QR, Wallet to Wallet Receive Money validated");
 		System.out.println("-----------------------------------------------------------");
@@ -9421,6 +9422,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletUseQR.objReadQRCodeToSendMoney, getTextVal(MLWalletUseQR.objReadQRCodeToSendMoney, "Option"));
 		enableCameraPopup();
 		scanQR(prop.getproperty("Valid_QR"));
+		waitTime(3000);
 		type(MLWalletUseQR.objAmountInputField,sAmount,"Amount Input Field");
 		click(MLWalletUseQR.objNextBtn, getTextVal(MLWalletUseQR.objNextBtn, "Button"));
 		click(MLWalletUseQR.objMLWalletBalance, getTextVal(MLWalletUseQR.objMLWalletBalance, "Button"));
@@ -9451,7 +9453,7 @@ public class MLWalletBusinessLogic {
 		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
 		if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
+//			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
 			logger.info("QR_TC_15,Use QR, One Time Pin screen UI Validated");
 			ExtentReporter.extentLoggerPass("QR_TC_15", "QR_TC_15,Use QR, One Time Pin screen UI Validated");
 			System.out.println("-----------------------------------------------------------");

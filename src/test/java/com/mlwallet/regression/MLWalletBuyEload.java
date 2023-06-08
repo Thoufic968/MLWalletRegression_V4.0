@@ -75,10 +75,10 @@ public class MLWalletBuyEload {
 //        MLWalletBusinessLogic.buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("sunMobileNumber"),3);
 //    }
 //
-//    @Test(priority = 9)
-//    public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
-//        MLWalletBusinessLogic.buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12();
-//    }
+    @Test(priority = 9)
+    public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
+        MLWalletBusinessLogic.buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12();
+    }
 //
 //    @Test(priority = 10)
 //    public void buyELoadLoadSelectionPageUIValidation_BE_TC_13() throws Exception {
@@ -115,10 +115,10 @@ public class MLWalletBuyEload {
 //        MLWalletBusinessLogic.buyELoadSearchFieldValidation_BE_TC_19(prop.getproperty("Fully_Verified"));
 //    }
 //
-//    @Test(priority = 17)
-//    public void buyELoadAddContactToFavorites_BE_TC_20() throws Exception {
-//        MLWalletBusinessLogic.buyELoadAddContactToFavorites_BE_TC_20(prop.getproperty("Fully_Verified"));
-//    }
+    @Test(priority = 17)
+    public void buyELoadAddContactToFavorites_BE_TC_20() throws Exception {
+        MLWalletBusinessLogic.buyELoadAddContactToFavorites_BE_TC_20(prop.getproperty("Fully_Verified"));
+    }
 //
 //    @Test(priority = 18)
 //    public void buyELoadAddedContactToFavoritesValidation_BE_TC_21() throws Exception {
