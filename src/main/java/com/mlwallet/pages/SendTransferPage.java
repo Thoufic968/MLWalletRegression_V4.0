@@ -178,4 +178,6 @@ public class SendTransferPage {
     public static By objWalletToWalletStatus = By.xpath("((//*[@text='Wallet to Wallet'])[1]/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView)[2]");
 
     public static By objAppInfo = By.xpath("//*[@text='App info']");
+    public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
 }

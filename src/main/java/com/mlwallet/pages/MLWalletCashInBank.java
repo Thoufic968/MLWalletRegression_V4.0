@@ -79,6 +79,7 @@ public class MLWalletCashInBank {
     public static By objBankMaxLimitTxtFullyVerified = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objAppInfo = By.xpath("//*[@text='App info']");
+    public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
 
 }

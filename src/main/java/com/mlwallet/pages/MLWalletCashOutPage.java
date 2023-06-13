@@ -167,6 +167,7 @@ public class MLWalletCashOutPage {
     public static By objDate = By.xpath("(//*[@text='Date']/following-sibling::android.widget.TextView)[1]");
     public static By objType = By.xpath("(//*[@text='Type']/following-sibling::android.widget.TextView)[1]");
     public static By objAddToSavedRecipients = By.xpath("//*[@text='Add to Saved Recipients']");
+    public static By objInvalidAmountMsg = By.xpath("//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 
 
 
@@ -180,4 +181,6 @@ public class MLWalletCashOutPage {
     public static By objAccountNumberInEditRecipient = By.xpath("//*[@text='Account Number']/following-sibling::android.widget.EditText");
     public static By objEditRecipientBackBtn = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup' and ./*[@class='android.view.ViewGroup']]]]]/*/*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup']])[1]");
     public static By objAppInfo = By.xpath("//*[@text='App info']");
+    public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
 }

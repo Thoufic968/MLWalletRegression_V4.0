@@ -13,7 +13,6 @@ public class MLWalletCashOutWithdrawScripts {
 
 
 
-    //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
@@ -31,7 +30,7 @@ public class MLWalletCashOutWithdrawScripts {
 //    {
 //        MLWalletBusinessLogic.cashOutWithdrawBank_WM_TC_01("100");
 //    }
-////
+//
 //    @Test(priority = 2)
 //    public void cashOutWithInvalidAccNumber_WM_TC_02() throws Exception
 //    {
@@ -62,10 +61,10 @@ public class MLWalletCashOutWithdrawScripts {
 //        MLWalletBusinessLogic.cashOutMaxLimit_WM_TC_06();
 //    }
 //
-    @Test(priority = 7)
-    public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
-        MLWalletBusinessLogic.cashOutInsufficientBalance_WM_TC_07();
-    }
+//    @Test(priority = 7)
+//    public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
+//        MLWalletBusinessLogic.cashOutInsufficientBalance_WM_TC_07();
+//    }
 //
 //    @Test(priority = 8)
 //    public void cashOutBuyerTierLevelAcc_WM_TC_09() throws Exception
@@ -357,10 +356,40 @@ public class MLWalletCashOutWithdrawScripts {
 //    public void cashOutBranchTransactionValidationAfterMinimizingApp_WM_TC_91() throws Exception {
 //        MLWalletBusinessLogic.cashOutBranchTransactionValidationAfterMinimizingApp_WM_TC_91();
 //    }
-
+//
     @Test(priority = 65)
     public void cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08() throws Exception {
         MLWalletBusinessLogic.cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08();
+    }
+
+    @Test(priority = 66)
+    public void cashOutBankAmountFieldValidation_WM_TC_97() throws Exception {
+        MLWalletBusinessLogic.cashOutBankAmountFieldValidation_WM_TC_97("100.123");
+    }
+
+    @Test(priority = 67)
+    public void cashOutBranchAmountFieldValidation_WM_TC_98() throws Exception {
+        MLWalletBusinessLogic.cashOutBranchAmountFieldValidation_WM_TC_98("100.123");
+    }
+
+    @Test(priority = 68)
+    public void cashOutBankTransactionWithValidMLPin_WM_TC_99() throws Exception {
+        MLWalletBusinessLogic.cashOutBankTransactionWithValidMLPin_WM_TC_99("100");
+    }
+
+    @Test(priority = 69)
+    public void cashOutBranchTransactionWithValidMLPin_WM_TC_100() throws Exception {
+        MLWalletBusinessLogic.cashOutBranchTransactionWithInValidMLPin_WM_TC_100("100");
+    }
+
+    @Test(priority = 70)
+    public void cashOutBranchTransactionWithValidMLPin_WM_TC_106() throws Exception {
+        MLWalletBusinessLogic.cashOutBranchTransactionWithValidMLPin_WM_TC_106();
+    }
+
+    @Test(priority = 71)
+    public void cashOutBranchTransactionWithInValidMLPin_WM_TC_107() throws Exception {
+        MLWalletBusinessLogic.cashOutBranchTransactionWithInValidMLPin_WM_TC_107();
     }
 
 

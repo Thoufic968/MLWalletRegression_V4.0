@@ -600,6 +600,9 @@ public class MLWalletBusinessLogic {
 	}
 
 
+
+
+
 //=================================== Cash Out Phase2==================================================//
 
 	public void cashOutInvalidBank_WM_TC_10() throws Exception {
@@ -1729,15 +1732,146 @@ public class MLWalletBusinessLogic {
 
 
 
+	public void cashOutBankAmountFieldValidation_WM_TC_97(String sAmount) throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Bank, Amount Field with more than 2 decimals Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		cashOutSelectBank(prop.getproperty("Valid_BankName"));
+		enterBankDetails(prop.getproperty("AccountNumber"));
+		Thread.sleep(3000);
+		verifyElementPresent(MLWalletCashOutPage.objAmountField, "Bank Cash Out Amount Field");
+		type(MLWalletCashOutPage.objAmountField, sAmount, "Amount to Send");
+		click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
+		if (verifyElementPresent(MLWalletCashOutPage.objInvalidAmountMsg, getTextVal(MLWalletCashOutPage.objInvalidAmountMsg, "Pop Message"))) {
+			String sMinimumTransactionPopupMsg = getText(MLWalletCashOutPage.objInvalidAmountMsg);
+			String sExpectedPopupMsg = "The amount must be limited to 2 decimal places";
+			assertionValidation(sMinimumTransactionPopupMsg, sExpectedPopupMsg);
+			logger.info("WM_TC_97, CashOut Bank, Amount Field with more than 2 decimals Error Msg validated");
+			ExtentReporter.extentLoggerPass("WM_TC_97", "WM_TC_97, CashOut Bank, Amount Field with more than 2 decimals Error Msg validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
+	public void cashOutBranchAmountFieldValidation_WM_TC_98(String sAmount) throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Branch, Amount Field with more than 2 decimals Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
+		verifyElementPresent(MLWalletCashOutPage.objToAnyMLBranch, getTextVal(MLWalletCashOutPage.objToAnyMLBranch, "Button"));
+		click(MLWalletCashOutPage.objToAnyMLBranch, getTextVal(MLWalletCashOutPage.objToAnyMLBranch, "Button"));
+		verifyElementPresent(MLWalletCashOutPage.objCashOutToBranch, getTextVal(MLWalletCashOutPage.objCashOutToBranch, "Page"));
+		type(MLWalletCashOutPage.objAmountField, sAmount, "Amount to Send");
+		click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
+		if (verifyElementPresent(MLWalletCashOutPage.objInvalidAmountMsg, getTextVal(MLWalletCashOutPage.objInvalidAmountMsg, "Pop Message"))) {
+			String sMinimumTransactionPopupMsg = getText(MLWalletCashOutPage.objInvalidAmountMsg);
+			String sExpectedPopupMsg = "The amount must be limited to 2 decimal places";
+			assertionValidation(sMinimumTransactionPopupMsg, sExpectedPopupMsg);
+			logger.info("WM_TC_98, CashOut Branch, Amount Field with more than 2 decimals Error Msg validated");
+			ExtentReporter.extentLoggerPass("WM_TC_98", "WM_TC_98, CashOut Branch, Amount Field with more than 2 decimals Error Msg validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
+	public void cashOutBankTransactionWithValidMLPin_WM_TC_99(String sAmount) throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Bank Transaction With Valid ML Pin");
+		mlWalletLogin("9999999999");
+		cashOutSelectBank(prop.getproperty("Valid_BankName"));
+		enterBankDetails(prop.getproperty("AccountNumber"));
+		Thread.sleep(3000);
+		enterAmountBank(sAmount);
+		enableLocation_PopUp();
+		handleMpin("1111");
+		if (verifyElementPresent(MLWalletCashOutPage.objTransactionReceipt, getTextVal(MLWalletCashOutPage.objTransactionReceipt, "Text"))) {
+			verifyElementPresent(MLWalletCashOutPage.objTransactionSuccessMessage, getTextVal(MLWalletCashOutPage.objTransactionSuccessMessage, "Message"));
+			String sTransactionSuccess = getText(MLWalletCashOutPage.objTransactionSuccessMessage);
+			assertionValidation(sTransactionSuccess, "Transaction Successful");
+			verifyElementPresent(MLWalletCashOutPage.objTransactionNo, getTextVal(MLWalletCashOutPage.objTransactionNo, "Transaction Number"));
+			String sTransactionNumber = getText(MLWalletCashOutPage.objTransactionNo);
+			System.out.println(sTransactionNumber);
+			scrollToVertical("Back To Home");
+			click(MLWalletCashOutPage.objBackToHomeBtn, getTextVal(MLWalletCashOutPage.objBackToHomeBtn, "Button"));
+			Thread.sleep(3000);
+			Swipe("DOWN", 2);
+			Swipe("UP", 1);
+			verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+			click(MLWalletHomePage.objCashOutButton, getTextVal(MLWalletHomePage.objCashOutButton, "Text"));
+			if (verifyElementPresent(MLWalletCashOutPage.objTransactionDetails, getTextVal(MLWalletCashOutPage.objTransactionDetails, "Page"))) {
+				String sReferenceNumberInCashOut = getText(MLWalletCashOutPage.objReferenceNumberInCashOut);
+				System.out.println(sReferenceNumberInCashOut);
+				assertionValidation(sReferenceNumberInCashOut, sTransactionNumber);
+				logger.info("WM_TC_99, CashOut Bank Transaction With Valid ML Pin validated");
+				ExtentReporter.extentLoggerPass("WM_TC_99", "WM_TC_99, CashOut Bank Transaction With Valid ML Pin validated");
+				System.out.println("-----------------------------------------------------------");
+			}
+		}
+	}
 
+	public void cashOutBranchTransactionWithInValidMLPin_WM_TC_100(String sAmount) throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Bank Transaction With Invalid ML Pin");
+		mlWalletLogin("9999999999");
+		cashOutSelectBank(prop.getproperty("Valid_BankName"));
+		enterBankDetails(prop.getproperty("AccountNumber"));
+		Thread.sleep(3000);
+		enterAmountBank(sAmount);
+		enableLocation_PopUp();
+		handleMpin("1234");
+		if (verifyElementPresent(MLWalletCashOutPage.objInvalidPINMsg, getTextVal(MLWalletCashOutPage.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(MLWalletCashOutPage.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("WM_TC_100, CashOut Bank Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("WM_TC_100", "WM_TC_100, CashOut Bank Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void cashOutBranchTransactionWithValidMLPin_WM_TC_106() throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Branch Transaction With Invalid ML Pin");
+		mlWalletLogin("9999999999");
+		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
+		enterAmountMLBranch("10");
+		enableLocation_PopUp();
+		handleMpin("1111");
+		if (verifyElementPresent(MLWalletCashOutPage.objCashOutToBranch, getTextVal(MLWalletCashOutPage.objCashOutToBranch, "Page"))) {
+			verifyElementPresent(MLWalletCashOutPage.objCreatedDate, getTextVal(MLWalletCashOutPage.objCreatedDate, "Date"));
+			verifyElementPresent(MLWalletCashOutPage.objReferenceNumber, getTextVal(MLWalletCashOutPage.objReferenceNumber, "Reference Number"));
+			String nReference = getText(MLWalletCashOutPage.objReferenceNumber);
+			System.out.println(nReference);
+			String sReferenceNumber = nReference.substring(5, 16);
+			System.out.println(sReferenceNumber);
+			click(MLWalletCashOutPage.objBackToHomeBtn, getTextVal(MLWalletCashOutPage.objBackToHomeBtn, "Button"));
+			Swipe("DOWN", 2);
+			Swipe("UP", 1);
+			verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+			click(MLWalletHomePage.objCashOutButton, getTextVal(MLWalletHomePage.objCashOutButton, "Text"));
+			if (verifyElementPresent(MLWalletCashOutPage.objTransactionDetails, getTextVal(MLWalletCashOutPage.objTransactionDetails, "Page"))) {
+				String sReferenceNumberInCashOut = getText(MLWalletCashOutPage.objReferenceNumberInCashOut);
+				System.out.println(sReferenceNumberInCashOut);
+				assertionValidation(sReferenceNumberInCashOut, sReferenceNumber);
+				logger.info("Reference Number is matching with recent Transaction");
+				logger.info("WM_TC_106, CashOut Branch Transaction With valid ML Pin validated");
+				ExtentReporter.extentLoggerPass("WM_TC_106", "WM_TC_106, CashOut Branch Transaction With valid ML Pin validated");
+				System.out.println("-----------------------------------------------------------");
+			}
+		}
+	}
 
-
-
+	public void cashOutBranchTransactionWithInValidMLPin_WM_TC_107() throws Exception {
+		ExtentReporter.HeaderChildNode("CashOut Branch Transaction With Invalid ML Pin");
+		mlWalletLogin("9999999999");
+		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
+		enterAmountMLBranch("10");
+		enableLocation_PopUp();
+		handleMpin("1234");
+		if (verifyElementPresent(MLWalletCashOutPage.objInvalidPINMsg, getTextVal(MLWalletCashOutPage.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(MLWalletCashOutPage.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("WM_TC_107, CashOut Bank Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("WM_TC_107", "WM_TC_107, CashOut Bank Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 
@@ -2714,7 +2848,7 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
-	public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_56() throws Exception {
+	public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money To ML Branch Transaction Validation After Minimizing App");
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		enterMLBranchDetails();
@@ -2724,12 +2858,63 @@ public class MLWalletBusinessLogic {
 		DriverManager.getAppiumDriver().runAppInBackground(Duration.ofSeconds(5));
 		logger.info("Application relaunched after 5 Seconds");
 		if (verifyElementPresent(SendTransferPage.objSendMoneySuccessful, getTextVal(SendTransferPage.objSendMoneySuccessful, "Message"))) {
-			logger.info("STB_TC_56, Send Money To ML Branch Transaction Validation After Minimizing App Validated");
-			ExtentReporter.extentLoggerPass("STB_TC_56", "STB_TC_56, Send Money To ML Branch Transaction Validation After Minimizing App Validated");
+			logger.info("STB_TC_58, Send Money To ML Branch Transaction Validation After Minimizing App Validated");
+			ExtentReporter.extentLoggerPass("STB_TC_58", "STB_TC_58, Send Money To ML Branch Transaction Validation After Minimizing App Validated");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
 
+	public void sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_64() throws Exception {
+		ExtentReporter.HeaderChildNode("Send Money to any ML Branch Transaction With Valid ML Pin");
+		sendMoneyToAnyMLBranch("9999999999");
+		enterMLBranchDetails();
+		enterAmountToKwartaPadala("100");
+		enableLocation_PopUp();
+		handleMpin("1111");
+		if (verifyElementPresent(SendTransferPage.objSendMoneySuccessful, getTextVal(SendTransferPage.objSendMoneySuccessful, "Message"))) {
+			verifyElementPresent(SendTransferPage.objPHPAmount, getTextVal(SendTransferPage.objPHPAmount, "Amount"));
+			verifyElementPresent(SendTransferPage.objDate, getTextVal(SendTransferPage.objDate, "Date"));
+			verifyElementPresent(SendTransferPage.objReferenceNumber, getTextVal(SendTransferPage.objReferenceNumber, "Reference Number"));
+			String sReference = getText(SendTransferPage.objReferenceNumber);
+			System.out.println(sReference);
+			String sReferenceNumber = sReference.substring(9, 20);
+			System.out.println(sReferenceNumber);
+			Swipe("UP", 2);
+			click(SendTransferPage.objBackToHomeBtn, getTextVal(SendTransferPage.objBackToHomeBtn, "Button"));
+			Thread.sleep(3000);
+			Swipe("DOWN", 2);
+			Swipe("UP", 1);
+			verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+			verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+			click(MLWalletHomePage.objKwartaPadala, getTextVal(MLWalletHomePage.objKwartaPadala, "Text"));
+			if (verifyElementPresent(SendTransferPage.objReferenceNumberInTransactionDetails, getTextVal(SendTransferPage.objReferenceNumberInTransactionDetails, "Page"))) {
+				String sReferenceNumberInCashOut = getText(SendTransferPage.objReferenceNumberInTransactionDetails);
+				System.out.println(sReferenceNumberInCashOut);
+				assertionValidation(sReferenceNumberInCashOut, sReferenceNumber);
+				logger.info("STB_TC_64, Send Money to any ML Branch Transaction With Valid ML Pin validated");
+				ExtentReporter.extentLoggerPass("STB_TC_64", "STB_TC_64, Send Money to any ML Branch Transaction With Valid ML Pin validated");
+				System.out.println("-----------------------------------------------------------");
+			}
+		}
+	}
+
+	public void sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_65() throws Exception {
+		ExtentReporter.HeaderChildNode("Send Money to any ML Branch Transaction With Invalid ML Pin");
+		sendMoneyToAnyMLBranch("9999999999");
+		enterMLBranchDetails();
+		enterAmountToKwartaPadala("100");
+		waitTime(3000);
+		enableLocation_PopUp();
+		handleMpin("1234");
+		if (verifyElementPresent(SendTransferPage.objInvalidPINMsg, getTextVal(SendTransferPage.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(SendTransferPage.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("STB_TC_65, Send Money to any ML Branch Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("STB_TC_65", "STB_TC_65, Send Money to any ML Branch Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 
@@ -3561,6 +3746,55 @@ public class MLWalletBusinessLogic {
 	}
 
 
+	public void sendMoneyToMLWalletTransactionWithValidMLPin_STW_TC_56() throws Exception {
+		ExtentReporter.HeaderChildNode("Send Money to any ML Wallet Transaction With Valid ML Pin");
+		sendMoneyMLWallet(prop.getproperty("Fully_verified"));
+		enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
+		enterAmountAndSendToMLWallet("10");
+		enableLocation_PopUp();
+		handleMpin("1111");
+		if (verifyElementPresent(SendTransferPage.objSendMoneyMLWallet, getTextVal(SendTransferPage.objSendMoneyMLWallet, "Message"))) {
+			verifyElementPresent(SendTransferPage.objSendMoneyMLWalletPHP, getTextVal(SendTransferPage.objSendMoneyMLWalletPHP, "Amount"));
+			verifyElementPresent(SendTransferPage.objSendMoneyMLWalletDate, getTextVal(SendTransferPage.objSendMoneyMLWalletDate, "Date"));
+			verifyElementPresent(SendTransferPage.objMLWalletReferenceNumber, getTextVal(SendTransferPage.objMLWalletReferenceNumber, "Reference Number"));
+			String sReferenceNumber = getText(SendTransferPage.objMLWalletReferenceNumber);
+			System.out.println(sReferenceNumber);
+			Swipe("UP", 2);
+			click(SendTransferPage.objBackToHomeBtn, getTextVal(SendTransferPage.objBackToHomeBtn, "Button"));
+			Thread.sleep(3000);
+			Swipe("DOWN", 2);
+			Swipe("UP", 1);
+			verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+			verifyElementPresent(MLWalletHomePage.objWalletToWallet, getTextVal(MLWalletHomePage.objWalletToWallet, "Text"));
+			click(MLWalletHomePage.objWalletToWallet, getTextVal(MLWalletHomePage.objWalletToWallet, "Text"));
+			if (verifyElementPresent(SendTransferPage.objReferenceNumberInTransactionDetails, getTextVal(SendTransferPage.objReferenceNumberInTransactionDetails, "Page"))) {
+				String sReferenceNumberInWalletToWallet = getText(SendTransferPage.objReferenceNumberInTransactionDetails);
+				System.out.println(sReferenceNumberInWalletToWallet);
+				assertionValidation(sReferenceNumberInWalletToWallet, sReferenceNumber);
+				logger.info("STW_TC_56, Send Money to any ML Wallet Transaction With Valid ML Pin validated");
+				ExtentReporter.extentLoggerPass("STW_TC_56", "STW_TC_56, Send Money to any ML Wallet Transaction With Valid ML Pin validated");
+				System.out.println("-----------------------------------------------------------");
+			}
+		}
+	}
+
+	public void sendMoneyToMLWalletTransactionWithInValidMLPin_STW_TC_57() throws Exception {
+		ExtentReporter.HeaderChildNode("Send Money to any ML Wallet Transaction With Invalid ML Pin");
+		sendMoneyMLWallet(prop.getproperty("Fully_verified"));
+		enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
+		enterAmountAndSendToMLWallet("10");
+		enableLocation_PopUp();
+		handleMpin("1234");
+		if (verifyElementPresent(SendTransferPage.objInvalidPINMsg, getTextVal(SendTransferPage.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(SendTransferPage.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("STW_TC_57, Send Money to any ML Wallet Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("STW_TC_57", "STW_TC_57, Send Money to any ML Wallet Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
 
 
 //================================================ Transaction History ===========================================//
@@ -4083,9 +4317,9 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletShopItemsPage.objProductQuantity,getTextVal(MLWalletShopItemsPage.objProductQuantity,"Product Quantity"));
 			verifyElementPresent(MLWalletShopItemsPage.objItemSubTotal,getTextVal(MLWalletShopItemsPage.objItemSubTotal,"Item SubTotal"));
 			verifyElementPresent(MLWalletShopItemsPage.objTotalOrder,getTextVal(MLWalletShopItemsPage.objTotalOrder,"Total Order"));
+			Swipe("UP",2);
 			verifyElementPresent(MLWalletShopItemsPage.objServiceFee,getTextVal(MLWalletShopItemsPage.objServiceFee,"Service Fee"));
 			verifyElementPresent(MLWalletShopItemsPage.objShippingFeeInShippingDetails,getTextVal(MLWalletShopItemsPage.objShippingFeeInShippingDetails,"Shipping Fee in Shipping Details"));
-			Swipe("UP",2);
 			verifyElementPresent(MLWalletShopItemsPage.objSelectPaymentMethod,getTextVal(MLWalletShopItemsPage.objSelectPaymentMethod,"Header"));
 			verifyElementPresent(MLWalletShopItemsPage.objMLWallet,getTextVal(MLWalletShopItemsPage.objMLWallet,"Payment Method"));
 			verifyElementPresent(MLWalletShopItemsPage.objOnlineBanking,getTextVal(MLWalletShopItemsPage.objOnlineBanking,"Payment Method"));
@@ -4201,6 +4435,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Shop Items Cancel Button Functionality on OTP Screen");
 		shopItemsOneTimePinPageUIValidation_MLS_TC_25();
 		click(MLWalletShopItemsPage.objCancel,getTextVal(MLWalletShopItemsPage.objCancel,"Button"));
+		waitTime(4000);
 		if(verifyElementPresent(MLWalletShopItemsPage.objPlaceOrderBtn,getTextVal(MLWalletShopItemsPage.objPlaceOrderBtn,"Button"))){
 			logger.info("MLS_TC_26, Shop Items Cancel Button Functionality on OTP Screen validated");
 			ExtentReporter.extentLoggerPass("MLS_TC_26", "MLS_TC_26, Shop Items Cancel Button Functionality on OTP Screen validated");
@@ -4222,7 +4457,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
 		verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
 		click(MLWalletShopItemsPage.objOkBtn, "OK Button");
-		Swipe("UP",3);
+		Swipe("UP",4);
 		click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order Button");
 		if(verifyElementPresent(MLWalletShopItemsPage.objErrorPopup,getTextVal(MLWalletShopItemsPage.objErrorPopup,"Error Popup"))){
 			String sActualErrorPopup = getText(MLWalletShopItemsPage.objErrorPopup);
@@ -4379,7 +4614,7 @@ public class MLWalletBusinessLogic {
 		waitTime(5000);
 		if(verifyElementPresent(MLWalletShopItemsPage.objSubtotalAmount,getTextVal(MLWalletShopItemsPage.objSubtotalAmount,"SubTotal Items"))){
 			String sActualSubtotalItems = getText(MLWalletShopItemsPage.objSubtotalAmount);
-			String sExceptedSubtotalItems = "P500.00";
+			String sExceptedSubtotalItems = "P7,600.00";
 			assertionValidation(sActualSubtotalItems,sExceptedSubtotalItems);
 			logger.info("MLS_TC_60, Shop Items Total subTotal Verification with selecting the items in the Cart validated");
 			ExtentReporter.extentLoggerPass("MLS_TC_60", "MLS_TC_60, Shop Items Total subTotal Verification with selecting the items in the Cart validated");
@@ -5009,7 +5244,58 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank, Amount Field with more than 2 decimals Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		selectBankAndInputAmount("1000.123");
+		if (verifyElementPresent(MLWalletCashInBank.objInvalidAmountMsg, getTextVal(MLWalletCashInBank.objInvalidAmountMsg, "Pop Message"))) {
+			String sMinimumTransactionPopupMsg = getText(MLWalletCashInBank.objInvalidAmountMsg);
+			String sExpectedPopupMsg = "The amount must be limited to 2 decimal places";
+			assertionValidation(sMinimumTransactionPopupMsg, sExpectedPopupMsg);
+			logger.info("CIBA_TC_49, Cash In Via Bank, Amount Field with more than 2 decimals Error Msg validated");
+			ExtentReporter.extentLoggerPass("CIBA_TC_49", "CIBA_TC_49, Cash In Via Bank, Amount Field with more than 2 decimals Error Msg validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Transaction With Valid ML Pin");
+		mlWalletLogin("9999999999");
+		selectBankAndInputAmount("100");
+		dragonPayChargesMsgValidation();
+		reviewTransactionValidation();
+		handleMpin("1111");
+		enableLocation_PopUp();
+		bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
+		click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
+		click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
+		verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
+		verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
+		verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
+		if (verifyElementPresent(MLWalletCashInBank.objSuccessMsg, getTextVal(MLWalletCashInBank.objSuccessMsg, "Message"))) {
+			logger.info("CIBA_TC_50, Cash In Via Bank Transaction With Valid ML Pin validated");
+			ExtentReporter.extentLoggerPass("CIBA_TC_50", "CIBA_TC_50, Cash In Via Bank Transaction With Valid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+	public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Transaction With Invalid ML Pin");
+		mlWalletLogin("9999999999");
+		selectBankAndInputAmount("100");
+		dragonPayChargesMsgValidation();
+		reviewTransactionValidation();
+		handleMpin("1234");
+		if (verifyElementPresent(MLWalletCashInBank.objInvalidPINMsg, getTextVal(MLWalletCashInBank.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(MLWalletCashInBank.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("CIBA_TC_51, Cash In Via Bank Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("CIBA_TC_51", "CIBA_TC_51, Cash In Via Bank Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 
@@ -5797,8 +6083,8 @@ public class MLWalletBusinessLogic {
 			click(MLWalletSettingsPage.objEnterMpinVal(ch1),
 					getTextVal(MLWalletSettingsPage.objEnterMpinVal(ch1), "MPIN"));
 		}
-		logger.info("Entered MPIN " + mPin + " Successfully");
-		ExtentReporter.extentLogger("Enter MPIN", "Entered MPIN " + mPin + " Successfully");
+		logger.info("Entered MLPin " + mPin + " Successfully");
+		ExtentReporter.extentLogger("Enter MLPin", "Entered MLPin " + mPin + " Successfully");
 	}
 //===========================================================================================================//
 	public void settingsAccountDetailsValidation_SS_TC_01() throws Exception {
@@ -7142,6 +7428,17 @@ public class MLWalletBusinessLogic {
 		click(MLWalletCashInViaBranch.objContinueButton, getTextVal(MLWalletCashInViaBranch.objContinueButton, "Button"));
 	}
 
+	public void cancelPreviousTransactionAndContinue() throws Exception {
+		if (verifyElementDisplayed(MLWalletCashInViaBranch.objCancelTransactionBtn)) {
+			click(MLWalletCashInViaBranch.objCancelTransactionBtn, getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn, "button"));
+			click(MLWalletCashInViaBranch.objCancelBtn1, getTextVal(MLWalletCashInViaBranch.objCancelBtn1, "Button"));
+			verifyElementPresentAndClick(MLWalletCashInViaBranch.objBackToHomeBtn, getTextVal(MLWalletCashInViaBranch.objBackToHomeBtn, "Button"));
+			click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
+			verifyElementPresent(MLWalletCashInViaBranch.objBranchName, "Cash In Options Page");
+			click(MLWalletCashInViaBranch.objBranchName, "ML Branch");
+		}
+	}
+
 
 	public void cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception {
 		ExtentReporter.HeaderChildNode("ML_Wallet_Cash_In_Via_Barnch_ValidAmount_Scenario");
@@ -7688,14 +7985,7 @@ public class MLWalletBusinessLogic {
 	public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Transaction Validation After Minimizing App");
 		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
-		if(verifyElementDisplayed(MLWalletCashInViaBranch.objCancelTransactionBtn)){
-			click(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"button"));
-			click(MLWalletCashInViaBranch.objCancelBtn1,getTextVal(MLWalletCashInViaBranch.objCancelBtn1,"Button"));
-			verifyElementPresentAndClick(MLWalletCashInViaBranch.objBackToHomeBtn,getTextVal(MLWalletCashInViaBranch.objBackToHomeBtn,"Button"));
-			click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
-			verifyElementPresent(MLWalletCashInViaBranch.objBranchName, "Cash In Options Page");
-			click(MLWalletCashInViaBranch.objBranchName, "ML Branch");
-		}
+		cancelPreviousTransactionAndContinue();
 		cashInViaBranchEnterAmount("100");
 		waitTime(2000);
 		verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
@@ -7715,7 +8005,71 @@ public class MLWalletBusinessLogic {
 	}
 
 
+	public void cashInViaBranchAmountFieldValidation_CIBR_TC_42() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Branch, Amount Field with more than 2 decimals Validation");
+		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		cancelPreviousTransactionAndContinue();
+		cashInViaBranchEnterAmount("100.123");
+		waitTime(2000);
+		if (verifyElementPresent(MLWalletCashInViaBranch.objInvalidAmountMsg, getTextVal(MLWalletCashInViaBranch.objInvalidAmountMsg, "Pop Message"))) {
+			String sMinimumTransactionPopupMsg = getText(MLWalletCashInViaBranch.objInvalidAmountMsg);
+			String sExpectedPopupMsg = "The amount must be limited to 2 decimal places";
+			assertionValidation(sMinimumTransactionPopupMsg, sExpectedPopupMsg);
+			logger.info("CIBR_TC_42, Cash In Via Branch, Amount Field with more than 2 decimals Error Msg validated");
+			ExtentReporter.extentLoggerPass("CIBR_TC_42", "CIBR_TC_42, Cash In Via Branch, Amount Field with more than 2 decimals Error Msg validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+
+	public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Branch Transaction With Valid ML Pin");
+		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		cancelPreviousTransactionAndContinue();
+		cashInViaBranchEnterAmount("100");
+		waitTime(2000);
+		verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
+				getTextVal(MLWalletCashInViaBranch.objWarningPopup, "Pop Up"));
+		click(MLWalletCashInViaBranch.objContinueButton, "Continue Button");
+		handleMpin("1111");
+		enableLocation_PopUp();
+		if(verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch,getTextVal(MLWalletCashInViaBranch.objCashInToBranch,"Header"))){
+			verifyElementPresent(MLWalletCashInViaBranch.objPHP,getTextVal(MLWalletCashInViaBranch.objPHP,"PHP"));
+			verifyElementPresent(MLWalletCashInViaBranch.objCreatedDate,getTextVal(MLWalletCashInViaBranch.objCreatedDate,"Date"));
+			verifyElementPresent(MLWalletCashInViaBranch.objStatus,getTextVal(MLWalletCashInViaBranch.objStatus,"Status"));
+			verifyElementPresent(MLWalletCashInViaBranch.objTransactionNo,getTextVal(MLWalletCashInViaBranch.objTransactionNo,"Transaction Number"));
+			verifyElementPresentAndClick(MLWalletCashInViaBranch.objCrossBtn,"Cash In Branch Cross Button");
+			Swipe("DOWN",1);
+			Swipe("UP",1);
+			if(verifyElementPresent(MLWalletCashInBank.objCashInTransaction,getTextVal(MLWalletCashInBank.objCashInTransaction,"Transaction"))) {
+				verifyElementPresent(MLWalletCashInBank.objPending, getTextVal(MLWalletCashInBank.objPending, "Status"));
+				logger.info("'CIBR_TC_43', Cash In Via Branch Transaction With Valid ML Pin validated");
+				ExtentReporter.extentLoggerPass("'CIBR_TC_43", "'CIBR_TC_43', Cash In Via Branch Transaction With Valid ML Pin validated");
+				System.out.println("-----------------------------------------------------------");
+			}
+		}
+	}
+
+
+	public void cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Branch Transaction With InValid ML Pin");
+		cashInViaBranchNavigation("9999999999");
+		cancelPreviousTransactionAndContinue();
+		cashInViaBranchEnterAmount("100");
+		waitTime(2000);
+		verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
+				getTextVal(MLWalletCashInViaBranch.objWarningPopup, "Pop Up"));
+		click(MLWalletCashInViaBranch.objContinueButton, "Continue Button");
+		handleMpin("1234");
+		if (verifyElementPresent(MLWalletCashInViaBranch.objInvalidPINMsg, getTextVal(MLWalletCashInViaBranch.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(MLWalletCashInViaBranch.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+			logger.info("CIBR_TC_44, Cash In Via Branch Transaction With Invalid ML Pin validated");
+			ExtentReporter.extentLoggerPass("CIBR_TC_44", "CIBR_TC_44, Cash In Via Branch Transaction With Invalid ML Pin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 

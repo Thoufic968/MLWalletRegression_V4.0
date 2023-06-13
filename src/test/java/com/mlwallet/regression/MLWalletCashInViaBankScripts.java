@@ -11,14 +11,7 @@ public class MLWalletCashInViaBankScripts {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
-//    @BeforeTest()
-//    public void beforeTest(){
-//        AppiumServer.stopServer();
-//        AppiumServer.startServer();
-//    }
 
-
-    //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
@@ -181,15 +174,30 @@ public class MLWalletCashInViaBankScripts {
 //    public void cashInViaBankLocationPopUpAllowFunctionality_CIBA_TC_39() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBankLocationPopUpAllowFunctionality_CIBA_TC_39();
 //    }
+//
+//    @Test(priority = 30)
+//    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
+//    }
+//
+//    @Test(priority = 31)
+//    public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43();
+//    }
 
-    @Test(priority = 30)
-    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
+    @Test(priority = 32)
+    public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankAmountFieldValidation_CIBA_TC_49();
     }
 
-    @Test(priority = 31)
-    public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43();
+    @Test(priority = 33)
+    public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionWithValidMLPin_CIBA_TC_50();
+    }
+
+    @Test(priority = 34)
+    public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51();
     }
 
 

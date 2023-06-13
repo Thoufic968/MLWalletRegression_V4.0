@@ -10,15 +10,7 @@ public class MLWalletCashInViaBranch {
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
 
-//    @BeforeTest()
-//    public void beforeTest(){
-//        AppiumServer.stopServer();
-//        AppiumServer.startServer();
-//    }
 
-
-
-    //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
@@ -116,10 +108,10 @@ public class MLWalletCashInViaBranch {
 //        MLWalletBusinessLogic.cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19();
 //    }
 //
-////    @Test(priority = 16)
-////  public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
-////    MLWalletBusinessLogic.cashInViaBranchBuyerTierUser_CIBR_TC_16();
-////}
+//    @Test(priority = 16)
+//     public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
+//     MLWalletBusinessLogic.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+//}
 //
 //
 //    @Test(priority = 17)
@@ -186,13 +178,26 @@ public class MLWalletCashInViaBranch {
 //    public void cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32();
 //    }
+//
+//    @Test(priority = 30)
+//    public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36();
+//    }
 
-    @Test(priority = 30)
-    public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36();
+    @Test(priority = 31)
+    public void cashInViaBranchAmountFieldValidation_CIBR_TC_42() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchAmountFieldValidation_CIBR_TC_42();
     }
 
+    @Test(priority = 32)
+    public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43();
+    }
 
+    @Test(priority = 33)
+    public void cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44();
+    }
 
     @AfterMethod
     public void afterMethod(){

@@ -10,12 +10,8 @@ public class MLWalletBranchLocator {
     public static String portno;
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
 
-//    @BeforeTest()
-//    public void beforeTest(){
-//        AppiumServer.startServer();
-//    }
 
-    //@BeforeSuite(groups = { "All" })
+
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {

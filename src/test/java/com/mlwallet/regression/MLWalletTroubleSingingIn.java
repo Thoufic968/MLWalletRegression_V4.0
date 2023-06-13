@@ -14,7 +14,6 @@ public class MLWalletTroubleSingingIn {
 
 
 
-    //@BeforeSuite(groups = { "All" })
     @Parameters({"deviceName","portno"})
     @BeforeMethod
     public void before(String deviceName,String portno) throws Exception {
