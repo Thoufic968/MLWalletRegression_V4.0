@@ -184,22 +184,46 @@ public class MLWalletCashInViaBankScripts {
 //    public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43();
 //    }
+//
+//    @Test(priority = 32)
+//    public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankAmountFieldValidation_CIBA_TC_49();
+//    }
+//
+//    @Test(priority = 33)
+//    public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankTransactionWithValidMLPin_CIBA_TC_50();
+//    }
+//
+//    @Test(priority = 34)
+//    public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51();
+//    }
 
-    @Test(priority = 32)
-    public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankAmountFieldValidation_CIBA_TC_49();
+    @Test(priority = 35)
+    public void cashInViaBankOTPPopupValidation_CIBA_TC_57() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankOTPPopupValidation_CIBA_TC_57();
     }
 
-    @Test(priority = 33)
-    public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankTransactionWithValidMLPin_CIBA_TC_50();
+    @Test(priority = 36)
+    public void cashInViaBankTransactionInAppOTPPopupUIValidation_CIBA_TC_58() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionInAppOTPPopupUIValidation_CIBA_TC_58();
     }
 
-    @Test(priority = 34)
-    public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
-        MLWalletBusinessLogic.cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51();
+    @Test(priority = 37)
+    public void cashInViaBankTransactionNewOTPAfterSixtySecondsValidation_CIBA_TC_59() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionNewOTPAfterSixtySecondsValidation_CIBA_TC_59();
     }
 
+    @Test(priority = 38)
+    public void cashInViaBankTransactionOTPCancelBtnFunctionality_CIBA_TC_60() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionOTPCancelBtnFunctionality_CIBA_TC_60();
+    }
+
+    @Test(priority = 39)
+    public void cashInViaBankOTPContinueBtnFunctionality_CIBA_TC_61() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankOTPContinueBtnFunctionality_CIBA_TC_61();
+    }
 
     @AfterMethod
     public void afterMethod(){

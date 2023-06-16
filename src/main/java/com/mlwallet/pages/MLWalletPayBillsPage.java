@@ -100,5 +100,7 @@ public class MLWalletPayBillsPage {
     public static By objRecentTransactionOne = By.xpath("//*[@class='android.view.ViewGroup' and ./*[@text] and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.HorizontalScrollView']]]]]");
     public static By objAccountInfo = By.xpath("//*[@text='Account Info']");
     public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
+    public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
 
 }

@@ -14,6 +14,7 @@ public class MLWalletLoginPage {
 	}
 	public static By objCameraPopup = By.xpath("//*[@text='Allow ML Wallet to take pictures and record video?']");
 	public static By objContinueBtn = By.xpath("//*[@text='CONTINUE']");
+	public static By objCancelBtn = By.xpath("//*[@text='CANCEL']");
 
 	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
 
@@ -55,5 +56,7 @@ public class MLWalletLoginPage {
 	public static By objNoInternetConnectionMsg = By.xpath("(//*[@text='No Connection']/following-sibling::android.widget.TextView)[1]");
 	public static By objNoConnection = By.xpath("//*[@text='No Connection']");
 	public static By objNoConnectionAppVersion = By.xpath("(//*[@text='No Connection']/following-sibling::android.widget.TextView)[2]");
+	public static By objOTP = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[1]");
+	public static By objSeconds = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[2]");
 
 }

@@ -183,20 +183,45 @@ public class MLWalletCashInViaBranch {
 //    public void cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36() throws Exception {
 //        MLWalletBusinessLogic.cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36();
 //    }
+//
+//    @Test(priority = 31)
+//    public void cashInViaBranchAmountFieldValidation_CIBR_TC_42() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchAmountFieldValidation_CIBR_TC_42();
+//    }
+//
+//    @Test(priority = 32)
+//    public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43();
+//    }
+//
+//    @Test(priority = 33)
+//    public void cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44();
+//    }
 
-    @Test(priority = 31)
-    public void cashInViaBranchAmountFieldValidation_CIBR_TC_42() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchAmountFieldValidation_CIBR_TC_42();
+    @Test(priority = 34)
+    public void cashInViaBranchOTPPopupValidation_CIBR_TC_50() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchOTPPopupValidation_CIBR_TC_50();
     }
 
-    @Test(priority = 32)
-    public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43();
+    @Test(priority = 35)
+    public void cashInViaBranchTransactionInAppOTPPopupUIValidation_CIBR_TC_51() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionInAppOTPPopupUIValidation_CIBR_TC_51();
     }
 
-    @Test(priority = 33)
-    public void cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44();
+    @Test(priority = 36)
+    public void cashInViaBranchTransactionNewOTPAfterSixtySecondsValidation_CIBR_TC_52() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionNewOTPAfterSixtySecondsValidation_CIBR_TC_52();
+    }
+
+    @Test(priority = 37)
+    public void cashInViaBranchTransactionOTPCancelBtnFunctionality_CIBR_TC_53() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchTransactionOTPCancelBtnFunctionality_CIBR_TC_53();
+    }
+
+    @Test(priority = 38)
+    public void cashInViaBranchOTPContinueBtnFunctionality_CIBR_TC_54() throws Exception {
+        MLWalletBusinessLogic.cashInViaBranchOTPContinueBtnFunctionality_CIBR_TC_54();
     }
 
     @AfterMethod

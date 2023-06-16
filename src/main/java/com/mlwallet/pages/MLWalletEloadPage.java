@@ -72,4 +72,6 @@ public class MLWalletEloadPage {
 	public static By objAskMeLater = By.xpath("//*[@resource-id='android:id/button3']");
 	public static By objAllowAccess = By.xpath("//*[@resource-id='android:id/button1']");
 	public static By objNewTransaction = By.xpath("//*[@text='New Transaction']");
+	public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+
 }

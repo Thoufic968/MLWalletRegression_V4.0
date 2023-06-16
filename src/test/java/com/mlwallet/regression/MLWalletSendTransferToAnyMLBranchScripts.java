@@ -268,16 +268,44 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //    public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58() throws Exception {
 //        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58();
 //    }
+//
+//    @Test(priority = 49)
+//    public void sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_64() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_64();
+//    }
+//
+//    @Test(priority = 50)
+//    public void sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_65() throws Exception {
+//        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_65();
+//    }
 
-    @Test(priority = 49)
-    public void sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_64() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_64();
+    @Test(priority = 51)
+    public void sendMoneyToMLBranchInOTPPopupValidation_STB_TC_71() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchInOTPPopupValidation_STB_TC_71();
     }
 
-    @Test(priority = 50)
-    public void sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_65() throws Exception {
-        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_65();
+    @Test(priority = 52)
+    public void sendMoneyToMLBranchTransactionInAppOTPPopupUIValidation_STB_TC_72() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionInAppOTPPopupUIValidation_STB_TC_72();
     }
+
+    @Test(priority = 53)
+    public void sendMoneyToMLBranchTransactionNewOTPAfterSixtySecondsValidation_STB_TC_73() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionNewOTPAfterSixtySecondsValidation_STB_TC_73();
+    }
+
+    @Test(priority = 54)
+    public void sendMoneyToMLBranchTransactionOTPCancelBtnFunctionality_STB_TC_74() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionOTPCancelBtnFunctionality_STB_TC_74();
+    }
+
+    @Test(priority = 55)
+    public void sendMoneyToMLBranchOTPContinueBtnFunctionality_STB_TC_75() throws Exception {
+        MLWalletBusinessLogic.sendMoneyToMLBranchTransactionOTPContinueBtnFunctionality_STB_TC_75();
+    }
+
+
+
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();
