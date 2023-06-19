@@ -37,7 +37,7 @@ public class MLWalletCashOutPage {
     public static By objMaxLimitUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objInsufficientBalance = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
-    public static By objOkBtn = By.xpath("//*[@resource-id='modal-confirm-button']");
+    public static By objOkBtn = By.xpath("//*[@text='Ok']");
 
     public static By objCashOutPageBackArrowBtn = By.xpath("//*[@text='Cash Out']/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView");
 

@@ -177,7 +177,7 @@ public class MLWalletUseQR {
     public void useQR_SendMoneyToMLWalletWhenReceiverQRCodeCapturedByCamera_QR_TC_40() throws Exception {
         MLWalletBusinessLogic.useQR_SendMoneyToMLWalletWhenReceiverQRCodeCapturedByCamera_QR_TC_40();
     }
-    
+
 
 
 
