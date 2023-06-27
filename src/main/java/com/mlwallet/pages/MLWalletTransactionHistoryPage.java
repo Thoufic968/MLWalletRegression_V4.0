@@ -54,4 +54,5 @@ public class MLWalletTransactionHistoryPage {
 	public static By objDate = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]]]/*[@class='android.view.ViewGroup'])[1]/*[@text])[4]");
 	public static By objBank = By.xpath("(//*[@resource-id='Bank'])[2]");
 	public static By objAmountReceived = By.xpath("(//*[@resource-id='Amount Received'])[2]");
+	public static By objRedeemCode = By.xpath("(//*[@resource-id='Redeem Code'])[2]");
 }

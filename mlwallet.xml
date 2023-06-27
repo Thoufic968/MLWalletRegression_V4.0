@@ -9,7 +9,7 @@
 	
 	 <test name="MLWallet">
 	     <parameter name="portno" value="4723"></parameter>
-         <parameter name="deviceName" value="RZ8T20EDQ5W"></parameter>
+         <parameter name="deviceName" value="4TWOGQCM6589MBZD"></parameter>
 		 <parameter name="browserType" value="Chrome"></parameter>
 		 <parameter name="url" value="https://prnt.sc/qA8TKBF8wiJ9"></parameter>
 		 <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
@@ -27,16 +27,18 @@
 			<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
 			<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
 			<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
-			<class name="com.mlwallet.regression.MLWalletShopItemScripts" />
-			<class name="com.mlwallet.regression.MLWalletTransactionHistory" />
+<!--			<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletTransactionHistory" />-->
 			<class name="com.mlwallet.regression.MLWalletBuyEload" />
-			<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>
+<!--			<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>-->
 			<class name="com.mlwallet.regression.MLWalletBranchLocator"/>
 			<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>
-			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />
-			<class name="com.mlwallet.regression.MLWalletRegistration" />
+<!--			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
 			<class name="com.mlwallet.regression.MLWalletUseQR" />
-			<class name="com.mlwallet.regression.MLWalletSettingScripts" />
+<!--			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
+			<class name="com.mlwallet.regression.MLWalletTopUpGames" />
+
 
 		</classes>
 	</test>

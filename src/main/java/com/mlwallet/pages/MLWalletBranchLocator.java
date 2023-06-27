@@ -22,7 +22,19 @@ public class MLWalletBranchLocator {
     public static By objMLUSBtn = By.xpath("//*[@text='ML US']");
     public static By objFAQ = By.xpath("//*[@text='FAQ']");
     public static By objCareers = By.xpath("//*[@text='Careers']");
+    public static By objCareersPage = By.xpath("//*[@text='@TechnologyCareers']");
     public static By objLogin = By.xpath("//*[@text='Login']");
     public static By objDownloadApp = By.xpath("//*[@text='Download app for free']");
     public static By objFrequentlyAskedQuestions = By.xpath("//*[@text='Frequently Asked Questions']");
+    public static By objShop = By.xpath("//*[@text='Shop here']");
+    public static By objShopItemsPage = By.xpath("//*[@resource-id='best-sellers-section-main-label']");
+    public static By objPayBillsLearnMore = By.xpath("//*[@text='Pay Bills']/following-sibling::android.view.View/child::android.view.View/child::android.view.View/child::android.widget.TextView");
+    public static By objPayBillsPage = By.xpath("//*[@text='Pay Bills']");
+    public static By objBuyELoadLearnMore = By.xpath("(//*[@text='Buy eLoad'])[2]/following-sibling::android.view.View/child::android.view.View/child::android.widget.TextView");
+    public static By objBuyELoad = By.xpath("//*[@text='Buy eLoad']");
+    public static By objLoansPage = By.xpath("//*[@resource-id='com.vivo.browser:id/url_text']");
+    public static By objLoans = By.xpath("//*[@text='Loans']/following-sibling::android.view.View/child::android.view.View/child::android.widget.TextView");
+    public static By objInsurance = By.xpath("//*[@text='Insurance']/following-sibling::android.view.View/child::android.view.View/child::android.widget.TextView");
+    public static By objInsurancePage = By.xpath("//*[@resource-id='com.vivo.browser:id/url_text']");
+
 }
