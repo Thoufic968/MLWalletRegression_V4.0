@@ -40,7 +40,7 @@ public class MLWalletCashInViaBranch {
 	public static By objTransactionNo = By.xpath("//*[@resource-id='0QMRD2']");
 	public static By objStatus = By.xpath("//*[@resource-id='S2JHWK']/child::android.widget.TextView");
 	public static By objGoBackBtn = By.xpath("//*[@text='Go Back']");
-	public static By objMaxLimitTxt = By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+	public static By objMaxLimitTxt = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objUpgradeNowBtn = By.xpath("//*[@text='Upgrade Now']");
 	public static By objAppInfo = By.xpath("//*[@text='App info']");
 

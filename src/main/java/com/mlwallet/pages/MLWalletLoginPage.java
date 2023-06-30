@@ -53,9 +53,9 @@ public class MLWalletLoginPage {
 	public static By objErrorPopup = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objOkBtn = By.xpath("//*[@text='Ok']");
 
-	public static By objNoInternetConnectionMsg = By.xpath("(//*[@text='No Connection']/following-sibling::android.widget.TextView)[1]");
-	public static By objNoConnection = By.xpath("//*[@text='No Connection']");
-	public static By objNoConnectionAppVersion = By.xpath("(//*[@text='No Connection']/following-sibling::android.widget.TextView)[2]");
+	public static By objNoInternetConnectionMsg = By.xpath("(//*[@text='Connection Error']/following-sibling::android.widget.TextView)[1]");
+	public static By objConnectionError = By.xpath("//*[@text='Connection Error']");
+	public static By objNoConnectionAppVersion = By.xpath("(//*[@text='Connection Error']/following-sibling::android.widget.TextView)[2]");
 	public static By objOTP = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[1]");
 	public static By objSeconds = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[2]");
 

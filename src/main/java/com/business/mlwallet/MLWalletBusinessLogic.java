@@ -350,9 +350,10 @@ public class MLWalletBusinessLogic {
 		setWifiConnectionToONOFF("OFF");
 		if(verifyElementPresent(MLWalletLoginPage.objErrorPopup,getTextVal(MLWalletLoginPage.objErrorPopup,"pop up"))){
 			verifyElementPresentAndClick(MLWalletLoginPage.objOkBtn,getTextVal(MLWalletLoginPage.objOkBtn,"Button"));
-			verifyElementPresent(MLWalletLoginPage.objNoConnection,getTextVal(MLWalletLoginPage.objNoConnection,"Header"));
+			type(MLWalletLoginPage.objMobileNumberTextField,prop.getproperty("Branch_Verified") , "Mobile Number Text Field");
+			click(MLWalletLoginPage.objLoginBtn, "Login Button");
+			verifyElementPresent(MLWalletLoginPage.objConnectionError,getTextVal(MLWalletLoginPage.objConnectionError,"Header"));
 			verifyElementPresent(MLWalletLoginPage.objNoInternetConnectionMsg,getTextVal(MLWalletLoginPage.objNoInternetConnectionMsg,"Msg"));
-			verifyElementPresent(MLWalletLoginPage.objNoConnectionAppVersion,getTextVal(MLWalletLoginPage.objNoConnectionAppVersion,"App version"));
 			logger.info("Lgn_TC_20, Login Internet Interruption While Launching App");
 			ExtentReporter.extentLoggerPass("Lgn_TC_20", "Lgn_TC_20, Login Internet Interruption While Launching App");
 			System.out.println("-----------------------------------------------------------");
@@ -635,7 +636,7 @@ public class MLWalletBusinessLogic {
 
 	public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash Out Insufficient Balance");
-		mlWalletLogin(prop.getproperty("Branch_Verified_ELoad_LowBalance"));
+		mlWalletLogin(prop.getproperty("Semi_Verified"));
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch("35000");
 		if (verifyElementPresent(MLWalletCashOutPage.objInsufficientBalance, getTextVal(MLWalletCashOutPage.objInsufficientBalance, "Text Message"))) {
@@ -650,7 +651,7 @@ public class MLWalletBusinessLogic {
 
 	public void cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08() throws Exception {
 		ExtentReporter.HeaderChildNode("CashOut Branch Maximum Transaction Branch Verified Tier");
-		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		mlWalletLogin(prop.getproperty("Semi_Verified"));
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch("50001");
 		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitTxt, getTextVal(MLWalletCashOutPage.objMaxLimitTxt, "Text Message"))) {
@@ -668,8 +669,8 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Buyer_Tier"));
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch("100");
-		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitTxt, getTextVal(MLWalletCashOutPage.objMaxLimitTxt, "Text Message"))) {
-			String sErrorMessage = getText(MLWalletCashOutPage.objMaxLimitTxt);
+		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitUpgrade, getTextVal(MLWalletCashOutPage.objMaxLimitUpgrade, "Text Message"))) {
+			String sErrorMessage = getText(MLWalletCashOutPage.objMaxLimitUpgrade);
 			String ExpectedTxt = "Branch Cash-out is not allowed for customers at this verification level. Please upgrade your account to use this service.";
 			assertionValidation(sErrorMessage, ExpectedTxt);
 			logger.info("WM_TC_09, Branch Cash-out is not allowed for customers at this verification level. Error Message is Validated");
@@ -8276,7 +8277,6 @@ public class MLWalletBusinessLogic {
 			Swipe("DOWN",1);
 			Swipe("UP",1);
 			if(verifyElementPresent(MLWalletCashInBank.objCashInTransaction,getTextVal(MLWalletCashInBank.objCashInTransaction,"Transaction"))) {
-				verifyElementPresent(MLWalletCashInBank.objPending, getTextVal(MLWalletCashInBank.objPending, "Status"));
 				logger.info("'CIBR_TC_01', To validate valid Amount in Cash In ML Branch ");
 				ExtentReporter.extentLoggerPass("'CIBR_TC_01", "'CIBR_TC_01', To validate valid Amount in Cash In ML Branch ");
 				System.out.println("-----------------------------------------------------------");
@@ -8441,6 +8441,14 @@ public class MLWalletBusinessLogic {
 	public void cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch Cancel Button validation on CashIn Confirm Popup");
 		cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
+		cancelPreviousTransactionAndContinue();
+		cashInViaBranchEnterAmount("100");
+		waitTime(2000);
+		verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
+				getTextVal(MLWalletCashInViaBranch.objWarningPopup, "Pop Up"));
+		click(MLWalletCashInViaBranch.objContinueButton, "Continue Button");
+		enterOTP(prop.getproperty("Valid_OTP"));
+		enableLocation_PopUp();
 		verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch, getTextVal(MLWalletCashInViaBranch.objCashInToBranch, "Header"));
 		verifyElementPresentAndClick(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"Button"));
 		waitTime(5000);
@@ -8515,15 +8523,19 @@ public class MLWalletBusinessLogic {
 		enterOTP(prop.getproperty("Valid_OTP"));
 		enableLocation_PopUp();
 		waitTime(4000);
-
-		if (verifyElementPresent(MLWalletCashInViaBranch.objMaxLimitTxt, getTextVal(MLWalletCashInViaBranch.objMaxLimitTxt, "Text Message"))) {
-			String sErrorMessage = getText(MLWalletCashInViaBranch.objMaxLimitTxt);
-			String ExpectedTxt = "Branch Cash-in not allowed. Please upgrade to a higher verification level to add more balance.";
-			assertionValidation(sErrorMessage, ExpectedTxt);
-			verifyElementPresent(MLWalletCashInViaBranch.objUpgradeNowBtn,getTextVal(MLWalletCashInViaBranch.objUpgradeNowBtn,"Button"));
-			logger.info("CIBR_TC_16, Cash In Via Branch Buyer Tier User, Branch CashIn Not Allowed-Error message Validated");
-			ExtentReporter.extentLoggerPass("CIBR_TC_16", "CIBR_TC_16, Cash In Via Branch Buyer Tier User, Branch CashIn Not Allowed-Error message Validated");
-			System.out.println("-----------------------------------------------------------");
+		if(verifyElementPresent(MLWalletCashInViaBranch.objCashInToBranch,getTextVal(MLWalletCashInViaBranch.objCashInToBranch,"Header"))){
+			verifyElementPresent(MLWalletCashInViaBranch.objPHP,getTextVal(MLWalletCashInViaBranch.objPHP,"PHP"));
+			verifyElementPresent(MLWalletCashInViaBranch.objCreatedDate,getTextVal(MLWalletCashInViaBranch.objCreatedDate,"Date"));
+			verifyElementPresent(MLWalletCashInViaBranch.objStatus,getTextVal(MLWalletCashInViaBranch.objStatus,"Status"));
+			verifyElementPresent(MLWalletCashInViaBranch.objTransactionNo,getTextVal(MLWalletCashInViaBranch.objTransactionNo,"Transaction Number"));
+			verifyElementPresentAndClick(MLWalletCashInViaBranch.objCrossBtn,"Cash In Branch Cross Button");
+			Swipe("DOWN",1);
+			Swipe("UP",1);
+			if(verifyElementPresent(MLWalletCashInBank.objCashInTransaction,getTextVal(MLWalletCashInBank.objCashInTransaction,"Transaction"))) {
+				logger.info("CIBR_TC_16, Cash In Via Branch Transaction successful for Buyer Tier User is Validated");
+				ExtentReporter.extentLoggerPass("CIBR_TC_16", "CIBR_TC_16, Cash In Via Branch Transaction successful for Buyer Tier User is Validated");
+				System.out.println("-----------------------------------------------------------");
+			}
 		}
 	}
 

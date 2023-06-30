@@ -5,25 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Drivers/chromedriver/win32/114.0.5735.90/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTopUpGames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTopUpGames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_11_54_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_11_56_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_11_58_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_04_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_08_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_08_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_09_35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_10_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_10_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_12_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_12_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_13_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_18_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_21_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_24_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_28_37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_31_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_33_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_36_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_38_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_40_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_41_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_44_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_54_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_56_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_12_59_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_02_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_04_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_07_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_09_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_12_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_15_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_17_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_18_30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_20_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_35_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_37_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_38_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_41_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_42_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_46_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android/MLWallet/Screenshots/MLWallet_2023_06_28_13_49_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build 11.0.70_2023_06_28_12_16_11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build 11.0.70_2023_06_28_12_33_51.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build 11.0.70_2023_06_28_12_34_38.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build 11.0.70_2023_06_28_13_10_33.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build 11.0.70_2023_06_28_13_44_51.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/Android_MLWallet_Build _2023_06_28_11_50_07.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/CashINViaBank_Android_MLWallet_Build 11.0.70_2023_06_28_12_20_41.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/CashInViaBranch_Android_MLWallet_Build 11.0.70_2023_06_28_12_52_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/LogIn_Android_MLWallet_Build 11.0.70_2023_06_28_12_09_08.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_06_2023/UseQR_Android_MLWallet_Build 11.0.70_2023_06_28_11_51_06.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/testdata.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletBranchLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletBranchLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTransactionHistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTransactionHistoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBranchLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBranchLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInViaBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInViaBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashOutWithdrawScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashOutWithdrawScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletHomeAndDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletHomeAndDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionPayBillsScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionPayBillsScripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionScripts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegressionScripts2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToMLWalletUserScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToMLWalletUserScripts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletUseQR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletUseQR.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
