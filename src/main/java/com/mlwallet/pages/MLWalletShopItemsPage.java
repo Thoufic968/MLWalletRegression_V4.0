@@ -54,7 +54,7 @@ public class MLWalletShopItemsPage {
 	public static By objProductPrice = By.xpath("//*[@resource-id='productPriceDisplay']");
 	public static By objShippingTo = By.xpath("//*[@resource-id='ship']");
 	public static By objShippingFee = By.xpath("//*[@resource-id='shippingfee']");
-	public static By objViewShop = By.xpath("//*[@text='\uF54E  View Shop']");
+	public static By objViewShop = By.xpath("//*[contains(@text,'View Shop')]");
 
 	public static By objCartPageHeader = By.xpath("(//*[@class='android.widget.Image'])[1]/following-sibling::android.view.View");
 	public static By objDeleteIcon = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.view.View)[2]");
@@ -154,8 +154,23 @@ public class MLWalletShopItemsPage {
 	public static By objKaratInProductDetails = By.xpath("//*[@resource-id='mlproduct-karat']");
 	public static By objGenderInProductDetails = By.xpath("//*[@resource-id='mlproduct-gender']");
 	public static By objPriceInProductDetails = By.xpath("//*[@text='Price']");
-	public static By objActualPriceInProductDetails = By.xpath("//*[@text and @class='android.view.View' and ./parent::*[@id='compareAtPriceDisplay']]");
+	public static By objActualPriceInProductDetails = By.xpath("//*[@resource-id='compareAtPriceDisplay']/child::android.view.View");
 	public static By objDiscountPriceInProductDetails = By.xpath("//*[@resource-id='productPriceDisplay']");
+	public static By objShopName = By.xpath("//*[@resource-id='ml-shopname']");
+	public static By objShopMobileNumber = By.xpath("(//*[@resource-id='ml-shopname']/following-sibling::android.view.View)[1]");
+	public static By objShopEmailID =By.xpath("(//*[@resource-id='ml-shopname']/following-sibling::android.view.View)[2]");
+	public static By objShopAddress1 = By.xpath("(//*[@resource-id='ml-shopname']/following-sibling::android.view.View)[3]");
+	public static By objShopAddress2 = By.xpath("(//*[@resource-id='ml-shopname']/following-sibling::android.view.View)[4]");
+	public static By objTotalProducts = By.xpath("(//*[contains(@text,'Products')])[1]");
+	public static By objSoldProducts = By.xpath("(//*[contains(@text,'Products')])[2]");
+
+	public static By objProductImageInInterestedIn =  By.xpath("(//*[@text='product image'])[1]");
+	public static By objProductNameInInterestedIn = By.xpath("((//*[@text='product image'])[1]/following-sibling::android.view.View)[1]");
+	public static By objActualPriceInInterestedIn = By.xpath("((//*[@text='product image'])[1]/following-sibling::android.view.View)[2]/child::android.view.View");
+	public static By objDiscountPriceInInterestedIn = By.xpath("(//*[@text='product image'])[1]/following-sibling::android.widget.TextView");
+	public static By objDiscountPercentageInInterestedIn = By.xpath("(//*[@text='product image'])[1]/preceding-sibling::android.widget.TextView");
+
+
 
 
 

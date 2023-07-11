@@ -6,7 +6,7 @@ public class SendTransferPage {
 
     public static By objSendTransferBtn = By.xpath("//*[@text='Send /\n" +
             "Transfer']");
-
+//(//*[@text='Cash In']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[1]/child::android.view.ViewGroup/child::android.widget.TextView
     public static By objSendMoney = By.xpath("//*[@text='Send Money']");
 
     public static By objSendWalletOptions = By.xpath("//*[@text='Send Wallet Options']");

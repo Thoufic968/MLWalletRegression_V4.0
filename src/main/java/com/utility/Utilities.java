@@ -305,7 +305,6 @@ public class Utilities extends ExtentReporter {
         if (isPresentWithWait(byLocator)) {
             logger.info(validationtext + " is displayed");
             ExtentReporter.extentLoggerPass("checkElementPresent", validationtext + " is displayed");
-
             return true;
         } else {
             logger.info(validationtext + " is not displayed");

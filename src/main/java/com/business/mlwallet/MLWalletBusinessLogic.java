@@ -70,14 +70,10 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.extentLogger("", "Session ID: " + ((RemoteWebDriver) DriverManager.getAppiumDriver()).getSessionId());
 		logger.info("Session is quit");
 		ExtentReporter.extentLogger("", "Session is quit");
-
 		setScreenshotSource();
 		DriverManager.getAppiumDriver().quit();
 	}
 
-	public void beforeSuite(){
-
-	}
 	//================================ LOG IN==============================================//
 	public void mlWalletLogin(String sTier) throws Exception {
 		waitTime(10000);
@@ -125,7 +121,6 @@ public class MLWalletBusinessLogic {
 		}else if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)){
 			waitTime(10000);
 			verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
-
 			for(int i=1;i<=6;i++) {
 				type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
 			}
@@ -438,6 +433,18 @@ public class MLWalletBusinessLogic {
 		if(verifyElementPresent(MLWalletLoginPage.objAvailableBalance,getTextVal(MLWalletLoginPage.objAvailableBalance,"Button"))){
 			logger.info("Lgn_TC_26, LogIn, After clicking on Continue in One time pin popup App navigates to Home Page validated");
 			ExtentReporter.extentLoggerPass("Lgn_TC_26", "Lgn_TC_26, LogIn, After clicking on Continue in One time pin popup App navigates to Home Page validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void logInScenarioWithInvalidMobNumber_Lgn_TC_15() throws Exception {
+		ExtentReporter.HeaderChildNode("Login Scenarios With Invalid Mobile Number");
+		explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
+		type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Invalid_AlphaNumericMobileNumber"), "Mobile Number Text Field");
+		click(MLWalletLoginPage.objLoginBtn, "Login Button");
+		if (verifyElementPresent(MLWalletLoginPage.objInvalidMobNumberTxt, getTextVal(MLWalletLoginPage.objInvalidMobNumberTxt, "Error Message"))) {
+			logger.info("Lgn_TC_15, Mobile number is Invalid Error Message is Displayed");
+			ExtentReporter.extentLoggerPass("Lgn_TC_15", "Lgn_TC_15, Mobile number is Invalid Error Message is Displayed");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
@@ -2249,6 +2256,9 @@ public class MLWalletBusinessLogic {
 			}
 		}
 	}
+
+
+
 
 	public void sendMoneyRequiredDetails_STB_TC_08() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money Invalid Bank Details");
@@ -5414,6 +5424,103 @@ public class MLWalletBusinessLogic {
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
+	public void shopItemsSellerDetailsInProductDetailsPageValidation_MLS_TC_104() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items Seller Details In Product Details Page validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		Swipe("UP", 2);
+		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		waitTime(10000);
+		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+		waitTime(5000);
+		Swipe("UP",2);
+		if(verifyElementPresent(MLWalletShopItemsPage.objShopName,getTextVal(MLWalletShopItemsPage.objShopName,"Shop Name"))){
+			verifyElementPresent(MLWalletShopItemsPage.objShopMobileNumber,getTextVal(MLWalletShopItemsPage.objShopMobileNumber,"Shop Mobile Number"));
+			verifyElementPresent(MLWalletShopItemsPage.objShopEmailID,getTextVal(MLWalletShopItemsPage.objShopEmailID,"Shop Email ID"));
+			verifyElementPresent(MLWalletShopItemsPage.objTotalProducts,getTextVal(MLWalletShopItemsPage.objTotalProducts,"Total Products"));
+			verifyElementPresent(MLWalletShopItemsPage.objSoldProducts,getTextVal(MLWalletShopItemsPage.objSoldProducts,"Sold Products"));
+			verifyElementPresent(MLWalletShopItemsPage.objViewShop,getTextVal(MLWalletShopItemsPage.objViewShop,"Button"));
+			logger.info("MLS_TC_104, Shop Items Seller Details In Product Details Page validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_104", "MLS_TC_104, Shop Items Seller Details In Product Details Page validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsYouMayAlsoBeInterestedInItemsDetailsValidation_MLS_TC_105() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items You May Also Be Interested In Items Details validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		Swipe("UP", 2);
+		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		waitTime(10000);
+		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+		waitTime(5000);
+		Swipe("UP", 3);
+		if(verifyElementPresent(MLWalletShopItemsPage.objProductImageInInterestedIn,"Product Image In Interested In")){
+			verifyElementPresent(MLWalletShopItemsPage.objProductNameInInterestedIn,getTextVal(MLWalletShopItemsPage.objProductNameInInterestedIn,"Product Name In Interested In"));
+			verifyElementPresent(MLWalletShopItemsPage.objActualPriceInInterestedIn,getTextVal(MLWalletShopItemsPage.objActualPriceInInterestedIn,"Actual Price In Interested In"));
+			verifyElementPresent(MLWalletShopItemsPage.objDiscountPriceInInterestedIn,getTextVal(MLWalletShopItemsPage.objDiscountPriceInInterestedIn,"Discount Price In Interested In"));
+			verifyElementPresent(MLWalletShopItemsPage.objDiscountPercentageInInterestedIn,getTextVal(MLWalletShopItemsPage.objDiscountPercentageInInterestedIn,"Discount percentage In Interested In"));
+			logger.info("MLS_TC_105, Shop Items You May Also Be Interested In Items Details validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_105", "MLS_TC_105, Shop Items You May Also Be Interested In Items Details validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items You May Also Be Interested In Item page UI Validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		Swipe("UP", 2);
+		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		waitTime(10000);
+		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+		waitTime(5000);
+		Swipe("UP", 3);
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objProductImageInInterestedIn,"First Item under You May Also Be Interested In Item Tab");
+		if(verifyElementPresent(MLWalletShopItemsPage.objMainProductImage,"Product Image in Product Details Page")){
+			verifyElementPresent(MLWalletShopItemsPage.objOptionalProductImage,"Optional Product Image");
+			verifyElementPresent(MLWalletShopItemsPage.objProductNameInProductDetails,getTextVal(MLWalletShopItemsPage.objProductNameInProductDetails," : Product Name in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objColorInProductDetails,getTextVal(MLWalletShopItemsPage.objColorInProductDetails,"Color in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objKaratInProductDetails,getTextVal(MLWalletShopItemsPage.objKaratInProductDetails,"Karat in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objGenderInProductDetails,getTextVal(MLWalletShopItemsPage.objGenderInProductDetails,"Gender in Product details"));
+			Swipe("UP",1);
+			verifyElementPresent(MLWalletShopItemsPage.objPriceInProductDetails,getTextVal(MLWalletShopItemsPage.objPriceInProductDetails,"Header in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objActualPriceInProductDetails,getTextVal(MLWalletShopItemsPage.objActualPriceInProductDetails,"Actual Price in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objDiscountPriceInProductDetails,getTextVal(MLWalletShopItemsPage.objDiscountPriceInProductDetails,"Discount Price in Product details"));
+			verifyElementPresent(MLWalletShopItemsPage.objShippingTo,getTextVal(MLWalletShopItemsPage.objShippingTo,"Shipping To"));
+			verifyElementPresent(MLWalletShopItemsPage.objShippingFee,getTextVal(MLWalletShopItemsPage.objShippingFee,"Shipping Fee"));
+			logger.info("MLS_TC_106, Shop Items You May Also Be Interested In Item page UI validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_106", "MLS_TC_106, Shop Items You May Also Be Interested In Item page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+	public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items Product Details Page View Shop Button Functionality validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		Swipe("UP", 2);
+		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		waitTime(10000);
+		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+		waitTime(5000);
+		Swipe("UP",1);
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objViewShop,getTextVal(MLWalletShopItemsPage.objViewShop,"Button"));
+		if(verifyElementPresent(MLWalletShopItemsPage.objShopName,getTextVal(MLWalletShopItemsPage.objShopName,"Shop Name"))) {
+			verifyElementPresent(MLWalletShopItemsPage.objShopMobileNumber, getTextVal(MLWalletShopItemsPage.objShopMobileNumber, "Shop Mobile Number"));
+			verifyElementPresent(MLWalletShopItemsPage.objShopEmailID, getTextVal(MLWalletShopItemsPage.objShopEmailID, "Shop Email ID"));
+			verifyElementPresent(MLWalletShopItemsPage.objShopAddress1, getTextVal(MLWalletShopItemsPage.objShopAddress1, "Shop Address 1"));
+			verifyElementPresent(MLWalletShopItemsPage.objShopAddress2, getTextVal(MLWalletShopItemsPage.objShopAddress2, "Shop Address 2"));
+			logger.info("MLS_TC_107, Shop Items Product Details Page View Shop Button Functionality validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_107", "MLS_TC_107, Shop Items Product Details Page View Shop Button Functionality validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+
+	}
+
 
 
 

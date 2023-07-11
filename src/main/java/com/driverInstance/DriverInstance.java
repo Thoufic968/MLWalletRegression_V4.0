@@ -75,11 +75,6 @@ public class DriverInstance extends Drivertools {
 			case "Web":
 				LaunchBrowser(getBrowserType());
 				break;
-				
-//			case "TV":
-//				tlDriver.set((AppiumDriver<WebElement>) new AndroidDriver<WebElement>(new URL(getremoteUrl()),
-//						this.generateAndroidCapabilities(Application)));
-//				break;
 
 			default:
 				throw new SkipException("Incorrect Platform...");
@@ -109,7 +104,7 @@ public class DriverInstance extends Drivertools {
 		capabilities.setCapability("appium-version", "1.22.3");
 		capabilities.setCapability(MobileCapabilityType.UDID, deviceName);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12");
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UIAutomator2");
 		//capabilities.setCapability("autoGrantPermissions", true);
