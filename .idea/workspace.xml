@@ -5,51 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_11_28_25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_12_07_22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_12_11_30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_12_24_46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_12_28_50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_12_37_47.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_15_24_21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_07_15_40_23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_11_25_23.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_12_05_46.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_12_09_23.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_12_22_24.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_12_25_54.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_12_35_26.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_15_21_14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_15_21_47.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/07_07_2023/Android_MLWallet_Build 11.0.71_2023_07_07_15_37_37.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_11_38_58.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_11_49_22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_11_49_23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_11_52_25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_12_11_11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_12_14_14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_12_20_50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_12_21_21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_10_12_22_20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_11_36_36.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_11_45_50.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_11_46_28.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_11_49_52.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_12_08_30.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_12_11_50.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_12_19_14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/10_07_2023/Android_MLWallet_Build 11.0.71_2023_07_10_12_22_00.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/driverInstance/DriverInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/driverInstance/DriverInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utility/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utility/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletLoginScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
