@@ -9,7 +9,7 @@
 	
 	 <test name="MLWallet">
 	     <parameter name="portno" value="4723"></parameter>
-         <parameter name="deviceName" value="4TWOGQCM6589MBZD"></parameter>
+         <parameter name="deviceName" value="Q4UKMR75WWQ8RSVG"></parameter>
 		 <parameter name="browserType" value="Chrome"></parameter>
 		 <parameter name="url" value="https://prnt.sc/qA8TKBF8wiJ9"></parameter>
 		 <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
