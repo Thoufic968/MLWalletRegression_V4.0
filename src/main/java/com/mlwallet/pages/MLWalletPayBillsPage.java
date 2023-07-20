@@ -58,7 +58,7 @@ public class MLWalletPayBillsPage {
     public static By objPayBtn = By.xpath("//*[contains(@text,'Pay P')]");
     public static By objMaxLimitErrorMessageUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objMaxLimitErrorMessage = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
-    public static By objAddBiller = By.xpath("//*[@text='Add Biller']");
+    public static By objAddBiller = By.xpath("//*[@text='Add Billerl']");
     public static By objAddBillers = By.xpath("//*[@text='Add Billers']");
     public static By objAddSeectedBiller = By.xpath("//*[@text='Biller']/preceding-sibling::android.view.ViewGroup");
     public static By objBillerListSearchBiller = By.xpath("//*[@class='android.widget.EditText']");

@@ -31,7 +31,7 @@ public class MLWalletHomePage {
     public static By objAvailableBalanceHeader = By.xpath("//*[@resource-id='UTJ9TN']");
     public static By objEyeIcon = By.xpath("//*[@resource-id='JKRBGQ']");
     public static By objAvailableBalance = By.xpath("//*[@resource-id='0619JV']");
-    public static By objHiddenAvailableBalance = By.xpath("//*[@resource-id='3P4KX3']");
+    public static By objHiddenAvailableBalance = By.xpath("//*[@resource-id='0619JV']");
     public static By objTransactions = By.xpath("//*[@resource-id='8VFRG4']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
     public static By objSeeMore = By.xpath("//*[@text='See More']");
     public static By objIIcon = By.xpath("//*[@text='Learn more about your account level by clicking here.']");
@@ -72,5 +72,6 @@ public class MLWalletHomePage {
     public static By objOkBtn = By.xpath("//*[@text='Ok']");
     public static By objDoYouHaveAnotherAccBtn = By.xpath("//*[@resource-id='SYOFR5']");
     public static By objAddAccFacility = By.xpath("//*[@text='ML Wallet Add Account Facility']");
+    public static By objSuccess = By.xpath("(//*[@text='Success'])[1]");
 
 }

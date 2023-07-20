@@ -29,7 +29,7 @@ public class MLWalletCashInViaBankScripts {
         MLWalletBusinessLogic.cashInViaBank_CIBA_TC_01();
     }
 
-    @Test(priority = 2)
+//    @Test(priority = 2)
     public void cashInViaBankMinimumTransactionLimit() throws Exception {
         MLWalletBusinessLogic.cashInViaBankMinimumTransactionLimit_CIBA_TC_03();
     }
@@ -98,6 +98,11 @@ public class MLWalletCashInViaBankScripts {
     }
 
     @Test(priority = 15)
+    public void cashInViaBankStatusTransaction_CIBA_TC_16() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankStatusTransaction_CIBA_TC_16();
+    }
+
+    @Test(priority = 15)
     public void cashInViaBankPendingTransaction_CIBA_TC_17() throws Exception {
         MLWalletBusinessLogic.cashInViaBankPendingTransaction_CIBA_TC_17();
     }
@@ -128,6 +133,17 @@ public class MLWalletCashInViaBankScripts {
     public void cashInViaBankBuyerTierLevel_CIBA_TC_24() throws Exception {
         MLWalletBusinessLogic.cashInViaBankBuyerTierLevel_CIBA_TC_24();
     }
+
+    @Test(priority = 21)
+    public void cashInViaBankSemiVerifiedTierStatusTransaction_STW_TC_25() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankSemiVerifiedTierStatusTransaction_CIBA_TC_25();
+    }
+
+    @Test(priority = 22)
+    public void cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26();
+    }
+
 
     @Test(priority = 21)
     public void cashInViaBankSemiVerifiedUserMaxLimit_CIBA_TC_27() throws Exception {

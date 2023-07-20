@@ -8,8 +8,7 @@ import java.security.spec.DSAPublicKeySpec;
 public class MLWalletTopUpGames {
 
 
-    public static By objTopUpGames = By.xpath("//*[@text='Top up\n" +
-            " Games']");
+    public static By objTopUpGames = By.xpath("//*[@text='Gaming']");
     public static By objTopGamesPage = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.widget.ImageView']]/*[@class='android.view.ViewGroup'])[2]");
     public static By objGames(int i){
         return By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]]/*[@class='android.view.ViewGroup'])[4]/*/*/*/*[@text and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[./*[@class='android.widget.ImageView']]])["+i+"]");
@@ -50,8 +49,8 @@ public class MLWalletTopUpGames {
         return By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[@text] and ./*[@class='android.view.ViewGroup']])["+i+"]");
     }
 
-    public static By objLoadTypeAndPoints(int i,int j){
-        return By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])["+i+"]/*[@text])["+j+"]");
+    public static By objLoadTypeAndPoints(int i){
+        return By.xpath("(//*[@class='android.widget.ScrollView']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView)["+i+"]");
     }
 
     public static By objHamburgerMenu = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup' and ./*[./*[@class='android.view.ViewGroup']]]]]]]/*/*[@class='android.widget.TextView' and ./parent::*[@class='android.view.ViewGroup']])[3]");
@@ -59,6 +58,7 @@ public class MLWalletTopUpGames {
     public static By objTopUpAgainBtn = By.xpath("//*[@text='Top Up Again']");
     public static By objTopUpGamesTransaction = By.xpath("//*[@text='Top Up Games']");
     public static By objCompleteStatus = By.xpath("//*[@text='Complete']");
+    public static By objMLPinEditField = By.xpath("//*[@resource-id='847305']");
 
 
 }

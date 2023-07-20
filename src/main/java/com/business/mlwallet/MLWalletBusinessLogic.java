@@ -5835,6 +5835,34 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void cashInViaBankStatusTransaction_CIBA_TC_16() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Success transaction validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+		String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		selectBankAndInputAmount("1000");
+		dragonPayChargesMsgValidation();
+		reviewTransactionValidation();
+		enterOTP(prop.getproperty("Valid_OTP"));
+		enableLocation_PopUp();
+		bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
+		click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
+		click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
+		verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
+		verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
+		verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
+		verifyElementPresentAndClick(MLWalletCashInBank.objCompleteTransactionBtn, getTextVal(MLWalletCashInBank.objCompleteTransactionBtn, "Button"));
+		Swipe("DOWN", 3);
+		String sBalanceAfterTransaction = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		Swipe("UP",1);
+		if(verifyElementPresent(MLWalletHomePage.objSuccess,getTextVal(MLWalletHomePage.objSuccess,"Status"))) {
+			assertNotEquals(sBalance, sBalanceAfterTransaction);
+			logger.info("STW_TC_16, Cash In Via Bank success transaction validated and cash in Amount is reflected in Balance");
+			ExtentReporter.extentLoggerPass("STW_TC_16", "STW_TC_16, Cash In Via Bank success transaction validated and cash in Amount is reflected in Balance");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
 	public void cashInViaBankPendingTransaction_CIBA_TC_17() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Bank Pending Transaction");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -5963,6 +5991,62 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletCashInBank.objUpgradeNowBtn, getTextVal(MLWalletCashInBank.objUpgradeNowBtn, "Button"));
 			logger.info("CIBA_TC_24, Branch Cash-In is not allowed for customers at this verification level. Error Message is Validated");
 			ExtentReporter.extentLoggerPass("CIBA_TC_24", "CIBA_TC_24, Branch Cash-In is not allowed for customers at this verification level. Error Message is Validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void cashInViaBankSemiVerifiedTierStatusTransaction_CIBA_TC_25() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Semi Verified Tier Success transaction validation");
+		mlWalletLogin(prop.getproperty("Semi_Verified"));
+		verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+		String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		selectBankAndInputAmount("1000");
+		dragonPayChargesMsgValidation();
+		reviewTransactionValidation();
+		enterOTP(prop.getproperty("Valid_OTP"));
+		enableLocation_PopUp();
+		bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
+		click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
+		click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
+		verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
+		verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
+		verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
+		verifyElementPresentAndClick(MLWalletCashInBank.objCompleteTransactionBtn, getTextVal(MLWalletCashInBank.objCompleteTransactionBtn, "Button"));
+		Swipe("DOWN", 3);
+		String sBalanceAfterTransaction = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		Swipe("UP",1);
+		if(verifyElementPresent(MLWalletHomePage.objSuccess,getTextVal(MLWalletHomePage.objSuccess,"Status"))) {
+			assertNotEquals(sBalance, sBalanceAfterTransaction);
+			logger.info("CIBA_TC_25, Cash In Via Bank Semi Verified Tier success transaction validated and cash in Amount is reflected in Balance");
+			ExtentReporter.extentLoggerPass("CIBA_TC_25", "CIBA_TC_25, Cash In Via Bank Semi Verified Tier success transaction validated and cash in Amount is reflected in Balance");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26() throws Exception {
+		ExtentReporter.HeaderChildNode("Cash In Via Bank Fully Verified Tier Success transaction validation");
+		mlWalletLogin(prop.getproperty("Fully_verified"));
+		verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+		String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		selectBankAndInputAmount("1000");
+		dragonPayChargesMsgValidation();
+		reviewTransactionValidation();
+		enterOTP(prop.getproperty("Valid_OTP"));
+		enableLocation_PopUp();
+		bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
+		click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
+		click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
+		verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
+		verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
+		verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
+		verifyElementPresentAndClick(MLWalletCashInBank.objCompleteTransactionBtn, getTextVal(MLWalletCashInBank.objCompleteTransactionBtn, "Button"));
+		Swipe("DOWN", 3);
+		String sBalanceAfterTransaction = getText(MLWalletHomePage.objHiddenAvailableBalance);
+		Swipe("UP",1);
+		if(verifyElementPresent(MLWalletHomePage.objSuccess,getTextVal(MLWalletHomePage.objSuccess,"Status"))) {
+			assertNotEquals(sBalance, sBalanceAfterTransaction);
+			logger.info("CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
+			ExtentReporter.extentLoggerPass("CIBA_TC_26", "CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
@@ -11851,18 +11935,19 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTopUpGames.objValorant,getTextVal(MLWalletTopUpGames.objValorant,"Game"));
 		waitTime(4000);
 		for(int i=1;i<=6;i++){
-			if(verifyElementDisplayed(MLWalletTopUpGames.objLoadType(i))){
-				for(int j=1;j<3;j++){
-					if(j==1) {
-						verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i, j), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i, j), "Load Type and Points"));
-					}
-				}
+			if(i%2!=0){
+				verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Load Type"));
+			} else if (i%2==0) {
+				verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Points"));
+
 			}
 		}
 		logger.info("TUG_TC_05, TopUp Games Load Selection Screen navigation validated");
 		ExtentReporter.extentLoggerPass("TUG_TC_05", "TUG_TC_05, TopUp Games Load Selection Screen navigation validated");
 		System.out.println("-----------------------------------------------------------");
 	}
+
+
 
 	public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("TopUp Games successful Load Transaction");
@@ -11887,6 +11972,24 @@ public class MLWalletBusinessLogic {
 		assertNotEquals(sAvailableBalance,sAvailableBalanceAfterTopUp);
 		logger.info("TUG_TC_06, TopUp Games successful Load Transaction validated");
 		ExtentReporter.extentLoggerPass("TUG_TC_06", "TUG_TC_06, TopUp Games successful Load Transaction validated");
+		System.out.println("-----------------------------------------------------------");
+	}
+
+	public void topUPGamesLoadSelectionPageLoadTypesValidation_TUG_TC_08() throws Exception {
+		ExtentReporter.HeaderChildNode("TopUp Games Load Selection Page Load Types Validation");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
+		waitTime(4000);
+		for (int i = 1; i <= 6; i++) {
+			if (i % 2 != 0) {
+				verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Load Type"));
+			} else if (i % 2 == 0) {
+				verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Points"));
+			}
+			Swipe("UP",1);
+		}
+		logger.info("TUG_TC_08, TopUp Games Load Selection Page Load Types Validation validated");
+		ExtentReporter.extentLoggerPass("TUG_TC_08", "TUG_TC_08, TopUp Games Load Selection Page Load Types validated");
 		System.out.println("-----------------------------------------------------------");
 	}
 
@@ -12129,6 +12232,7 @@ public class MLWalletBusinessLogic {
 
 	public void topUpGamesSelectRecipientWithSavedFavorites_TUG_TC_29() throws Exception {
 		ExtentReporter.HeaderChildNode("TopUp Games Select recipient with saved favorites");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
 		verifyElementPresentAndClick(MLWalletTopUpGames.objMyFavorites,getTextVal(MLWalletTopUpGames.objMyFavorites,"Button"));
 		type(MLWalletTopUpGames.objSearchFavField,prop.getproperty("GameMobileNumber"),"Game User ID Input Field");
 		click(MLWalletTopUpGames.objFavoriteRecipient,getTextVal(MLWalletTopUpGames.objFavoriteRecipient,"Favorite Recipient"));
@@ -12138,11 +12242,76 @@ public class MLWalletBusinessLogic {
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
+	public void topUpGamesTransactionWithValidMLPin() throws Exception {
+		ExtentReporter.HeaderChildNode("TopUp Games Transaction with Valid MLPin");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
+		selectGameAndLoadType();
+		inputRequiredDataAndContinue();
+		verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm,getTextVal(MLWalletTopUpGames.objConfirm,"button"));
+		waitTime(5000);
+		enableLocation_PopUp();
+		handleMpin(prop.getproperty("MLPin"));
+		if(verifyElementPresent(MLWalletTopUpGames.objTransactionDetails,getTextVal(MLWalletTopUpGames.objTransactionDetails,"Page"))) {
+			verifyElementPresent(MLWalletTopUpGames.objTransactionCode, getTextVal(MLWalletTopUpGames.objTransactionCode, "Transaction Code"));
+			verifyElementPresent(MLWalletTopUpGames.objGameUserIDInTransactionDetails, getTextVal(MLWalletTopUpGames.objGameUserIDInTransactionDetails, "Game User ID"));
+			verifyElementPresent(MLWalletTopUpGames.objRedeemCode, getTextVal(MLWalletTopUpGames.objRedeemCode, "Redeem code"));
+		}
+		logger.info("TUG_TC_, TopUp Games Transaction with Valid MLPin validated");
+		ExtentReporter.extentLoggerPass("TUG_TC_", "TUG_TC_, TopUp Games Transaction with Valid MLPin validated");
+		System.out.println("-----------------------------------------------------------");
+	}
+
+
+
+
+	public void topUpGamesTransactionWithInValidMLPin_TUG_TC_26() throws Exception {
+		ExtentReporter.HeaderChildNode("TopUp Games Transaction with InValid MLPin");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
+		selectGameAndLoadType();
+		inputRequiredDataAndContinue();
+		verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm,getTextVal(MLWalletTopUpGames.objConfirm,"button"));
+		waitTime(5000);
+		enableLocation_PopUp();
+		handleMpin(prop.getproperty("wrongMpin"));
+		if (verifyElementPresent(MLWalletCashInViaBranch.objInvalidPINMsg, getTextVal(MLWalletCashInViaBranch.objInvalidPINMsg, "Message"))) {
+			String sActualErrorMsg = getText(MLWalletCashInViaBranch.objInvalidPINMsg);
+			String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+			assertionValidation(sActualErrorMsg, sExceptedErrorMsg);
+			logger.info("TUG_TC_26, TopUp Games Transaction with InValid MLPin validated");
+			ExtentReporter.extentLoggerPass("TUG_TC_26", "TUG_TC_26, TopUp Games Transaction with Valid MLPin validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void topUpGamesMLPinPageNavigation_TUG_TC_23() throws Exception {
+		ExtentReporter.HeaderChildNode("TopUp Games ML Pin Page Navigation");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
+		selectGameAndLoadType();
+		inputRequiredDataAndContinue();
+		verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm,getTextVal(MLWalletTopUpGames.objConfirm,"button"));
+		waitTime(5000);
+		enableLocation_PopUp();
+		if(verifyElementPresent(MLWalletTopUpGames.objMLPinEditField,"ML Pin Edit Field")){
+			logger.info("TUG_TC_23, TopUp Games ML Pin Page navigation validated");
+			ExtentReporter.extentLoggerPass("TUG_TC_23", "TUG_TC_23, TopUp Games ML Pin Page navigation validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void topUpGamesInAppOTPPopupNavigation_TUG_TC_20() throws Exception {
+		ExtentReporter.HeaderChildNode("TopUp Games InApp popup navigation");
+		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
+		selectGameAndLoadType();
+		inputRequiredDataAndContinue();
+		verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm,getTextVal(MLWalletTopUpGames.objConfirm,"button"));
+		waitTime(5000);
+		enableLocation_PopUp();
+		if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Popup"))){
+			verifyElementPresent(MLWalletLoginPage.objOTP,getTextVal(MLWalletLoginPage.objOTP,"OTP Generated"));
+			logger.info("TUG_TC_20, TopUp Games InApp popup navigation validated");
+			ExtentReporter.extentLoggerPass("TUG_TC_20", "TUG_TC_20, TopUp Games InApp popup navigation validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 }
-
-
-
-
-
-
-

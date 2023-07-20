@@ -268,9 +268,9 @@ public class MLWalletShopItemScripts {
 
 
 
-//    @AfterMethod
-//    public void afterMethod(){
-//        AppiumServer.stopServer();
-//    }
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 }

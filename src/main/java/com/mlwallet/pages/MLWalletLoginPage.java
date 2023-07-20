@@ -12,7 +12,7 @@ public class MLWalletLoginPage {
 	public static By objCameraPopup = By.xpath("//*[@text='Allow ML Wallet to take pictures and record video?']");
 	public static By objContinueBtn = By.xpath("//*[@text='CONTINUE']");
 	public static By objCancelBtn = By.xpath("//*[@text='CANCEL']");
-	public static By objAvailableBalance = By.xpath("//*[@text='Available Balance']");
+	public static By objAvailableBalance = By.xpath("//*[@text='BALANCE']");
 	public static By objInvalidMobNumberTxt = By.xpath("//*[@text='Mobile number is invalid']");
 	public static By objOneTimePin = By.xpath("(//*[@text='One Time Pin'])[1]");
 	public static By objMLPin = By.xpath("//*[@text='ML Pin']");
