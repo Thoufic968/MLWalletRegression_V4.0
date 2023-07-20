@@ -24,7 +24,7 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.explicitWaitVisible;
 // Sprint demo 5
 
-
+//Demo
 public class MLWalletBusinessLogic {
 
 	static LoggingUtils logger = new LoggingUtils();
