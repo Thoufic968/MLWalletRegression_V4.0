@@ -22,7 +22,7 @@ import java.util.List;
 
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.explicitWaitVisible;
-// Sprint demo 5
+// Sprint demo 7
 
 
 public class MLWalletBusinessLogic {
