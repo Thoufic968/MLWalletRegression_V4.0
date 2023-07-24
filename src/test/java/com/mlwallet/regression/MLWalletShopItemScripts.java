@@ -23,7 +23,7 @@ public class MLWalletShopItemScripts {
 //=========================================================================================================//
 
 
-//
+
 //    @Test(priority = 1)
 //    public void mlWalletShopItems_Scenario() throws Exception
 //    {
@@ -141,125 +141,151 @@ public class MLWalletShopItemScripts {
 //        MLWalletBusinessLogic.shopItemsSubTotalVerificationWithSelectingTheItemsInCart_MLS_TC_60();
 //    }
 //
-    @Test(priority = 24)
-    public void shopItemsAboutLinkFunctionality_MLS_TC_83() throws Exception {
-        MLWalletBusinessLogic.shopItemsAboutLinkFunctionality_MLS_TC_83();
+//    @Test(priority = 24)
+//    public void shopItemsAboutLinkFunctionality_MLS_TC_83() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAboutLinkFunctionality_MLS_TC_83();
+//    }
+//
+//    @Test(priority = 25)
+//    public void shopItemsContactLinkFunctionality_MLS_TC_84() throws Exception {
+//        MLWalletBusinessLogic.shopItemsContactLinkFunctionality_MLS_TC_84();
+//    }
+//
+//    @Test(priority = 26)
+//    public void shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85() throws Exception {
+//        MLWalletBusinessLogic.shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85();
+//    }
+//
+//    @Test(priority = 27)
+//    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
+//        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
+//    }
+//
+//    @Test(priority = 28)
+//    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
+//        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
+//    }
+//
+//    @Test(priority = 29)
+//    public void shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89();
+//    }
+//
+//    @Test(priority = 30)
+//    public void shopItemsAmparitoCollectionsRingProductTypeSubTypesValidation_MLS_TC_90() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsRingProductTypeSubTypesValidation_MLS_TC_90();
+//    }
+//
+//    @Test(priority = 31)
+//    public void shopItemsAmparitoCollectionsNecklaceProductTypeSubTypesValidation_MLS_TC_91() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsNecklaceProductTypeSubTypesValidation_MLS_TC_91();
+//    }
+//
+//    @Test(priority = 32)
+//    public void shopItemsAmparitoCollectionsBraceletAndBangleProductTypeSubTypesValidation_MLS_TC_92() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsBraceletAndBangleProductTypeSubTypesValidation_MLS_TC_92();
+//    }
+//
+//    @Test(priority = 33)
+//    public void shopItemsAmparitoCollectionsEarringsProductTypeSubTypesValidation_MLS_TC_93() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsEarringsProductTypeSubTypesValidation_MLS_TC_93();
+//    }
+//
+//    @Test(priority = 34)
+//    public void shopItemsAmparitoCollectionsPendantProductTypeSubTypesValidation_MLS_TC_94() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsPendantProductTypeSubTypesValidation_MLS_TC_94();
+//    }
+//
+//    @Test(priority = 35)
+//    public void shopItemsAmparitoCollectionsTernoAndSetProductTypeSubTypesValidation_MLS_TC_95() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsTernoAndSetProductTypeSubTypesValidation_MLS_TC_95();
+//    }
+//
+//    @Test(priority = 36)
+//    public void shopItemsAmparitoCollectionsWeddingRingProductTypeSubTypesValidation_MLS_TC_96() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsWeddingRingProductTypeSubTypesValidation_MLS_TC_96();
+//    }
+//
+//    @Test(priority = 37)
+//    public void shopItemsAmparitoCollectionsPinBrouchAndScalpingProductTypeSubTypesValidation_MLS_TC_97() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsPinBrouchAndScalpingProductTypeSubTypesValidation_MLS_TC_97();
+//    }
+//
+//    @Test(priority = 38)
+//    public void shopItemsAmparitoCollectionsWatchesProductTypeSubTypesValidation_MLS_TC_98() throws Exception {
+//        MLWalletBusinessLogic.shopItemsAmparitoCollectionsWatchesProductTypeSubTypesValidation_MLS_TC_98();
+//    }
+//
+//    @Test(priority = 39)
+//    public void shopItemsGenderFilterValidation_MLS_TC_99() throws Exception {
+//        MLWalletBusinessLogic.shopItemsGenderFilterValidation_MLS_TC_99();
+//    }
+//
+//    @Test(priority = 40)
+//    public void shopItemsColorFilterValidation_MLS_TC_100() throws Exception {
+//        MLWalletBusinessLogic.shopItemsColorFilterValidation_MLS_TC_100();
+//    }
+//
+//    @Test(priority = 41)
+//    public void shopItemsKaratFilterValidation_MLS_TC_101() throws Exception {
+//        MLWalletBusinessLogic.shopItemsKaratFilterValidation_MLS_TC_101();
+//    }
+//
+//    @Test(priority = 42)
+//    public void shopItemsPriceFilterValidation_MLS_TC_102() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPriceFilterValidation_MLS_TC_102();
+//    }
+//
+//    @Test(priority = 43)
+//    public void shopItemsProductDetailsPageValidation_MLS_TC_103() throws Exception {
+//        MLWalletBusinessLogic.shopItemsProductDetailsPageValidation_MLS_TC_103();
+//    }
+//
+//    @Test(priority = 44)
+//    public void shopItemsSellerDetailsInProductDetailsPageValidation_MLS_TC_104() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSellerDetailsInProductDetailsPageValidation_MLS_TC_104();
+//    }
+//
+//    @Test(priority = 45)
+//    public void shopItemsYouMayAlsoBeInterestedInItemsDetailsValidation_MLS_TC_105() throws Exception {
+//        MLWalletBusinessLogic.shopItemsYouMayAlsoBeInterestedInItemsDetailsValidation_MLS_TC_105();
+//    }
+//
+//    @Test(priority = 46)
+//    public void shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106() throws Exception {
+//        MLWalletBusinessLogic.shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106();
+//    }
+//
+//    @Test(priority = 47)
+//    public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
+//        MLWalletBusinessLogic.shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107();
+//    }
+//
+//    @Test(priority = 48)
+//    public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPageUIValidation_MLS_TC_11();
+//    }
+//
+//    @Test(priority = 49)
+//    public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSuccessfulLoginPopupValidation_MLS_TC_17();
+//    }
+//
+//    @Test(priority = 50)
+//    public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35();
+//    }
+//
+//    @Test(priority = 51)
+//    public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
+//    }
+
+    @Test(priority = 52)
+    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
+        MLWalletBusinessLogic.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
     }
 
-    @Test(priority = 25)
-    public void shopItemsContactLinkFunctionality_MLS_TC_84() throws Exception {
-        MLWalletBusinessLogic.shopItemsContactLinkFunctionality_MLS_TC_84();
-    }
-
-    @Test(priority = 26)
-    public void shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85() throws Exception {
-        MLWalletBusinessLogic.shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85();
-    }
-
-    @Test(priority = 27)
-    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
-        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
-    }
-
-    @Test(priority = 28)
-    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
-        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
-    }
-
-    @Test(priority = 29)
-    public void shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89();
-    }
-
-    @Test(priority = 30)
-    public void shopItemsAmparitoCollectionsRingProductTypeSubTypesValidation_MLS_TC_90() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsRingProductTypeSubTypesValidation_MLS_TC_90();
-    }
-
-    @Test(priority = 31)
-    public void shopItemsAmparitoCollectionsNecklaceProductTypeSubTypesValidation_MLS_TC_91() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsNecklaceProductTypeSubTypesValidation_MLS_TC_91();
-    }
-
-    @Test(priority = 32)
-    public void shopItemsAmparitoCollectionsBraceletAndBangleProductTypeSubTypesValidation_MLS_TC_92() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsBraceletAndBangleProductTypeSubTypesValidation_MLS_TC_92();
-    }
-
-    @Test(priority = 33)
-    public void shopItemsAmparitoCollectionsEarringsProductTypeSubTypesValidation_MLS_TC_93() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsEarringsProductTypeSubTypesValidation_MLS_TC_93();
-    }
-
-    @Test(priority = 34)
-    public void shopItemsAmparitoCollectionsPendantProductTypeSubTypesValidation_MLS_TC_94() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsPendantProductTypeSubTypesValidation_MLS_TC_94();
-    }
-
-    @Test(priority = 35)
-    public void shopItemsAmparitoCollectionsTernoAndSetProductTypeSubTypesValidation_MLS_TC_95() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsTernoAndSetProductTypeSubTypesValidation_MLS_TC_95();
-    }
-
-    @Test(priority = 36)
-    public void shopItemsAmparitoCollectionsWeddingRingProductTypeSubTypesValidation_MLS_TC_96() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsWeddingRingProductTypeSubTypesValidation_MLS_TC_96();
-    }
-
-    @Test(priority = 37)
-    public void shopItemsAmparitoCollectionsPinBrouchAndScalpingProductTypeSubTypesValidation_MLS_TC_97() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsPinBrouchAndScalpingProductTypeSubTypesValidation_MLS_TC_97();
-    }
-
-    @Test(priority = 38)
-    public void shopItemsAmparitoCollectionsWatchesProductTypeSubTypesValidation_MLS_TC_98() throws Exception {
-        MLWalletBusinessLogic.shopItemsAmparitoCollectionsWatchesProductTypeSubTypesValidation_MLS_TC_98();
-    }
-
-    @Test(priority = 39)
-    public void shopItemsGenderFilterValidation_MLS_TC_99() throws Exception {
-        MLWalletBusinessLogic.shopItemsGenderFilterValidation_MLS_TC_99();
-    }
-
-    @Test(priority = 40)
-    public void shopItemsColorFilterValidation_MLS_TC_100() throws Exception {
-        MLWalletBusinessLogic.shopItemsColorFilterValidation_MLS_TC_100();
-    }
-
-    @Test(priority = 41)
-    public void shopItemsKaratFilterValidation_MLS_TC_101() throws Exception {
-        MLWalletBusinessLogic.shopItemsKaratFilterValidation_MLS_TC_101();
-    }
-
-    @Test(priority = 42)
-    public void shopItemsPriceFilterValidation_MLS_TC_102() throws Exception {
-        MLWalletBusinessLogic.shopItemsPriceFilterValidation_MLS_TC_102();
-    }
-
-    @Test(priority = 43)
-    public void shopItemsProductDetailsPageValidation_MLS_TC_103() throws Exception {
-        MLWalletBusinessLogic.shopItemsProductDetailsPageValidation_MLS_TC_103();
-    }
-
-    @Test(priority = 44)
-    public void shopItemsSellerDetailsInProductDetailsPageValidation_MLS_TC_104() throws Exception {
-        MLWalletBusinessLogic.shopItemsSellerDetailsInProductDetailsPageValidation_MLS_TC_104();
-    }
-
-    @Test(priority = 45)
-    public void shopItemsYouMayAlsoBeInterestedInItemsDetailsValidation_MLS_TC_105() throws Exception {
-        MLWalletBusinessLogic.shopItemsYouMayAlsoBeInterestedInItemsDetailsValidation_MLS_TC_105();
-    }
-
-    @Test(priority = 46)
-    public void shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106() throws Exception {
-        MLWalletBusinessLogic.shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106();
-    }
-
-    @Test(priority = 47)
-    public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
-        MLWalletBusinessLogic.shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107();
-    }
 
 
 
@@ -267,10 +293,9 @@ public class MLWalletShopItemScripts {
 
 
 
-
-    @AfterMethod
-    public void afterMethod(){
-        AppiumServer.stopServer();
-    }
+//    @AfterMethod
+//    public void afterMethod(){
+//        AppiumServer.stopServer();
+//    }
 
 }

@@ -29,7 +29,7 @@ public class MLWalletCashInViaBankScripts {
         MLWalletBusinessLogic.cashInViaBank_CIBA_TC_01();
     }
 
-//    @Test(priority = 2)
+    @Test(priority = 2)
     public void cashInViaBankMinimumTransactionLimit() throws Exception {
         MLWalletBusinessLogic.cashInViaBankMinimumTransactionLimit_CIBA_TC_03();
     }

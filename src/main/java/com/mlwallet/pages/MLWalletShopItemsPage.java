@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletShopItemsPage {
 
-	public static By objShopItemsTab=By.xpath("//*[@text='Shop Items']");
+	public static By objShopItemsTab=By.xpath("//*[@text='Shop']");
 	public static By objMLShopPage=By.xpath("//*[@text='ML Shop']");
 	public static By objItemMenu=By.xpath("//*[@text='Rings']");
 	public static By objSelectItem=By.xpath("(//*[android.view.View]/child::android.view.View/descendant::android.view.View/child::android.view.View)[8]");
@@ -27,6 +27,7 @@ public class MLWalletShopItemsPage {
 	public static By objYesBtn=By.xpath("//*[@text='Yes']");
 	public static By objPlaceOrderBtn=By.xpath("//*[@resource-id='PlaceOrder']");
 	public static By objOtpPage=By.xpath("//*[@text='One Time Pin']");
+	public static By objCheckOutConfirmationMsg = By.xpath("//*[@resource-id='mainCheckout']");
 	public static By objOtpTextField=By.xpath("//*[@class='android.widget.EditText']");
 	public static By objValidateBtn=By.xpath("//*[@text='Validate']");
 	
@@ -38,6 +39,10 @@ public class MLWalletShopItemsPage {
 	public static By objAvailableBalance=By.xpath("//*[@text='Available Balance']");
 	public static By objSelectPaymentMethod = By.xpath("//*[@text='Select Payment Method']");
 	public static By objMLWallet = By.xpath("//*[@text='ML Wallet']");
+	public static By objPayUsingMlWallet = By.xpath("((//*[@class='android.webkit.WebView'])[2]/child::android.view.View/child::android.view.View)[2]");
+	//*[@text='ML Wallet']/parent::android.view.View/parent::android.view.View
+	public static By objPayUsingOnlineBanking = By.xpath("//*[@text='Online Banking']/parent::android.view.View/parent::android.view.View");
+
 
 	public static By objSearch=By.xpath("//*[@text=' Search']");
 	public static By objProfile=By.xpath("//*[@text=' Profile']");
@@ -169,6 +174,13 @@ public class MLWalletShopItemsPage {
 	public static By objActualPriceInInterestedIn = By.xpath("((//*[@text='product image'])[1]/following-sibling::android.view.View)[2]/child::android.view.View");
 	public static By objDiscountPriceInInterestedIn = By.xpath("(//*[@text='product image'])[1]/following-sibling::android.widget.TextView");
 	public static By objDiscountPercentageInInterestedIn = By.xpath("(//*[@text='product image'])[1]/preceding-sibling::android.widget.TextView");
+
+	public static By objMLShopLOgo = By.xpath("//*[@resource-id='nav-logo']");
+	public static By objProductImageInMLShopPage = By.xpath("//*[@text='Product image']");
+	public static By objMLShopProductsHeader = By.xpath("//*[@resource-id='best-sellers-section-main-label']");
+	public static By objMLShopPageBanner = By.xpath("//*[@resource-id='banner-text']");
+
+	public static By objSuccessfulLoginTxt = By.xpath("//*[@text='Successfully Login']");
 
 
 

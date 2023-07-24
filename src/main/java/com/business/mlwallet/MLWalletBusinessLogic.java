@@ -5518,13 +5518,118 @@ public class MLWalletBusinessLogic {
 			ExtentReporter.extentLoggerPass("MLS_TC_107", "MLS_TC_107, Shop Items Product Details Page View Shop Button Functionality validated");
 			System.out.println("-----------------------------------------------------------");
 		}
+	}
 
+	public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items page UI validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objShopItemsTab, "Shop Items Icon");
+		waitTime(10000);
+		if(verifyElementPresent(MLWalletShopItemsPage.objMLShopPage,getTextVal(MLWalletShopItemsPage.objMLShopPage,"Page"))){
+			verifyElementPresent(MLWalletShopItemsPage.objMLShopPageBanner,getTextVal(MLWalletShopItemsPage.objMLShopPageBanner,"Banner"));
+			verifyElementPresent(MLWalletShopItemsPage.objMLShopLOgo,"ML Shop Logo");
+			verifyElementPresent(MLWalletShopItemsPage.objMLShopProductsHeader,getTextVal(MLWalletShopItemsPage.objMLShopProductsHeader,"Header"));
+			verifyElementPresent(MLWalletShopItemsPage.objProductImageInMLShopPage,"Product Image in ML Shop Page");
+			verifyElementPresent(MLWalletShopItemsPage.objHambergerMenu,"Hamburger Menu");
+			logger.info("MLS_TC_11, Shop Items page UI validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_11", "MLS_TC_11, Shop Items page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items Successful Login popup validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objShopItemsTab, "Shop Items Icon");
+		if(verifyElementPresent(MLWalletShopItemsPage.objSuccessfulLoginTxt,getTextVal(MLWalletShopItemsPage.objSuccessfulLoginTxt,"Popup"))){
+			logger.info("MLS_TC_17, Shop Items Successful Login popup validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_17", "MLS_TC_17, Shop Items Successful Login popup validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items Pay using ML Wallet option selection validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		selectItemAndAddToCart();
+		Swipe("down", 4);
+		navigationToCart();
+		click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+		click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
+		click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
+		verifyElementPresent(MLWalletShopItemsPage.objSelectBranchPage, getTextVal(MLWalletShopItemsPage.objSelectBranchPage, "Page"));
+		click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
+		verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
+		click(MLWalletShopItemsPage.objOkBtn, "OK Button");
+		Swipe("UP",2);
+		verifyElementPresent(MLWalletShopItemsPage.objSelectPaymentMethod,getTextVal(MLWalletShopItemsPage.objSelectPaymentMethod,"Header"));
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objPayUsingMlWallet,"Pay using ML Wallet Option");
+		Swipe("UP",2);
+		click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order Button");
+		if(verifyElementPresent(MLWalletShopItemsPage.objOtpPage,getTextVal(MLWalletShopItemsPage.objOtpPage,"Page"))){
+			logger.info("MLS_TC_35, Shop Items Pay using ML Wallet option selected and App Navigates to OTP Page is validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_35", "MLS_TC_35, Shop Items Pay using ML Wallet option selected and App Navigates to OTP Page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items Pay using Online Banking option selection validation");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		selectItemAndAddToCart();
+		Swipe("down", 4);
+		navigationToCart();
+		click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+		click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
+		click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
+		verifyElementPresent(MLWalletShopItemsPage.objSelectBranchPage, getTextVal(MLWalletShopItemsPage.objSelectBranchPage, "Page"));
+		click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
+		verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
+		click(MLWalletShopItemsPage.objOkBtn, "OK Button");
+		Swipe("UP",2);
+		verifyElementPresent(MLWalletShopItemsPage.objSelectPaymentMethod,getTextVal(MLWalletShopItemsPage.objSelectPaymentMethod,"Header"));
+		Swipe("UP",1);
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objPayUsingOnlineBanking,"Pay using Online Banking Option");
+		Swipe("UP",1);
+		click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order Button");
+		if(verifyElementPresent(MLWalletShopItemsPage.objCheckOutConfirmationMsg,"Confirmation CheckOut Popup")){
+			logger.info("MLS_TC_36, Shop Items Pay using Online Banking option selected and App Navigates to OTP Page is validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_36", "MLS_TC_36, Shop Items Pay using Online Banking option selected and App Navigates to OTP Page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items SubTotal amount validation before Selecting Items");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		selectItemAndAddToCart();
+		Swipe("DOWN", 4);
+		navigationToCart();
+		if(verifyElementPresent(MLWalletShopItemsPage.objSubtotalAmount,getTextVal(MLWalletShopItemsPage.objSubtotalAmount,"SubTotal Amount"))){
+			String sSubTotalAmount = getText(MLWalletShopItemsPage.objSubtotalAmount);
+			String sExceptedSubTotalAmount = "P 0.00";
+			assertionValidation(sSubTotalAmount,sExceptedSubTotalAmount);
+			logger.info("MLS_TC_59, Shop Items SubTotal amount should be P 0.00 before Selecting Items is validated");
+			ExtentReporter.extentLoggerPass("MLS_TC_59", "MLS_TC_59, Shop Items SubTotal amount should be P 0.00 before Selecting Items is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
 	}
 
 
+	public void shopItemsSubTotalAmountValidationAfterSelectingItems_MLS_TC_59() throws Exception {
+		ExtentReporter.HeaderChildNode("Shop Items SubTotal amount validation after Selecting Items");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		shopItemsNavigation();
+		selectItemAndAddToCart();
+		Swipe("DOWN", 4);
+		navigationToCart();
+		click(MLWalletShopItemsPage.objCheckBox, "Check Box");
 
 
-
+	}
 
 
 
@@ -12243,7 +12348,7 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
-	public void topUpGamesTransactionWithValidMLPin() throws Exception {
+	public void topUpGamesTransactionWithValidMLPin_TUG_TC_31() throws Exception {
 		ExtentReporter.HeaderChildNode("TopUp Games Transaction with Valid MLPin");
 		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
 		selectGameAndLoadType();
@@ -12257,8 +12362,8 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletTopUpGames.objGameUserIDInTransactionDetails, getTextVal(MLWalletTopUpGames.objGameUserIDInTransactionDetails, "Game User ID"));
 			verifyElementPresent(MLWalletTopUpGames.objRedeemCode, getTextVal(MLWalletTopUpGames.objRedeemCode, "Redeem code"));
 		}
-		logger.info("TUG_TC_, TopUp Games Transaction with Valid MLPin validated");
-		ExtentReporter.extentLoggerPass("TUG_TC_", "TUG_TC_, TopUp Games Transaction with Valid MLPin validated");
+		logger.info("TUG_TC_31, TopUp Games Transaction with Valid MLPin validated");
+		ExtentReporter.extentLoggerPass("TUG_TC_31", "TUG_TC_31, TopUp Games Transaction with Valid MLPin validated");
 		System.out.println("-----------------------------------------------------------");
 	}
 

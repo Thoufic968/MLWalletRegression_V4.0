@@ -120,8 +120,8 @@ public class MLWalletTopUpGames {
     }
 
     @Test(priority = 20)
-    public void topUpGamesTransactionWithValidMLPin() throws Exception {
-        MLWalletBusinessLogic.topUpGamesTransactionWithValidMLPin();
+    public void topUpGamesTransactionWithValidMLPin_TUG_TC_31() throws Exception {
+        MLWalletBusinessLogic.topUpGamesTransactionWithValidMLPin_TUG_TC_31();
     }
 
     @Test(priority = 21)
