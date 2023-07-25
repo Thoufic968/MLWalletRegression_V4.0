@@ -53,5 +53,6 @@ public class MLWalletUseQR {
     public static By objScanQRSuggestion = By.xpath("//*[@text='Make sure that the QR code is within the frame']");
     public static By objCameraPermissionRequiredPopup = By.xpath("//*[@resource-id='android:id/alertTitle']");
     public static By objCameraPermissionRequiredMsg = By.xpath("//*[@resource-id='android:id/message']");
+    public static By objMLPinEditField = By.xpath("//*[@resource-id='847305']");
 
 }

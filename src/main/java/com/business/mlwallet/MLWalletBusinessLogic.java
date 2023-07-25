@@ -187,7 +187,7 @@ public class MLWalletBusinessLogic {
 	public void logInScenarioWithInvalidMobNumber_Lgn_TC_02() throws Exception {
 		ExtentReporter.HeaderChildNode("Login Scenarios With Invalid Mobile Number");
 		explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
-		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
+//		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
 		type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Invalid_MobileNumber"), "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		if (verifyElementPresent(MLWalletLoginPage.objInvalidMobNumberTxt, getTextVal(MLWalletLoginPage.objInvalidMobNumberTxt, "Error Message"))) {
@@ -210,7 +210,7 @@ public class MLWalletBusinessLogic {
 	public void LogInScenarioWithInValidOTP() throws Exception {
 		ExtentReporter.HeaderChildNode("Login Scenarios With InValid OTP");
 		explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
-		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
+//		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
 		type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 //		type(MLWalletLoginPage.objOtpTextField, prop.getproperty("InValid_OTP"), "OTP Text Field");
@@ -278,7 +278,6 @@ public class MLWalletBusinessLogic {
 
 	public void loginOTPPageUIValidation_Lgn_TC_10() throws Exception {
 		ExtentReporter.HeaderChildNode("LogIn OTP Page UI Validation");
-		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
 		type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		waitTime(5000);
@@ -325,7 +324,6 @@ public class MLWalletBusinessLogic {
 	public void loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(String sTier) throws Exception {
 		ExtentReporter.HeaderChildNode("Login Network Interruption Validation");
 		waitTime(5000);
-		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
 		type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		waitTime(5000);
@@ -343,16 +341,16 @@ public class MLWalletBusinessLogic {
 	public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
 		ExtentReporter.HeaderChildNode("Login Internet Interruption While Launching App");
 		setWifiConnectionToONOFF("OFF");
-		if(verifyElementPresent(MLWalletLoginPage.objErrorPopup,getTextVal(MLWalletLoginPage.objErrorPopup,"pop up"))){
-			verifyElementPresentAndClick(MLWalletLoginPage.objOkBtn,getTextVal(MLWalletLoginPage.objOkBtn,"Button"));
-			type(MLWalletLoginPage.objMobileNumberTextField,prop.getproperty("Branch_Verified") , "Mobile Number Text Field");
-			click(MLWalletLoginPage.objLoginBtn, "Login Button");
-			verifyElementPresent(MLWalletLoginPage.objConnectionError,getTextVal(MLWalletLoginPage.objConnectionError,"Header"));
-			verifyElementPresent(MLWalletLoginPage.objNoInternetConnectionMsg,getTextVal(MLWalletLoginPage.objNoInternetConnectionMsg,"Msg"));
-			logger.info("Lgn_TC_20, Login Internet Interruption While Launching App");
-			ExtentReporter.extentLoggerPass("Lgn_TC_20", "Lgn_TC_20, Login Internet Interruption While Launching App");
-			System.out.println("-----------------------------------------------------------");
+		if(verifyElementDisplayed(MLWalletLoginPage.objErrorPopup)) {
+			verifyElementPresentAndClick(MLWalletLoginPage.objOkBtn, getTextVal(MLWalletLoginPage.objOkBtn, "Button"));
 		}
+		type(MLWalletLoginPage.objMobileNumberTextField,prop.getproperty("Branch_Verified") , "Mobile Number Text Field");
+		click(MLWalletLoginPage.objLoginBtn, "Login Button");
+		verifyElementPresent(MLWalletLoginPage.objConnectionError,getTextVal(MLWalletLoginPage.objConnectionError,"Header"));
+		verifyElementPresent(MLWalletLoginPage.objNoInternetConnectionMsg,getTextVal(MLWalletLoginPage.objNoInternetConnectionMsg,"Msg"));
+		logger.info("Lgn_TC_20, Login Internet Interruption While Launching App");
+		ExtentReporter.extentLoggerPass("Lgn_TC_20", "Lgn_TC_20, Login Internet Interruption While Launching App");
+		System.out.println("-----------------------------------------------------------");
 		setWifiConnectionToONOFF("ON");
 	}
 
@@ -5564,7 +5562,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objOkBtn, "OK Button");
 		Swipe("UP",2);
 		verifyElementPresent(MLWalletShopItemsPage.objSelectPaymentMethod,getTextVal(MLWalletShopItemsPage.objSelectPaymentMethod,"Header"));
-		verifyElementPresentAndClick(MLWalletShopItemsPage.objPayUsingMlWallet,"Pay using ML Wallet Option");
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objMLWallet,"Pay using ML Wallet Option");
 		Swipe("UP",2);
 		click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order Button");
 		if(verifyElementPresent(MLWalletShopItemsPage.objOtpPage,getTextVal(MLWalletShopItemsPage.objOtpPage,"Page"))){
@@ -11391,15 +11389,13 @@ public class MLWalletBusinessLogic {
 		mlWalletLogin(prop.getproperty("Fully_verified"));
 		verifyElementPresent(MLWalletTransactionHistoryPage.objRecentTransaction,getTextVal(MLWalletTransactionHistoryPage.objRecentTransaction,"Header"));
 		Swipe("DOWN",2);
-//		verifyElementPresent(MLWalletTransactionHistoryPage.objReceiveMoneyTab,getTextVal(MLWalletTransactionHistoryPage.objReceiveMoneyTab,"Transaction"));
+		Swipe("UP",1);
 		verifyElementPresent(MLWalletTransactionHistoryPage.objWalletToWallet,getTextVal(MLWalletTransactionHistoryPage.objWalletToWallet,"Transaction"));
 
 		verifyElementPresent(MLWalletUseQR.objSuccess,getTextVal(MLWalletUseQR.objSuccess,"Status"));
 		click(MLWalletTransactionHistoryPage.objWalletToWallet,getTextVal(MLWalletTransactionHistoryPage.objWalletToWallet,"Transaction"));
 		String sReferenceNumberInReceiver = getText(SendTransferPage.objReferenceNumberInTransactionDetails);
 		assertionValidation(sReferenceNumberInReceiver, sReferenceNumberInSender);
-//		String sAmountReceived = getText(MLWalletTransactionHistoryPage.objAmountReceived);
-//		assertionValidation(sAmountReceived,sAmountToSend);
 		logger.info("QR_TC_04, Use QR, Wallet to Wallet Receive Money validated");
 		ExtentReporter.extentLoggerPass("QR_TC_04", "QR_TC_04, Use QR, Wallet to Wallet Receive Money validated");
 		System.out.println("-----------------------------------------------------------");
@@ -11816,7 +11812,13 @@ public class MLWalletBusinessLogic {
 		enterAmountAndSendToMLWallet("10");
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
-			if(verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"))){
+			if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)){
+				verifyElementPresent(MLWalletLoginPage.objOneTimePin,getTextVal(MLWalletLoginPage.objOneTimePin,"Page"));
+				logger.info("QR_TC_030, Use QR, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
+				ExtentReporter.extentLoggerPass("QR_TC_030", "QR_TC_030, Use QR, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
+				System.out.println("-----------------------------------------------------------");
+			} else if (verifyElementDisplayed(MLWalletUseQR.objMLPinEditField)) {
+				verifyElementPresent(MLWalletUseQR.objMLPinEditField,"ML Pin Page");
 				logger.info("QR_TC_030, Use QR, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
 				ExtentReporter.extentLoggerPass("QR_TC_030", "QR_TC_030, Use QR, Send Money To ML Wallet Location popup Allow Button Functionality Validated");
 				System.out.println("-----------------------------------------------------------");

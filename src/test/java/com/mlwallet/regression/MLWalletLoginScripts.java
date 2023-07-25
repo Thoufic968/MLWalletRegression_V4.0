@@ -7,6 +7,7 @@ import com.mlwallet.pages.MLWalletLoginPage;
 import org.testng.annotations.*;
 import com.driverInstance.AppiumServer;
 import static com.business.mlwallet.MLWalletBusinessLogic.prop;
+import static com.utility.Utilities.setWifiConnectionToONOFF;
 
 public class MLWalletLoginScripts {
     public static String deviceName;
@@ -98,10 +99,12 @@ public class MLWalletLoginScripts {
     @Test(priority = 14)
     public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
         MLWalletBusinessLogic.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
+        setWifiConnectionToONOFF("ON");
     }
 
     @Test(priority = 15)
     public void loginInAppOTPNavigation_Lgn_TC_22() throws Exception {
+        setWifiConnectionToONOFF("ON");
         MLWalletBusinessLogic.loginInAppOTPNavigation_Lgn_TC_22();
     }
 

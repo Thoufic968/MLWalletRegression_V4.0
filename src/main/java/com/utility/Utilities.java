@@ -342,7 +342,7 @@ public class Utilities extends ExtentReporter {
             try {
                 WebElement element = DriverManager.getDriver().findElement(byLocator);
                 if (element.isDisplayed()) {
-                    return true;
+                   return true;
                 }
             } catch (Exception e) {
             }
