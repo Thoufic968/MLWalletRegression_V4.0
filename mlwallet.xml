@@ -21,7 +21,7 @@
 <!--			Q4UKMR75WWQ8RSVG-->
 
 
-			<class name="com.mlwallet.regression.MLWalletLoginScripts" />
+<!--			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
@@ -37,7 +37,7 @@
 <!--			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletUseQR" />-->
-<!--			<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
+			<class name="com.mlwallet.regression.MLWalletTopUpGames" />
 <!--			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
 
 
