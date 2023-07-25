@@ -268,6 +268,7 @@ public class MLWalletBusinessLogic {
 	public void loginBranchLocator_Lgn_TC_09() throws Exception {
 		ExtentReporter.HeaderChildNode("LogIn Branch Locator");
 		if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
+			waitTime(6000);
 			enableLocation_PopUp();
 			verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"));
 			logger.info("Lgn_TC_09, Navigated to Branch Locator Page");
