@@ -40,10 +40,10 @@ public class MLWalletShopItemScripts {
 //       MLWalletBusinessLogic.shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15();
 //    }
 //
-//    @Test(priority = 4)
-//    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
-//        MLWalletBusinessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
-//    }
+//    @Test(prionessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
+//    }rity = 4)
+////    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
+////        MLWalletBusi
 //
 //    @Test(priority = 5)
 //    public void shopItemsCartPageUIValidation_MLS_TC_19() throws Exception {
@@ -161,10 +161,10 @@ public class MLWalletShopItemScripts {
 //        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
 //    }
 //
-//    @Test(priority = 28)
-//    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
-//        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
-//    }
+    @Test(priority = 28)
+    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
+        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
+    }
 //
 //    @Test(priority = 29)
 //    public void shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89() throws Exception {
@@ -256,46 +256,46 @@ public class MLWalletShopItemScripts {
 //        MLWalletBusinessLogic.shopItemsYouMayAlsoBeInterestedInItemPageUIValidation_MLS_TC_106();
 //    }
 //
-    @Test(priority = 47)
-    public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
-        MLWalletBusinessLogic.shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107();
-    }
-
-    @Test(priority = 48)
-    public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
-        MLWalletBusinessLogic.shopItemsPageUIValidation_MLS_TC_11();
-    }
-
-    @Test(priority = 49)
-    public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
-        MLWalletBusinessLogic.shopItemsSuccessfulLoginPopupValidation_MLS_TC_17();
-    }
-
-    @Test(priority = 50)
-    public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
-        MLWalletBusinessLogic.shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35();
-    }
-
-    @Test(priority = 51)
-    public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
-        MLWalletBusinessLogic.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
-    }
-
-    @Test(priority = 52)
-    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
-        MLWalletBusinessLogic.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
-    }
-
-
-
-
-
-
-
-
-//    @AfterMethod
-//    public void afterMethod(){
-//        AppiumServer.stopServer();
+//    @Test(priority = 47)
+//    public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
+//        MLWalletBusinessLogic.shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107();
 //    }
+//
+//    @Test(priority = 48)
+//    public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPageUIValidation_MLS_TC_11();
+//    }
+//
+//    @Test(priority = 49)
+//    public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSuccessfulLoginPopupValidation_MLS_TC_17();
+//    }
+//
+//    @Test(priority = 50)
+//    public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35();
+//    }
+//
+//    @Test(priority = 51)
+//    public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
+//        MLWalletBusinessLogic.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
+//    }
+//
+//    @Test(priority = 52)
+//    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
+//    }
+
+
+
+
+
+
+
+
+    @AfterMethod
+    public void afterMethod(){
+        AppiumServer.stopServer();
+    }
 
 }

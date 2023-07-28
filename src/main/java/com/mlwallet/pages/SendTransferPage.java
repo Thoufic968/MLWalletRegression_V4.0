@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 
 public class SendTransferPage {
 
-    public static By objSendTransferBtn = By.xpath("//*[@text='Send /\n" +
-            "Transfer']");
+    public static By objSendTransferBtn = By.xpath("//*[@text='Send']");
 //(//*[@text='Cash In']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[1]/child::android.view.ViewGroup/child::android.widget.TextView
     public static By objSendMoney = By.xpath("//*[@text='Send Money']");
 
@@ -99,7 +98,7 @@ public class SendTransferPage {
 
     public static By objInvalidAmountMsg = By.xpath("//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 
-    public static By objInsufficientAmountMsg = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objInsufficientAmountMsg = By.xpath("//*[@text='Upgrade Now' or @text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
     public static By objMaxLimitErrorMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objErrorMsg = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");

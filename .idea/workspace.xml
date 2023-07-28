@@ -5,20 +5,376 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_15_54_08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_16_08_06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_16_29_14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_15_51_55.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_16_02_06.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_16_07_03.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_16_28_23.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_16_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_24_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_28_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_31_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_34_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_25_17_36_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_17_13_29.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_17_22_44.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_17_26_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/25_07_2023/Android_MLWallet_Build 11.0.74_2023_07_25_17_29_16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_47_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_48_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_48_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_51_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_53_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_57_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_57_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_58_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_10_58_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_33_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_34_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_34_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_38_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_39_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_50_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_51_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_53_39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_54_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_57_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_58_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_11_58_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_02_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_03_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_04_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_04_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_05_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_05_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_05_33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_07_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_12_08_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_39_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_42_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_44_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_45_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_46_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_48_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_49_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_52_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_53_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_54_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_56_37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_17_57_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_00_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_01_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_03_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_05_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_08_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_10_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_12_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_15_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_17_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_19_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_21_44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_23_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_26_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_28_39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_31_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_33_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_36_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_38_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_39_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_41_39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_43_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_45_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_47_33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_49_33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_51_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_26_18_53_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_10_44_56.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_10_50_29.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_10_55_48.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_11_36_57.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_11_52_25.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_12_01_26.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_12_06_22.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_17_37_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/26_07_2023/Android_MLWallet_Build 11.0.74_2023_07_26_17_37_32.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_01_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_03_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_06_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_47_22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_57_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_58_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_10_59_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_15_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_16_45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_19_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_21_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_22_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_25_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_26_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_27_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_28_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_29_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_31_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_32_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_32_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_34_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_36_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_37_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_40_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_41_35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_41_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_41_44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_43_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_44_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_49_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_52_45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_54_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_56_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_11_57_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_00_47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_01_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_03_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_04_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_05_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_06_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_07_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_08_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_09_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_12_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_13_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_15_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_16_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_18_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_18_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_18_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_19_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_24_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_27_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_29_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_30_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_32_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_55_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_12_58_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_01_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_02_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_04_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_05_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_08_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_09_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_11_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_12_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_13_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_14_22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_15_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_16_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_17_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_20_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_22_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_23_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_24_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_25_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_28_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_30_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_33_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_36_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_38_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_40_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_41_39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_43_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_46_00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_47_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_49_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_51_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_53_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_54_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_56_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_57_47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_13_59_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_02_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_05_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_07_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_08_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_10_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_12_53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_14_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_16_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_18_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_36_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_41_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_45_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_48_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_52_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_53_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_14_59_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_00_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_02_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_09_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_12_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_15_20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_16_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_17_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_18_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_20_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_21_47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_22_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_23_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_24_40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_26_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_27_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_28_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_31_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_33_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_34_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_35_53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_36_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_40_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_41_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_44_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_47_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_49_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_51_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_52_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_54_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_57_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_15_59_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_01_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_03_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_04_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_06_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_07_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_09_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_11_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_14_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_17_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_19_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_20_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_22_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_24_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_26_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_28_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_31_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_41_52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_16_44_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_13_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_13_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_20_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_25_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_37_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_40_45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_45_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_47_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_50_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_53_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_56_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_17_58_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_18_03_44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_18_09_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_27_18_11_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_10_55_33.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_11_55_57.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_12_51_24.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_33_10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_38_16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_41_52.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_44_13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_46_16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_51_14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_53_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_55_28.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_14_56_08.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_15_01_22.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_15_06_25.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_16_39_18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_17_33_20.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_17_35_44.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_17_44_00.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_17_51_06.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_17_55_34.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_18_01_48.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/Android_MLWallet_Build 11.0.74_2023_07_27_18_07_39.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/SendTransferToWalletUser_Android_MLWallet_Build 11.0.74_2023_07_27_15_06_25.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/27_07_2023/TopUPGames_Android_MLWallet_Build 11.0.74_2023_07_27_11_55_57.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_18_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_37_38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_40_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_41_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_43_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_45_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_45_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_46_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_48_48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_50_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_52_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_54_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_56_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_11_58_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_00_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_02_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_04_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_06_43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_08_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_10_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_11_46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_12_59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_14_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_14_09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_14_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_15_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_17_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_17_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_18_49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_18_50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_20_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_21_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_22_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_24_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_25_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_26_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_26_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_26_55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_28_22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_29_50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_31_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_32_50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_34_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_35_51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_37_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_38_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_40_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_41_35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_42_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_44_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_45_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_47_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_48_35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_50_08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_51_42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_53_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_54_58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_55_53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_57_07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_12_59_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_13_01_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_13_02_41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_15_43_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_15_43_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_15_59_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_16_01_57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android/MLWallet/Screenshots/MLWallet_2023_07_28_16_09_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android_MLWallet_Build 11.0.74_2023_07_28_11_38_18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android_MLWallet_Build 11.0.74_2023_07_28_15_41_15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android_MLWallet_Build 11.0.74_2023_07_28_15_58_09.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android_MLWallet_Build 11.0.74_2023_07_28_16_00_48.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/28_07_2023/Android_MLWallet_Build 11.0.74_2023_07_28_16_07_43.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/properties/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/testdata.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInViaBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInViaBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletEloadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletEloadPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTopUpGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTopUpGames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/SendTransferPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletSendTransferToAnyMLBranchScripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTopUpGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTopUpGames.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletEloadPage {
 
-	public static By objEloadTab=By.xpath("//*[@text='Buy eLoad']");
+	public static By objEloadTab=By.xpath("//*[@text='eLoad']");
 	public static By objEloadtransactionPage=By.xpath("//*[@text='eLoad Transaction']");
 	public static By objSelectTelco = By.xpath("//*[@text='Select Telco']");
 	public static By objPhoneToLoad = By.xpath("//*[@text='Phone to load']");
@@ -46,6 +46,9 @@ public class MLWalletEloadPage {
 	public static By objMaxLimitPopupMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By obj3000RegularLoad = By.xpath("(//*[@text='Globe Regular Load 3000'])[1]");
 	public static By obj2000RegularLoad = By.xpath("(//*[@text='Globe Regular Load 2000'])[1]");
+
+	public static By obj2000PromoLoad = By.xpath("(//*[@text='LD2000'])[1]");
+	public static By obj3000PromoLoad = By.xpath("(//*[@text='LD3000'])[1]");
 	public static By objBuyLoad = By.xpath("//*[@text='Buy Load']");
 	public static By objLoadSelectionBackArrowBtn = By.xpath("//*[@text='Load Selection']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 	public static By objMobileNumberInLoadSelection = By.xpath("//*[@text='+63']/following-sibling::android.widget.TextView");
@@ -73,5 +76,6 @@ public class MLWalletEloadPage {
 	public static By objAllowAccess = By.xpath("//*[@resource-id='android:id/button1']");
 	public static By objNewTransaction = By.xpath("//*[@text='New Transaction']");
 	public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+	public static By objMaxLimitErrorMsg = By.xpath("//*[@text='Upgrade Now' or @text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
 }

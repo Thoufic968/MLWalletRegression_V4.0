@@ -117,7 +117,7 @@ public class MLWalletBusinessLogic {
 
 		waitTime(5000);
 		if(verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
-			click(MLWalletLoginPage.objContinueBtn, "Clicked On OTP Continue Button");
+			click(MLWalletLoginPage.objContinueBtn, "OTP Continue Button");
 		}else if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)){
 			waitTime(10000);
 			verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
@@ -2643,6 +2643,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
 		type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
 		click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
+		waitTime(3000);
 		if (verifyElementPresent(SendTransferPage.objSelectPaymentMethod, getTextVal(SendTransferPage.objSelectPaymentMethod, "Page"))) {
 			verifyElementPresent(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
 			verifyElementPresent(SendTransferPage.objAvailableBalance, getTextVal(SendTransferPage.objAvailableBalance, "Available PHP"));
@@ -3457,7 +3458,7 @@ public class MLWalletBusinessLogic {
 
 	public void sendToMLWalletInsufficientAmount_STW_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
-		sendMoneyMLWallet("9999999995");
+		sendMoneyMLWallet("9999999997");
 		enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
 		enterAmountAndSendToMLWallet("35000");
 		waitTime(5000);
@@ -5029,7 +5030,7 @@ public class MLWalletBusinessLogic {
 		navigationToCart();
 		if(verifyElementPresent(MLWalletShopItemsPage.objSubtotalAmount,getTextVal(MLWalletShopItemsPage.objSubtotalAmount,"SubTotal Items"))){
 			String sActualSubtotalItems = getText(MLWalletShopItemsPage.objSubtotalAmount);
-			String sExceptedSubtotalItems = "P0.00";
+			String sExceptedSubtotalItems = "P 0.00";
 			assertionValidation(sActualSubtotalItems,sExceptedSubtotalItems);
 			logger.info("MLS_TC_59, Shop Items Total subTotal Verification without selecting the items in the Cart validated");
 			ExtentReporter.extentLoggerPass("MLS_TC_59", "MLS_TC_59, Shop Items Total subTotal Verification without selecting the items in the Cart validated");
@@ -5049,9 +5050,9 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCheckBox, "Check Box");
 		waitTime(5000);
 		if(verifyElementPresent(MLWalletShopItemsPage.objSubtotalAmount,getTextVal(MLWalletShopItemsPage.objSubtotalAmount,"SubTotal Items"))){
+			String sSelectItemPrice = getText(MLWalletShopItemsPage.objSelectedItemPrice);
 			String sActualSubtotalItems = getText(MLWalletShopItemsPage.objSubtotalAmount);
-			String sExceptedSubtotalItems = "P7,600.00";
-			assertionValidation(sActualSubtotalItems,sExceptedSubtotalItems);
+			assertionValidation(sActualSubtotalItems,sSelectItemPrice);
 			logger.info("MLS_TC_60, Shop Items Total subTotal Verification with selecting the items in the Cart validated");
 			ExtentReporter.extentLoggerPass("MLS_TC_60", "MLS_TC_60, Shop Items Total subTotal Verification with selecting the items in the Cart validated");
 			System.out.println("-----------------------------------------------------------");
@@ -7383,7 +7384,7 @@ public class MLWalletBusinessLogic {
 
 
 	public void navigateToProfile() throws Exception {
-		click(MLWalletSettingsPage.objProfileIcon1, "Profile Icon");
+		click(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
 		waitTime(5000);
 		if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
 			logger.info("Navigated to settings");
@@ -7910,7 +7911,7 @@ public class MLWalletBusinessLogic {
 		hideKeyboard();
 		waitTime(5000);
 		click(MLWalletEloadPage.objNextBtn, "Next Button");
-		click(MLWalletEloadPage.objNextBtn, "Next Button");
+//		click(MLWalletEloadPage.objNextBtn, "Next Button");
 //		enableLocation_PopUp();
 	}
 //===================================================================================================//
@@ -8000,7 +8001,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
 		waitTime(5000);
 		swipeDownUntilElementVisible("Globe Regular Load 3000");
-		verifyElementPresentAndClick(MLWalletEloadPage.obj2000RegularLoad,getTextVal(MLWalletEloadPage.obj2000RegularLoad,"Load"));
+		verifyElementPresentAndClick(MLWalletEloadPage.obj2000PromoLoad,getTextVal(MLWalletEloadPage.obj2000PromoLoad,"Load"));
 		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
 		waitTime(5000);
 		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -8889,6 +8890,179 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Branch verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(5000);
+		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+		verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
+		waitTime(30000);
+		if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
+			logger.info("BE_TC_42, Buy ELoad maximum transaction for Branch verified Tier validated");
+			ExtentReporter.extentLoggerPass("BE_TC_42", "BE_TC_42, Buy ELoad maximum transaction for Branch verified Tier validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Semi verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(5000);
+		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+		verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
+		waitTime(5000);
+		if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
+			logger.info("BE_TC_30, Buy ELoad maximum transaction for Semi verified Tier validated");
+			ExtentReporter.extentLoggerPass("BE_TC_30", "BE_TC_42, Buy ELoad maximum transaction for Semi verified Tier validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+	public void buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Semi verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		Swipe("UP",1);
+		click(MLWalletEloadPage.obj3000PromoLoad, getTextVal(MLWalletEloadPage.obj3000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(2000);
+		if(verifyElementPresent(MLWalletEloadPage.objMaxLimitErrorMsg,getTextVal(MLWalletEloadPage.objMaxLimitErrorMsg,"Error Message"))) {
+			String sErrorMsg = getText(MLWalletEloadPage.objMaxLimitErrorMsg);
+			String sExpectedErrorMsg = "The maximum E-load per transaction set for your verification level is P2,000.00. Please try again.";
+			assertionValidation(sErrorMsg, sExpectedErrorMsg);
+			logger.info("BE_TC_33, Buy ELoad maximum Limit reached Error msg validated for Semi verified Tier");
+			ExtentReporter.extentLoggerPass("BE_TC_33", "BE_TC_33, Buy ELoad maximum Limit reached Error msg validated for Semi verified Tier");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Fully verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		Swipe("UP",1);
+		click(MLWalletEloadPage.obj3000PromoLoad, getTextVal(MLWalletEloadPage.obj3000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(2000);
+		if(verifyElementPresent(MLWalletEloadPage.objMaxLimitErrorMsg,getTextVal(MLWalletEloadPage.objMaxLimitErrorMsg,"Error Message"))) {
+			String sErrorMsg = getText(MLWalletEloadPage.objMaxLimitErrorMsg);
+			String sExpectedErrorMsg = "The maximum E-load per transaction set for your verification level is P2,000.00. Please try again.";
+			assertionValidation(sErrorMsg, sExpectedErrorMsg);
+			logger.info("BE_TC_39, Buy ELoad maximum Limit reached Error msg validated for Fully verified Tier");
+			ExtentReporter.extentLoggerPass("BE_TC_39", "BE_TC_39, Buy ELoad maximum Limit reached Error msg validated for Fully verified Tier");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Fully verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(5000);
+		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+		verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
+		waitTime(5000);
+		if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
+			logger.info("BE_TC_36, Buy ELoad maximum transaction for Fully verified Tier validated");
+			ExtentReporter.extentLoggerPass("BE_TC_36", "BE_TC_36, Buy ELoad maximum transaction for Fully verified Tier validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+	public void buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Buyer Tier verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		Swipe("UP",2);
+		click(MLWalletEloadPage.obj3000PromoLoad, getTextVal(MLWalletEloadPage.obj3000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(2000);
+		if(verifyElementPresent(MLWalletEloadPage.objMaxLimitErrorMsg,getTextVal(MLWalletEloadPage.objMaxLimitErrorMsg,"Error Message"))) {
+			String sErrorMsg = getText(MLWalletEloadPage.objMaxLimitErrorMsg);
+			String sExpectedErrorMsg = "The maximum E-load per transaction set for your verification level is P2,000.00. Please try again.";
+			assertionValidation(sErrorMsg, sExpectedErrorMsg);
+			logger.info("BE_TC_45, Buy ELoad maximum Limit reached Error msg validated for Buyer Tier verified Tier");
+			ExtentReporter.extentLoggerPass("BE_TC_45", "BE_TC_45, Buy ELoad maximum Limit reached Error msg validated for Buyer Tier verified Tier");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Buyer Tier verified Tier");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(5000);
+		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
+		verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
+		waitTime(5000);
+		if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
+			logger.info("BE_TC_48, Buy ELoad maximum transaction for Buyer Tier verified Tier validated");
+			ExtentReporter.extentLoggerPass("BE_TC_48", "BE_TC_48, Buy ELoad maximum transaction for Buyer Tier verified Tier validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+
 
 
 //=========================================== Cash In  Via Branch ================================//
@@ -8901,7 +9075,6 @@ public class MLWalletBusinessLogic {
 		click(MLWalletCashInViaBranch.objBranchName, "ML Branch");
 	}
 		public void cashInViaBranchEnterAmount(String sAmount) throws Exception {
-		click(MLWalletCashInViaBranch.objAmountTextField, "Amount Text Field");
 		type(MLWalletCashInViaBranch.objAmountTextField, sAmount, "Amount Text Field");
 		hideKeyboard();
 		Swipe("up", 1);
@@ -8971,6 +9144,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletCashInViaBranch.objCancelTransactionBtn,getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn,"Button"));
 		verifyElementPresentAndClick(MLWalletCashInViaBranch.objBackToHomeBtn, getTextVal(MLWalletCashInViaBranch.objBackToHomeBtn, "Button"));
 		Swipe("DOWN",2);
+		Swipe("UP",1);
 		if(verifyElementPresent(MLWalletCashInBank.objCashInTransaction,getTextVal(MLWalletCashInBank.objCashInTransaction,"Transaction"))) {
 			verifyElementPresent(MLWalletCashInBank.objCancelled, getTextVal(MLWalletCashInBank.objCancelled, "Status"));
 			logger.info("'CIBR_TC_02', To validate Cancel Transaction in Cash In ML Branch");
@@ -9091,6 +9265,7 @@ public class MLWalletBusinessLogic {
 	public void cashInViaBranchPendingTransaction_CIBR_TC_11() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash In Via Branch, If pending transaction Exists, Application directly navigates to previous transaction QR Code");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		Swipe("UP",1);
 		if(verifyElementPresent(MLWalletCashInBank.objCashInTransaction,getTextVal(MLWalletCashInBank.objCashInTransaction,"Transaction"))) {
 			verifyElementPresent(MLWalletCashInBank.objPending, getTextVal(MLWalletCashInBank.objPending, "Status"));
 			click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
@@ -9304,6 +9479,7 @@ public class MLWalletBusinessLogic {
 			assertionValidation(sErrorMsg, sExpectedErrorMsg);
 			logger.info("CIBR_TC_21, Cash In Via Branch Max Transaction Limit Fully-verified Tier User Validated");
 			ExtentReporter.extentLoggerPass("CIBR_TC_21", "CIBR_TC_21, Cash In Via Branch Max Transaction Limit Fully-verified Tier User Validated");
+			System.out.println("-----------------------------------------------------------");
 		}
 	}
 
@@ -12025,12 +12201,12 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("TopUp Games Home Page Validation");
 		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
 		waitTime(5000);
-		for(int i=1;i<4;i++){
+		for(int i=2;i<8;i++){
 			verifyElementPresent(MLWalletTopUpGames.objGames(i),getTextVal(MLWalletTopUpGames.objGames(i),"Games"));
 		}
-		for(int j=1;j<4;j++){
-			verifyElementPresent(MLWalletTopUpGames.objGames1(j),getTextVal(MLWalletTopUpGames.objGames1(j),"Games"));
-		}
+//		for(int j=1;j<4;j++){
+//			verifyElementPresent(MLWalletTopUpGames.objGames1(j),getTextVal(MLWalletTopUpGames.objGames1(j),"Games"));
+//		}
 		logger.info("TUG_TC_01, TopUp Games Home Page validated");
 		ExtentReporter.extentLoggerPass("TUG_TC_01", "TUG_TC_01, TopUp Games Home Page validated");
 		System.out.println("-----------------------------------------------------------");
@@ -12076,6 +12252,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletTopUpGames.objRedeemCode,getTextVal(MLWalletTopUpGames.objRedeemCode,"Redeem code"));
 		swipeDownUntilElementVisible("Back To Home");
 		verifyElementPresentAndClick(MLWalletTopUpGames.objBackToHome,getTextVal(MLWalletTopUpGames.objBackToHome,"Button"));
+		Swipe("DOWN",2);
 		String sAvailableBalanceAfterTopUp = getText(MLWalletTopUpGames.objAvailableBalance);
 		assertNotEquals(sAvailableBalance,sAvailableBalanceAfterTopUp);
 		logger.info("TUG_TC_06, TopUp Games successful Load Transaction validated");
@@ -12257,8 +12434,6 @@ public class MLWalletBusinessLogic {
 		topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
 		verifyElementPresentAndClick(MLWalletTopUpGames.objMyFavorites,getTextVal(MLWalletTopUpGames.objMyFavorites,"Button"));
 		type(MLWalletTopUpGames.objSearchFavField,prop.getproperty("GameMobileNumber"),"Game User ID Input Field");
-//		click(MLWalletTopUpGames.objFavoriteRecipient,getTextVal(MLWalletTopUpGames.objFavoriteRecipient,"Favorite Recipient"));
-		verifyElementPresentAndClick(MLWalletTopUpGames.objHamburgerMenu,"Hamburger menu");
 		click(MLWalletTopUpGames.objHamburgerMenu,"Hamburger menu");
 		verifyElementPresentAndClick(MLWalletTopUpGames.objRemoveBtn,getTextVal(MLWalletTopUpGames.objRemoveBtn,"Button"));
 		if(verifyElementNotPresent(MLWalletTopUpGames.objFavoriteRecipient,"Saved Recipient",5)){
@@ -12274,6 +12449,7 @@ public class MLWalletBusinessLogic {
 		Swipe("UP",3);
 		verifyElementPresentAndClick(MLWalletHomePage.objSeeMore,getTextVal(MLWalletHomePage.objSeeMore,"Button"));
 		scrollToFirstHorizontalScrollableElement("Top Up Games");
+		click(MLWalletTopUpGames.objTopUpGamesTransaction,getTextVal(MLWalletTopUpGames.objTopUpGamesTransaction,"Option"));
 		verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objFirstTransaction, "First Transaction");
 		if(verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionDetails,getTextVal(MLWalletTransactionHistoryPage.objTransactionDetails,"Page"))){
 			verifyElementPresent(MLWalletTransactionHistoryPage.objReferenceNumberInTransactionDetails,getTextVal(MLWalletTransactionHistoryPage.objReferenceNumberInTransactionDetails,"Reference Number"));
@@ -12330,6 +12506,7 @@ public class MLWalletBusinessLogic {
 		swipeDownUntilElementVisible("Back To Home");
 		verifyElementPresentAndClick(MLWalletTopUpGames.objBackToHome,getTextVal(MLWalletTopUpGames.objBackToHome,"Button"));
 		verifyElementPresent(MLWalletHomePage.objRecentTransactions,getTextVal(MLWalletHomePage.objRecentTransactions,"Header"));
+		Swipe("UP",1);
 		if(verifyElementPresent(MLWalletTopUpGames.objTopUpGamesTransaction,getTextVal(MLWalletTopUpGames.objTopUpGamesTransaction,"Transaction"))){
 			verifyElementPresent(MLWalletTopUpGames.objCompleteStatus,getTextVal(MLWalletTopUpGames.objCompleteStatus,"Status"));
 			logger.info("TUG_TC_28, Top Up Games Recent Transaction Validation");

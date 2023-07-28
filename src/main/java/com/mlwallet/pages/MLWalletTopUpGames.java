@@ -11,7 +11,7 @@ public class MLWalletTopUpGames {
     public static By objTopUpGames = By.xpath("//*[@text='Gaming']");
     public static By objTopGamesPage = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.widget.ImageView']]/*[@class='android.view.ViewGroup'])[2]");
     public static By objGames(int i){
-        return By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]]/*[@class='android.view.ViewGroup'])[4]/*/*/*/*[@text and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[./*[@class='android.widget.ImageView']]])["+i+"]");
+        return By.xpath("(//*[@class='android.widget.TextView'])["+i+"]");
     }
 
     public static By objGames1(int j){

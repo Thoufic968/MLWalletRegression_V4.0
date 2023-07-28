@@ -55,7 +55,7 @@ public class MLWalletShopItemsPage {
 	public static By objKaratDropdown = By.xpath("//*[@resource-id='drpKarat']");
 	public static By objPriceDropdown = By.xpath("//*[@resource-id='drpKarat']");
 
-	public static By objProductImage = By.xpath("(//*[@text='product image'])[1]");
+	public static By objProductImage = By.xpath("//*[@resource-id='crewimage']");
 	public static By objProductPrice = By.xpath("//*[@resource-id='productPriceDisplay']");
 	public static By objShippingTo = By.xpath("//*[@resource-id='ship']");
 	public static By objShippingFee = By.xpath("//*[@resource-id='shippingfee']");
@@ -93,6 +93,7 @@ public class MLWalletShopItemsPage {
 	public static By objMyPurchase = By.xpath("//*[@text='My Purchases']");
 	public static By objOrderDetails = By.xpath("//*[@resource-id='orderDetails']");
 	public static By objSubtotalAmount = By.xpath("//*[@resource-id='cart-subtotal']");
+	public static By objSelectedItemPrice = By.xpath("((//*[@class='android.widget.CheckBox'])[1]/following-sibling::android.widget.TextView)[2]");
 	public static By objJewelry = By.xpath("//*[@text='Jewelry']");
 	public static By objContactUs = By.xpath("//*[@text='Contact Us']");
 	public static By objGreatDealsForFineWatches = By.xpath("//*[@text='Great Deals for Fine Watches']");

@@ -17,7 +17,7 @@ public class MLWalletCashInViaBranch {
 	public static By objWarningPopup=By.xpath("//*[@text='Continue']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objContinueButton=By.xpath("//*[@text='Continue']");
 	public static By objkptnId=By.xpath("//*[@resource-id='transaction-code']");
-	public static By objCrossBtn=By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]]]]]/*/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']]])[1]/*/*[@text and ./parent::*[@class='android.view.ViewGroup']])[1]");
+	public static By objCrossBtn=By.xpath("//*[@text='Cash In']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 	public static By objCancelTransactionBtn=By.xpath("//*[@text='Cancel Transaction']");
 	public static By objCancelTransactionPopup=By.xpath("//*[@text='Would you like cancel Transaction?']");
 	public static By objCancelBtn1=By.xpath("//*[@text='Cancel Transaction']");
