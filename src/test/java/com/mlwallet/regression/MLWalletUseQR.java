@@ -27,15 +27,15 @@ public class MLWalletUseQR {
     }
 
 
-//    @Test(priority = 1)
-//    public void useQRGenerateQRCode_QR_TC_01() throws Exception {
-//        MLWalletBusinessLogic.useQRGenerateQRCode_QR_TC_01();
-//    }
-//
-//    @Test(priority = 2)
-//    public void useQRSendMoneyToAnyMLWalletUser_QR_TC_02() throws Exception {
-//        MLWalletBusinessLogic.useQRSendMoneyToAnyMLWalletUser_QR_TC_02();
-//    }
+    @Test(priority = 1)
+    public void useQRGenerateQRCode_QR_TC_01() throws Exception {
+        MLWalletBusinessLogic.useQRGenerateQRCode_QR_TC_01();
+    }
+
+    @Test(priority = 2)
+    public void useQRSendMoneyToAnyMLWalletUser_QR_TC_02() throws Exception {
+        MLWalletBusinessLogic.useQRSendMoneyToAnyMLWalletUser_QR_TC_02();
+    }
 //
 //    @Test(priority = 3)
 //    public void useQRInvalidQRCodeValidation_QR_TC_03() throws Exception {

@@ -118,10 +118,10 @@ public class MLWalletTransactionHistory {
 
 
 
-    @AfterMethod
-    public void afterMethod(){
-        AppiumServer.stopServer();
-    }
+//    @AfterMethod
+//    public void afterMethod(){
+//        AppiumServer.stopServer();
+//    }
 
 
 

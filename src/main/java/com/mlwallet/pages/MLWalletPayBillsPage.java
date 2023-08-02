@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletPayBillsPage {
 
-    public static By objPayBills = By.xpath("//*[@text='Pay Bills']");
+    public static By objPayBills = By.xpath("//*[@text='Bills']");
 
     public static By objSelectBiller = By.xpath("//*[@text='Select Biller']");
     public static By objBillers = By.xpath("//*[@text='Billers']");
@@ -56,9 +56,9 @@ public class MLWalletPayBillsPage {
     public static By objAccountNumber = By.xpath("(//*[@resource-id='Account Number'])[2]");
     public static By objPaymentMethod = By.xpath("(//*[@resource-id='Payment Method'])[2]");
     public static By objPayBtn = By.xpath("//*[contains(@text,'Pay P')]");
-    public static By objMaxLimitErrorMessageUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objMaxLimitErrorMessageUpgrade = By.xpath("//*[@text='Upgrade Now' or @text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objMaxLimitErrorMessage = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
-    public static By objAddBiller = By.xpath("//*[@text='Add Billerl']");
+    public static By objAddBiller = By.xpath("//*[@text='Add Biller']");
     public static By objAddBillers = By.xpath("//*[@text='Add Billers']");
     public static By objAddSeectedBiller = By.xpath("//*[@text='Biller']/preceding-sibling::android.view.ViewGroup");
     public static By objBillerListSearchBiller = By.xpath("//*[@class='android.widget.EditText']");

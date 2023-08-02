@@ -21,7 +21,6 @@ import java.util.Date;
 import java.util.List;
 
 import static com.utility.Utilities.*;
-import static com.utility.Utilities.explicitWaitVisible;
 // Sprint demo 9
 // Sprint Demo 12
 
@@ -632,7 +631,7 @@ public class MLWalletBusinessLogic {
 		enterAmountMLBranch("100000");
 		if (verifyElementPresent(MLWalletCashOutPage.objMaxLimitTxt, getTextVal(MLWalletCashOutPage.objMaxLimitTxt, "Text Message"))) {
 			String sMaxLimitTxt = getText(MLWalletCashOutPage.objMaxLimitTxt);
-			String ExpectedTxt = "The maximum Branch Cash-out per transaction set for your verification level is P40,000.00. Please try again. ";
+			String ExpectedTxt = "The maximum Branch Cash-out per transaction set for your verification level is P40,000.00. Please try again.";
 			assertionValidation(sMaxLimitTxt, ExpectedTxt);
 			logger.info("WM_TC_06, The supplied amount us less than the required minimum transaction limit. Error Message is Validated");
 			ExtentReporter.extentLoggerPass("WM_TC_06", "WM_TC_06, The supplied amount us less than the required minimum transaction limit. Error Message is Validated");
@@ -642,7 +641,7 @@ public class MLWalletBusinessLogic {
 
 	public void cashOutInsufficientBalance_WM_TC_07() throws Exception {
 		ExtentReporter.HeaderChildNode("Cash Out Insufficient Balance");
-		mlWalletLogin(prop.getproperty("Semi_Verified"));
+		mlWalletLogin("9999999997");
 		click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
 		enterAmountMLBranch("35000");
 		if (verifyElementPresent(MLWalletCashOutPage.objInsufficientBalance, getTextVal(MLWalletCashOutPage.objInsufficientBalance, "Text Message"))) {
@@ -4244,7 +4243,7 @@ public class MLWalletBusinessLogic {
 			List<WebElement> values = findElements(MLWalletTransactionHistoryPage.objPayBillsTransctionList1(billModule));
 			for (int i = 0; i < values.size(); i++) {
 				String billPayTransaction = values.get(i).getText();
-				logger.info(billModule + " All Transactions : " + billPayTransaction);
+				logger.info(billModule + " Transaction : " + billPayTransaction);
 				ExtentReporter.extentLogger(" ", billModule + " All Transactions : " + billPayTransaction);
 			}
 		} else if (PayBillsHistory.equals(transaction))// "No Recent Transaction"
@@ -4271,6 +4270,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Bills Pay Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
 		click(MLWalletTransactionHistoryPage.objBillsPayTab, "Bills Pay");
+		waitTime(3000);
 		mlWallet_TransactionHistory_Generic_Steps("Pay Bills", "No Recent Transaction");
 		logger.info("TH_TC_02, Bills pay Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_02", "'TH_TC_02', Bills pay Transactions are displayed");
@@ -4281,6 +4281,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Buy Eload Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
 		click(MLWalletTransactionHistoryPage.objeLoadTab, "eLoad");
+		waitTime(3000);
 		mlWallet_TransactionHistory_Generic_Steps("Buy Eload", "No Recent Transaction");
 		logger.info("TH_TC_03, eLoad Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_03", "'TH_TC_03', eLoad Transactions Transactions are displayed");
@@ -4291,6 +4292,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Send Money Transaction History");
 		mlWallet_TransactionHistory_TH_TC_01();
 		click(MLWalletTransactionHistoryPage.objSendMoneyTab, "Send Money");
+		waitTime(3000);
 		mlWallet_TransactionHistory_Generic_Steps("Kwarta Padala", "No Recent Transaction"); // Kwarta Padala
 		logger.info("TH_TC_04, Send Money Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_04", "'TH_TC_04', Send Money Transactions are displayed");
@@ -4315,7 +4317,7 @@ public class MLWalletBusinessLogic {
 		scrollToFirstHorizontalScrollableElement("Cash Out");
 		click(MLWalletTransactionHistoryPage.objCashOutTab, "Cash Out");
 		Thread.sleep(3000);
-		mlWallet_TransactionHistory_Generic_Steps("Cash Out", "No Recent Transaction");
+		mlWallet_TransactionHistory_Generic_Steps("Cash Out", "Cash Out");
 		logger.info("TH_TC_06,  Cash Out Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_06", "'TH_TC_06', Cash Out Transactions are displayed");
 		System.out.println("-----------------------------------------------------------");
@@ -4327,7 +4329,7 @@ public class MLWalletBusinessLogic {
 		scrollToFirstHorizontalScrollableElement("Receive Money");
 		click(MLWalletTransactionHistoryPage.objReceiveMoneyTab, "Receive Money");
 		Thread.sleep(3000);
-		mlWallet_TransactionHistory_Generic_Steps("Receive Money", "No Recent Transaction");
+		mlWallet_TransactionHistory_Generic_Steps("Wallet to Wallet", "Wallet to Wallet");
 		logger.info("TH_TC_07, Receive Money Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_07", "'TH_TC_07', Receive Money Transactions are displayed");
 		System.out.println("-----------------------------------------------------------");
@@ -4339,7 +4341,7 @@ public class MLWalletBusinessLogic {
 		scrollToFirstHorizontalScrollableElement("ML Shop");
 		click(MLWalletTransactionHistoryPage.objBalanceAdjustmentTab, "Balance Adjustment");
 		Thread.sleep(2000);
-		mlWallet_TransactionHistory_Generic_Steps("Balance Adjustment", "No Recent Transaction");
+		mlWallet_TransactionHistory_Generic_Steps("Adjustment", "No Recent Transaction");
 		logger.info("TH_TC_08, Balance Adjustment Transactions are displayed");
 		ExtentReporter.extentLoggerPass("TH_TC_08", "'TH_TC_08', Balance Adjustment Transactions are displayed");
 		System.out.println("-----------------------------------------------------------");
@@ -5111,6 +5113,7 @@ public class MLWalletBusinessLogic {
 		shopItemsNavigation();
 		Swipe("UP", 2);
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+		click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
 		waitTime(10000);
 		if(verifyElementPresent(MLWalletShopItemsPage.objProductImage,"Product Image")){
 			verifyElementPresent(MLWalletShopItemsPage.objProductName,getTextVal(MLWalletShopItemsPage.objProductName,"Product Name"));
@@ -6745,10 +6748,10 @@ public class MLWalletBusinessLogic {
 
 	public void payBillsInsufficientBalance_PB_TC_09() throws Exception {
 		ExtentReporter.HeaderChildNode("Pay Bills Insufficient Balance");
-		mlWalletLogin(prop.getproperty("Semi_Verified"));
+		mlWalletLogin("9999999997");
 		payBillsNavigation();
 		searchBiller();
-		billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "39000");
+		billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "24000");
 		confirmDetailsAndPay();
 		waitTime(5000);
 		if (verifyElementPresent(SendTransferPage.objInsufficientAmountMsg, getTextVal(SendTransferPage.objInsufficientAmountMsg, "Error Message"))) {
@@ -7921,7 +7924,7 @@ public class MLWalletBusinessLogic {
 	public void buyELoadTransactionDetails_BE_TC_01(String sTier,int promotab) throws Exception
 	{
 		ExtentReporter.HeaderChildNode("Transaction Details Validation after Buying eLoad");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -7981,7 +7984,7 @@ public class MLWalletBusinessLogic {
 	public void buyELoadWithoutTelecommunicationSelected_BE_TC_04() throws Exception
 	{
 		ExtentReporter.HeaderChildNode("Buying eLoad without telecommunication selected");
-		eLoad_generic(prop.getproperty("Fully_Verified"),prop.getproperty("sunMobileNumber"),"false", 3);
+		eLoad_generic(prop.getproperty("Fully_Verified"),prop.getproperty("GLOBE"),"false", 4);
 		enableLocation_PopUp();
 		if(verifyElementPresent(MLWalletEloadPage.objErrorMsg, getTextVal(MLWalletEloadPage.objErrorMsg, "Pop Up Message"))) {
 			String sActualErrorMsg = getText(MLWalletEloadPage.objErrorMsg);
@@ -8084,7 +8087,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Back Arrow Button Validation");
-		buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("sunMobileNumber"),3);
+		buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("GLOBE"),2);
 		verifyElementPresentAndClick(MLWalletEloadPage.objLoadSelectionBackArrowBtn,"Load Selection Back Arrow Button");
 		if(verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage,getTextVal(MLWalletEloadPage.objEloadtransactionPage,"Page"))){
 			logger.info("BE_TC_12, After clicking on Back Arrow Btn on Load Selection Page, Application Navigates to eLoad Transaction Page is Validated");
@@ -8095,7 +8098,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLoadSelectionPageUIValidation_BE_TC_13(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Page UI Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		if(verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage,getTextVal(MLWalletEloadPage.objLoadSelectionPage,"Page"))){
 			verifyElementPresent(MLWalletEloadPage.objMobileNumberInLoadSelection,getTextVal(MLWalletEloadPage.objMobileNumberInLoadSelection,"Number"));
@@ -8117,7 +8120,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLoadSelectionChangeBtnFunctionality_BE_TC_14(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Change Button Functionality Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresentAndClick(MLWalletEloadPage.objChange,getTextVal(MLWalletEloadPage.objChange,"Button"));
 		if(verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage,getTextVal(MLWalletEloadPage.objEloadtransactionPage,"Page"))){
@@ -8129,7 +8132,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionDetailsPageUIValidation_BE_TC_15(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction Details Page UI Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8328,7 +8331,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadPromoConfirmationPopupValidation_BE_TC_24(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Promo Confirmation Popup Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8346,7 +8349,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadOTPPageUIValidation_BE_TC_25(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad OTP page UI Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		waitTime(5000);
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
@@ -8371,7 +8374,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26(String sTier, int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Successful Transaction UI Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		waitTime(5000);
@@ -8400,7 +8403,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadRecentTransactionUIValidation_BE_TC_27() throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Recent Transaction UI Validation");
-		buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),3);
+		buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
 		verifyElementPresentAndClick(MLWalletEloadPage.objBackToHomeBtn,getTextVal(MLWalletEloadPage.objBackToHomeBtn,"Button"));
 		Swipe("DOWN",2);
 		if(verifyElementPresent(MLWalletHomePage.objRecentTransactions,getTextVal(MLWalletHomePage.objRecentTransactions,"Header"))){
@@ -8435,7 +8438,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLocationPopupValidation_BE_TC_51(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Location Popup Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpValidation();
 			logger.info("BE_TC_51, Buy ELoad Location Popup Validated");
@@ -8446,7 +8449,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLocationDenyFunctionality_BE_TC_52(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Location Deny Functionality");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			permissionDenyPopUp();
 			logger.info("BE_TC_52, Buy ELoad Location Deny Functionality Validated");
@@ -8457,7 +8460,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLocationPermissionDenyCloseBtnFunctionality_BE_TC_53(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Location Permission Deny Close Button Functionality");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			permissionDenyCloseBtnFunctionality();
 			if(verifyElementPresent(MLWalletLoginPage.objAvailableBalance,getTextVal(MLWalletLoginPage.objAvailableBalance,"Page"))){
@@ -8471,7 +8474,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLocationPermissionDenyOpenSettingsBtnFunctionality_BE_TC_54(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Location Permission Deny open Settings Button Functionality Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			permissionDenyOpenSettingsBtnFunctionality();
 			if (verifyElementPresent(MLWalletEloadPage.objAppInfo, getTextVal(MLWalletEloadPage.objAppInfo, "Page"))) {
@@ -8485,7 +8488,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadLocationPopUpAllowFunctionality_BE_TC_55(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Location popup Allow Button Functionality Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
 			locationPopUpAllowFunctionality();
 			verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage,getTextVal(MLWalletEloadPage.objLoadSelectionPage,"Page"));
@@ -8592,7 +8595,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Internet Interruption While Entering OTP Validation");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8690,7 +8693,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(String sTier, int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction Validation After Minimizing App");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8715,7 +8718,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionWithValidMLPin_BE_TC_78(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction With Valid MLPin");
-		eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier,prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8744,7 +8747,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionWithInValidMLPin_BE_TC_79(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction With InValid MLPin");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8769,7 +8772,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadInOTPPopupValidation_BE_TC_089(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction IN App OTP Popup Validation");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8792,7 +8795,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction InApp OTP popup UI Validation");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8818,7 +8821,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad New OTP got generated After Sixty Seconds validation");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8844,7 +8847,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction OTP Cancel Button Functionality");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -8868,7 +8871,7 @@ public class MLWalletBusinessLogic {
 
 	public void buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(String sTier,int promotab) throws Exception {
 		ExtentReporter.HeaderChildNode("Buy ELoad Transaction OTP Continue Button Functionality");
-		eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
 		enableLocation_PopUp();
 		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
 		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -9057,6 +9060,49 @@ public class MLWalletBusinessLogic {
 		if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
 			logger.info("BE_TC_48, Buy ELoad maximum transaction for Buyer Tier verified Tier validated");
 			ExtentReporter.extentLoggerPass("BE_TC_48", "BE_TC_48, Buy ELoad maximum transaction for Buyer Tier verified Tier validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad Second time Load selection popup validation");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresentAndClick(MLWalletEloadPage.objBuyLoadBackArrowBtn,"Buy Load Back Arrow Button");
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		if(verifyElementPresent(MLWalletEloadPage.objSecondTimeConfirmationPopup,getTextVal(MLWalletEloadPage.objSecondTimeConfirmationPopup,"Popup"))){
+			verifyElementPresent(MLWalletEloadPage.obj2000PromoLoad,getTextVal(MLWalletEloadPage.obj2000PromoLoad,"Promo Load"));
+			logger.info("BE_TC_29, Buy ELoad Second time Load selection popup validated");
+			ExtentReporter.extentLoggerPass("BE_TC_29", "BE_TC_29, Buy ELoad Second time Load selection popup validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void buyELoadMLPinPageNavigation_BE_TC_87(String sTier,int promotab) throws Exception {
+		ExtentReporter.HeaderChildNode("Buy ELoad ML pin page navigation");
+		eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+		enableLocation_PopUp();
+		verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+		click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+		waitTime(5000);
+		click(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Promo"));
+		verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+		waitTime(5000);
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+		click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+		waitTime(5000);
+		if(verifyElementPresent(MLWalletEloadPage.objMLPinEditField,"ML Pin Page")){
+			logger.info("BE_TC_87, Buy ELoad ML pin page navigation validated");
+			ExtentReporter.extentLoggerPass("BE_TC_87", "BE_TC_87, Buy ELoad ML pin page navigation validated");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
@@ -10200,6 +10246,74 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void branchLocatorLogInFunctionality_BL_TC_14() throws Exception {
+		ExtentReporter.HeaderChildNode("Branch Locator LogIn Functionality");
+		branchLocatorNavigation();
+		verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu,"Hamburger Menu Button");
+		verifyElementPresentAndClick(MLWalletBranchLocator.objLogin,getTextVal(MLWalletBranchLocator.objLogin,"Option"));
+		waitTime(10000);
+		if(verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,"Page"))) {
+			logger.info("BL_TC_14, Branch Locator LogIn Button Functionality validated and App Navigated to To use ML Wallet on your computer Page");
+			ExtentReporter.extentLoggerPass("BL_TC_14", "BL_TC_14, Branch Locator LogIn Button Functionality validated and App Navigated to To use ML Wallet on your computer Page");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void branchLocatorSendTransferPageNavigation_BL_TC_18() throws Exception {
+		ExtentReporter.HeaderChildNode("Branch Locator Send transfer page Navigation");
+		branchLocatorNavigation();
+		homePageNavigation();
+		waitTime(5000);
+		verifyElementPresentAndClick(MLWalletBranchLocator.objSendNowBtn,getTextVal(MLWalletBranchLocator.objSendNowBtn,"Button"));
+		waitTime(15000);
+		if(verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,"Page"))) {
+			for(int i=1;i<=3;i++){
+				verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),+i+" Step"));
+			}
+			verifyElementPresent(MLWalletBranchLocator.objDoNotHaveMLWallet,getTextVal(MLWalletBranchLocator.objDoNotHaveMLWallet,"Text"));
+			logger.info("BL_TC_18, Branch Locator Send transfer page navigation validated");
+			ExtentReporter.extentLoggerPass("BL_TC_18", "BL_TC_18, Branch Locator Send transfer page navigation validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void branchLocatorCashInPageNavigation_BL_TC_20() throws Exception {
+		ExtentReporter.HeaderChildNode("Branch Locator Cash In page Navigation");
+		branchLocatorNavigation();
+		homePageNavigation();
+		waitTime(5000);
+		Swipe("UP",1);
+		verifyElementPresentAndClick(MLWalletBranchLocator.objCashInLearnMore,getTextVal(MLWalletBranchLocator.objCashInLearnMore,"Cash In Button"));
+		waitTime(15000);
+		if(verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,"Page"))) {
+			for(int i=1;i<=3;i++){
+				verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),+i+" Step"));
+			}
+			verifyElementPresent(MLWalletBranchLocator.objDoNotHaveMLWallet,getTextVal(MLWalletBranchLocator.objDoNotHaveMLWallet,"Text"));
+			logger.info("BL_TC_20, Branch Locator Cash In page navigation validated");
+			ExtentReporter.extentLoggerPass("BL_TC_20", "BL_TC_20, Branch Locator Cash In page navigation validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void branchLocatorCashOutPageNavigation_BL_TC_21() throws Exception {
+		ExtentReporter.HeaderChildNode("Branch Locator Cash out page Navigation");
+		branchLocatorNavigation();
+		homePageNavigation();
+		waitTime(5000);
+		Swipe("UP",1);
+		verifyElementPresentAndClick(MLWalletBranchLocator.objCashOutLearnMore,getTextVal(MLWalletBranchLocator.objCashOutLearnMore,"Cash Out Button"));
+		waitTime(15000);
+		if(verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputer,"Page"))) {
+			for(int i=1;i<=3;i++){
+				verifyElementPresent(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),getTextVal(MLWalletBranchLocator.objToUseMLWalletOnYourComputerSteps(i),+i+" Step"));
+			}
+			verifyElementPresent(MLWalletBranchLocator.objDoNotHaveMLWallet,getTextVal(MLWalletBranchLocator.objDoNotHaveMLWallet,"Text"));
+			logger.info("BL_TC_21, Branch Locator Cash out page navigation validated");
+			ExtentReporter.extentLoggerPass("BL_TC_21", "BL_TC_21, Branch Locator Cash out page navigation validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
 
 
@@ -10747,7 +10861,6 @@ public class MLWalletBusinessLogic {
 		type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name") ,"First Name Field");
 		String sFullName = getText(MLWalletTroubleSigningInPage.objFullNameField);
 		type(MLWalletTroubleSigningInPage.objRegisteredEmail, prop.getproperty("Email") ,"Registered Email Field");
-		String sRegisteredEmail = getText(MLWalletTroubleSigningInPage.objRegisteredEmail);
 		Swipe("UP",1);
 		type(MLWalletTroubleSigningInPage.objMobileNumber, prop.getproperty("Branch_Verified") ,"Mobile Number Field");
 		String sMobileNumber = getText(MLWalletTroubleSigningInPage.objMobileNumber);
@@ -10762,7 +10875,7 @@ public class MLWalletBusinessLogic {
 		Swipe("UP",1);
 		String sActualMobileNumber = getText(MLWalletTroubleSigningInPage.objMobileNumber);
 		assertNotEquals(sActualFullName,sFullName);
-		assertNotEquals(sActualRegisteredEmail,sRegisteredEmail);
+		assertNotEquals(sActualRegisteredEmail,prop.getproperty("Email"));
 		assertNotEquals(sActualMobileNumber,sMobileNumber);
 		logger.info("TS_TC_13, Trouble Signing In Clear form Btn on Clear form popup functionality Validated");
 		ExtentReporter.extentLoggerPass("TS_TC_13", "TS_TC_13, Trouble Signing In Clear form Btn on Clear form popup functionality Validated");
@@ -10776,7 +10889,6 @@ public class MLWalletBusinessLogic {
 		type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name") ,"First Name Field");
 		String sFullName = getText(MLWalletTroubleSigningInPage.objFullNameField);
 		type(MLWalletTroubleSigningInPage.objRegisteredEmail, prop.getproperty("Email") ,"Registered Email Field");
-		String sRegisteredEmail = getText(MLWalletTroubleSigningInPage.objRegisteredEmail);
 		Swipe("UP",1);
 		type(MLWalletTroubleSigningInPage.objMobileNumber, prop.getproperty("Branch_Verified") ,"Mobile Number Field");
 		String sMobileNumber = getText(MLWalletTroubleSigningInPage.objMobileNumber);
@@ -10791,7 +10903,7 @@ public class MLWalletBusinessLogic {
 		Swipe("UP",1);
 		String sActualMobileNumber = getText(MLWalletTroubleSigningInPage.objMobileNumber);
 		assertionValidation(sActualFullName,sFullName);
-		assertionValidation(sActualRegisteredEmail,sRegisteredEmail);
+		assertionValidation(sActualRegisteredEmail,prop.getproperty("Email"));
 		assertionValidation(sActualMobileNumber,sMobileNumber);
 		logger.info("TS_TC_14, Trouble Signing In Cancel Btn on Clear form popup functionality Validated");
 		ExtentReporter.extentLoggerPass("TS_TC_14", "TS_TC_14, Trouble Signing In Cancel Btn on Clear form popup functionality Validated");

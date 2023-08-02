@@ -40,10 +40,11 @@ public class MLWalletShopItemScripts {
 //       MLWalletBusinessLogic.shopItemsRespectivePageNavigationAfterSelectingAnCategory_MLS_TC_15();
 //    }
 //
-//    @Test(prionessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
-//    }rity = 4)
-////    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
-////        MLWalletBusi
+//    @Test(priority = 4)
+//    public void shopItemsSelectedItemScreenUIValidation_MLS_TC_18() throws Exception {
+//        MLWalletBusinessLogic.shopItemsSelectedItemScreenUIValidation_MLS_TC_18();
+//    }
+//
 //
 //    @Test(priority = 5)
 //    public void shopItemsCartPageUIValidation_MLS_TC_19() throws Exception {
@@ -155,16 +156,16 @@ public class MLWalletShopItemScripts {
 //    public void shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85() throws Exception {
 //        MLWalletBusinessLogic.shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85();
 //    }
-//
-//    @Test(priority = 27)
-//    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
-//        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
-//    }
-//
-    @Test(priority = 28)
-    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
-        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
+
+    @Test(priority = 27)
+    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
+        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
     }
+
+//    @Test(priority = 28)
+//    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
+//        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
+//    }
 //
 //    @Test(priority = 29)
 //    public void shopItemsAmparitoCollectionsProductTypesValidation_MLS_TC_89() throws Exception {

@@ -23,7 +23,8 @@ public class MLWalletEloadPage {
 	public static By objLoadSelectionPage=By.xpath("//*[@text='Load Selection']");
 	public static By objPromoLoadTab=By.xpath("//*[@text='Promo Load']");
 	public static By objRegularLoadTab = By.xpath("//*[@text='Regular Load']");
-	public static By objTransaction=By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[./*[@text]]])[1]");
+//	public static By objTransaction=By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView']]/*/*[@class='android.view.ViewGroup' and ./*[./*[@text]]])[1]");
+	public static By objTransaction = By.xpath("(//*[@text='LD'])[2]");
 	public static By objContinuePromoPopUp=By.xpath("//*[@text='Would you like to continue with this promo?']");
 	public static By objPromoName=By.xpath("(//*[android.view.ViewGroup]/child::android.view.ViewGroup/child::android.widget.TextView)[5]");
 	public static By objPromoConfirmationPopup = By.xpath("//*[@text='Confirm']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
@@ -56,7 +57,7 @@ public class MLWalletEloadPage {
 	public static By objWalletBalanceInLoadSeletion = By.xpath("//*[@text='Change']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 	public static By objLoadWithAmount = By.xpath("(//*[@text='Transaction Details']//parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView");
 	public static By objContacts =By.xpath("//*[@text='Contacts']");
-	public static By objAllowBtn = By.xpath("//*[@text='Allow']");
+	public static By objAllowBtn = By.xpath("//*[@text='Allow' or @text='ALLOW']");
 	public static By objSearch = By.xpath("//*[@class='android.widget.EditText']");
 	public static By objContactsBtn = By.xpath("(//*[@text='Contacts'])[2]");
 	public static By objFavorites = By.xpath("//*[@text='Favorites']");
@@ -77,5 +78,7 @@ public class MLWalletEloadPage {
 	public static By objNewTransaction = By.xpath("//*[@text='New Transaction']");
 	public static By objInvalidPINMsg = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objMaxLimitErrorMsg = By.xpath("//*[@text='Upgrade Now' or @text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
-
+	public static By objBuyLoadBackArrowBtn = By.xpath("//*[@text='Buy Load']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+	public static By objSecondTimeConfirmationPopup = By.xpath("//*[@resource-id='modal-confirm-button']/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+	public static By objMLPinEditField = By.xpath("//*[@resource-id='847305']");
 }

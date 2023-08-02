@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletCashOutPage {
 
-    public static By objCashOut = By.xpath("//*[@text='Cashout /\n" +
-            "Withdraw']");
+    public static By objCashOut = By.xpath("//*[@text='Withdraw']");
 //=========================================== ML Branch ========================================================//
     public static By objToAnyMLBranch = By.xpath("//*[@text='To any ML Branch']");
 
@@ -36,7 +35,7 @@ public class MLWalletCashOutPage {
     public static By objMaxLimitTxt = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objMaxLimitUpgrade = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 
-    public static By objInsufficientBalance = By.xpath("//*[@text='Upgrade Now']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+    public static By objInsufficientBalance = By.xpath("//*[@text='Upgrade Now' or @text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
     public static By objOkBtn = By.xpath("//*[@text='Ok']");
 
     public static By objCashOutPageBackArrowBtn = By.xpath("//*[@text='Cash Out']/preceding-sibling::android.view.ViewGroup/child::android.widget.TextView");
