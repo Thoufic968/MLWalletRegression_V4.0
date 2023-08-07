@@ -24,11 +24,11 @@ public class MLWalletShopItemScripts {
 
 
 
-//    @Test(priority = 1)
-//    public void mlWalletShopItems_Scenario() throws Exception
-//    {
-//        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
-//    }
+    @Test(priority = 1)
+    public void mlWalletShopItems_Scenario() throws Exception
+    {
+        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
+    }
 //
 //    @Test(priority = 2)
 //    public void shopItemsHamburgerMenuNavigation_MLS_TC_12() throws Exception {

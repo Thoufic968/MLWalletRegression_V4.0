@@ -24,7 +24,7 @@ public class MLWalletHomeAndDashboard {
 
 
     @Test(priority = 1)
-    public void mlWalletHomePageUIValidation() throws Exception {
+    public void mlWalletHomePageUIValidation_HD_TC_01() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageUIValidation_HD_TC_01();
     }
 

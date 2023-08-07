@@ -15,27 +15,27 @@ public class MLWalletHomePage {
 //=================================== Icons ==================================================================//
 
     public static By objCashInIcon = By.xpath("//*[@text='Cash In']");
-    public static By objCashOutIcon = By.xpath("//*[@text='Cashout /\n" +
-            "Withdraw']");
-    public static By objBuyELoadIcon =By.xpath("//*[@text='Buy eLoad']");
+    public static By objCashOutIcon = By.xpath("//*[@text='Withdraw']");
+    public static By objBuyELoadIcon =By.xpath("//*[@text='eLoad']");
     public static By objBuyELoadTransaction =By.xpath("(//*[@text='Buy Eload'])[1]");
     public static By objPosted = By.xpath("//*[@text='Posted']");
-    public static By objPayBillsIcon = By.xpath("//*[@text='Pay Bills']");
-    public static By objShopItemsIcon = By.xpath("//*[@text='Shop Items']");
-    public static By objSendTransferIcon = By.xpath("//*[@text='Send /\n" +
-            "Transfer']");
-    public static By objMLLoans = By.xpath("//*[@text='ML Loans']");
+    public static By objPayBillsIcon = By.xpath("//*[@text='Bills']");
+    public static By objShopItemsIcon = By.xpath("//*[@text='Shop']");
+    public static By objSendTransferIcon = By.xpath("//*[@text='Send']");
+    public static By objMLLoans = By.xpath("//*[@text='Loans']");
     public static By objUseQR = By.xpath("//*[@text='Use QR']");
-    public static By objHamburgerMenu = By.xpath("(//*[android.view.ViewGroup]/child::android.view.ViewGroup/child::android.widget.TextView)[3]");
+    public static By objHamburgerMenu = By.xpath("//*[@text and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.widget.ImageView']]]]");
     public static By objProfileIcon1=By.xpath("(//*[android.widget.ImageView]/ancestor::android.view.ViewGroup/descendant::android.view.ViewGroup/child::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[2]");
     public static By objProfileIcon=By.xpath("(//*[android.widget.ImageView]/ancestor::android.view.ViewGroup/descendant::android.view.ViewGroup/child::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[1]");
-    public static By objAvailableBalanceHeader = By.xpath("//*[@resource-id='UTJ9TN']");
+    public static By objAvailableBalanceHeader = By.xpath("//*[@text='BALANCE']");
     public static By objEyeIcon = By.xpath("//*[@resource-id='JKRBGQ']");
     public static By objAvailableBalance = By.xpath("//*[@resource-id='0619JV']");
-    public static By objHiddenAvailableBalance = By.xpath("//*[@resource-id='0619JV']");
-    public static By objTransactions = By.xpath("//*[@resource-id='8VFRG4']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
+    public static By objHiddenAvailableBalance = By.xpath("//*[@resource-id='3P4KX3']");
+    public static By objTransactions = By.xpath("//*[@resource-id='OSJVNX']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
     public static By objSeeMore = By.xpath("//*[@text='See More']");
-    public static By objIIcon = By.xpath("//*[@text='Learn more about your account level by clicking here.']");
+    public static By objIIcon = By.xpath("//*[@text='Learn more about your account level by clicking here.']/preceding-sibling::android.widget.TextView");
+    public static By objLearnMoreTxt = By.xpath("//*[@text='Learn more about your account level by clicking here.']");
+
     public static By objVerificationTierPerks = By.xpath("//*[@text='Verification Tier Perks']");
     public static By objMaxBalanceText = By.xpath("//*[@text='Max. Balance:']");
     public static By objMaxBalanceAmount = By.xpath("//*[@text='Max. Balance:']/following-sibling::android.widget.TextView");
