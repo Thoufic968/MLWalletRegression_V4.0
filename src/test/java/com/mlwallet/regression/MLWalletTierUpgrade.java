@@ -53,6 +53,11 @@ public class MLWalletTierUpgrade {
         MLWalletBusinessLogic.tierUpgradeVerificationTierPerksBackBtnValidation_TU_TC_06();
     }
 
+    @Test(priority = 7)
+    public void tierUpgradeUpgradeTierLevelBtnValidationForSemiVerifiedTabAsBuyTierUser_TU_TC_07() throws Exception {
+        MLWalletBusinessLogic.tierUpgradeUpgradeTierLevelBtnValidationForSemiVerifiedTabAsBuyTierUser_TU_TC_07();
+    }
+
 
     @AfterMethod
     public void afterMethod(){

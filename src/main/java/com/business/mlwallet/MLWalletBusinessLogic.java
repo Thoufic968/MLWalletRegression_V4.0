@@ -2424,6 +2424,7 @@ public class MLWalletBusinessLogic {
 
 	public void sendMoneyEditRecipient_STB_TC_06() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
+		sendMoneyAddRecipient_STB_TC_03();
 		sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
 		selectSavedRecipient();
 		click(SendTransferPage.objEditRecipient, getTextVal(SendTransferPage.objEditRecipient, "Button"));
@@ -3561,6 +3562,7 @@ public class MLWalletBusinessLogic {
 
 	public void sendMoneyMLWalletSearchFavoriteUser_STW_TC_15() throws Exception {
 		ExtentReporter.HeaderChildNode("Send Money ML Wallet Search Favorite User");
+		sendMoneyAddToFavorites_STW_TC_12();
 		sendMoneyMLWallet(prop.getproperty("Fully_verified"));
 		waitTime(5000);
 		verifyElementPresentAndClick(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
@@ -12716,15 +12718,24 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
 		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objVerificationTierPerksBackBtn,"Back Button");
-		if(verifyElementPresent(MLWalletHomePage.objAvailableBalance,getTextVal(MLWalletHomePage.objAvailableBalance,"Header"))){
+		if(verifyElementPresent(MLWalletHomePage.objAvailableBalanceHeader,getTextVal(MLWalletHomePage.objAvailableBalanceHeader,"Header"))){
 			logger.info("TU_TC_06, Tier Upgrade, After clicking back btn in verification tier perks app navigates to Home Page is validated");
 			ExtentReporter.extentLoggerPass("TU_TC_06", "TU_TC_06, Tier Upgrade, After clicking back btn in verification tier perks app navigates to Home Page is validated");
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
 
-	public void tierUpgrade(){
-
+	public void tierUpgradeUpgradeTierLevelBtnValidationForSemiVerifiedTabAsBuyTierUser_TU_TC_07() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Upgrade tier level Button validation, For Semi verified tab As Buyer tier User");
+		mlWalletLogin(prop.getproperty("Buyer_Tier"));
+		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
+		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSemiVerifiedTab,getTextVal(MLWalletTierUpgrade.objSemiVerifiedTab,"Tab"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objUpgradeTierLevel,getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"))){
+			logger.info("TU_TC_07, Tier Upgrade Upgrade tier level Button validated, For Semi verified tab As Buyer tier User");
+			ExtentReporter.extentLoggerPass("TU_TC_07", "TU_TC_07, Tier Upgrade Upgrade tier level Button validated, For Semi verified tab As Buyer tier User");
+			System.out.println("-----------------------------------------------------------");
+		}
 	}
 
 
