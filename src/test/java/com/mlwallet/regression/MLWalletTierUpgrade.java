@@ -23,29 +23,34 @@ public class MLWalletTierUpgrade {
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
     }
 
-    @Test(priority = 1)
-    public void tierUpgradeHomePageIIconValidationAsBuyerTierUser_TU_TC_01() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsBuyerTierUser_TU_TC_01();
-    }
+//    @Test(priority = 1)
+//    public void tierUpgradeHomePageIIconValidationAsBuyerTierUser_TU_TC_01() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsBuyerTierUser_TU_TC_01();
+//    }
+//
+//    @Test(priority = 2)
+//    public void tierUpgradeHomePageIIconValidationAsSemiVerifiedTierUser_TU_TC_02() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsSemiVerifiedTierUser_TU_TC_02();
+//    }
+//
+//    @Test(priority = 3)
+//    public void tierUpgradeHomePageIIconValidationAsFullyVerifiedTierUser_TU_TC_03() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsFullyVerifiedTierUser_TU_TC_03();
+//    }
+//
+//    @Test(priority = 4)
+//    public void tierUpgradeVerificationTierPerksPageNavigationAsBuyerTierUser_TU_TC_04() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeVerificationTierPerksPageNavigationAsBuyerTierUser_TU_TC_04();
+//    }
+//
+//    @Test(priority = 5)
+//    public void tierUpgradeVerificationTierPerksPageNavigationAsSemiVerifiedTierUser_TU_TC_05() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeVerificationTierPerksPageNavigationAsSemiVerifiedTierUser_TU_TC_05();
+//    }
 
-    @Test(priority = 2)
-    public void tierUpgradeHomePageIIconValidationAsSemiVerifiedTierUser_TU_TC_02() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsSemiVerifiedTierUser_TU_TC_02();
-    }
-
-    @Test(priority = 3)
-    public void tierUpgradeHomePageIIconValidationAsFullyVerifiedTierUser_TU_TC_03() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeHomePageIIconValidationAsFullyVerifiedTierUser_TU_TC_03();
-    }
-
-    @Test(priority = 4)
-    public void tierUpgradeVerificationTierPerksPageNavigationAsBuyerTierUser_TU_TC_04() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeVerificationTierPerksPageNavigationAsBuyerTierUser_TU_TC_04();
-    }
-
-    @Test(priority = 5)
-    public void tierUpgradeVerificationTierPerksPageNavigationAsSemiVerifiedTierUser_TU_TC_05() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeVerificationTierPerksPageNavigationAsSemiVerifiedTierUser_TU_TC_05();
+    @Test(priority = 6)
+    public void tierUpgradeVerificationTierPerksBackBtnValidation_TU_TC_06() throws Exception {
+        MLWalletBusinessLogic.tierUpgradeVerificationTierPerksBackBtnValidation_TU_TC_06();
     }
 
 

@@ -12710,7 +12710,22 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
+	public void tierUpgradeVerificationTierPerksBackBtnValidation_TU_TC_06() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Verification tier perks Back button validation");
+		mlWalletLogin(prop.getproperty("Buyer_Tier"));
+		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
+		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objVerificationTierPerksBackBtn,"Back Button");
+		if(verifyElementPresent(MLWalletHomePage.objAvailableBalance,getTextVal(MLWalletHomePage.objAvailableBalance,"Header"))){
+			logger.info("TU_TC_06, Tier Upgrade, After clicking back btn in verification tier perks app navigates to Home Page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_06", "TU_TC_06, Tier Upgrade, After clicking back btn in verification tier perks app navigates to Home Page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
 
+	public void tierUpgrade(){
+
+	}
 
 
 }

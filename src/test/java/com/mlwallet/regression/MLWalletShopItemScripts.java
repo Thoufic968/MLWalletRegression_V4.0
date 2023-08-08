@@ -24,11 +24,11 @@ public class MLWalletShopItemScripts {
 
 
 
-    @Test(priority = 1)
-    public void mlWalletShopItems_Scenario() throws Exception
-    {
-        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
-    }
+//    @Test(priority = 1)
+//    public void mlWalletShopItems_Scenario() throws Exception
+//    {
+//        MLWalletBusinessLogic.shopItemsWithoutInputOtp_MLS_TC_04();
+//    }
 //
 //    @Test(priority = 2)
 //    public void shopItemsHamburgerMenuNavigation_MLS_TC_12() throws Exception {
@@ -156,12 +156,12 @@ public class MLWalletShopItemScripts {
 //    public void shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85() throws Exception {
 //        MLWalletBusinessLogic.shopItemsGreatDealsForFineWatchesValidation_MLS_TC_85();
 //    }
-
-    @Test(priority = 27)
-    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
-        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
-    }
-
+//
+//    @Test(priority = 27)
+//    public void shopItemsProductDetailsValidation_MLS_TC_86() throws Exception {
+//        MLWalletBusinessLogic.shopItemsProductDetailsValidation_MLS_TC_86();
+//    }
+//
 //    @Test(priority = 28)
 //    public void shopItemsCategoriesValidation_MLS_TC_88() throws Exception {
 //        MLWalletBusinessLogic.shopItemsCategoriesValidation_MLS_TC_88();
@@ -261,27 +261,27 @@ public class MLWalletShopItemScripts {
 //    public void shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107() throws Exception {
 //        MLWalletBusinessLogic.shopItemsProductDetailsPageViewShopButtonFunctionalityValidation_MLS_TC_107();
 //    }
-//
-//    @Test(priority = 48)
-//    public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
-//        MLWalletBusinessLogic.shopItemsPageUIValidation_MLS_TC_11();
-//    }
-//
-//    @Test(priority = 49)
-//    public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
-//        MLWalletBusinessLogic.shopItemsSuccessfulLoginPopupValidation_MLS_TC_17();
-//    }
-//
-//    @Test(priority = 50)
-//    public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
-//        MLWalletBusinessLogic.shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35();
-//    }
-//
-//    @Test(priority = 51)
-//    public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
-//        MLWalletBusinessLogic.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
-//    }
-//
+
+    @Test(priority = 48)
+    public void shopItemsPageUIValidation_MLS_TC_11() throws Exception {
+        MLWalletBusinessLogic.shopItemsPageUIValidation_MLS_TC_11();
+    }
+
+    @Test(priority = 49)
+    public void shopItemsSuccessfulLoginPopupValidation_MLS_TC_17() throws Exception {
+        MLWalletBusinessLogic.shopItemsSuccessfulLoginPopupValidation_MLS_TC_17();
+    }
+
+    @Test(priority = 50)
+    public void shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35() throws Exception {
+        MLWalletBusinessLogic.shopItemsPayUsingMLWalletOptionSelectionValidation_MLS_TC_35();
+    }
+
+    @Test(priority = 51)
+    public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
+        MLWalletBusinessLogic.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
+    }
+
 //    @Test(priority = 52)
 //    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
 //        MLWalletBusinessLogic.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
