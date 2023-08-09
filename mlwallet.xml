@@ -23,24 +23,24 @@
 
 
 
-			<class name="com.mlwallet.regression.MLWalletLoginScripts" />
-			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
-			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
-			<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />
-			<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
-			<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
-			<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
-			<class name="com.mlwallet.regression.MLWalletShopItemScripts" />
-			<class name="com.mlwallet.regression.MLWalletTransactionHistory" />
-			<class name="com.mlwallet.regression.MLWalletBuyEload" />
+<!--			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletTransactionHistory" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletBuyEload" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>-->
 <!--			<class name="com.mlwallet.regression.MLWalletBranchLocator"/>-->
-			<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>
-			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />
+<!--			<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>-->
+<!--			<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
-			<class name="com.mlwallet.regression.MLWalletUseQR" />
-			<class name="com.mlwallet.regression.MLWalletTopUpGames" />
-<!--			<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
+<!--			<class name="com.mlwallet.regression.MLWalletUseQR" />-->
+<!--			<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
+			<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>
 <!--			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
 
 

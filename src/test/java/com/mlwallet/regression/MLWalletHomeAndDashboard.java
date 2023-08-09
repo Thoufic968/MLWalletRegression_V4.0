@@ -93,10 +93,10 @@ public class MLWalletHomeAndDashboard {
 //        MLWalletBusinessLogic.mlWalletVerificationTierPerksAsSemiVerifiedUser_HD_TC_14();
 //    }
 //
-//    @Test(priority = 15)
-//    public void mlWalletVerificationTierPerksAsFullyVerifiedUser_HD_TC_15() throws Exception {
-//        MLWalletBusinessLogic.mlWalletVerificationTierPerksAsFullyVerifiedUser_HD_TC_15();
-//    }
+    @Test(priority = 15)
+    public void mlWalletVerificationTierPerksAsFullyVerifiedUser_HD_TC_15() throws Exception {
+        MLWalletBusinessLogic.mlWalletVerificationTierPerksAsFullyVerifiedUser_HD_TC_15();
+    }
 //
 //    @Test(priority = 16)
 //    public void mlWalletVerificationAllTierPerksLoggingInAsSemiVerifiedUser_HD_TC_16() throws Exception {
