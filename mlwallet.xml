@@ -9,7 +9,7 @@
 	
 	 <test name="MLWallet">
 	     <parameter name="portno" value="4723"></parameter>
-         <parameter name="deviceName" value="4TWOGQCM6589MBZD"></parameter>
+         <parameter name="deviceName" value="emulator-5554"></parameter>
 		 <parameter name="browserType" value="Chrome"></parameter>
 		 <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		 <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
@@ -20,8 +20,6 @@
 <!--			4TWOGQCM6589MBZD-->
 <!--			Q4UKMR75WWQ8RSVG-->
 <!--			emulator-5554-->
-
-
 
 <!--			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
@@ -40,7 +38,7 @@
 <!--			<class name="com.mlwallet.regression.MLWalletRegistration" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletUseQR" />-->
 <!--			<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
-			<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>
+				<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>
 <!--			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
 
 

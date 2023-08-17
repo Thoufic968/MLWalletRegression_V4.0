@@ -47,4 +47,7 @@ public class MLWalletLoginPage {
 	public static By objOTP = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[1]");
 	public static By objSeconds = By.xpath("(//*[@class='com.horcrux.svg.SvgView'])[2]/following-sibling::android.view.ViewGroup/child::android.widget.TextView");
 
+	public static By objNotifPermission = By.xpath("//*[@text='Allow ML Wallet to send you notifications?']");
+	public static By objAllow = By.xpath("//*[@text='Allow']");
+
 }

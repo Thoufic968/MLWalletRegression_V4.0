@@ -9,7 +9,7 @@ public class MLWalletTierUpgrade {
 //  Semi verified Tab
     public static By objSemiVerifiedTab = By.xpath("//*[@text='Semi Verified']");
 //  Upgrade Tier Level Button
-    public static By objUpgradeTierLevel = By.xpath("//*[@text='Upgrade Tier Level']");
+    public static By objUpgradeTierLevel = By.xpath("//*[@text='Upgrade Tier Level']/parent::android.view.ViewGroup");
 //  Fully verified Tab
     public static By objFullyVerifiedTab = By.xpath("//*[@text='Fully Verified']");
 //  Branch verified Tab
@@ -35,5 +35,36 @@ public class MLWalletTierUpgrade {
 //  Confirm details btn
     public static By objConfirmDetails = By.xpath("//*[@text='Confirm Details']");
 //  Tier Upgrade btn
-    public static By objTierUpgrade = By.xpath("//*[@text='Tier Upgrade']");
+    public static By objTierUpgrade = By.xpath("//*[@text='Upgrade Tier Level']");
+//  Acc details text
+    public static By objAccDetailsText = By.xpath("//*[@text='Account Details']");
+//  Select any valid id txt
+    public static By objSelectAnyValidText = By.xpath("//*[@text='Select Any Valid ID']");
+//  Select ID txt
+    public static By objSelectIDText = By.xpath("//*[@text='Select ID']");
+    // Back button of Select ID Page
+    public static By objSelectIDPageBackBtn = By.xpath("//*[@text='Tier Upgrade']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+//  ID's
+    public static By getObjElementsID(int i){
+    return By.xpath("((//*[@class='android.widget.ScrollView']/child::android.view.ViewGroup/child::android.view.ViewGroup)["+i+"]/child::android.view.ViewGroup)[1]/child::android.view.ViewGroup/child::android.widget.TextView");
+    }
+//  Take a picture btn
+    public static By objTakePicBtn = By.xpath("//*[contains(@text, \"Let's Take a Picture\")]");
+// Select Specific ID
+    public static By getObjSelectedID(String ID){
+        return By.xpath("//*[@text='"+ID+"']");
+    }
+//
+    public static By objBackBtnTakePic= By.xpath("//*[@text='Take ID Picture']/preceding-sibling::android.widget.LinearLayout");
+    public static By objLeaveBtn = By.xpath("//*[@text='Leave']");
+    public static By objUploadPage= By.xpath("//*[@text='Upload ID Photos']");
+    public static By objTextTiertext = By.xpath("//*[@text='Tier Upgrade']");
+    public static By objBackPicIdBackBtn = By.xpath("//*[@text='Tier Upgrade']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
+    //
+    public static By objScanFront = By.xpath("//*[@text='Scan Front of ID']");
+    //
+    public static By objScanBack = By.xpath("//*[@text='Scan Back of ID']");
+    //
+    public static By objScanFace = By.xpath("//*[@text='Take a Face Identity Photo']");
+    //
 }

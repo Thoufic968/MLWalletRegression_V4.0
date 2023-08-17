@@ -122,13 +122,50 @@ public class MLWalletTierUpgrade {
 //    public void tierUpgradePageNavigation_TU_TC_20() throws Exception {
 //        MLWalletBusinessLogic.tierUpgradePageNavigation_TU_TC_20();
 //    }
-
-    @Test(priority = 21)
+    /*@Test(priority = 21)
     public void tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21() throws Exception {
         MLWalletBusinessLogic.tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21();
+    }*/
+    @Test(priority = 24)
+    public void tierUpgradeSemiVerifiedTierSelectIDTabUIValidation_TU_TC_24() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSemiVerifiedTierSelectIDTabUIValidation_TU_TC_24();
     }
-
-
+    @Test(priority = 25)
+    public void tierUpgradeValidateBackButtonInSelectIDPage_TU_TC_25() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeValidateBackButtonInSelectIDPage_TU_TC_25();
+    }
+    @Test(priority = 26)
+    public void tierUpgradeSelectedIDPHILHEALTHValidation_TU_TC_26() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectedIDPHILHEALTHValidation_TU_TC_26();
+    }
+    @Test(priority = 27)
+    public void tierUpgradeBackNavigationUploadIDPageTU_TC_27() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeBackNavigationUploadIDPageTU_TC_27();
+    }
+    @Test(priority = 28)
+    public void tierUpgradeScanFrontIDPage_TU_TC_28() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeScanFrontIDPage_TU_TC_28();
+    }
+    @Test(priority = 0)
+    public void tierUpgradeSelectIDTabUIValidation_TU_TC_29() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectIDTabUIValidation_TU_TC_29();
+    }
+    @Test(priority = 1)
+    public void tierUpgradeSelectIDTabUIValidation_TU_TC_30() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectIDTabUIValidation_TU_TC_30();
+    }
+    @Test(priority = 2)
+    public void tierUpgradeSelectIDTabUIValidation_TU_TC_31() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectIDTabUIValidation_TU_TC_31();
+    }
+    @Test(priority = 3)
+    public void tierUpgradeSelectIDTabUIValidation_TU_TC_32() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectIDTabUIValidation_TU_TC_32();
+    }
+    @Test(priority = 4)
+    public void tierUpgradeSelectIDTabUIValidation_TU_TC_33() throws Exception{
+        MLWalletBusinessLogic.tierUpgradeSelectIDTabUIValidation_TU_TC_33();
+    }
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();
