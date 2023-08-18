@@ -122,13 +122,66 @@ public class MLWalletTierUpgrade {
 //    public void tierUpgradePageNavigation_TU_TC_20() throws Exception {
 //        MLWalletBusinessLogic.tierUpgradePageNavigation_TU_TC_20();
 //    }
-
-    @Test(priority = 21)
-    public void tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21() throws Exception {
-        MLWalletBusinessLogic.tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21();
+//
+//    @Test(priority = 21)
+//    public void tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeFullyVerifiedTierTabUIValidation_TU_TC_21();
+//    }
+//
+//    @Test(priority = 22)
+//    public void tierUpgradeAccountDetailsPageUIValidation_TU_TC_23() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeAccountDetailsPageUIValidation_TU_TC_23();
+//    }
+//
+//    @Test(priority = 23)
+//    public void tierUpgradePageUIValidation_TU_TC_24() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradePageUIValidation_TU_TC_24();
+//    }
+//
+    @Test(priority = 24)
+    public void tierUpgradeBackArrowBtnValidation_TU_TC_25() throws Exception {
+        MLWalletBusinessLogic.tierUpgradeBackArrowBtnValidation_TU_TC_25();
+    }
+//
+//    @Test(priority = 25)
+//    public void tierUpgradeUploadIDPhotosUIValidationAfterSelectingPHILHEALTH_TU_TC_26() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeUploadIDPhotosUIValidationAfterSelectingPHILHEALTH_TU_TC_26();
+//    }
+//
+//    @Test(priority = 26)
+//    public void tierUpgradeUploadIDPhotosBackArrowBtnValidation_TU_TC_27() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeUploadIDPhotosBackArrowBtnValidation_TU_TC_27();
+//    }
+//
+//    @Test(priority = 27)
+//    public void tierUpgradeScanFrontOfIDPageUIValidation_TU_TC_28() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeScanFrontOfIDPageUIValidation_TU_TC_28();
+//    }
+//
+//    @Test(priority = 28)
+//    public void tierUpgradeScanFrontOfIDPageBackArrowBtnValidation_TU_TC_29() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeScanFrontOfIDPageBackArrowBtnValidation_TU_TC_29();
+//    }
+//
+//    @Test(priority = 29)
+//    public void tierUpgradeScanBackOfIDPageUIValidation_TU_TC_30() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeScanBackOfIDPageUIValidation_TU_TC_30();
+//    }
+//
+//    @Test(priority = 30)
+//    public void tierUpgradeScanBackOfIDPageBackArrowBtnValidation_TU_TC_31() throws Exception {
+//        MLWalletBusinessLogic.tierUpgradeScanBackOfIDPageBackArrowBtnValidation_TU_TC_31();
+//    }
+//
+    @Test(priority = 31)
+    public void tierUpgradeTakeAFaceIdentityPhotoPageUIValidation_TU_TC_32() throws Exception {
+        MLWalletBusinessLogic.tierUpgradeTakeAFaceIdentityPhotoPageUIValidation_TU_TC_32();
     }
 
-
+    @Test(priority = 32)
+    public void tierUpgradeTakeAFaceIdentityPhotoPageBackArrowBtnValidation_TU_TC_33() throws Exception {
+        MLWalletBusinessLogic.tierUpgradeTakeAFaceIdentityPhotoPageBackArrowBtnValidation_TU_TC_33();
+    }
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();

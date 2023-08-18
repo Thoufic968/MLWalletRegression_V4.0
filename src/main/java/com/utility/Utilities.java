@@ -346,7 +346,8 @@ public class Utilities extends ExtentReporter {
                 }
             } catch (Exception e) {
             }
-        } else if (platform.equalsIgnoreCase("Android")) {
+        }
+        else if (platform.equalsIgnoreCase("Android")||platform.equalsIgnoreCase("BrowserStack")) {
             try {
                 WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
                 if (element.isDisplayed()) {
@@ -391,7 +392,7 @@ public class Utilities extends ExtentReporter {
         try {
             if (platform.equalsIgnoreCase("web")) {
                 element = DriverManager.getDriver().findElement(byLocator);
-            } else if (platform.equalsIgnoreCase("Android")) {
+            } else if (platform.equalsIgnoreCase("Android")||platform.equalsIgnoreCase("BrowserStack")) {
                 element = DriverManager.getAppiumDriver().findElement(byLocator);
             }
             MLWalletBusinessLogic.softAssert.assertEquals(element.isDisplayed(), true, "" + validationtext + " " + " is displayed");
@@ -399,7 +400,7 @@ public class Utilities extends ExtentReporter {
             ExtentReporter.extentLogger("checkElementPresent", "" + validationtext + " is displayed");
             if (platform.equalsIgnoreCase("web")) {
                 DriverManager.getDriver().findElement(byLocator).click();
-            } else if (platform.equalsIgnoreCase("Android")) {
+            } else if (platform.equalsIgnoreCase("Android")||platform.equalsIgnoreCase("BrowserStack")) {
                 DriverManager.getAppiumDriver().findElement(byLocator).click();
             }
             logger.info("Clicked on " + validationtext);
@@ -450,7 +451,11 @@ public class Utilities extends ExtentReporter {
             if (platform.equalsIgnoreCase("Android")) {
                 AndroidElement element = (AndroidElement) DriverManager.getAppiumDriver().findElement(byLocator);
                 element.click();
-            } else if (platform.equalsIgnoreCase("mpwa")) {
+            }else   if (platform.equalsIgnoreCase("BrowserStack")) {
+                AndroidElement element = (AndroidElement) DriverManager.getAppiumDriver().findElement(byLocator);
+                element.click();
+            }
+            else if (platform.equalsIgnoreCase("mpwa")) {
                 WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
                 element.click();
             }
@@ -516,7 +521,7 @@ public class Utilities extends ExtentReporter {
         if (platform.equalsIgnoreCase("web")) {
             WebElement element = DriverManager.getDriver().findElement(byLocator);
             value = element.getText();
-        } else if (platform.equalsIgnoreCase("Android")) {
+        } else if (platform.equalsIgnoreCase("Android")||platform.equalsIgnoreCase("BrowserStack")) {
             WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
             value = element.getText();
         }
@@ -693,7 +698,11 @@ public class Utilities extends ExtentReporter {
             if (platform.equalsIgnoreCase("Android")) {
                 WebElement ele = DriverManager.getAppiumDriver().findElement(byLocator);
                 ele.sendKeys(input);
-            } else if (platform.equalsIgnoreCase("mpwa")) {
+            }else if (platform.equalsIgnoreCase("BrowserStack")) {
+                WebElement ele = DriverManager.getAppiumDriver().findElement(byLocator);
+                ele.sendKeys(input);
+            }
+            else if (platform.equalsIgnoreCase("mpwa")) {
                 Actions a = new Actions(DriverManager.getAppiumDriver());
                 a.sendKeys(input);
                 a.perform();
@@ -2545,7 +2554,7 @@ public class Utilities extends ExtentReporter {
                 WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 20);
                 wait.until(ExpectedConditions.visibilityOfElementLocated(by));
             }
-            if (platform.equalsIgnoreCase("Android")) {
+            if (platform.equalsIgnoreCase("Android")||platform.equalsIgnoreCase("BrowserStack")) {
                 WebDriverWait wait = new WebDriverWait(DriverManager.getAppiumDriver(), 20);
                 wait.until(ExpectedConditions.visibilityOfElementLocated(by));
             }

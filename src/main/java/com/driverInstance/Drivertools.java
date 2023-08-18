@@ -91,9 +91,36 @@ public class Drivertools {
 
 	private static String ENV = "";
 
+	private String userID;
+	private String userKey;
+	private String appID;
+	private String bsRemoteUrl;
 	public Drivertools(){
 
 	}
+	protected void setBSuserID(String userID) {
+		this.userID = userID;
+	}
+
+
+
+	protected void setBSuserKey(String userKey) {
+		this.userKey = userKey;
+	}
+
+
+
+	protected void setBSappID(String appID) {
+		this.appID = appID;
+	}
+
+
+
+	protected void setBSremoteUrl(String bsRemoteUrl) {
+		this.bsRemoteUrl = bsRemoteUrl;
+	}
+
+
 
 	/** The Constant logger. */
 //	final static Logger logger = Logger.getLogger("rootLogger");
@@ -242,6 +269,18 @@ public class Drivertools {
 		return this.runMode;
 	}
 
+	protected String getBSremoteUrl() {
+		return this.bsRemoteUrl;
+	}
+	protected String getBSuserID() {
+		return this.userID;
+	}
+	protected String getBSuserKey() {
+		return this.userKey;
+	}
+	protected String getBSappID() {
+		return this.appID;
+	}
 	@SuppressWarnings("static-access")
 	public void setENV(String env) {
 		this.ENV = env;
@@ -279,6 +318,11 @@ public class Drivertools {
 		setPort(Integer.parseInt(getHandler().getproperty("HOST_PORT")));
 		setappTimeOut(Integer.parseInt(getHandler().getproperty("APP_TIMEOUT")));
 		setremoteUrl("http://" + getHost() + ":" + portno + "/wd/hub");
+		if(platform.equalsIgnoreCase("BrowserStack") || platform.equalsIgnoreCase("IOSBrowserStack")) {
+			setBSuserID(getHandler().getproperty("userID"));
+			setBSuserKey(getHandler().getproperty("accessKey"));
+			setBSremoteUrl("http://" + getHost() + "/wd/hub");
+		}
 
 		setHandler(new PropertyFileReader("properties/AppPackageActivity.properties"));
 		setAppPackage(getHandler().getproperty(application + "Package"));
@@ -286,6 +330,11 @@ public class Drivertools {
 		setAppVersion(getHandler().getproperty(application + "Version"));
 		setAPKName(getHandler().getproperty(application + "apkfile"));
 		setDriverVersion(getHandler().getproperty("DriverVersion"));
+		if(platform.equalsIgnoreCase("BrowserStack")) {
+			setBSappID(getHandler().getproperty("appID"));
+		}else if(platform.equalsIgnoreCase("IOSBrowserStack")) {
+			setBSappID(getHandler().getproperty("iOSappID"));
+		}
 	}
 
 	{		
@@ -339,10 +388,16 @@ public class Drivertools {
 		} else if (getPlatform().equals("MPWA")) {
 			setENV("Chrome Application");
 			click = false;
+		}else if (getPlatform().equals("BrowserStack")) {
+			setENV("Native App");
+			click = false;
+		} else if (getPlatform().equals("IOSBrowserStack")) {
+			setENV("Native App");
+			click = false;
 		}
 		
 		logger.info("PlatForm :: " + getPlatform());
-		if (Stream.of("Android", "ios", "Web", "MPWA", "TV").anyMatch(getPlatform()::equals)) {
+		if (Stream.of("Android", "ios", "Web", "MPWA", "TV","BrowserStack","IOSBrowserStack").anyMatch(getPlatform()::equals)) {
 			setHandler(new PropertyFileReader("properties/ExecutionControl.properties"));
 			if (getHandler().getproperty(getTestName()).equals("Y")) {
 				logger.info("Running Test :: " + getTestName());

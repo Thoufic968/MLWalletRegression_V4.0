@@ -129,7 +129,7 @@ public class ExtentReporter implements ITestListener {
 	public static synchronized void initExtentDriver() throws Exception {
 		if (getPlatformFromtools().equals("Web")) {
 			src = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
-		} else if (getPlatformFromtools().equals("Android") || getPlatformFromtools().equals("PWA") || getPlatformFromtools().equals("TV")) {
+		} else if (getPlatformFromtools().equals("Android") || getPlatformFromtools().equals("PWA") || getPlatformFromtools().equals("TV")|| getPlatformFromtools().equals("BrowserStack")) {
 			//src = ((TakesScreenshot) getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 			src = ((TakesScreenshot) DriverManager.getAppiumDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 		} else if (getPlatformFromtools().equals("MPWA")) {
@@ -475,7 +475,7 @@ public class ExtentReporter implements ITestListener {
 	public synchronized static void setScreenshotSource() {
 		if (getPlatformFromtools().equals("Web")) {
 			src = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
-		} else if (getPlatformFromtools().equals("Android") || getPlatformFromtools().equals("PWA") || getPlatformFromtools().equals("TV")) {
+		} else if (getPlatformFromtools().equals("Android") || getPlatformFromtools().equals("PWA") || getPlatformFromtools().equals("TV")|| getPlatformFromtools().equals("BrowserStack")) {
 			src = ((TakesScreenshot) DriverManager.getAppiumDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 		} else if (getPlatformFromtools().equals("MPWA")) {
 			src = ((TakesScreenshot) DriverManager.getAppiumDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);

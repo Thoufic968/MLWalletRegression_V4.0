@@ -9,6 +9,7 @@ import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
 import com.utility.Utilities;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
@@ -12660,9 +12661,13 @@ public class MLWalletBusinessLogic {
 	public void accountDetailsPageNavigation(String sTier) throws Exception {
 		mlWalletLogin(sTier);
 		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
+		waitTime(5000);
 		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
+		waitTime(5000);
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
+		Swipe("UP",2);
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objUpgradeTierLevel,getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"));
+		waitTime(5000);
 		verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"));
 	}
 
@@ -12820,6 +12825,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
 		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
+		waitTime(3000);
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objUpgradeTierLevel,getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"))){
 			logger.info("TU_TC_13, Tier Upgrade Account details page navigation validated as Buyer tier user to upgrade to Fully verified tier user");
@@ -12951,6 +12957,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
 		verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
+		waitTime(3000);
 		if(verifyElementPresent(MLWalletHomePage.objTier, getTextVal(MLWalletHomePage.objTier, "Header"))) {
 			verificationTierPerksPageValidation();
 			verifyElementPresent(MLWalletTierUpgrade.objUpgradeTierLevel, getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"));
@@ -12960,7 +12967,220 @@ public class MLWalletBusinessLogic {
 		}
 	}
 
-
-
-
+	public void tierUpgradeAccountDetailsPageUIValidation_TU_TC_23() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier upgrade Account details page UI validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"))){
+			verifyElementPresent(MLWalletTierUpgrade.objPersonalInformation,getTextVal(MLWalletTierUpgrade.objPersonalInformation,"Header"));
+			verifyElementPresent(MLWalletTierUpgrade.objPlaceOfBirth,getTextVal(MLWalletTierUpgrade.objPlaceOfBirth,"Place of Birth"));
+			verifyElementPresent(MLWalletTierUpgrade.objNationality,getTextVal(MLWalletTierUpgrade.objNationality,"Nationality"));
+			verifyElementPresent(MLWalletTierUpgrade.objCivilStatus,getTextVal(MLWalletTierUpgrade.objCivilStatus,"Civil Status"));
+			verifyElementPresent(MLWalletTierUpgrade.objGenderAtBirth,getTextVal(MLWalletTierUpgrade.objGenderAtBirth,"Gender at Birth"));
+			verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncome,getTextVal(MLWalletTierUpgrade.objSourceOfIncome,"Source of Income"));
+			verifyElementPresent(MLWalletTierUpgrade.objCompanyOrEmployerName,getTextVal(MLWalletTierUpgrade.objCompanyOrEmployerName,"Company/Employer Name"));
+			verifyElementPresent(MLWalletTierUpgrade.objProductServiceOffered,getTextVal(MLWalletTierUpgrade.objProductServiceOffered,"Product/Service offered"));
+			verifyElementPresent(MLWalletTierUpgrade.objWorkAddress,getTextVal(MLWalletTierUpgrade.objWorkAddress,"Work Address"));
+			Swipe("UP",2);
+			verifyElementPresent(MLWalletTierUpgrade.objPositionAtWork,getTextVal(MLWalletTierUpgrade.objPositionAtWork,"Position at Work"));
+			verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWork,getTextVal(MLWalletTierUpgrade.ObjNatureOfWork,"Nature of Work"));
+			logger.info("TU_TC_23, Tier upgrade Account details page UI validated");
+			ExtentReporter.extentLoggerPass("TU_TC_23", "TU_TC_23, Tier upgrade Account details page UI validated");
+			System.out.println("-----------------------------------------------------------");
 		}
+	}
+
+	public void tierUpgradePageUIValidation_TU_TC_24() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier upgrade page UI validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP",2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails,getTextVal(MLWalletTierUpgrade.objConfirmDetails,"Button"));
+		if (verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"))) {
+			verifyElementPresent(MLWalletTierUpgrade.objSelectAnyValidID,getTextVal(MLWalletTierUpgrade.objSelectAnyValidID,"Header"));
+			verifyElementPresent(MLWalletTierUpgrade.objSelectID,getTextVal(MLWalletTierUpgrade.objSelectID,"Input field Header"));
+			verifyElementPresent(MLWalletTierUpgrade.objSelectIDSelectionBtn,"Select ID Selection Button");
+			logger.info("TU_TC_24, Tier upgrade page UI validated");
+			ExtentReporter.extentLoggerPass("TU_TC_24", "TU_TC_24, Tier upgrade page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeBackArrowBtnValidation_TU_TC_25() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier upgrade page UI validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn,"Tier upgrade Back Arrow Btn");
+		if(verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails,"Page"))){
+			logger.info("TU_TC_25, After clicking on Back Arrow Btn on Tier upgrade Page, Application Navigates to Account Details Page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_25", "TU_TC_25, After clicking on Back Arrow Btn on Tier upgrade Page, Application Navigates to Account Details Page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeUploadIDPhotosUIValidationAfterSelectingPHILHEALTH_TU_TC_26() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade, Upload ID photos UI validation After Selecting PHIL HEALTH");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn,"Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput,"PhilHealth","Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth,getTextVal(MLWalletTierUpgrade.objPhilHealth,"ID"));
+		if (verifyElementPresent(MLWalletTierUpgrade.objUploadIDPhotos, getTextVal(MLWalletTierUpgrade.objUploadIDPhotos, "Header"))) {
+			verifyElementPresent(MLWalletTierUpgrade.objSelectIDField,getTextVal(MLWalletTierUpgrade.objSelectIDField,"Selected ID Field"));
+			verifyElementPresent(MLWalletTierUpgrade.objCardInputField,"Card Input Field");
+			verifyElementPresent(MLWalletTierUpgrade.objScanFrontOfID,getTextVal(MLWalletTierUpgrade.objScanFrontOfID,"Button"));
+			verifyElementPresent(MLWalletTierUpgrade.objScanBackOfID,getTextVal(MLWalletTierUpgrade.objScanBackOfID,"Button"));
+			verifyElementPresent(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,"Button"));
+			logger.info("TU_TC_26, Tier Upgrade, Upload ID photos UI validated After Selecting PHIL HEALTH");
+			ExtentReporter.extentLoggerPass("TU_TC_26", "TU_TC_26, Tier Upgrade, Upload ID photos UI validated After Selecting PHIL HEALTH");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeUploadIDPhotosBackArrowBtnValidation_TU_TC_27() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier upgrade page UI validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn, "Tier upgrade Back Arrow Btn");
+		if (verifyElementPresent(MLWalletTierUpgrade.objAccountDetails, getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"))) {
+			logger.info("TU_TC_27, After clicking on Back Arrow Btn on Tier upgrade Upload ID Photos Page, Application Navigates to Account Details Page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_27", "TU_TC_27, After clicking on Back Arrow Btn on Tier upgrade Upload ID Photos Page, Application Navigates to Account Details Page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeScanFrontOfIDPageUIValidation_TU_TC_28() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Scan front of ID page UI Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn,"Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput,"PhilHealth","Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth,getTextVal(MLWalletTierUpgrade.objPhilHealth,"ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objScanFrontOfID,getTextVal(MLWalletTierUpgrade.objScanFrontOfID,"Button"));
+		enableCameraPopup();
+		if(verifyElementPresent(MLWalletTierUpgrade.objScanFrontOfID,getTextVal(MLWalletTierUpgrade.objScanFrontOfID,"Page"))){
+			verifyElementPresent(MLWalletTierUpgrade.objScanFrontOfIDInfo,getTextVal(MLWalletTierUpgrade.objScanFrontOfIDInfo,"info"));
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureScreen,"Capture Screen");
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureButton,"Capture Button");
+			logger.info("TU_TC_28, Tier Upgrade Scan front of ID page UI validated");
+			ExtentReporter.extentLoggerPass("TU_TC_28", "TU_TC_28, Tier Upgrade Scan front of ID page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeScanFrontOfIDPageBackArrowBtnValidation_TU_TC_29() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Scan front of ID page BAck Arrow button Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objScanFrontOfID, getTextVal(MLWalletTierUpgrade.objScanFrontOfID, "Button"));
+		enableCameraPopup();
+		verifyElementPresent(MLWalletTierUpgrade.objScanFrontOfID, getTextVal(MLWalletTierUpgrade.objScanFrontOfID, "Button"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn,"Tier Upgrade Scan Front of ID Back Arrow Button");
+		waitTime(3000);
+		if(verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"))){
+			logger.info("TU_TC_29, Tier Upgrade, After clicking back btn in Tier Upgrade Scan Front of ID app navigates to Tier Upgrade page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_29", "TU_TC_29, Tier Upgrade, After clicking back btn in Tier Upgrade Scan Front of ID app navigates to Tier Upgrade page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeScanBackOfIDPageUIValidation_TU_TC_30() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Scan Back of ID page UI Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objScanBackOfID,getTextVal(MLWalletTierUpgrade.objScanBackOfID,"Button"));
+		enableCameraPopup();
+		if(verifyElementPresent(MLWalletTierUpgrade.objScanBackOfID,getTextVal(MLWalletTierUpgrade.objScanBackOfID,"Page"))){
+			verifyElementPresent(MLWalletTierUpgrade.objScanFrontOfIDInfo,getTextVal(MLWalletTierUpgrade.objScanFrontOfIDInfo,"info"));
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureScreen,"Capture Screen");
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureButton,"Capture Button");
+			logger.info("TU_TC_30, Tier Upgrade Scan Back of ID page UI validated");
+			ExtentReporter.extentLoggerPass("TU_TC_30", "TU_TC_30, Tier Upgrade Scan Back of ID page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+
+	public void tierUpgradeScanBackOfIDPageBackArrowBtnValidation_TU_TC_31() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Scan Back of ID page BAck Arrow button Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objScanBackOfID, getTextVal(MLWalletTierUpgrade.objScanBackOfID, "Button"));
+		enableCameraPopup();
+		verifyElementPresent(MLWalletTierUpgrade.objScanBackOfID, getTextVal(MLWalletTierUpgrade.objScanBackOfID, "Button"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn,"Tier Upgrade Scan Back of ID Back Arrow Button");
+		waitTime(3000);
+		if(verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"))){
+			logger.info("TU_TC_31, Tier Upgrade, After clicking back btn in Tier Upgrade Scan Back of ID app navigates to Tier Upgrade page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_31", "TU_TC_31, Tier Upgrade, After clicking back btn in Tier Upgrade Scan Back of ID app navigates to Tier Upgrade page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeTakeAFaceIdentityPhotoPageUIValidation_TU_TC_32() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Take a face identity photo page UI Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		waitTime(5000);
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,"Button"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"))){
+			verifyElementPresent(MLWalletTierUpgrade.objTakeAFaceIdentityPhotoInfo,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhotoInfo,"info"));
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureScreen,"Capture Screen");
+			verifyElementPresent(MLWalletTierUpgrade.objCaptureButton,"Capture Button");
+			logger.info("TU_TC_32, Tier Upgrade Take a face identity photo page UI validated");
+			ExtentReporter.extentLoggerPass("TU_TC_32", "TU_TC_32, Tier Upgrade Take a face identity photo page UI validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
+	public void tierUpgradeTakeAFaceIdentityPhotoPageBackArrowBtnValidation_TU_TC_33() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade Take a face identity photo Back arrow button Validation");
+		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
+		Swipe("UP", 2);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
+		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
+		waitTime(3000);
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,"Button"));
+		waitTime(5000);
+		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn,"Tier Upgrade, Take a face identity photo Back Arrow Btn");
+		waitTime(3000);
+		if(verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"))) {
+			logger.info("TU_TC_33, Tier Upgrade, After clicking back btn in Tier Upgrade Take a face identity photo app navigates to Tier Upgrade page is validated");
+			ExtentReporter.extentLoggerPass("TU_TC_33", "TU_TC_33, Tier Upgrade, After clicking back btn in Tier Upgrade Take a face identity photo app navigates to Tier Upgrade page is validated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+}

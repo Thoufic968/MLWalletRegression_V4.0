@@ -55,11 +55,15 @@ public class DriverInstance extends Drivertools {
 //				}
 //				else {
 					DriverManager.setAppiumDriver((AppiumDriver<WebElement>) new AndroidDriver<WebElement>(new URL(getremoteUrl()),this.generateAndroidCapabilities(Application,deviceName,portno)));
-					//Utilities.waitForElementDisplayed(AMDOnboardingScreen.objWaitForSplashScreenDisapear, 240);				
+					//Utilities.waitForElementDisplayed(AMDOnboardingScreen.objWaitForSplashScreenDisapear, 240);
 					Instant endTime = Instant.now();
 					timeElapsed = Duration.between(startTime, endTime);
 					logger.info("Time taken to launch the App (millisec)" + timeElapsed.toMillis());
-			//	}
+					//	}
+				break;
+
+			case "BrowserStack":
+					DriverManager.setAppiumDriver((AppiumDriver<WebElement>) new AndroidDriver<WebElement>(new URL(getBSremoteUrl()),this.generateCapabilitiesbrowserStack(Application,deviceName,portno)));
 				break;
 
 //			case "MPWA":
@@ -147,6 +151,18 @@ public class DriverInstance extends Drivertools {
 		capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.apple.mobilesafari");
 		capabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
+		return capabilities;
+	}
+	public DesiredCapabilities generateCapabilitiesbrowserStack(String application,String deviceName, String portno) {
+		System.out.println("Capability-BrowserStack");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("deviceName"));
+		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		capabilities.setCapability("browserstack.user", getBSuserID());
+		capabilities.setCapability("browserstack.key", getBSuserKey());
+		capabilities.setCapability(MobileCapabilityType.APP, getBSappID());
+		capabilities.setCapability("autoGrantPermissions", "true");
+		capabilities.setCapability("interactiveDebugging","true");
 		return capabilities;
 	}
 	
