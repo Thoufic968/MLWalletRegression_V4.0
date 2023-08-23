@@ -237,6 +237,9 @@ public class Drivertools {
 	protected void setURL1(String url) {
 		this.url = url;
 	}
+	protected void setURL2(String url) {
+		this.url = url;
+	}
 	
 	protected String getURL1() {
 		return this.url;
@@ -343,7 +346,7 @@ public class Drivertools {
 		setBrowserType(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browserType"));
 		setURL(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url"));
 		setURL1(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url1"));
-		//setURL(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url1"));
+		setURL2(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("kpxurl"));
 		setRunModule(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runModule"));
 		setRunMode(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runMode"));
 		if (getPlatform().equals("Android")) {

@@ -81,7 +81,8 @@ public class MLWalletBusinessLogic {
 		type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
 		click(MLWalletLoginPage.objLoginBtn, "Login Button");
 		enterOTP(prop.getproperty("Valid_OTP"));
-		waitTime(5000);
+		handleMpin("1111");
+		waitTime(10000);
 		if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
 			logger.info("Application Logged In Successfully");
 		} else {
@@ -12671,6 +12672,16 @@ public class MLWalletBusinessLogic {
 		verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"));
 	}
 
+	public void openKPXInChrome(String url) {
+		switchPlatformToWeb(url);
+		waitTime(5000);
+	}
+	public void closeKPXInChrome(){
+		closeWebBrowser();
+		switchPlatformToAndroid();
+	}
+
+
 
 
 
@@ -13152,6 +13163,7 @@ public class MLWalletBusinessLogic {
 		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,"Button"));
+		enableCameraPopup();
 		if(verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"))){
 			verifyElementPresent(MLWalletTierUpgrade.objTakeAFaceIdentityPhotoInfo,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhotoInfo,"info"));
 			verifyElementPresent(MLWalletTierUpgrade.objCaptureScreen,"Capture Screen");
@@ -13167,13 +13179,14 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("Buyer_Tier"));
 		Swipe("UP", 2);
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails, "Button"));
+		waitTime(3000);
 		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade, getTextVal(MLWalletTierUpgrade.objTierUpgrade, "Page"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objSelectIDSelectionBtn, "Select ID Selection Button");
 		type(MLWalletTierUpgrade.objSearchFieldInput, "PhilHealth", "Select ID Input field");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objPhilHealth, getTextVal(MLWalletTierUpgrade.objPhilHealth, "ID"));
 		waitTime(3000);
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,getTextVal(MLWalletTierUpgrade.objTakeAFaceIdentityPhoto,"Button"));
-		waitTime(5000);
+		enableCameraPopup();
 		verifyElementPresent(MLWalletTierUpgrade.objTierUpgrade,getTextVal(MLWalletTierUpgrade.objTierUpgrade,"Page"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objTierUpgradeBackBtn,"Tier Upgrade, Take a face identity photo Back Arrow Btn");
 		waitTime(3000);
@@ -13183,4 +13196,55 @@ public class MLWalletBusinessLogic {
 			System.out.println("-----------------------------------------------------------");
 		}
 	}
+
+	public void tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244() throws Exception {
+		ExtentReporter.HeaderChildNode("Tier Upgrade to Branch verified tier from Buyer tier");
+//		openKPXInChrome(prop.getproperty("KPX_URL"));
+		openKPXInChrome("https://accounts.google.com/signin");
+//		waitTime(5000);
+//		WebElement frame1= DriverManager.getDriver().findElement(By.xpath("//iframe[@title='Sign in with Google Button']"));
+//		DriverManager.getDriver().switchTo().frame(frame1);
+//		System.out.println("Switched");
+//		switchFrame_id("//*[@id='gsi_628747_308167']");
+//		verifyElementPresentAndClick(MLWalletKPX.objSignInWithGoogle,"Sign in with Button");
+//		type(MLWalletKPX.objEmailInputField,prop.getproperty("Gmail_Password"),"Email Input Field");
+//		verifyElementPresentAndClick(MLWalletKPX.objNextBtn,getTextVal(MLWalletKPX.objNextBtn,"Button"));
+		//URL launch
+//		DriverManager.getDriver().get("https://accounts.google.com/signin");
+		//identify email
+//		WebElement l = DriverManager.getDriver()
+//				.findElement(By.name("identifier"));
+//		l.sendKeys("COLLABERAML@GMAIL.COM");
+//		WebElement b = DriverManager.getDriver()
+//				.findElement(By.className("VfPpkd-LgbsSe"));
+
+//		click(MLWalletKPX.objNextBtn,"Next");
+		//identify password
+//		WebElement p = DriverManager.getDriver()
+//				.findElement(By.name("password"));
+//		p.sendKeys("123456");
+//		click(MLWalletKPX.objNextBtn,"Next");
+		//close browser
+
+		// Find and fill in the email field
+		WebElement emailField = DriverManager.getDriver().findElement(By.id("identifierId"));
+		emailField.sendKeys("COLLABERAML@GMAIL.COM");
+
+		// Find and click the "Next" button
+		WebElement nextButton = DriverManager.getDriver().findElement(By.id("identifierNext"));
+		nextButton.click();
+
+		// Wait for password field to appear
+		// You might need to use explicit waits here using WebDriverWait
+
+		// Find and fill in the password field
+		WebElement passwordField = DriverManager.getDriver().findElement(By.name("password"));
+		passwordField.sendKeys("");
+
+		// Find and click the "Next" button for password
+//		WebElement passwordNextButton = DriverManager.getDriver().findElement(By.id("passwordNext"));
+//		passwordNextButton.click();
+	}
+
+
 }

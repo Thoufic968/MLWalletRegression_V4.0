@@ -261,6 +261,7 @@ public class DriverInstance extends Drivertools {
 			options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 			try {
 				DriverManager.setDriver(new ChromeDriver(options));
+
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
